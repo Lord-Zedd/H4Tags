@@ -1,0 +1,12 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+	</_field_long_flags>
+	<_field_block name="control points" max="16" srcguid="f0ee9f54-d5ca-3041-9685-ab6f75d07a1f" srcName="camera_track_control_point_block">
+		<_field_real_vector_3d name="position" />
+		<_field_real_quaternion name="orientation" />
+		<_field_useless_pad name="" />
+	</_field_block>
+	<_field_useless_pad name="" />
+</plugin>

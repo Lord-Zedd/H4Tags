@@ -1,0 +1,15 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="global textures">0: ............... random noise</_field_explanation>
+	<_field_block name="global textures" max="255" srcguid="0639fa6c-769f-ae4c-8034-c2f5a11803ea" srcName="global_textures_refs_block">
+		<_field_tag_reference name="texture" validtags="bitm" />
+	</_field_block>
+	<_field_tag_reference name="default rain" validtags="rain" />
+	<_field_explanation name="ripple settings (TO BE REMOVED)">we are going to use a new method to render and control of ripple effects</_field_explanation>
+	<_field_struct name="rain ripple setting" />
+	<_field_tag_reference name="rain ripple texture" validtags="bitm" />
+	<_field_real name="group period time:seconds" />
+	<_field_real name="texture tile size:world units" />
+	<_field_real name="reflection intensify" />
+</plugin>

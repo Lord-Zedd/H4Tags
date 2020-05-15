@@ -1,0 +1,60 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="properties" />
+	<_field_short_integer name="updates per second:Hz" />
+	<_field_pad name="IFJ" length="2" />
+	<_field_real name="dead cell penalty" />
+	<_field_real name="live cell bonus" />
+	<_field_pad name="EPTNF" length="80" />
+	<_field_explanation name="height map" />
+	<_field_short_integer name="width:cells" />
+	<_field_short_integer name="height:cells" />
+	<_field_real name=" cell width:world units" />
+	<_field_real name=" height:world units" />
+	<_field_real_vector_2d name="velocity:cells/update" />
+	<_field_pad name="KHXCI" length="28" />
+	<_field_old_string_id name="marker" />
+	<_field_long_flags name="interpolation flags">
+		<item Name="blend in hsv#blends colors in hsv rather than rgb space" />
+		<item Name="...more colors#blends colors through more hues (goes the long way around the color wheel)" />
+	</_field_long_flags>
+	<_field_real_rgb_color name="base color" />
+	<_field_real_rgb_color name="peak color" />
+	<_field_pad name="IXKLNR" length="76" />
+	<_field_explanation name="detail map" />
+	<_field_short_integer name="  width:cells" />
+	<_field_short_integer name="  height:cells" />
+	<_field_real name="  cell width:world units" />
+	<_field_real_vector_2d name=" velocity:cells/update" />
+	<_field_pad name="JXB" length="48" />
+	<_field_old_string_id name=" marker" />
+	<_field_short_integer name="texture width:cells" />
+	<_field_pad name="HNOIXYJ" length="2" />
+	<_field_pad name="DDIGC" length="48" />
+	<_field_tag_reference name="texture" validtags="bitm" />
+	<_field_pad name="HSJQLXWS" length="160" />
+	<_field_block name="rules" max="16" srcguid="684debdb-7020-354c-9b47-cd3f0c94f08b" srcName="rules_block">
+		<_field_string name="name^" />
+		<_field_real_rgb_color name="tint color" />
+		<_field_pad name="VJSKSPI" length="32" />
+		<_field_block name="states" max="16" srcguid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" srcName="states_block">
+			<_field_string name="name^" />
+			<_field_real_rgb_color name="color" />
+			<_field_short_integer name="counts as:neighbors" />
+			<_field_pad name="IZ" length="2" />
+			<_field_real name="initial placement weight" />
+			<_field_pad name="B" length="24" />
+			<_field_short_block_index name="zero" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="one" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="two" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="three" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="four" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="five" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="six" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="seven" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_short_block_index name="eight" targetGuid="bbbdd73b-eed2-3b41-8229-71b4516a8d30" targetName="states_block" />
+			<_field_pad name="BJVWP" length="2" />
+		</_field_block>
+	</_field_block>
+</plugin>

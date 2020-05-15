@@ -1,0 +1,437 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="raw geometry compressed" />
+		<item Name="use raw instance imposter verts" />
+		<item Name="valid and good to go" />
+		<item Name="build completed" />
+	</_field_long_flags>
+	<_field_string_id name="bsp name" />
+	<_field_long_integer name="checksum" />
+	<_field_string_id name="source metadata path" />
+	<_field_block name="instances" max="8192" srcguid="98a9f897-b3fe-9545-9c9a-c5a1d7b18c9f" srcName="instance_imposter_block">
+		<_field_short_integer name="group index" />
+		<_field_char_integer name="subpart_index" />
+		<_field_byte_flags name="flags">
+			<item Name="card" />
+			<item Name="poly" />
+			<item Name="rainbow box" />
+			<item Name="occlusion" />
+		</_field_byte_flags>
+	</_field_block>
+	<_field_block name="instance checksums" max="8192" srcguid="b09fcbbd-531e-ac41-8c9a-95389eab6747" srcName="instance_imposter_checksum_block">
+		<_field_string_id name="name" />
+		<_field_long_integer name="import checksum" />
+		<_field_long_integer name="transform checksum" />
+		<_field_real name="scale" />
+		<_field_real_vector_3d name="forward" />
+		<_field_real_vector_3d name="left" />
+		<_field_real_vector_3d name="up" />
+		<_field_real_point_3d name="position" />
+		<_field_short_integer name="imposter version" />
+		<_field_char_integer name="imposter policy" />
+		<_field_pad name="padefefrdapad" length="1" />
+		<_field_real name="bounding radius" />
+		<_field_real name="transition distance" />
+	</_field_block>
+	<_field_custom name="atlas info" />
+	<_field_short_integer name="atlas tile resolution" />
+	<_field_char_integer name="atlas x tile count" />
+	<_field_char_integer name="atlas y tile count" />
+	<_field_tag_reference name="atlas texture" validtags="bitm" />
+	<_field_custom name="mesh data" />
+	<_field_struct name="render geometry" />
+	<_field_explanation name="Render Geometry">
+All new Halo 3 render geometry definitions!</_field_explanation>
+	<_field_long_flags name="runtime flags*!">
+		<item Name="processed*!" />
+		<item Name="available*!" />
+		<item Name="has valid budgets (really)*!" />
+		<item Name="manual resource creation*!" />
+		<item Name="keep raw geometry*!" />
+		<item Name="dont use compressed vertex positions*!" />
+		<item Name="pca animation table sorted*!" />
+		<item Name="needs no lightmap uvs*!" />
+		<item Name="always needs lightmap uvs*!" />
+	</_field_long_flags>
+	<_field_block name="meshes*" max="8191" srcguid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" srcName="global_mesh_block">
+		<_field_block name="parts*" max="255" srcguid="9d84814a-eefb-b442-a3c9-56ace6530f18" srcName="part_block">
+			<_field_short_block_index name="render method index^*" targetGuid="735913b1-a534-c54d-9990-1631b0b5e573" targetName="global_geometry_material_block" />
+			<_field_short_block_index name="transparent sorting index*" targetGuid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" targetName="sorting_position_block" />
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_integer name="subpart start*" />
+			<_field_short_integer name="subpart count*" />
+			<_field_char_integer name="part type*" />
+			<_field_char_enum name="specialized render">
+				<item Name="none" />
+				<item Name="fail" />
+				<item Name="fur" />
+				<item Name="fur_stencil" />
+				<item Name="decal" />
+				<item Name="shield" />
+				<item Name="water" />
+				<item Name="lightmap_only" />
+				<item Name="hologram" />
+			</_field_char_enum>
+			<_field_word_flags name="part flags*">
+				<item Name="is water surface" />
+				<item Name="per vertex lightmap part" />
+				<item Name="debug flag instance part" />
+				<item Name="subparts has uberlights info" />
+				<item Name="draw cull distance medium" />
+				<item Name="draw cull distance close" />
+				<item Name="draw cull rendering shields" />
+				<item Name="cannot single pass render" />
+				<item Name="is transparent" />
+				<item Name="cannot two pass" />
+				<item Name="transparent should output depth for DoF#expensive" />
+				<item Name="do not include in static lightmap" />
+				<item Name="do not include in PVS generation" />
+				<item Name="draw cull rendering active camo" />
+			</_field_word_flags>
+			<_field_word_integer name="budget vertex count" />
+			<_field_short_enum name="tessellation">
+				<item Name="none" />
+				<item Name="fixed x4 faces" />
+				<item Name="fixed x9 faces" />
+				<item Name="fixed x36 faces" />
+			</_field_short_enum>
+		</_field_block>
+		<_field_block name="subparts*" max="65535" srcguid="339a1009-279c-6f43-b438-bfbab6971bae" srcName="subpart_block">
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_block_index name="part index*" targetGuid="9d84814a-eefb-b442-a3c9-56ace6530f18" targetName="part_block" />
+			<_field_word_integer name="budget vertex count" />
+			<_field_dword_integer name="analytical light index" />
+		</_field_block>
+		<_field_array name="vertex buffer indices*">
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+		</_field_array>
+		<_field_short_integer name="index buffer index*" />
+		<_field_short_integer name="index buffer tessellation*" />
+		<_field_word_flags name="mesh flags*">
+			<item Name="mesh has vertex color" />
+			<item Name="use region index for sorting" />
+			<item Name="use vertex buffers for indices" />
+			<item Name="mesh has per-instance lighting (do not modify)" />
+			<item Name="mesh is unindexed (do not modify)" />
+			<item Name="subpart were merged" />
+			<item Name="mesh has fur" />
+			<item Name="mesh has decal" />
+			<item Name="mesh doesnt use compressed position" />
+			<item Name="use uncompressed vertex format" />
+			<item Name="mesh is PCA" />
+			<item Name="mesh compression determined" />
+			<item Name="mesh has authored lightmap texture coords" />
+			<item Name="mesh has a useful set of second texture coords" />
+			<item Name="mesh has no lightmap" />
+			<item Name="per vertex lighting" />
+		</_field_word_flags>
+		<_field_char_integer name="rigid node index*" />
+		<_field_char_enum name="vertex type*">
+			<item Name="world" />
+			<item Name="rigid" />
+			<item Name="skinned" />
+			<item Name="particle_model" />
+			<item Name="flat world" />
+			<item Name="flat rigid" />
+			<item Name="flat skinned" />
+			<item Name="screen" />
+			<item Name="debug" />
+			<item Name="transparent" />
+			<item Name="particle" />
+			<item Name="unused0" />
+			<item Name="light_volume" />
+			<item Name="chud_simple" />
+			<item Name="chud_fancy" />
+			<item Name="decorator" />
+			<item Name="position only" />
+			<item Name="patchy_fog" />
+			<item Name="water" />
+			<item Name="ripple" />
+			<item Name="implicit geometry" />
+			<item Name="unused1" />
+			<item Name="world_tessellated" />
+			<item Name="rigid_tessellated" />
+			<item Name="skinned_tessellated" />
+			<item Name="shader_cache" />
+			<item Name="structure_instance_imposter" />
+			<item Name="object_instance_imposter" />
+			<item Name="rigid compressed" />
+			<item Name="skinned uncompressed" />
+			<item Name="light volume precompiled" />
+			<item Name="blendshape_rigid" />
+			<item Name="blendshape_rigid_blendshaped" />
+			<item Name="rigid_blendshaped" />
+			<item Name="blendshape_skinned" />
+			<item Name="blendshape_skinned_blendshaped" />
+			<item Name="skinned_blendshaped" />
+			<item Name="VirtualGeometryHWtess" />
+			<item Name="VirtualGeometryMemexport" />
+			<item Name="position_only" />
+			<item Name="VirtualGeometryDebug" />
+			<item Name="blendshapeRigidCompressed" />
+			<item Name="skinnedUncompressedBlendshaped" />
+			<item Name="blendshapeSkinnedCompressed" />
+			<item Name="tracer" />
+			<item Name="polyart" />
+			<item Name="vectorart" />
+			<item Name="rigid_boned" />
+			<item Name="rigid_boned_2uv" />
+			<item Name="blendshape_skinned_2uv" />
+			<item Name="blendshape_skinned_2uv_blendshaped" />
+			<item Name="skinned_2uv_blendshaped" />
+			<item Name="polyartUV" />
+			<item Name="blendshape_skinned_uncompressed_blendshaped" />
+		</_field_char_enum>
+		<_field_char_enum name="PRT vertex type*">
+			<item Name="No PRT" />
+			<item Name="PRT Ambient" />
+			<item Name="PRT Linear" />
+			<item Name="PRT Quadratic" />
+		</_field_char_enum>
+		<_field_char_enum name="lighting policy">
+			<item Name="vertex color" />
+			<item Name="single probe" />
+			<item Name="prt ambient" />
+		</_field_char_enum>
+		<_field_char_enum name="index buffer type*">
+			<item Name="DEFAULT" />
+			<item Name="line list" />
+			<item Name="line strip" />
+			<item Name="triangle list" />
+			<item Name="triangle fan" />
+			<item Name="triangle strip" />
+			<item Name="quad list" />
+			<item Name="rect list" />
+		</_field_char_enum>
+		<_field_pad name="BAASDFIR" length="1" />
+		<_field_short_integer name="pca mesh index*" />
+		<_field_block name="instance buckets*" max="2048" srcguid="6960550c-90c7-aa4b-a39f-96e0d9b27120" srcName="global_instance_bucket_block">
+			<_field_short_integer name="mesh index*" />
+			<_field_short_integer name="definition index*" />
+			<_field_block name="instances" max="65535" srcguid="2abc11bb-5252-ac4b-9937-57be8027853e" srcName="instance_index_word_block">
+				<_field_short_integer name="instance index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="water indices start" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_real name="runtime bounding radius:world units*!" />
+		<_field_real_point_3d name="runtime bounding offset*!" />
+		<_field_block name="vertex keys*" max="16777214" srcguid="18c1d1da-0f57-4e4e-af86-840b860bb1e0" srcName="vertexKeyBlock">
+			<_field_long_integer name="key1*" />
+			<_field_long_integer name="key2*" />
+		</_field_block>
+		<_field_short_block_index name="clone index*" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+		<_field_short_integer name="cumulative part count (initialized by PVS building code)" />
+	</_field_block>
+	<_field_block name="PCA Mesh Indices*" max="8191" srcguid="2313c647-271f-164d-97cd-4802cca9ffa4" srcName="PCAMeshIndexBlock">
+		<_field_long_block_index name="mesh index" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+	</_field_block>
+	<_field_block name="compression info*" max="65536" srcguid="acfd51fe-ff62-7847-a8c3-3054a023a96c" srcName="compression_info_block">
+		<_field_word_flags name="compression flags*">
+			<item Name="compressed position" />
+			<item Name="compressed texcoord" />
+			<item Name="compression optimized" />
+		</_field_word_flags>
+		<_field_pad name="JOJOBOMO" length="2" />
+		<_field_explanation name="WARNING">The following fields are mislabeled for legacy reasons.The actual order is:
+position_bounds.x0 position_bounds.x1 position_bounds.y0
+position_bounds.y1 position_bounds.z0 position_bounds.z1
+
+texcoord_bounds.x0 texcoord_bounds.x1
+texcoord_bounds.y0 texcoord_bounds.y1</_field_explanation>
+		<_field_real_point_3d name="position bounds 0*" />
+		<_field_real_point_3d name="position bounds 1*" />
+		<_field_real_point_2d name="texcoord bounds 0*" />
+		<_field_real_point_2d name="texcoord bounds 1*" />
+		<_field_real name="unused0*" />
+		<_field_real name="unused1*" />
+	</_field_block>
+	<_field_block name="part sorting position*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+		<_field_real_plane_3d name="plane*" />
+		<_field_real_point_3d name="position*" />
+		<_field_real name="radius*" />
+		<_field_array name="node indices*">
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+		</_field_array>
+		<_field_array name="node weights*">
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="user data*" max="64" srcguid="4e7ebe3b-5947-ef49-bdd0-1f257c2f2589" srcName="user_data_block">
+		<_field_struct name="user data header*" />
+		<_field_char_enum name="data type^*">
+			<item Name="PRT Info" />
+		</_field_char_enum>
+		<_field_char_integer name="data count*" />
+		<_field_word_integer name="data size*" />
+		<_field_data name="user data*" />
+	</_field_block>
+	<_field_block name="per mesh temporary*" max="8191" srcguid="b00a9052-0523-644b-ba86-1c132cc95c01" srcName="per_mesh_raw_data_block">
+		<_field_block name="raw vertices*" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="raw indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_block name="raw indices32*" max="2147483647" srcguid="8e4b5173-a55e-7849-8aaa-440d39e1c24c" srcName="indices_dword_block">
+			<_field_long_integer name="dword*" />
+		</_field_block>
+		<_field_block name="raw water data" max="1024" srcguid="44c6094f-ed93-124f-a9d7-54e16e7054c7" srcName="raw_water_block">
+			<_field_block name="raw water indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+				<_field_short_integer name="word*" />
+			</_field_block>
+			<_field_block name="raw water vertices*" max="65535" srcguid="8530f8b6-9ac9-b141-b7f4-54a85ae2008e" srcName="raw_water_append_block">
+				<_field_real_point_2d name="base texcoord*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="raw imposter data" max="65535" srcguid="53c748c2-9b67-7348-82d2-cc05bb8a57a9" srcName="raw_imposter_brdf_block">
+			<_field_real_rgb_color name="diffuse" />
+			<_field_real_rgb_color name="ambient" />
+			<_field_real_rgb_color name="specular" />
+			<_field_real name="shininess" />
+			<_field_real name="alpha" />
+			<_field_real_argb_color name="change color tint of diffuse" />
+			<_field_real_argb_color name="change color tint of specular" />
+		</_field_block>
+		<_field_block name="raw instance imposter verts" max="65535" srcguid="d44dcf22-e8fd-0e47-83fa-52ab7303b0cc" srcName="raw_instance_imposter_block">
+			<_field_real_vector_3d name="position" />
+			<_field_dword_integer name="color" />
+			<_field_real name="HDR scaler" />
+		</_field_block>
+		<_field_block name="raw blendshapes*" max="16777214" srcguid="93555e7d-7ef9-b94d-8e97-bc0072ec5ce9" srcName="raw_blendshape_block">
+			<_field_real_vector_3d name="position*" />
+			<_field_real_vector_3d name="normal*" />
+			<_field_real_argb_color name="tension and ambient occlusion*" />
+		</_field_block>
+		<_field_long_integer name="per vertex lighting vertex size" />
+		<_field_short_integer name="parameterized texture width" />
+		<_field_short_integer name="parameterized texture height" />
+		<_field_long_flags name="flags">
+			<item Name="indices are triangle strips" />
+			<item Name="indices are triangle lists" />
+			<item Name="indices are quad lists" />
+		</_field_long_flags>
+	</_field_block>
+	<_field_pad name="pad3" length="12" />
+	<_field_block name="per mesh node map*" max="8191" srcguid="03203bc2-a62a-0c45-8b24-97d96c50810f" srcName="per_mesh_node_map_block">
+		<_field_block name="node map*" max="255" srcguid="4a2adb77-c60e-0d49-822e-a7273026f880" srcName="node_map_byte_block">
+			<_field_char_integer name="node index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per mesh subpart visibility*" max="64" srcguid="32043606-be14-e047-818a-b223a6db06a2" srcName="per_mesh_subpart_visibility_block">
+		<_field_block name="bounding_sphere*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+			<_field_real_plane_3d name="plane*" />
+			<_field_real_point_3d name="position*" />
+			<_field_real name="radius*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_mesh_prt_data*" max="8191" srcguid="afa5cb7e-9d68-8543-be23-7733820d7068" srcName="per_mesh_prt_data_block">
+		<_field_data name="mesh pca data*" />
+		<_field_block name="per instance prt data" max="65535" srcguid="3da36c83-d937-db44-bbef-f22e6f5d159b" srcName="per_instance_prt_data_block">
+			<_field_data name="mesh pca data*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_instance_lightmap_texcoords*" max="65535" srcguid="d0a480f8-f8f9-ae48-99b4-36d5c2c552e5" srcName="per_instance_lightmap_texcoords_block">
+		<_field_block name="texture coordinates" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="texture coordinates (concise)" max="16777214" srcguid="33763d6e-f556-2d49-84f0-f79e0e70cd1a" srcName="raw_texcoord_block">
+			<_field_real_point_2d name="texcoord*" />
+		</_field_block>
+		<_field_short_integer name="vertex buffer index*" />
+		<_field_pad name="HTJIAHA" length="2" />
+	</_field_block>
+	<_field_block name="water bounding box block*" max="8191" srcguid="d0ac8ef2-fff1-a941-96b9-30d0c2a5a259" srcName="water_bounding_box_block">
+		<_field_short_integer name="mesh index" />
+		<_field_short_integer name="part index" />
+		<_field_real_point_3d name="position bounds 0" />
+		<_field_real_point_3d name="position bounds 1" />
+	</_field_block>
+	<_field_pageable_resource name="api resource" />
+	<_field_block name="Optional PVS data" max="16" srcguid="2c1e4000-d96b-e64b-aa5d-6719c5566afd" srcName="render_geometry_pvs_data_block">
+		<_field_block name="Visibility array" max="65535" srcguid="de41aacd-e9de-c64e-9e9b-798e24e8f6f7" srcName="render_geometry_pvs_data_visibility_value_block">
+			<_field_dword_integer name="Value" />
+		</_field_block>
+		<_field_block name="Per-block visibility offset array" max="65535" srcguid="ff84cb00-57d9-414e-a470-8748921e2594" srcName="render_geometry_pvs_data_visibility_index_block">
+			<_field_word_integer name="Index" />
+		</_field_block>
+		<_field_long_integer name="Bits per block" />
+		<_field_real_point_3d name="Object space grid AABB min" />
+		<_field_real_point_3d name="Object space grid AABB max" />
+		<_field_real_vector_3d name="Block Size" />
+		<_field_long_integer name="Num blocks X" />
+		<_field_long_integer name="Num blocks Y" />
+		<_field_long_integer name="Num blocks Z" />
+	</_field_block>
+	<_field_block name="shapeNames*" max="8192" srcguid="7ce68c39-7e3a-704f-b414-43f073d6fb49" srcName="shapeNameBlock">
+		<_field_long_integer name="key*" />
+		<_field_long_string name="name*" />
+	</_field_block>
+</plugin>

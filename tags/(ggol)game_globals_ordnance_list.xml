@@ -1,0 +1,30 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_real name="ordnance map width:world units" />
+	<_field_real name="random ordnance fanfare duration:seconds" />
+	<_field_tag_reference name="drop pod cleanup effect" validtags="effe" />
+	<_field_block name="ordnances" max="64" srcguid="668a14b1-74d4-b44c-ad66-b2f7996f17d5" srcName="GameGlobalsOrdnanceBlock">
+		<_field_string_id name="ordnance name^" />
+		<_field_string name="ordnance internal name!" />
+		<_field_long_integer name="activation point cost" />
+		<_field_string_id name="drop pod variant name#is pod with this power weapon, else if blank is remote strike (remote strike equipment)" />
+		<_field_tag_reference name="remote strike equipment" validtags="eqip" />
+		<_field_byte_integer name="sequence index" />
+		<_field_byte_integer name="equipment count" />
+		<_field_byte_flags name="premium flag">
+			<item Name="premium ordnance" />
+		</_field_byte_flags>
+		<_field_pad name="PAD" length="1" />
+		<_field_real_point_3d name="navpoint marker offset*!" />
+	</_field_block>
+	<_field_block name="ordnance remapping tables" max="64" srcguid="81d9ea9a-f1f9-d447-9d76-f0e61ea7c0e6" srcName="OrdnanceRemappingVariantBlock">
+		<_field_string_id name="name" />
+		<_field_string name="internal name!" />
+		<_field_block name="remappings" max="128" srcguid="61588cf6-bac7-b44a-ac13-88fd730acea8" srcName="OrdnanceRemappingBlock">
+			<_field_string_id name="from^#This must match one of the global ordnance objects." />
+			<_field_string_id name="to^#This must match one of the global ordnance objects." />
+		</_field_block>
+	</_field_block>
+	<_field_real name="equipment invulnerable seconds" />
+</plugin>

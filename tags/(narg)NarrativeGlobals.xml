@@ -1,0 +1,12 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="Narrative Flag Definitions" max="64" srcguid="fc8132b4-5e4c-6842-84e3-4e80246add95" srcName="NarrativeFlagDefinitionBlock">
+		<_field_long_integer name="Index" />
+		<_field_char_enum name="Type">
+			<item Name="Unknown" />
+			<item Name="Terminal" />
+		</_field_char_enum>
+		<_field_pad name="fsarewrsda" length="3" />
+	</_field_block>
+</plugin>

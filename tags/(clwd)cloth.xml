@@ -1,0 +1,49 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="Doesn't use wind" />
+		<item Name="Uses grid attach top" />
+	</_field_long_flags>
+	<_field_string_id name="marker attachment name" />
+	<_field_string_id name="secondary axis attachment name" />
+	<_field_tag_reference name="Shader" validtags="mat " />
+	<_field_explanation name="Default cloth vertices">if not importing from a render model, type a grid size</_field_explanation>
+	<_field_short_integer name="grid x dimension" />
+	<_field_short_integer name="grid y dimension" />
+	<_field_real name="grid spacing x" />
+	<_field_real name="grid spacing y" />
+	<_field_block name="collision spheres" max="8" srcguid="d4cf6811-ec1e-7a4c-85a5-ff5140abcdaf" srcName="collision_sphere_block">
+		<_field_string_id name="object marker name" />
+		<_field_real name="radius" />
+	</_field_block>
+	<_field_explanation name="Cloth Properties" />
+	<_field_struct name="properties" />
+	<_field_short_enum name="Integration type*">
+		<item Name="verlet" />
+	</_field_short_enum>
+	<_field_short_integer name="Number iterations#[1-8] sug 1" />
+	<_field_real name="weight#[-10.0 - 10.0] sug 1.0" />
+	<_field_real name="drag#[0.0 - 0.5] sug 0.07" />
+	<_field_real name="wind_scale#[0.0 - 3.0] sug 1.0" />
+	<_field_real name="wind_flappiness_scale#[0.0 - 1.0] sug 0.75" />
+	<_field_real name="longest_rod#[1.0 - 10.0] sug 3.5" />
+	<_field_pad name="WXLH" length="24" />
+	<_field_explanation name="Import or grid data" />
+	<_field_block name="vertices*" max="121" srcguid="25a0bf9c-39b3-2145-bc81-e2fdf791ed55" srcName="cloth_vertices_block">
+		<_field_real_point_3d name="initial position*" />
+		<_field_real_vector_2d name="uv*" />
+	</_field_block>
+	<_field_block name="indices*" max="1210" srcguid="ee25d037-d2d2-3542-a99b-29d10beaccdc" srcName="cloth_indices_block">
+		<_field_short_integer name="index*" />
+	</_field_block>
+	<_field_block name="strip indices*" max="1210" srcguid="ee25d037-d2d2-3542-a99b-29d10beaccdc" srcName="cloth_indices_block">
+		<_field_short_integer name="index*" />
+	</_field_block>
+	<_field_block name="links*" max="1210" srcguid="d4ca082a-e61e-764f-85a6-ff9140e35aaf" srcName="cloth_links_block">
+		<_field_real name="default_distance*" />
+		<_field_long_integer name="index1*" />
+		<_field_long_integer name="index2*" />
+		<_field_pad name="vmx_pad" length="4" />
+	</_field_block>
+</plugin>

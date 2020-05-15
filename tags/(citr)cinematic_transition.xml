@@ -1,0 +1,559 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="fade out from game" />
+	<_field_struct name="fade out from game struct" />
+	<_field_struct name="global fade" />
+	<_field_real_rgb_color name="fade_color^" />
+	<_field_long_integer name="fade time:hs_ticks" />
+	<_field_block name="sound global gain" max="1" srcguid="0cb6ce8a-e3e6-d74b-b3b6-6f6cb34f073c" srcName="cinematic_transition_global_gain_block">
+		<_field_real name="gain:dB^" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="sound class gains" max="8" srcguid="c2ceb596-820e-8a47-bcbf-8b27abf26bcf" srcName="cinematic_transition_sound_class_gain_block">
+		<_field_char_enum name="class^">
+			<item Name="projectile_impact" />
+			<item Name="projectile_detonation" />
+			<item Name="projectile_flyby" />
+			<item Name="projectile_detonation_lod" />
+			<item Name="weapon_fire" />
+			<item Name="weapon_ready" />
+			<item Name="weapon_reload" />
+			<item Name="weapon_empty" />
+			<item Name="weapon_charge" />
+			<item Name="weapon_overheat" />
+			<item Name="weapon_idle" />
+			<item Name="weapon_melee" />
+			<item Name="weapon_animation" />
+			<item Name="object_impacts" />
+			<item Name="particle_impacts" />
+			<item Name="weapon_fire_lod" />
+			<item Name="water_transitions" />
+			<item Name="lowpass_effects" />
+			<item Name="unit_footsteps" />
+			<item Name="unit_dialog" />
+			<item Name="unit_animation" />
+			<item Name="unit_unused!" />
+			<item Name="vehicle_collision" />
+			<item Name="vehicle_engine" />
+			<item Name="vehicle_animation" />
+			<item Name="vehicle_engine_lod" />
+			<item Name="device_door" />
+			<item Name="device_unused0!" />
+			<item Name="device_machinery" />
+			<item Name="device_stationary" />
+			<item Name="device_unused1!" />
+			<item Name="device_unused2!" />
+			<item Name="music" />
+			<item Name="ambient_nature" />
+			<item Name="ambient_machinery" />
+			<item Name="ambient_stationary" />
+			<item Name="huge_ass" />
+			<item Name="object_looping" />
+			<item Name="cinematic_music" />
+			<item Name="unknown_unused0!" />
+			<item Name="unknown_unused1!" />
+			<item Name="ambient_flock" />
+			<item Name="no_pad" />
+			<item Name="no_pad_stationary" />
+			<item Name="equipment_effect" />
+			<item Name="mission_dialog" />
+			<item Name="cinematic_dialog" />
+			<item Name="scripted_cinematic_foley" />
+			<item Name="game_event" />
+			<item Name="ui" />
+			<item Name="test" />
+			<item Name="multiplayer_dialog" />
+			<item Name="ambient_nature_details" />
+			<item Name="ambient_machinery_details" />
+			<item Name="inside_surround_tail" />
+			<item Name="outside_surround_tail" />
+			<item Name="vehicle_detonation" />
+			<item Name="ambient_detonation" />
+			<item Name="first_person_inside" />
+			<item Name="first_person_outside" />
+			<item Name="first_person_anywhere" />
+			<item Name="space_projectile_detonation" />
+			<item Name="space_projectile_flyby" />
+			<item Name="space_vehicle_engine" />
+			<item Name="space_weapon_fire" />
+			<item Name="player_voice_team" />
+			<item Name="player_voice_proxy" />
+			<item Name="projectile_impact_postpone" />
+			<item Name="unit_footsteps_postpone" />
+			<item Name="weapon_ready_third_person" />
+			<item Name="ui_music" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_real name="gain:dB" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="stop sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="start sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="resume looping sounds" max="4" srcguid="bc65feba-539f-b04c-84b2-ed70a68f0ecf" srcName="cinematic_transition_looping_sound_reference_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+	</_field_block>
+	<_field_block name="looping sound states" max="4" srcguid="863e7b82-ac2b-8247-af5e-4c043f3b687e" srcName="cinematic_transition_looping_sound_state_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		<_field_real name="scale" />
+		<_field_word_flags name="alternate">
+			<item Name="alternate" />
+		</_field_word_flags>
+		<_field_word_flags name="layers">
+			<item Name="none!" />
+			<item Name="layer 1" />
+			<item Name="layer 2" />
+			<item Name="layer 3" />
+			<item Name="layer 4" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_long_integer name="sleep time:hs_ticks" />
+	<_field_custom name="fade in to cinematic" />
+	<_field_struct name="fade in to cinematic struct" />
+	<_field_struct name="global fade" />
+	<_field_real_rgb_color name="fade_color^" />
+	<_field_long_integer name="fade time:hs_ticks" />
+	<_field_block name="sound global gain" max="1" srcguid="0cb6ce8a-e3e6-d74b-b3b6-6f6cb34f073c" srcName="cinematic_transition_global_gain_block">
+		<_field_real name="gain:dB^" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="sound class gains" max="8" srcguid="c2ceb596-820e-8a47-bcbf-8b27abf26bcf" srcName="cinematic_transition_sound_class_gain_block">
+		<_field_char_enum name="class^">
+			<item Name="projectile_impact" />
+			<item Name="projectile_detonation" />
+			<item Name="projectile_flyby" />
+			<item Name="projectile_detonation_lod" />
+			<item Name="weapon_fire" />
+			<item Name="weapon_ready" />
+			<item Name="weapon_reload" />
+			<item Name="weapon_empty" />
+			<item Name="weapon_charge" />
+			<item Name="weapon_overheat" />
+			<item Name="weapon_idle" />
+			<item Name="weapon_melee" />
+			<item Name="weapon_animation" />
+			<item Name="object_impacts" />
+			<item Name="particle_impacts" />
+			<item Name="weapon_fire_lod" />
+			<item Name="water_transitions" />
+			<item Name="lowpass_effects" />
+			<item Name="unit_footsteps" />
+			<item Name="unit_dialog" />
+			<item Name="unit_animation" />
+			<item Name="unit_unused!" />
+			<item Name="vehicle_collision" />
+			<item Name="vehicle_engine" />
+			<item Name="vehicle_animation" />
+			<item Name="vehicle_engine_lod" />
+			<item Name="device_door" />
+			<item Name="device_unused0!" />
+			<item Name="device_machinery" />
+			<item Name="device_stationary" />
+			<item Name="device_unused1!" />
+			<item Name="device_unused2!" />
+			<item Name="music" />
+			<item Name="ambient_nature" />
+			<item Name="ambient_machinery" />
+			<item Name="ambient_stationary" />
+			<item Name="huge_ass" />
+			<item Name="object_looping" />
+			<item Name="cinematic_music" />
+			<item Name="unknown_unused0!" />
+			<item Name="unknown_unused1!" />
+			<item Name="ambient_flock" />
+			<item Name="no_pad" />
+			<item Name="no_pad_stationary" />
+			<item Name="equipment_effect" />
+			<item Name="mission_dialog" />
+			<item Name="cinematic_dialog" />
+			<item Name="scripted_cinematic_foley" />
+			<item Name="game_event" />
+			<item Name="ui" />
+			<item Name="test" />
+			<item Name="multiplayer_dialog" />
+			<item Name="ambient_nature_details" />
+			<item Name="ambient_machinery_details" />
+			<item Name="inside_surround_tail" />
+			<item Name="outside_surround_tail" />
+			<item Name="vehicle_detonation" />
+			<item Name="ambient_detonation" />
+			<item Name="first_person_inside" />
+			<item Name="first_person_outside" />
+			<item Name="first_person_anywhere" />
+			<item Name="space_projectile_detonation" />
+			<item Name="space_projectile_flyby" />
+			<item Name="space_vehicle_engine" />
+			<item Name="space_weapon_fire" />
+			<item Name="player_voice_team" />
+			<item Name="player_voice_proxy" />
+			<item Name="projectile_impact_postpone" />
+			<item Name="unit_footsteps_postpone" />
+			<item Name="weapon_ready_third_person" />
+			<item Name="ui_music" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_real name="gain:dB" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="stop sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="start sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="resume looping sounds" max="4" srcguid="bc65feba-539f-b04c-84b2-ed70a68f0ecf" srcName="cinematic_transition_looping_sound_reference_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+	</_field_block>
+	<_field_block name="looping sound states" max="4" srcguid="863e7b82-ac2b-8247-af5e-4c043f3b687e" srcName="cinematic_transition_looping_sound_state_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		<_field_real name="scale" />
+		<_field_word_flags name="alternate">
+			<item Name="alternate" />
+		</_field_word_flags>
+		<_field_word_flags name="layers">
+			<item Name="none!" />
+			<item Name="layer 1" />
+			<item Name="layer 2" />
+			<item Name="layer 3" />
+			<item Name="layer 4" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_long_integer name="sleep time:hs_ticks" />
+	<_field_custom name="fade out from cinematic" />
+	<_field_struct name="fade out from cinematic struct" />
+	<_field_struct name="global fade" />
+	<_field_real_rgb_color name="fade_color^" />
+	<_field_long_integer name="fade time:hs_ticks" />
+	<_field_block name="sound global gain" max="1" srcguid="0cb6ce8a-e3e6-d74b-b3b6-6f6cb34f073c" srcName="cinematic_transition_global_gain_block">
+		<_field_real name="gain:dB^" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="sound class gains" max="8" srcguid="c2ceb596-820e-8a47-bcbf-8b27abf26bcf" srcName="cinematic_transition_sound_class_gain_block">
+		<_field_char_enum name="class^">
+			<item Name="projectile_impact" />
+			<item Name="projectile_detonation" />
+			<item Name="projectile_flyby" />
+			<item Name="projectile_detonation_lod" />
+			<item Name="weapon_fire" />
+			<item Name="weapon_ready" />
+			<item Name="weapon_reload" />
+			<item Name="weapon_empty" />
+			<item Name="weapon_charge" />
+			<item Name="weapon_overheat" />
+			<item Name="weapon_idle" />
+			<item Name="weapon_melee" />
+			<item Name="weapon_animation" />
+			<item Name="object_impacts" />
+			<item Name="particle_impacts" />
+			<item Name="weapon_fire_lod" />
+			<item Name="water_transitions" />
+			<item Name="lowpass_effects" />
+			<item Name="unit_footsteps" />
+			<item Name="unit_dialog" />
+			<item Name="unit_animation" />
+			<item Name="unit_unused!" />
+			<item Name="vehicle_collision" />
+			<item Name="vehicle_engine" />
+			<item Name="vehicle_animation" />
+			<item Name="vehicle_engine_lod" />
+			<item Name="device_door" />
+			<item Name="device_unused0!" />
+			<item Name="device_machinery" />
+			<item Name="device_stationary" />
+			<item Name="device_unused1!" />
+			<item Name="device_unused2!" />
+			<item Name="music" />
+			<item Name="ambient_nature" />
+			<item Name="ambient_machinery" />
+			<item Name="ambient_stationary" />
+			<item Name="huge_ass" />
+			<item Name="object_looping" />
+			<item Name="cinematic_music" />
+			<item Name="unknown_unused0!" />
+			<item Name="unknown_unused1!" />
+			<item Name="ambient_flock" />
+			<item Name="no_pad" />
+			<item Name="no_pad_stationary" />
+			<item Name="equipment_effect" />
+			<item Name="mission_dialog" />
+			<item Name="cinematic_dialog" />
+			<item Name="scripted_cinematic_foley" />
+			<item Name="game_event" />
+			<item Name="ui" />
+			<item Name="test" />
+			<item Name="multiplayer_dialog" />
+			<item Name="ambient_nature_details" />
+			<item Name="ambient_machinery_details" />
+			<item Name="inside_surround_tail" />
+			<item Name="outside_surround_tail" />
+			<item Name="vehicle_detonation" />
+			<item Name="ambient_detonation" />
+			<item Name="first_person_inside" />
+			<item Name="first_person_outside" />
+			<item Name="first_person_anywhere" />
+			<item Name="space_projectile_detonation" />
+			<item Name="space_projectile_flyby" />
+			<item Name="space_vehicle_engine" />
+			<item Name="space_weapon_fire" />
+			<item Name="player_voice_team" />
+			<item Name="player_voice_proxy" />
+			<item Name="projectile_impact_postpone" />
+			<item Name="unit_footsteps_postpone" />
+			<item Name="weapon_ready_third_person" />
+			<item Name="ui_music" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_real name="gain:dB" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="stop sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="start sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="resume looping sounds" max="4" srcguid="bc65feba-539f-b04c-84b2-ed70a68f0ecf" srcName="cinematic_transition_looping_sound_reference_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+	</_field_block>
+	<_field_block name="looping sound states" max="4" srcguid="863e7b82-ac2b-8247-af5e-4c043f3b687e" srcName="cinematic_transition_looping_sound_state_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		<_field_real name="scale" />
+		<_field_word_flags name="alternate">
+			<item Name="alternate" />
+		</_field_word_flags>
+		<_field_word_flags name="layers">
+			<item Name="none!" />
+			<item Name="layer 1" />
+			<item Name="layer 2" />
+			<item Name="layer 3" />
+			<item Name="layer 4" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_long_integer name="sleep time:hs_ticks" />
+	<_field_custom name="fade post core load" />
+	<_field_struct name="fade post core load struct" />
+	<_field_struct name="global fade" />
+	<_field_real_rgb_color name="fade_color^" />
+	<_field_long_integer name="fade time:hs_ticks" />
+	<_field_block name="sound global gain" max="1" srcguid="0cb6ce8a-e3e6-d74b-b3b6-6f6cb34f073c" srcName="cinematic_transition_global_gain_block">
+		<_field_real name="gain:dB^" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="sound class gains" max="8" srcguid="c2ceb596-820e-8a47-bcbf-8b27abf26bcf" srcName="cinematic_transition_sound_class_gain_block">
+		<_field_char_enum name="class^">
+			<item Name="projectile_impact" />
+			<item Name="projectile_detonation" />
+			<item Name="projectile_flyby" />
+			<item Name="projectile_detonation_lod" />
+			<item Name="weapon_fire" />
+			<item Name="weapon_ready" />
+			<item Name="weapon_reload" />
+			<item Name="weapon_empty" />
+			<item Name="weapon_charge" />
+			<item Name="weapon_overheat" />
+			<item Name="weapon_idle" />
+			<item Name="weapon_melee" />
+			<item Name="weapon_animation" />
+			<item Name="object_impacts" />
+			<item Name="particle_impacts" />
+			<item Name="weapon_fire_lod" />
+			<item Name="water_transitions" />
+			<item Name="lowpass_effects" />
+			<item Name="unit_footsteps" />
+			<item Name="unit_dialog" />
+			<item Name="unit_animation" />
+			<item Name="unit_unused!" />
+			<item Name="vehicle_collision" />
+			<item Name="vehicle_engine" />
+			<item Name="vehicle_animation" />
+			<item Name="vehicle_engine_lod" />
+			<item Name="device_door" />
+			<item Name="device_unused0!" />
+			<item Name="device_machinery" />
+			<item Name="device_stationary" />
+			<item Name="device_unused1!" />
+			<item Name="device_unused2!" />
+			<item Name="music" />
+			<item Name="ambient_nature" />
+			<item Name="ambient_machinery" />
+			<item Name="ambient_stationary" />
+			<item Name="huge_ass" />
+			<item Name="object_looping" />
+			<item Name="cinematic_music" />
+			<item Name="unknown_unused0!" />
+			<item Name="unknown_unused1!" />
+			<item Name="ambient_flock" />
+			<item Name="no_pad" />
+			<item Name="no_pad_stationary" />
+			<item Name="equipment_effect" />
+			<item Name="mission_dialog" />
+			<item Name="cinematic_dialog" />
+			<item Name="scripted_cinematic_foley" />
+			<item Name="game_event" />
+			<item Name="ui" />
+			<item Name="test" />
+			<item Name="multiplayer_dialog" />
+			<item Name="ambient_nature_details" />
+			<item Name="ambient_machinery_details" />
+			<item Name="inside_surround_tail" />
+			<item Name="outside_surround_tail" />
+			<item Name="vehicle_detonation" />
+			<item Name="ambient_detonation" />
+			<item Name="first_person_inside" />
+			<item Name="first_person_outside" />
+			<item Name="first_person_anywhere" />
+			<item Name="space_projectile_detonation" />
+			<item Name="space_projectile_flyby" />
+			<item Name="space_vehicle_engine" />
+			<item Name="space_weapon_fire" />
+			<item Name="player_voice_team" />
+			<item Name="player_voice_proxy" />
+			<item Name="projectile_impact_postpone" />
+			<item Name="unit_footsteps_postpone" />
+			<item Name="weapon_ready_third_person" />
+			<item Name="ui_music" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_real name="gain:dB" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="stop sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="start sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="resume looping sounds" max="4" srcguid="bc65feba-539f-b04c-84b2-ed70a68f0ecf" srcName="cinematic_transition_looping_sound_reference_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+	</_field_block>
+	<_field_block name="looping sound states" max="4" srcguid="863e7b82-ac2b-8247-af5e-4c043f3b687e" srcName="cinematic_transition_looping_sound_state_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		<_field_real name="scale" />
+		<_field_word_flags name="alternate">
+			<item Name="alternate" />
+		</_field_word_flags>
+		<_field_word_flags name="layers">
+			<item Name="none!" />
+			<item Name="layer 1" />
+			<item Name="layer 2" />
+			<item Name="layer 3" />
+			<item Name="layer 4" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_long_integer name="sleep time:hs_ticks" />
+	<_field_custom name="fade in to game" />
+	<_field_struct name="fade in to game struct" />
+	<_field_struct name="global fade" />
+	<_field_real_rgb_color name="fade_color^" />
+	<_field_long_integer name="fade time:hs_ticks" />
+	<_field_block name="sound global gain" max="1" srcguid="0cb6ce8a-e3e6-d74b-b3b6-6f6cb34f073c" srcName="cinematic_transition_global_gain_block">
+		<_field_real name="gain:dB^" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="sound class gains" max="8" srcguid="c2ceb596-820e-8a47-bcbf-8b27abf26bcf" srcName="cinematic_transition_sound_class_gain_block">
+		<_field_char_enum name="class^">
+			<item Name="projectile_impact" />
+			<item Name="projectile_detonation" />
+			<item Name="projectile_flyby" />
+			<item Name="projectile_detonation_lod" />
+			<item Name="weapon_fire" />
+			<item Name="weapon_ready" />
+			<item Name="weapon_reload" />
+			<item Name="weapon_empty" />
+			<item Name="weapon_charge" />
+			<item Name="weapon_overheat" />
+			<item Name="weapon_idle" />
+			<item Name="weapon_melee" />
+			<item Name="weapon_animation" />
+			<item Name="object_impacts" />
+			<item Name="particle_impacts" />
+			<item Name="weapon_fire_lod" />
+			<item Name="water_transitions" />
+			<item Name="lowpass_effects" />
+			<item Name="unit_footsteps" />
+			<item Name="unit_dialog" />
+			<item Name="unit_animation" />
+			<item Name="unit_unused!" />
+			<item Name="vehicle_collision" />
+			<item Name="vehicle_engine" />
+			<item Name="vehicle_animation" />
+			<item Name="vehicle_engine_lod" />
+			<item Name="device_door" />
+			<item Name="device_unused0!" />
+			<item Name="device_machinery" />
+			<item Name="device_stationary" />
+			<item Name="device_unused1!" />
+			<item Name="device_unused2!" />
+			<item Name="music" />
+			<item Name="ambient_nature" />
+			<item Name="ambient_machinery" />
+			<item Name="ambient_stationary" />
+			<item Name="huge_ass" />
+			<item Name="object_looping" />
+			<item Name="cinematic_music" />
+			<item Name="unknown_unused0!" />
+			<item Name="unknown_unused1!" />
+			<item Name="ambient_flock" />
+			<item Name="no_pad" />
+			<item Name="no_pad_stationary" />
+			<item Name="equipment_effect" />
+			<item Name="mission_dialog" />
+			<item Name="cinematic_dialog" />
+			<item Name="scripted_cinematic_foley" />
+			<item Name="game_event" />
+			<item Name="ui" />
+			<item Name="test" />
+			<item Name="multiplayer_dialog" />
+			<item Name="ambient_nature_details" />
+			<item Name="ambient_machinery_details" />
+			<item Name="inside_surround_tail" />
+			<item Name="outside_surround_tail" />
+			<item Name="vehicle_detonation" />
+			<item Name="ambient_detonation" />
+			<item Name="first_person_inside" />
+			<item Name="first_person_outside" />
+			<item Name="first_person_anywhere" />
+			<item Name="space_projectile_detonation" />
+			<item Name="space_projectile_flyby" />
+			<item Name="space_vehicle_engine" />
+			<item Name="space_weapon_fire" />
+			<item Name="player_voice_team" />
+			<item Name="player_voice_proxy" />
+			<item Name="projectile_impact_postpone" />
+			<item Name="unit_footsteps_postpone" />
+			<item Name="weapon_ready_third_person" />
+			<item Name="ui_music" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_real name="gain:dB" />
+		<_field_long_integer name="time:hs_ticks" />
+	</_field_block>
+	<_field_block name="stop sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="start sounds" max="4" srcguid="c9ccd713-3085-9843-8535-7f682d49ad3a" srcName="cinematic_transition_sound_reference_block">
+		<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_block name="resume looping sounds" max="4" srcguid="bc65feba-539f-b04c-84b2-ed70a68f0ecf" srcName="cinematic_transition_looping_sound_reference_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+	</_field_block>
+	<_field_block name="looping sound states" max="4" srcguid="863e7b82-ac2b-8247-af5e-4c043f3b687e" srcName="cinematic_transition_looping_sound_state_block">
+		<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		<_field_real name="scale" />
+		<_field_word_flags name="alternate">
+			<item Name="alternate" />
+		</_field_word_flags>
+		<_field_word_flags name="layers">
+			<item Name="none!" />
+			<item Name="layer 1" />
+			<item Name="layer 2" />
+			<item Name="layer 3" />
+			<item Name="layer 4" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_long_integer name="sleep time:hs_ticks" />
+</plugin>

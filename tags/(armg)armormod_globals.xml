@@ -1,0 +1,34 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="explode on death" />
+	<_field_tag_reference name="projectile#spawned by Explode On Death armormod" validtags="proj" />
+	<_field_explanation name="aural enhancement" />
+	<_field_tag_reference name="looping sound effect" validtags="lsnd" />
+	<_field_real name="near threshold:world units#beyond this distance volume is attenuated, far audio settings are applied" />
+	<_field_real name="attenuation pct#how much to attenuate volume" />
+	<_field_block name="near audio settings" max="1" srcguid="c49c426d-ea18-2d4c-8c42-9766c595aef5" srcName="aural_enhancement_audio_settings_block">
+		<_field_real name="frequency#beeps per second" />
+		<_field_real name="duty cycle pct" />
+	</_field_block>
+	<_field_block name="far audio settings" max="1" srcguid="c49c426d-ea18-2d4c-8c42-9766c595aef5" srcName="aural_enhancement_audio_settings_block">
+		<_field_real name="frequency#beeps per second" />
+		<_field_real name="duty cycle pct" />
+	</_field_block>
+	<_field_explanation name="Enhanced HUD (battle awareness)" />
+	<_field_real name="range:world units" />
+	<_field_explanation name="Stealth" />
+	<_field_byte_flags name="flags">
+		<item Name="is invisible to X-ray" />
+		<item Name="pings invisible on radar edge on foot#if enabled player will not ping on the radar gutter (circumference of radar) when on foot" />
+		<item Name="pings invisible on radar edge if driving#if enabled player will not ping on the radar gutter (circumference of radar) when driving a vehicle" />
+		<item Name="pings invisible on radar edge if in vehicle#if enabled player will not ping on the radar gutter (circumference of radar) when riding in a vehicle, in any seat" />
+		<item Name="pings invisible on radar edge only for enemy team#if this is enabled, stealth player will only not ping for the enemy team" />
+		<item Name="is invisible to turrets when camo is active" />
+		<item Name="use mod ping frequency and duration#enabling this will use the values set below for the radar ping and frequency" />
+		<item Name="disable footstep audio" />
+	</_field_byte_flags>
+	<_field_pad name="agspad" length="3" />
+	<_field_real name="stealth ping frequency:seconds#how often stealthed unit will ping" />
+	<_field_real name="stealth ping duration:seconds#length of ping" />
+</plugin>

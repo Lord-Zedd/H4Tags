@@ -1,0 +1,15 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="seasons" max="3" srcguid="3c44ea3f-c0b8-6946-a99a-353268153106" srcName="InfinityMissionSeasonImagesDefinition">
+		<_field_explanation name="Season Images">This block should contain a season's worth of Infinity mission images</_field_explanation>
+		<_field_long_integer name="season number^" />
+		<_field_tag_reference name="epilogue image#displayed where the missions would be, when the epilogue is selected" validtags="bitm" />
+		<_field_block name="season images" max="55" srcguid="55e7cf0c-7034-f34b-ac27-69a376b16ec8" srcName="InfinityMissionImagesDefinition">
+			<_field_tag_reference name="card image^" validtags="bitm" />
+			<_field_tag_reference name="detail image" validtags="bitm" />
+			<_field_tag_reference name="lobby image" validtags="bitm" />
+			<_field_tag_reference name="match image" validtags="bitm" />
+		</_field_block>
+	</_field_block>
+</plugin>

@@ -1,0 +1,18 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="map_variants" max="1024" srcguid="82b10aea-85d7-894e-8e15-775dc9b4205d" srcName="single_variant_block">
+		<_field_data name="metadata" />
+		<_field_data name="full_data" />
+		<_field_long_string name="filename^" />
+	</_field_block>
+	<_field_block name="game_variants" max="1024" srcguid="82b10aea-85d7-894e-8e15-775dc9b4205d" srcName="single_variant_block">
+		<_field_data name="metadata" />
+		<_field_data name="full_data" />
+		<_field_long_string name="filename^" />
+	</_field_block>
+	<_field_block name="fallback_hoppers" max="300" srcguid="f3a8d26f-b2bf-5441-8162-dc581d7fc254" srcName="FallbackHopperFileBlock">
+		<_field_data name="file_data" />
+		<_field_long_string name="filename^" />
+	</_field_block>
+</plugin>

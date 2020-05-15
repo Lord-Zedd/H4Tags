@@ -1,0 +1,9 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_integer name="job guid" />
+	<_field_block name="lightmap BSP references" max="32" srcguid="335adcff-8b24-a24b-bc16-903eabbc58e9" srcName="scenario_lightmap_bsp_data_reference_block">
+		<_field_tag_reference name="lightmap bsp data reference" validtags="Lbsp" />
+		<_field_tag_reference name="wetness bsp reference" validtags="wetn" />
+	</_field_block>
+</plugin>

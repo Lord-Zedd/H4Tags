@@ -1,0 +1,54 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="custom playback" />
+	<_field_struct name="cinematic playback!" />
+	<_field_long_block_flags name="scenes!" targetGuid="671ec177-5b72-544b-9168-08bf593a841d" targetName="cinematic_scene_reference_block" />
+	<_field_long_block_flags name="scenes expanded!" targetGuid="671ec177-5b72-544b-9168-08bf593a841d" targetName="cinematic_scene_reference_block" />
+	<_field_block name="shots!" max="32" srcguid="b4a6e7bc-27e1-c944-beae-bc13d21cf591" srcName="cinematic_shot_playback_data_block">
+		<_field_array name="shot flags!">
+			<_field_dword_integer name="shot flag data" />
+			<_field_dword_integer name="shot flag data" />
+		</_field_array>
+	</_field_block>
+	<_field_long_integer name="bsp zone flags!" />
+	<_field_struct name="scenario and zone set" />
+	<_field_custom name="custom ui" />
+	<_field_tag_reference name="scenario!" validtags="scnr" />
+	<_field_long_integer name="zone set!" />
+	<_field_string_id name="name^" />
+	<_field_short_enum name="channel type">
+		<item Name="letterbox" />
+		<item Name="briefing" />
+		<item Name="perspective" />
+		<item Name="vignette" />
+		<item Name="bink briefing" />
+		<item Name="bink (full screen)" />
+	</_field_short_enum>
+	<_field_pad name="PADDING" length="2" />
+	<_field_long_flags name="flags">
+		<item Name="Outro" />
+		<item Name="Extra Memory Bink" />
+		<item Name="Opaque Bink" />
+		<item Name="Don't Stretch Bink" />
+		<item Name="Don't Force Hologram Render" />
+	</_field_long_flags>
+	<_field_real name="easing in time#seconds" />
+	<_field_real name="easing out time#seconds" />
+	<_field_tag_reference name="transition settings" validtags="citr" />
+	<_field_tag_reference name="bink movie" validtags="bink" />
+	<_field_string name="bink movie on disc" />
+	<_field_custom name="Header" />
+	<_field_struct name="header" />
+	<_field_data name="script{ }" />
+	<_field_block name="scenes" max="32" srcguid="671ec177-5b72-544b-9168-08bf593a841d" srcName="cinematic_scene_reference_block">
+		<_field_tag_reference name="scene" validtags="cisc" />
+		<_field_tag_reference name="data" validtags="cisd" />
+	</_field_block>
+	<_field_custom name="Footer" />
+	<_field_struct name="footer" />
+	<_field_data name="script{ }" />
+	<_field_custom name="If The Player Skips" />
+	<_field_struct name="early exit" />
+	<_field_data name="script{ }" />
+</plugin>

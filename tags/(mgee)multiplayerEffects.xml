@@ -1,0 +1,8 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="effects" max="2048" srcguid="19b7e8f6-eec1-134d-aa4a-949c284c8cdc" srcName="multiplayerEffectsBlock">
+		<_field_string_id name="name^" />
+		<_field_tag_reference name="effect" validtags="effe" />
+	</_field_block>
+</plugin>

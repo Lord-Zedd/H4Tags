@@ -1,0 +1,42 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="link to render model" />
+	<_field_tag_reference name="render model*" validtags="mode" />
+	<_field_block name="render model permutation names!" max="32767" srcguid="ab4c9a54-dec2-9945-8e98-c68ec87e36aa" srcName="muffin_permutation_name_block">
+		<_field_string_id name="name^" />
+	</_field_block>
+	<_field_long_integer name="render model permutation name valid count!" />
+	<_field_block name="muffin markers{default markers}#defines where muffins appear, how often, and which types" max="32767" srcguid="5b18bf02-e4bd-1045-94c0-c253327f1a01" srcName="muffin_marker_block">
+		<_field_string_id name="name^" />
+		<_field_word_integer name="muffinage chance:percent [0 - 100]#how often muffins will appear on this marker" />
+		<_field_word_block_flags name="allowed muffin types" targetGuid="1314b30e-8fe6-4048-b0e7-c08851eed254" targetName="global_muffin_type_block" />
+	</_field_block>
+	<_field_block name="muffin types" max="16" srcguid="1314b30e-8fe6-4048-b0e7-c08851eed254" srcName="global_muffin_type_block">
+		<_field_short_block_index name="mesh^" targetGuid="ab4c9a54-dec2-9945-8e98-c68ec87e36aa" targetName="muffin_permutation_name_block" />
+		<_field_word_flags name="flags">
+			<item Name="disable for debug" />
+			<item Name="jump to marker on transition#forces the muffins to the new marker location when they are transferred to a new model, may cause popping if the markers aren't aligned" />
+		</_field_word_flags>
+		<_field_real_bounds name="spawn delay:seconds#how long to wait before spawning these muffins" />
+		<_field_explanation name="SCALE">animates the size of the muffin</_field_explanation>
+		<_field_real_bounds name="random scale:[0-1]" />
+		<_field_struct name="initial growth" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="growth time:seconds" />
+		<_field_struct name="periodic noise" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_explanation name="JIGGLE">Jigglypuff will kick your ass...</_field_explanation>
+		<_field_real name="jiggle:[0.0 - 1.0]#how much the muffin jiggles (0 = perfectly rigid, 1 = full jiggle, subject to parameters below)" />
+		<_field_real name="jiggle spring length:world units#spring length affects how the spring reacts to the model moving (this should be approximately how far the muffin sticks out from the model)" />
+		<_field_real name="jiggle spring strength:[0.01 - 1.0]#spring strength affects how fast the muffins jiggle (higher numbers jiggle faster)" />
+		<_field_real name="jiggle velocity damp:[0.5 - 0.95]#velocity damp affects how long the muffins jiggle (the higher numbers jiggle exponentially longer, 1.0 will never stop jiggling)" />
+		<_field_real name="jiggle max velocity:world units per frame#this just clamps how fast the muffin can jiggle, to keep it from exploding" />
+		<_field_explanation name="DEATH">... and then you will be dead.</_field_explanation>
+		<_field_real_bounds name="lifetime:seconds#how long before the muffins die" />
+		<_field_real name="immortality chance:[0.0 - 1.0]#the chance that any give muffin of this type will live forever" />
+		<_field_tag_reference name="death effect" validtags="effe" />
+	</_field_block>
+</plugin>

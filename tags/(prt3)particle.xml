@@ -1,0 +1,1205 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="main flags">
+		<item Name="dies at rest" />
+		<item Name="dies on structure collision" />
+		<item Name="dies in water" />
+		<item Name="dies in air" />
+		<item Name="has sweetener" />
+		<item Name="uses cheap shader" />
+	</_field_long_flags>
+	<_field_block name="attachments" max="4" srcguid="729630db-6439-fd40-8db1-932ad3071736" srcName="attachment_block">
+		<_field_byte_flags name="flags">
+			<item Name="disabled for debugging" />
+		</_field_byte_flags>
+		<_field_pad name="gerrrrr" length="3" />
+		<_field_tag_reference name="type" validtags="effe, sndo, foot" />
+		<_field_char_enum name="trigger">
+			<item Name="birth" />
+			<item Name="collision" />
+			<item Name="death" />
+			<item Name="first collision" />
+		</_field_char_enum>
+		<_field_byte_integer name="skip fraction:[0-127]#0 will always play, 127 will be extremely rare" />
+		<_field_char_enum name="primary scale">
+			<item Name="particle age" />
+			<item Name="system age{emitter age}" />
+			<item Name="particle random" />
+			<item Name="system random{emitter random}" />
+			<item Name="particle correlation 1{particle random 1}" />
+			<item Name="particle correlation 2{particle random 2}" />
+			<item Name="particle correlation 3{particle random 3}" />
+			<item Name="particle correlation 4{particle random 4}" />
+			<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+			<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+			<item Name="particle emission time{emitter time}{particle emit time}" />
+			<item Name="location lod{system lod}" />
+			<item Name="game time" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="particle rotation{physics rotation}" />
+			<item Name="location random" />
+			<item Name="distance from emitter" />
+			<item Name="particle simulation a" />
+			<item Name="particle simulation b" />
+			<item Name="particle velocity" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="secondary scale">
+			<item Name="particle age" />
+			<item Name="system age{emitter age}" />
+			<item Name="particle random" />
+			<item Name="system random{emitter random}" />
+			<item Name="particle correlation 1{particle random 1}" />
+			<item Name="particle correlation 2{particle random 2}" />
+			<item Name="particle correlation 3{particle random 3}" />
+			<item Name="particle correlation 4{particle random 4}" />
+			<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+			<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+			<item Name="particle emission time{emitter time}{particle emit time}" />
+			<item Name="location lod{system lod}" />
+			<item Name="game time" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="particle rotation{physics rotation}" />
+			<item Name="location random" />
+			<item Name="distance from emitter" />
+			<item Name="particle simulation a" />
+			<item Name="particle simulation b" />
+			<item Name="particle velocity" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+	</_field_block>
+	<_field_explanation name="PARTICLE APPEARANCE" />
+	<_field_long_flags name="appearance flags">
+		<item Name="random u mirror" />
+		<item Name="random v mirror" />
+		<item Name="random starting rotation" />
+		<item Name="tint from lightmap" />
+		<item Name="tint from diffuse texture" />
+		<item Name="bitmap authored vertically" />
+		<item Name="intensity affects alpha" />
+		<item Name="fade when viewed edge-on" />
+		<item Name="motion blur" />
+		<item Name="double-sided" />
+		<item Name="low res#renders heavy overdraw particles faster" />
+		<item Name="low res tighter mask#requires depth fade" />
+		<item Name="never kill verts on GPU (expensive)" />
+		<item Name="particle velocity relative to camera#makes parallel and perpindicular to velocity behave differently based upon camera motion" />
+	</_field_long_flags>
+	<_field_short_enum name="particle billboard style">
+		<item Name="screen facing" />
+		<item Name="camera facing" />
+		<item Name="parallel to direction" />
+		<item Name="perpendicular to direction" />
+		<item Name="vertical" />
+		<item Name="horizontal" />
+		<item Name="local vertical" />
+		<item Name="local horizontal" />
+		<item Name="world (particle models)" />
+		<item Name="velocity horizontal (particle models)" />
+	</_field_short_enum>
+	<_field_pad name="NQCLLBQ" length="2" />
+	<_field_short_integer name="first sequence index" />
+	<_field_short_integer name="sequence count" />
+	<_field_real name="low res switch distance:wu#the distance at which we switch from low res (close) to high res (far)" />
+	<_field_real_point_2d name="center offset" />
+	<_field_real name="curvature:0=flat, 1=hemisphere" />
+	<_field_real name="angle fade range:degrees#degrees beyond cutoff over which particles fade" />
+	<_field_real name="angle fade cutoff:degrees#degrees away from edge-on where fade is total" />
+	<_field_real name="motion blur translation scale#affects billboard tilt from observer motion" />
+	<_field_real name="motion blur rotation scale#affects billboard tilt from observer turning" />
+	<_field_real name="motion blur aspect scale#affects aspect ratio stretching from particle and observer motion" />
+	<_field_custom name="material" />
+	<_field_struct name="actual material?" />
+	<_field_tag_reference name="material shader" validtags="mats" />
+	<_field_block name="material parameters" max="111" srcguid="063e4b5e-a818-3647-becf-963f42cad69d" srcName="material_shader_parameter_block">
+		<_field_string_id name="parameter name^*" />
+		<_field_long_enum name="parameter type*">
+			<item Name="bitmap" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="color" />
+		</_field_long_enum>
+		<_field_long_integer name="parameter index*!" />
+		<_field_tag_reference name="bitmap" validtags="bitm" />
+		<_field_string_id name="bitmap path" />
+		<_field_real_argb_color name="color" />
+		<_field_real name="real" />
+		<_field_real_vector_3d name="vector" />
+		<_field_long_integer name="int/bool" />
+		<_field_word_integer name="bitmap flags" />
+		<_field_word_integer name="bitmap filter mode" />
+		<_field_word_integer name="bitmap address mode" />
+		<_field_word_integer name="bitmap address mode x" />
+		<_field_word_integer name="bitmap address mode y" />
+		<_field_word_integer name="bitmap sharpen mode" />
+		<_field_byte_integer name="bitmap extern mode" />
+		<_field_byte_integer name="bitmap min mipmap" />
+		<_field_byte_integer name="bitmap max mipmap" />
+		<_field_byte_integer name="render phases used" />
+		<_field_block name="function parameters" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale u" />
+				<item Name="scale v" />
+				<item Name="offset u" />
+				<item Name="offset v" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_char_enum name="Output Modifier!">
+				<item Name=" " />
+				<item Name="Add" />
+				<item Name="Multiply" />
+			</_field_char_enum>
+			<_field_pad name="BVCG" length="3" />
+			<_field_string_id name="Output Modifier Input!" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+		<_field_data name="display name*" />
+		<_field_data name="display group*" />
+		<_field_data name="display help text*" />
+		<_field_real name="display minimum" />
+		<_field_real name="display maximum" />
+		<_field_byte_integer name="register index*!" />
+		<_field_byte_integer name="register offset*!" />
+		<_field_byte_integer name="register count*!" />
+		<_field_char_enum name="register set*!">
+			<item Name="bool" />
+			<item Name="int" />
+			<item Name="float" />
+			<item Name="sampler" />
+			<item Name="vertex_bool" />
+			<item Name="vertex_int" />
+			<item Name="vertex_float" />
+			<item Name="vertex_sampler" />
+		</_field_char_enum>
+	</_field_block>
+	<_field_block name="postprocess definition!" max="1" srcguid="c3d0501d-52c8-c041-9e5b-9057ce98f3a3" srcName="material_postprocess_block">
+		<_field_block name="textures" max="32" srcguid="ec1298cd-d63c-e14b-b33b-fe480bbca596" srcName="material_postprocess_texture_block">
+			<_field_tag_reference name="bitmap reference" validtags="bitm" />
+			<_field_byte_integer name="address mode" />
+			<_field_byte_integer name="filter mode" />
+			<_field_byte_integer name="frame index parameter" />
+			<_field_byte_integer name="sampler index" />
+			<_field_char_integer name="level of smallest mipmap to use" />
+			<_field_char_integer name="level of largest mipmap to use" />
+			<_field_byte_integer name="render phase mask" />
+			<_field_pad name="DHaFS" length="1" />
+		</_field_block>
+		<_field_block name="texture constants" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+			<_field_real_vector_3d name="vector" />
+			<_field_real name="vector w" />
+		</_field_block>
+		<_field_block name="real vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+			<_field_real_vector_3d name="vector" />
+			<_field_real name="vector w" />
+		</_field_block>
+		<_field_block name="real vertex vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+			<_field_real_vector_3d name="vector" />
+			<_field_real name="vector w" />
+		</_field_block>
+		<_field_block name="int constants" max="1024" srcguid="9d869ce2-ada4-5b48-bf0b-f7e660402421" srcName="int_block">
+			<_field_long_integer name="int value" />
+		</_field_block>
+		<_field_long_integer name="bool constants" />
+		<_field_long_integer name="used bool constants" />
+		<_field_long_integer name="bool render phase mask" />
+		<_field_long_integer name="vertex bool constants" />
+		<_field_long_integer name="used vertex bool constants" />
+		<_field_long_integer name="vertex bool render phase mask" />
+		<_field_block name="functions" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale u" />
+				<item Name="scale v" />
+				<item Name="offset u" />
+				<item Name="offset v" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_char_enum name="Output Modifier!">
+				<item Name=" " />
+				<item Name="Add" />
+				<item Name="Multiply" />
+			</_field_char_enum>
+			<_field_pad name="BVCG" length="3" />
+			<_field_string_id name="Output Modifier Input!" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="function parameters" max="255" srcguid="c0eca125-1fb8-be4c-9f94-66e280a9cfdb" srcName="functionParameterBlock">
+			<_field_byte_integer name="function index" />
+			<_field_byte_integer name="render phase mask" />
+			<_field_byte_integer name="register index" />
+			<_field_byte_integer name="register offset" />
+		</_field_block>
+		<_field_block name="extern parameters" max="255" srcguid="36821172-2cb2-914f-a645-daafabe7a5bb" srcName="externParameterBlock">
+			<_field_byte_integer name="extern index" />
+			<_field_byte_integer name="extern register" />
+			<_field_byte_integer name="extern offset" />
+			<_field_byte_integer name="render phase mask" />
+		</_field_block>
+		<_field_char_enum name="alpha blend mode">
+			<item Name="opaque" />
+			<item Name="additive" />
+			<item Name="multiply" />
+			<item Name="alpha_blend" />
+			<item Name="double_multiply" />
+			<item Name="pre_multiplied_alpha" />
+			<item Name="maximum" />
+			<item Name="multiply_add" />
+			<item Name="add_src_times_dstalpha" />
+			<item Name="add_src_times_srcalpha" />
+			<item Name="inv_alpha_blend" />
+			<item Name="motion_blur_static" />
+			<item Name="motion_blur_inhibit" />
+			<item Name="apply_shadow_into_shadow_mask" />
+			<item Name="alpha_blend_constant" />
+			<item Name="overdraw_apply" />
+			<item Name="wet_screen_effect" />
+			<item Name="minimum" />
+			<item Name="revsubtract" />
+			<item Name="forge_lightmap" />
+			<item Name="forge_lightmap_inv" />
+			<item Name="replace_all_channels" />
+			<item Name="alpha_blend_max" />
+			<item Name="opaque_alpha_blend" />
+			<item Name="alpha_blend_additive_transparent" />
+		</_field_char_enum>
+		<_field_char_enum name="layer blend mode">
+			<item Name="none" />
+			<item Name="blended" />
+			<item Name="layered" />
+		</_field_char_enum>
+		<_field_word_flags name="flags">
+			<item Name="wireframe outline" />
+			<item Name="force single pass" />
+			<item Name="has pixel constant functions" />
+			<item Name="has vertex constant functions" />
+			<item Name="has texture transform functions" />
+			<item Name="has texture frame functions" />
+			<item Name="resolve screen before rendering" />
+			<item Name="disable atmosphere fog" />
+			<item Name="uses depth camera" />
+			<item Name="material is variable" />
+		</_field_word_flags>
+		<_field_array name="runtime queryable properties table">
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+		</_field_array>
+		<_field_struct name="physics material 0!" />
+		<_field_short_integer name="global material index" />
+		<_field_struct name="physics material 1!" />
+		<_field_short_integer name="global material index" />
+		<_field_struct name="physics material 2!" />
+		<_field_short_integer name="global material index" />
+		<_field_struct name="physics material 3!" />
+		<_field_short_integer name="global material index" />
+	</_field_block>
+	<_field_string_id name="physics material name" />
+	<_field_string_id name="physics material name 2" />
+	<_field_string_id name="physics material name 3" />
+	<_field_string_id name="physics material name 4" />
+	<_field_real name="sort offset" />
+	<_field_char_enum name="alpha blend mode">
+		<item Name="opaque" />
+		<item Name="additive" />
+		<item Name="multiply" />
+		<item Name="alpha_blend" />
+		<item Name="double_multiply" />
+		<item Name="pre_multiplied_alpha" />
+		<item Name="maximum" />
+		<item Name="multiply_add" />
+		<item Name="add_src_times_dstalpha" />
+		<item Name="add_src_times_srcalpha" />
+		<item Name="inv_alpha_blend" />
+		<item Name="motion_blur_static" />
+		<item Name="motion_blur_inhibit" />
+		<item Name="apply_shadow_into_shadow_mask" />
+		<item Name="alpha_blend_constant" />
+		<item Name="overdraw_apply" />
+		<item Name="wet_screen_effect" />
+		<item Name="minimum" />
+		<item Name="revsubtract" />
+		<item Name="forge_lightmap" />
+		<item Name="forge_lightmap_inv" />
+		<item Name="replace_all_channels" />
+		<item Name="alpha_blend_max" />
+		<item Name="opaque_alpha_blend" />
+		<item Name="alpha_blend_additive_transparent" />
+	</_field_char_enum>
+	<_field_char_enum name="sort layer*">
+		<item Name="invalid" />
+		<item Name="pre-pass" />
+		<item Name="normal" />
+		<item Name="post-pass" />
+	</_field_char_enum>
+	<_field_byte_flags name="flags!">
+		<item Name="converted from shader" />
+		<item Name="decal post lighting" />
+	</_field_byte_flags>
+	<_field_byte_flags name="render flags!">
+		<item Name="resolve screen before rendering" />
+	</_field_byte_flags>
+	<_field_char_enum name="Transparent Shadow Policy">
+		<item Name="none" />
+		<item Name="render as decal (cheap)" />
+		<item Name="render with material (expensive)" />
+	</_field_char_enum>
+	<_field_pad name="transparentshadowpad" length="3" />
+	<_field_struct name="aspect ratio" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_struct name="color:RGB#controls how the color of the particle changes as a function of its input" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_pad name="DSFDSGLKJ" length="2" />
+	<_field_struct name="intensity#multiplies color to give dynamic range outside [0,1]" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_struct name="alpha#separate from color, controls how the particle fades as a function of its input" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_real name="tint factor:0=modulate, 1=tint#switches between modulate (multiply) and tint(preserve whites)" />
+	<_field_explanation name="PARTICLE ANIMATION" />
+	<_field_long_flags name="animation flags">
+		<item Name="frame animation one shot" />
+		<item Name="can animate backwards" />
+	</_field_long_flags>
+	<_field_struct name="frame index#0=first frame, 1=last frame" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_struct name="animation rate:index cycles per second" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_struct name="palette animation:v coord of palette" />
+	<_field_char_enum name="Input Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Range Variable">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_char_enum>
+	<_field_char_enum name="Output Modifier Input">
+		<item Name="particle age" />
+		<item Name="system age{emitter age}" />
+		<item Name="particle random" />
+		<item Name="system random{emitter random}" />
+		<item Name="particle correlation 1{particle random 1}" />
+		<item Name="particle correlation 2{particle random 2}" />
+		<item Name="particle correlation 3{particle random 3}" />
+		<item Name="particle correlation 4{particle random 4}" />
+		<item Name="system correlation 1{emitter correlation 1}{emitter random 1}" />
+		<item Name="system correlation 2{emitter correlation 2}{emitter random 2}" />
+		<item Name="particle emission time{emitter time}{particle emit time}" />
+		<item Name="location lod{system lod}" />
+		<item Name="game time" />
+		<item Name="effect a scale" />
+		<item Name="effect b scale" />
+		<item Name="particle rotation{physics rotation}" />
+		<item Name="location random" />
+		<item Name="distance from emitter" />
+		<item Name="particle simulation a" />
+		<item Name="particle simulation b" />
+		<item Name="particle velocity" />
+		<item Name="invalid state --- please set again" />
+	</_field_char_enum>
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+	<_field_real name="runtime m_constant_value!" />
+	<_field_word_integer name="runtime m_flags!" />
+	<_field_byte_flags name="force flags!">
+		<item Name="force constant" />
+	</_field_byte_flags>
+	<_field_pad name="DSFDSGLKJ" length="1" />
+	<_field_explanation name="Mesh data, if this is a mesh particle" />
+	<_field_tag_reference name="Model" validtags="pmdf" />
+	<_field_custom name="OLD DEPRECATED shader definition" />
+	<_field_custom name="shader" />
+	<_field_struct name="actual shader?" />
+	<_field_tag_reference name="definition*" validtags="rmdf" />
+	<_field_tag_reference name="reference" validtags="rm  " />
+	<_field_block name="options" max="1024" srcguid="3ec5a466-0385-a648-a976-9ea5a0dfbc08" srcName="short_block">
+		<_field_short_integer name="short" />
+	</_field_block>
+	<_field_block name="parameters" max="64" srcguid="6146f51e-0f63-8d4e-ad88-bd765bbf101c" srcName="render_method_parameter_block">
+		<_field_string_id name="parameter name^" />
+		<_field_long_enum name="parameter type">
+			<item Name="bitmap" />
+			<item Name="color" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="argb color" />
+		</_field_long_enum>
+		<_field_tag_reference name="bitmap" validtags="bitm" />
+		<_field_real name="real" />
+		<_field_long_integer name="int/bool" />
+		<_field_word_integer name="bitmap flags" />
+		<_field_word_integer name="bitmap filter mode" />
+		<_field_word_integer name="bitmap address mode" />
+		<_field_word_integer name="bitmap address mode x" />
+		<_field_word_integer name="bitmap address mode y" />
+		<_field_short_integer name="bitmap anisotropy amount" />
+		<_field_short_integer name="bitmap extern RTT mode" />
+		<_field_word_integer name="bitmap sharpen mode" />
+		<_field_block name="animated parameters" max="1024" srcguid="4b5b6670-17be-764b-87b3-9ee20b5cc3a0" srcName="render_method_animated_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale x" />
+				<item Name="scale y" />
+				<item Name="translation x" />
+				<item Name="translation y" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="postprocess" max="1" srcguid="20e68c44-948c-924d-bcd0-5705362cbbf6" srcName="render_method_postprocess_block">
+		<_field_tag_reference name="shader template" validtags="rmt2" />
+		<_field_block name="textures" max="64" srcguid="51a69194-b4af-1e4c-9822-b53f607f03c2" srcName="render_method_postprocess_texture_block">
+			<_field_tag_reference name="bitmap reference" validtags="bitm" />
+			<_field_short_integer name="bitmap index" />
+			<_field_byte_integer name="address mode" />
+			<_field_byte_integer name="filter mode" />
+			<_field_byte_integer name="extern texture mode" />
+			<_field_char_block_index name="texture transform constant index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_struct name="texture transform overlay indices" />
+			<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="real vectors" max="1024" srcguid="4c029eff-187d-504c-90d7-3f8e22ef3a5d" srcName="real_vector4d_block">
+			<_field_real_vector_3d name="vector" />
+			<_field_real name="vector w" />
+		</_field_block>
+		<_field_block name="int constants" max="1024" srcguid="fed14f48-d74f-8b48-afaa-e8db731747c0" srcName="int_block">
+			<_field_long_integer name="int value" />
+		</_field_block>
+		<_field_long_integer name="bool constants" />
+		<_field_block name="entry points" max="1024" srcguid="cb11d54c-57e0-a642-9b31-efb874d7bee6" srcName="tag_block_index_block">
+			<_field_struct name="block index" />
+			<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="passes" max="1024" srcguid="23a50a92-62d6-3d49-887e-528dafe64288" srcName="render_method_postprocess_pass_block">
+			<_field_word_integer name="bitmaps#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="vertex real#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="pixel real#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="routing info" max="512" srcguid="29be3c3d-ec43-d644-961a-e5cb249a1d37" srcName="render_method_routing_info_block">
+			<_field_word_integer name="destination index#D3D constant index or sampler index" />
+			<_field_byte_integer name="source index#into constant tables below, unless this is an extern parameter" />
+			<_field_byte_integer name="type specific#bitmap flags or shader component mask" />
+		</_field_block>
+		<_field_block name="overlays" max="1024" srcguid="4b5b6670-17be-764b-87b3-9ee20b5cc3a0" srcName="render_method_animated_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale x" />
+				<item Name="scale y" />
+				<item Name="translation x" />
+				<item Name="translation y" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+		<_field_long_integer name="blend mode" />
+		<_field_long_integer name="flags" />
+		<_field_long_integer name="im_so_fired_pad!*" />
+		<_field_array name="runtime queryable properties table">
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+		</_field_array>
+	</_field_block>
+	<_field_long_integer name="is template" />
+	<_field_long_flags name="locked options">
+		<item Name="option 0" />
+		<item Name="option 1" />
+		<item Name="option 2" />
+		<item Name="option 3" />
+		<item Name="option 4" />
+		<item Name="option 5" />
+		<item Name="option 6" />
+		<item Name="option 7" />
+		<item Name="option 8" />
+		<item Name="option 9" />
+		<item Name="option 10" />
+		<item Name="option 11" />
+		<item Name="option 12" />
+		<item Name="option 13" />
+		<item Name="option 14" />
+		<item Name="option 15" />
+		<item Name="option 16" />
+		<item Name="option 17" />
+		<item Name="option 18" />
+		<item Name="option 19" />
+		<item Name="option 20" />
+		<item Name="option 21" />
+		<item Name="option 22" />
+		<item Name="option 23" />
+		<item Name="option 24" />
+		<item Name="option 25" />
+		<item Name="option 26" />
+		<item Name="option 27" />
+		<item Name="option 28" />
+		<item Name="option 29" />
+		<item Name="option 30" />
+		<item Name="option 31" />
+	</_field_long_flags>
+	<_field_block name="locked parameters" max="32" srcguid="57fcf408-b1d7-cc46-925b-90ee3108e35e" srcName="render_method_locked_parameter_block">
+		<_field_string_id name="parameter name" />
+		<_field_long_enum name="parameter type">
+			<item Name="bitmap" />
+			<item Name="color" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="argb color" />
+		</_field_long_enum>
+		<_field_dword_integer name="animated parameter flags" />
+	</_field_block>
+	<_field_word_flags name="shader flags*">
+		<item Name="don't fog me" />
+		<item Name="use custom setting" />
+		<item Name="calculate Z camera" />
+		<item Name="never render for shields" />
+		<item Name="only render for shields" />
+	</_field_word_flags>
+	<_field_char_enum name="sort layer*">
+		<item Name="invalid" />
+		<item Name="pre-pass" />
+		<item Name="normal" />
+		<item Name="post-pass" />
+	</_field_char_enum>
+	<_field_char_integer name="version!" />
+	<_field_long_integer name="Custom fog setting index" />
+	<_field_long_block_index name="prediction atom index!" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+	<_field_real_rgb_color name="bright tint" />
+	<_field_real_rgb_color name="ambient tint" />
+	<_field_real name="contrast" />
+	<_field_real name="blur weight" />
+	<_field_real name="intensity scale" />
+	<_field_tag_reference name="palette" validtags="bitm" />
+	<_field_dword_integer name="runtime m_used_particle_states!" />
+	<_field_dword_integer name="runtime m_constant_per_particle_properties!" />
+	<_field_dword_integer name="runtime m_constant_over_time_properties!" />
+	<_field_struct name="runtime m_gpu_data!" />
+	<_field_block name="runtime m_sprite!" max="1" srcguid="909c1f82-8495-6348-9425-371d7ab8e8dd" srcName="gpu_sprite_block">
+		<_field_array name="runtime gpu_sprite_array!">
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="runtime m_frames!" max="16" srcguid="6fcc2078-2802-f440-9322-5be7818dbd97" srcName="gpu_variants_block">
+		<_field_array name="runtime m_count!">
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+			<_field_real name="runtime gpu_real!" />
+		</_field_array>
+	</_field_block>
+</plugin>

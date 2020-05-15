@@ -1,0 +1,2334 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_pad name="YJLTWDSL" length="172" />
+	<_field_long_enum name="language">
+		<item Name="english" />
+		<item Name="japanese" />
+		<item Name="german" />
+		<item Name="french" />
+		<item Name="spanish" />
+		<item Name="mexican spanish" />
+		<item Name="italian" />
+		<item Name="korean" />
+		<item Name="chinese-traditional" />
+		<item Name="chinese-simplified" />
+		<item Name="portuguese" />
+		<item Name="polish" />
+		<item Name="russian" />
+		<item Name="danish" />
+		<item Name="finnish" />
+		<item Name="dutch" />
+		<item Name="norwegian" />
+	</_field_long_enum>
+	<_field_block name="havok cleanup resources" max="1" srcguid="b8b55811-fcfb-5a4d-b486-2259cb91eb7b" srcName="havok_cleanup_resources_block">
+		<_field_tag_reference name="object cleanup effect" validtags="effe" />
+	</_field_block>
+	<_field_block name="sound globals" max="1" srcguid="2886b749-02c8-1f4a-9f59-e6a47ab7b1c5" srcName="sound_globals_block">
+		<_field_tag_reference name="sound classes" validtags="sncl" />
+		<_field_tag_reference name="sound effects" validtags="sfx+" />
+		<_field_tag_reference name="sound mix" validtags="snmx" />
+		<_field_tag_reference name="sound combat dialogue constants" validtags="spk!" />
+		<_field_tag_reference name="sound propagation" validtags="sgp!" />
+		<_field_tag_reference name="Init sound bank#Init sound bank for WWise." validtags="sbnk" />
+		<_field_tag_reference name="Global sound bank#Global sound bank for WWise." validtags="sbnk" />
+		<_field_tag_reference name="Extra sound bank#The other sound bank for WWise." validtags="sbnk" />
+		<_field_tag_reference name="Campaign sound bank#Extra sound bank for WWise - only loaded for Campaign." validtags="sbnk" />
+		<_field_tag_reference name="Multiplayer sound bank#Extra sound bank for WWise - only loaded for MP - PVP." validtags="sbnk" />
+		<_field_block name="Streaming pack files" max="20" srcguid="dfe3423d-b7f0-4a4e-b9fe-7d418fa6b7d5" srcName="StreamingPackBlock">
+			<_field_long_flags name="flags">
+				<item Name="Language pack" />
+				<item Name="Sound bank pack" />
+			</_field_long_flags>
+			<_field_string name="Streaming pck file#Name of the stream pack file" />
+		</_field_block>
+		<_field_block name="un-spatialized campaign sounds" max="64" srcguid="73584056-065e-9c46-86cc-c3cd243ab85c" srcName="campaign_unspatialized_sounds_block">
+			<_field_tag_reference name="sound^" validtags="scmb, sndo, snd!" />
+		</_field_block>
+	</_field_block>
+	<_field_explanation name="AI globals">I have moved the ai globals out of this tag, and into its own tag which is referenced here.</_field_explanation>
+	<_field_block name="DEPRECATED{ai globals}*!" max="1" srcguid="a0800f1d-bda5-1b4a-9a07-0b18a8706c11" srcName="ai_globals_data_block">
+		<_field_real name="AI infantry-on-AI weapon damage scale:[0,1]#Global scale on weapon damage made by AI on other AI" />
+		<_field_real name="AI vehicle-on-AI weapon damage scale:[0,1]#Global scale on weapon damage made by AI in a vehicle on other AI" />
+		<_field_real name="AI player vehicle-on-AI weapon damage scale:[0,1]#Global scale on weapon damage made by AI in a vehicle with the player on other AI" />
+		<_field_real name="danger broadly facing" />
+		<_field_real name="danger shooting near" />
+		<_field_real name="danger shooting at" />
+		<_field_real name="danger extremely close" />
+		<_field_real name="danger shield damage" />
+		<_field_real name="danger exetended shield damage" />
+		<_field_real name="danger body damage" />
+		<_field_real name="danger extended body damage" />
+		<_field_tag_reference name="global dialogue tag" validtags="adlg" />
+		<_field_string_id name="default mission dialogue sound effect" />
+		<_field_real name="jump down:wu/tick" />
+		<_field_real name="jump step:wu/tick" />
+		<_field_real name="jump crouch:wu/tick" />
+		<_field_real name="jump stand:wu/tick" />
+		<_field_real name="jump storey:wu/tick" />
+		<_field_real name="jump tower:wu/tick" />
+		<_field_pad name="jump leap placeholder" length="4" />
+		<_field_real name="max jump down height down:wu" />
+		<_field_real name="max jump down height step:wu" />
+		<_field_real name="max jump down height crouch:wu" />
+		<_field_real name="max jump down height stand:wu" />
+		<_field_real name="max jump down height storey:wu" />
+		<_field_real name="max jump down height tower:wu" />
+		<_field_pad name="another leap placeholder" length="4" />
+		<_field_real_bounds name="hoist step:wus" />
+		<_field_real_bounds name="hoist crouch:wus" />
+		<_field_real_bounds name="hoist stand:wus" />
+		<_field_real_bounds name="vault step:wus" />
+		<_field_real_bounds name="vault crouch:wus" />
+		<_field_explanation name="PATHFINDING SEARCH RANGES">The maximum ranges to which firing point evaluations will do pathfinding searches. INCREASING THESE VALUES WILL ALMOST CERTAINLY HAVE A NEGATIVE IMPACT ON PERFORMANCE.</_field_explanation>
+		<_field_real name="search range infantry:wus" />
+		<_field_real name="search range flying:wus" />
+		<_field_real name="search range vehicle:wus" />
+		<_field_real name="search range giant:wus" />
+		<_field_block name="gravemind properties" max="1" srcguid="9d3b6b5d-c01f-fe47-8cdf-19e7a287da56" srcName="ai_globals_gravemind_block">
+			<_field_real name="min retreat time:secs" />
+			<_field_real name="ideal retreat time:secs" />
+			<_field_real name="max retreat time:secs" />
+		</_field_block>
+		<_field_real name="scary target threhold#A target of this scariness is offically considered scary (by combat dialogue, etc.)" />
+		<_field_real name="scary weapon threhold#A weapon of this scariness is offically considered scary (by combat dialogue, etc.)" />
+		<_field_real name="player scariness" />
+		<_field_real name="berserking actor scariness" />
+		<_field_real name="kamikazeing actor scariness" />
+		<_field_real name="invincible scariness#when an actor's target is invincible, he is this much more scared" />
+		<_field_explanation name="RESURRECTION">A few properties to help define when it is safe for a mission critical character to ressurect.</_field_explanation>
+		<_field_real name="min death time:seconds#I will be dead for at least this long" />
+		<_field_real name="projectile distance:wu#If there is a projectile within this distance of me, I'll stay dead" />
+		<_field_real name="idle clump distance:wu#If there is any enemy clump within this distance of me, I'll stay dead" />
+		<_field_real name="dangerous clump distance:wu#If there is any enemy clump with a status higher than idle within this distance of me, I'll stay dead" />
+		<_field_explanation name="TELEPORTATION">A few properties to help define when it is safe for a mission critical character to teleport.</_field_explanation>
+		<_field_real name="cover search duration:seconds#The number of seconds that must elapse before we try to look for a firing point behind cover to teleport to." />
+		<_field_real name="task direction search duration:seconds#The number of seconds we try to look for a firing point that aligns us with the actor's task direction." />
+		<_field_block name="spawn formations" max="128" srcguid="b4dafd33-853b-ab42-9fc8-a81a4e45a898" srcName="ai_globals_formation_block">
+			<_field_tag_reference name="formation^" validtags="form" />
+		</_field_block>
+		<_field_block name="squad template folders" max="32" srcguid="e59da9fc-f5f2-0f4c-b4f4-74983b390792" srcName="ai_globals_squad_template_folder_block">
+			<_field_string_id name="folder name^" />
+			<_field_block name="sub folders" max="32" srcguid="43741a41-4adc-554d-b4e3-6b7b017e72e0" srcName="ai_globals_squad_template_sub_folder_block">
+				<_field_string_id name="sub folder name^" />
+				<_field_block name="templates" max="128" srcguid="49c67ab7-2e5b-a54c-a7ac-56cb82c99e1b" srcName="ai_globals_squad_template_block">
+					<_field_tag_reference name="squad_template^" validtags="sqtm" />
+				</_field_block>
+			</_field_block>
+			<_field_block name="templates" max="128" srcguid="49c67ab7-2e5b-a54c-a7ac-56cb82c99e1b" srcName="ai_globals_squad_template_block">
+				<_field_tag_reference name="squad_template^" validtags="sqtm" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="performance template folders" max="32" srcguid="1bfa272d-adf6-7b41-962b-f0da0aad11c5" srcName="ai_globals_performance_template_folder_block">
+			<_field_string_id name="folder name^" />
+			<_field_block name="sub folders" max="32" srcguid="ec3d32f6-0cac-d94c-a340-402d5b7a8313" srcName="ai_globals_performance_template_sub_folder_block">
+				<_field_string_id name="sub folder name^" />
+				<_field_block name="templates" max="128" srcguid="4c03598c-c888-a44b-a2a2-49a4f4376ea3" srcName="ai_globals_performance_template_block">
+					<_field_tag_reference name="thespian_template^" validtags="pfmc" />
+				</_field_block>
+			</_field_block>
+			<_field_block name="templates" max="128" srcguid="4c03598c-c888-a44b-a2a2-49a4f4376ea3" srcName="ai_globals_performance_template_block">
+				<_field_tag_reference name="thespian_template^" validtags="pfmc" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="custom stimuli" max="128" srcguid="53b598a1-c97b-e742-bd3b-c6be7d86f5df" srcName="ai_globals_custom_stimuli_block">
+			<_field_string_id name="name^" />
+		</_field_block>
+		<_field_block name="cue templates" max="32" srcguid="a827436a-4223-1340-8210-0ebf905be117" srcName="ai_cue_template_block">
+			<_field_string_id name="name^" />
+			<_field_long_flags name="template_flags">
+				<item Name="ignored" />
+				<item Name="passive stimulus" />
+			</_field_long_flags>
+			<_field_block name="firing points" max="1" srcguid="62b35865-e4e6-394c-a65a-64fc061ce475" srcName="firing_point_payload_block">
+				<_field_real name="radius" />
+			</_field_block>
+			<_field_block name="stimulus" max="1" srcguid="86757e62-291a-6a43-b5e8-1c06b6a3fd65" srcName="stimulus_payload_block">
+				<_field_string_id name="stimulus type" />
+			</_field_block>
+			<_field_block name="combat cue" max="1" srcguid="3e566dc1-bd80-5a4f-9e28-eaf64f1f71c0" srcName="combat_cue_payload_block">
+				<_field_real_point_3d name="position!" />
+				<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+				<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+				<_field_word_flags name="flags!">
+					<item Name="open" />
+					<item Name="partial" />
+					<item Name="closed" />
+					<item Name="mobile" />
+					<item Name="wall lean" />
+					<item Name="perch" />
+					<item Name="ground point" />
+					<item Name="dynamic cover point" />
+					<item Name="automatically generated!" />
+					<item Name="nav volume" />
+				</_field_word_flags>
+				<_field_word_flags name="posture flags!">
+					<item Name="corner_left" />
+					<item Name="corner_right" />
+					<item Name="bunker" />
+					<item Name="bunker high" />
+					<item Name="bunker low" />
+				</_field_word_flags>
+				<_field_short_block_index name="area^!" targetGuid="16173565-f5ee-c74e-b163-96b12f48e3d7" targetName="areas_block" />
+				<_field_short_integer name="cluster index!" />
+				<_field_short_integer name="cluster bsp*" />
+				<_field_char_integer name="bits and pad!" />
+				<_field_pad name="PAD1" length="1" />
+				<_field_real_euler_angles_2d name="normal!" />
+				<_field_angle name="facing!" />
+				<_field_long_integer name="lastAbsoluteRejectionGameTime!" />
+				<_field_short_enum name="preference">
+					<item Name="low" />
+					<item Name="high" />
+					<item Name="total" />
+				</_field_short_enum>
+				<_field_pad name="post-preference" length="2" />
+			</_field_block>
+		</_field_block>
+		<_field_explanation name="CLUMP THROTTLING">Some values to help you control how much guys will throttle when they want to stick with the rest of their squad.</_field_explanation>
+		<_field_real name="stop dist:wu#At this distance from the squad, stop." />
+		<_field_real name="resume dist:wu#At this distance from the squad, start again." />
+		<_field_real name="min dist:wu#Start throttling back at this distance" />
+		<_field_real name="max dist:wu#Maximum trottle scale at this distance" />
+		<_field_real name="min scale:0-1#Minimum throttle value." />
+		<_field_explanation name="SQUAD PATROLLING">Parameters related to squad patrolling.</_field_explanation>
+		<_field_real name="passthrough chance#Chance of passing through a patrol objective without pausing" />
+		<_field_real name="search phase skip chance#Chance of skipping the search phase when stopped at a patrol objective" />
+		<_field_real name="patrol transition timeout:seconds#If the squad takes more than this time to get to their new patrol point, cancel it and go on to the next." />
+		<_field_real name="patrol maneuver timeout:seconds#If the squad takes longer than this time to reposition within a patrol point (e.g. searching and pausing), cancel the point and go on to the next." />
+		<_field_real_bounds name="patrol search firing point time:seconds#spend this amount of time at a search firing position when in search phase" />
+		<_field_real name="patrol isolation distance:wus#If you are more than this distance from your nearest squadmate, you are officially isolated." />
+		<_field_real name="patrol isolation time:seconds#If you are isolated for more than this time, you get deleted." />
+		<_field_explanation name="KUNGFU CONTROL">These parameters control how the kung-fu circle works (i.e. when tasks have kungfu-count associated with them)</_field_explanation>
+		<_field_real name="kungfu deactivation delay:seconds#When a task is disallowed from shooting, turn it off after this delay" />
+		<_field_custom name="Presearch Child Counts (0 means no limit)" />
+		<_field_short_integer name="suppressing fire count" />
+		<_field_short_integer name="uncover count" />
+		<_field_short_integer name="leap on cover count" />
+		<_field_short_integer name="destroy cover count" />
+		<_field_short_integer name="guard count" />
+		<_field_short_integer name="investigate count" />
+		<_field_block name="vision traits" max="3" srcguid="ef041b5e-0f59-bb4c-9a08-d75ac4860bf8" srcName="ai_trait_vision_block">
+			<_field_explanation name="Vision Traits">Traits that affect the AI's vision</_field_explanation>
+			<_field_real name="vision distance scale#Scale the distance at which an AI can see their target." />
+			<_field_real name="vision angle scale#Scale the angles of the AI's vision cone." />
+		</_field_block>
+		<_field_block name="sound traits" max="2" srcguid="1e4675fc-27a8-0645-91d2-a3591b2bb7d6" srcName="ai_trait_sound_block">
+			<_field_explanation name="Sound Traits">Traits that affect the AI's sound awareness</_field_explanation>
+			<_field_real name="hearing distance scale#Scale the character's hearing distance." />
+		</_field_block>
+		<_field_block name="luck traits" max="3" srcguid="5fb958b1-daf7-f94c-bc3f-d0fd8a9dd1b2" srcName="ai_trait_luck_block">
+			<_field_explanation name="Luck Traits">Traits that affect the AI's luck</_field_explanation>
+			<_field_real name="evasion chance scale#Scale the chance of evading fire." />
+			<_field_real name="grenade dive chance scale#Scale the chance of diving from grenades." />
+			<_field_real name="broken kamikaze chance scale#Scale the chance of going kamikaze when broken." />
+			<_field_real name="leader dead retreat chance scale#Scale the chance of retreating when your leader dies." />
+			<_field_real name="dive retreat chance scale#Scale the chance of retreating after a dive." />
+			<_field_real name="shield depleted berserk chance scale#Scale the chance of berserking when your shield is depleted." />
+			<_field_real name="leader abandoned berserk chance scale#Scale the chance of a leader berserking when all his followers die." />
+			<_field_real name="melee attack delay timer scale#Scale the time between melee attacks." />
+			<_field_real name="melee chance scale#Scale the chance of meleeing." />
+			<_field_real name="melee leap delay timer scale#Scale the delay for performing melee leaps." />
+			<_field_real name="throw grenade delay scale#Scale the time between grenade throws." />
+		</_field_block>
+		<_field_block name="grenade traits" max="2" srcguid="99300f0b-953f-5647-83e0-f6f374e85796" srcName="ai_trait_grenade_block">
+			<_field_explanation name="Grenade Traits">Traits that affect the AI's grenade use</_field_explanation>
+			<_field_real name="velocity scale#Scale the velocity at which AI throws grenades" />
+			<_field_real name="throw grenade delay scale#Scale the time between grenade throws." />
+			<_field_real name="don't drop grenades chance scale" />
+			<_field_real name="grenade uncover chance scale" />
+			<_field_real name="retreat throw grenade chance scale" />
+			<_field_real name="anti vehicle grenade chance scale" />
+			<_field_real name="throw grenade chance scale" />
+		</_field_block>
+		<_field_custom name="Search Pattern Specification" />
+		<_field_real name="max decay time" />
+		<_field_real name="decay time ping" />
+		<_field_real name="search pattern radius" />
+		<_field_short_integer name="search pattern shell count" />
+		<_field_short_integer_bounds name="search pattern cells per shell range" />
+		<_field_pad name="MOOOOOOO" length="2" />
+	</_field_block>
+	<_field_tag_reference name="ai globals ref" validtags="aigl" />
+	<_field_block name="damage table" max="2" srcguid="9887605e-9658-dc4f-bcd0-62b57302d300" srcName="game_globals_damage_block">
+		<_field_block name="damage groups" max="512" srcguid="aa5d9434-1031-9d40-a4f3-330d4b1bfd04" srcName="damage_group_block">
+			<_field_string_id name="name^" />
+			<_field_block name="armor modifiers" max="512" srcguid="2b480d1d-b10a-c045-86b6-ef803fde838a" srcName="armor_modifier_block">
+				<_field_string_id name="name^" />
+				<_field_real name="damage multiplier" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="sounds" max="2" srcguid="9ba8b7ba-c7df-d643-b889-5623eba18d33" srcName="sound_block">
+		<_field_tag_reference name="sound (OBSOLETE)" />
+	</_field_block>
+	<_field_block name="camera" max="1" srcguid="06fb4455-d0f3-7644-a51f-62576ba634e2" srcName="camera_block">
+		<_field_tag_reference name="default unit camera track" validtags="trak" />
+		<_field_explanation name="SANDBOX" />
+		<_field_struct name="pitch to vertical offset" />
+		<_field_data name="data" />
+		<_field_explanation name="CAMERA UNIVERSALS" />
+		<_field_real name="field of view:degrees" />
+		<_field_real name="yaw scale" />
+		<_field_real name="pitch scale" />
+		<_field_real name="forward scale" />
+		<_field_real name="side scale" />
+		<_field_real name="up scale" />
+		<_field_explanation name="DEAD CAMERA" />
+		<_field_real name="transition time:seconds#time it takes for the camera to move from the initial distance to the final distance" />
+		<_field_real name="falling death transition time:seconds#time it takes for the camera to move to its final position during a falling death" />
+		<_field_real name="initial distance:wu#on the first frame after death, this is how far out of the body the camera will be" />
+		<_field_real name="final distance:wu#how far from the body the camera will settle" />
+		<_field_real name="dead cam z offset:wu#how far above the body the camera focuses on" />
+		<_field_real name="dead cam maximum elevation:radians#the highest angle the camera can raise to (prevents it from flipping over the vertical axis)" />
+		<_field_real name="dead cam movement delay:seconds#delay in tracking the killer" />
+		<_field_real name="time_to_auto_switch_to_orbiting:seconds#how long the death camera lasts before auto-switching to orbiting camera" />
+		<_field_real name="ignore_stick_time:seconds#how long the death camera ignores stick inputs and keeps turning towards the killer (should be non-zero because user could have died while running or looking around)" />
+		<_field_real name="ignore_button_time:seconds#how long the death camera ignores shoulder button inputs and keeps turning towards the killer" />
+		<_field_real name="dead camera minimum falling velocity#minimum velocity to switch to fell to death behavior (when biped is not actually falling to death)" />
+		<_field_explanation name="FLYING CAMERA" />
+		<_field_real name="maximum boost speed#the scaling factor for the left stick when the left trigger is fully depressed" />
+		<_field_real name="time to maximum_boost#seconds. while pegging boost, time to reach maximum speed" />
+		<_field_short_enum name="boost function">
+			<item Name="linear" />
+			<item Name="early" />
+			<item Name="very early" />
+			<item Name="late" />
+			<item Name="very late" />
+			<item Name="cosine" />
+			<item Name="one" />
+			<item Name="zero" />
+		</_field_short_enum>
+		<_field_pad name="hoist" length="2" />
+		<_field_real name="zoomed field of view:degrees#field of view when zoomed" />
+		<_field_real name="zoomed look speed#scaling factor for look speed when zoomed" />
+		<_field_real name="bounding sphere radius:wu#radius of sphere for collision" />
+		<_field_real name="flying cam movement delay:seconds#how quickly the camera responds to the user's input" />
+		<_field_real name="zoom transition time:seconds#how long it takes to zoom in or out" />
+		<_field_real name="vertical movement time to max speed" />
+		<_field_short_enum name="vertical movement function">
+			<item Name="linear" />
+			<item Name="early" />
+			<item Name="very early" />
+			<item Name="late" />
+			<item Name="very late" />
+			<item Name="cosine" />
+			<item Name="one" />
+			<item Name="zero" />
+		</_field_short_enum>
+		<_field_pad name="moist" length="2" />
+		<_field_real name="survival switch time:seconds#how long it takes in survival mode before switching to flying camera" />
+		<_field_explanation name="ORBITING CAMERA" />
+		<_field_real name="minimum distance:wu" />
+		<_field_real name="maximum distance:wu" />
+		<_field_real name="orbit cam movement delay:seconds#how quickly the camera responds to the user's input" />
+		<_field_real name="orbit cam z offset:wu#how far above the object's root node to position the camera's focus point" />
+		<_field_real name="orbit cam minimum elevation:radians#lowest angle the camera can be moved to" />
+		<_field_real name="orbit cam maximum elevation:radians#highest angle the camera can be moved to" />
+		<_field_explanation name="SAVED FILMS" />
+		<_field_real name="max playback speed#how fast the film plays when the trigger is fully depressed" />
+		<_field_real name="fade out time:seconds#how long it takes for the screen to fade out when rewinding" />
+		<_field_real name="fade in time:seconds#see above" />
+		<_field_explanation name="IN GAME" />
+		<_field_real name="enter vehicle transition time:seconds#how long it takes the camera to move from first to third person when entering a vehicle" />
+		<_field_real name="exit vehicle transition time:seconds#see above" />
+		<_field_explanation name="CAMERA OBSTRUCTION" />
+		<_field_struct name="obstruction" />
+		<_field_real_fraction name="cylinder fraction#controls how far from the focus point the outer raycasts start.  0 == cone, 1 == cylinder" />
+		<_field_angle name="obstruction test angle:degrees#how wide of a cone to test" />
+		<_field_real name="obstruction max inward accel:1.0/s/s#how quickly the camera moves inward when it anticipates a collision" />
+		<_field_real name="obstruction max outward accel:1.0/s/s#how quickly the camera returns to a normal position when its anticipated distance is further than its current" />
+		<_field_real name="obstruction max velocity:1.0/s#maximum speed the camera can move" />
+		<_field_real name="obstruction return delay:s#when the camera wants to start moving back out, wait this long before doing so" />
+	</_field_block>
+	<_field_block name="controller input" max="1" srcguid="c5796005-19bd-1c4d-b754-4182d8a4d2ad" srcName="controller_input_block">
+		<_field_real name="axial dead zone" />
+		<_field_real name="radial dead zone" />
+	</_field_block>
+	<_field_block name="player control" max="1" srcguid="1474adaf-fe08-964a-94e4-bcf639c2eefc" srcName="player_control_block">
+		<_field_block name="controller button mappings" max="7" srcguid="664d1c6d-1c92-4e4c-b2a0-f6c3ec6aacbf" srcName="controller_mapping_reference_block">
+			<_field_tag_reference name="mapping" validtags="cnmp" />
+		</_field_block>
+		<_field_block name="move stick info" max="1" srcguid="067441d3-7ef4-5f4b-953c-7c15d364beab" srcName="gamepad_stick_info_block">
+			<_field_char_enum name="input shape">
+				<item Name="none" />
+				<item Name="unit_circle" />
+				<item Name="unit_square" />
+			</_field_char_enum>
+			<_field_pad name="F" length="3" />
+			<_field_real_fraction name="peg threshold [0,1]#magnitude of analog input for pegged acceleration to kick in" />
+			<_field_real_point_2d name="pegged time#time for a pegged look to reach maximum effect" />
+			<_field_real_point_2d name="pegged scale#the maximum effect achieved over the duration of the pegged time." />
+			<_field_angle name="peg max angular velocity:degrees per sec#the maximum turning speed during peg" />
+			<_field_block name="input mapping function" max="1" srcguid="63bfeeaa-a06a-5345-a5da-a31b60373717" srcName="input_mapping_function_block">
+				<_field_data name="data" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="look stick info" max="1" srcguid="067441d3-7ef4-5f4b-953c-7c15d364beab" srcName="gamepad_stick_info_block">
+			<_field_char_enum name="input shape">
+				<item Name="none" />
+				<item Name="unit_circle" />
+				<item Name="unit_square" />
+			</_field_char_enum>
+			<_field_pad name="F" length="3" />
+			<_field_real_fraction name="peg threshold [0,1]#magnitude of analog input for pegged acceleration to kick in" />
+			<_field_real_point_2d name="pegged time#time for a pegged look to reach maximum effect" />
+			<_field_real_point_2d name="pegged scale#the maximum effect achieved over the duration of the pegged time." />
+			<_field_angle name="peg max angular velocity:degrees per sec#the maximum turning speed during peg" />
+			<_field_block name="input mapping function" max="1" srcguid="63bfeeaa-a06a-5345-a5da-a31b60373717" srcName="input_mapping_function_block">
+				<_field_data name="data" />
+			</_field_block>
+		</_field_block>
+		<_field_real_fraction name="magnetism friction#how much the crosshair slows over enemies" />
+		<_field_real_fraction name="magnetism adhesion#how much the crosshair sticks to enemies" />
+		<_field_real_fraction name="inconsequential target scale#scales magnetism level for inconsequential targets like infection forms" />
+		<_field_explanation name="crosshair" />
+		<_field_real_point_2d name="crosshair location#-1..1, 0 is middle of the screen" />
+		<_field_explanation name="fireteam" />
+		<_field_real name="fireteam command mode duration:seconds#How long is command mode on after you initially attempt to issue an order" />
+		<_field_explanation name="looking" />
+		<_field_real name="look autolevelling scale#1 is fast, 0 is none, &gt;1 will probably be really fast" />
+		<_field_real name="gravity_scale" />
+		<_field_pad name="VM" length="2" />
+		<_field_short_integer name="minimum autolevelling ticks#amount of time player needs to move and not look up or down for autolevelling to kick in" />
+		<_field_angle name="minimum angle for vehicle flipping#0 means the vehicle's up vector is along the ground, 90 means the up vector is pointing straight up:degrees" />
+		<_field_explanation name="weapons may optionally be set to require extra button hold time (e.g. ordnance power weapon drops)" />
+		<_field_real name="minimum action hold time:seconds#time that player needs to press ACTION to register as a HOLD" />
+		<_field_real name="minimum action hold time for teammates:seconds#teammates of player who dropped/spawned weapon" />
+		<_field_real name="minimum action hold time for opponents:seconds#opponents of player who dropped/spawned weapon" />
+		<_field_real name="pegged zoom supression threshold#for spinny-shotgun goodness" />
+		<_field_explanation name="double/triple jump" />
+		<_field_real name="minimum vertical velocity:wu/s" />
+		<_field_real name="cooldown time:seconds" />
+		<_field_real_vector_2d name="double jump velocity:horizontal, vertical" />
+		<_field_real_vector_2d name="triple jump velocity:aiming, vertical" />
+		<_field_explanation name="stick throws" />
+		<_field_real name="throw channel width#how close to an axis you have to be" />
+		<_field_real name="throw peg threshold#how far from the center you have to be" />
+		<_field_real name="throw centered min time:s#how long the stick must be centered to start a throw" />
+		<_field_real name="throw drawing max time:s#how long you can take to become pegged at the start of a throw" />
+		<_field_real name="throw drawn max time:s#how long you can stay pegged at the start of a throw" />
+		<_field_real name="throw throwing max time:s#how long you can take to throw the stick to pegged on the other side" />
+		<_field_real name="flick peg jump max time:s#max time you can be pegged and then press jump to activate" />
+		<_field_real name="double tap interval time:s#to engage double-tap, user must press jump twice in this much time" />
+		<_field_explanation name="Jump Assist" />
+		<_field_real name="vault_speed_gain" />
+		<_field_real name="vaultSprint_speed_gain" />
+		<_field_real name="vault_height_high" />
+		<_field_real name="vaultSprint_height_high" />
+		<_field_real name="vault_height_medium" />
+		<_field_real name="vaultSprint_height_medium" />
+		<_field_real name="vault_height_min" />
+		<_field_real name="vaultSprint_height_min" />
+		<_field_real name="vault_height_traverse" />
+		<_field_real name="vaultSprint_height_traverse" />
+		<_field_real name="vault_max_downward_distance" />
+		<_field_real name="vaultSprint_max_downward_distance" />
+		<_field_real name="vault_max_distance" />
+		<_field_real name="vaultSprint_max_distance" />
+		<_field_real name="vault_gravity_gain" />
+		<_field_real name="vaultSprint_gravity_gain" />
+		<_field_real name="vault_stationary_probe_distance" />
+		<_field_real name="vault_stationary_probe_angle" />
+		<_field_real name="vault_stationary_probe_min_z" />
+		<_field_real name="vault_lateral_speed_gain" />
+		<_field_real name="vaultSprint_lateral_speed_gain" />
+		<_field_real name="jump_air_control_gain" />
+		<_field_real name="jump_forward_horizontal_speed_0" />
+		<_field_real name="jump_forward_horizontal_speed_1" />
+		<_field_real name="jump_forward_horizontal_speed_2" />
+		<_field_real name="jump_forward_gravity_0" />
+		<_field_real name="jump_forward_gravity_1" />
+		<_field_real name="jump_forward_gravity_2" />
+		<_field_real name="jump_forward_height" />
+		<_field_real name="jump_lateral_horizontal_speed_0" />
+		<_field_real name="jump_lateral_horizontal_speed_1" />
+		<_field_real name="jump_lateral_horizontal_speed_2" />
+		<_field_real name="jump_lateral_gravity_0" />
+		<_field_real name="jump_lateral_gravity_1" />
+		<_field_real name="jump_lateral_gravity_2" />
+		<_field_real name="jump_lateral_height" />
+		<_field_real name="jump_reverse_horizontal_speed_0" />
+		<_field_real name="jump_reverse_horizontal_speed_1" />
+		<_field_real name="jump_reverse_horizontal_speed_2" />
+		<_field_real name="jump_reverse_gravity_0" />
+		<_field_real name="jump_reverse_gravity_1" />
+		<_field_real name="jump_reverse_gravity_2" />
+		<_field_real name="jump_reverse_height" />
+		<_field_real name="jump_stationary_horizontal_speed_0" />
+		<_field_real name="jump_stationary_horizontal_speed_1" />
+		<_field_real name="jump_stationary_horizontal_speed_2" />
+		<_field_real name="jump_stationary_gravity_0" />
+		<_field_real name="jump_stationary_gravity_1" />
+		<_field_real name="jump_stationary_gravity_2" />
+		<_field_real name="jump_stationary_height" />
+		<_field_real name="Downward_Vault_Min_Laterial_Distance" />
+		<_field_real name="Vault_AutoCorrect_MaxAngle" />
+		<_field_real name="Vault ideal distance#When several via vault targets are found, vaults closer to this distance are more likely to be chosen" />
+		<_field_real name="Vault Sprint ideal distance#When several via vault targets are found, vaults closer to this distance are more likely to be chosen" />
+	</_field_block>
+	<_field_block name="default player traits" max="1" srcguid="4efacdae-4175-fd47-aa99-e781f6537f90" srcName="game_engine_player_traits_block">
+		<_field_block name="vitality traits" max="1" srcguid="2bb5238f-567e-5046-bd6e-d274d5a66fe8" srcName="player_traits_vitality_block">
+			<_field_long_flags name="should apply trait">
+				<item Name="damage resistance" />
+				<item Name="shield multiplier" />
+				<item Name="body multiplier" />
+				<item Name="shield stun duration" />
+				<item Name="shield recharge rate" />
+				<item Name="body recharge rate" />
+				<item Name="overshield recharge rate" />
+				<item Name="vampirism percent" />
+				<item Name="explosive damage resistance" />
+				<item Name="wheelman armor vehicle stun time modifier" />
+				<item Name="wheelman armor vehicle recharge time modifier" />
+				<item Name="wheelman armor vehicle emp disabled time modifier" />
+				<item Name="fall damage multiplier" />
+			</_field_long_flags>
+			<_field_explanation name="damage resistance">Any damage taken is divided by this number.  If you put -1, that means "invulnerable".</_field_explanation>
+			<_field_real name="damage resistance" />
+			<_field_real name="shield multiplier" />
+			<_field_real name="body multiplier" />
+			<_field_real name="shield stun duration" />
+			<_field_real name="shield recharge rate" />
+			<_field_real name="body recharge rate" />
+			<_field_real name="overshield recharge rate" />
+			<_field_real name="vampirism percent" />
+			<_field_real name="explosive damage resistance#incoming damage multiplied by (1 - resistance)" />
+			<_field_real name="wheelman armor vehicle stun time modifier" />
+			<_field_real name="wheelman armor vehicle recharge time modifier" />
+			<_field_real name="wheelman armor vehicle emp disabled time modifier" />
+			<_field_real name="fall damage multiplier" />
+			<_field_char_enum name="headshot immunity">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="assassination immunity">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="deathless">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="fast track armor">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="powerup cancellation">
+				<item Name="unchanged" />
+				<item Name="none" />
+				<item Name="no_overshield" />
+			</_field_char_enum>
+			<_field_pad name="pad" length="3" />
+		</_field_block>
+		<_field_block name="weapon traits" max="1" srcguid="d0769db2-953a-8942-ab81-d09dc0a90761" srcName="player_traits_weapons_block">
+			<_field_long_flags name="should apply trait">
+				<item Name="damage multiplier" />
+				<item Name="melee damage multiplier" />
+				<item Name="grenade recharge seconds frag" />
+				<item Name="grenade recharge seconds plasma" />
+				<item Name="grenade recharge seconds spike" />
+				<item Name="hero equipment energy use rate modifier" />
+				<item Name="hero equipment energy recharge delay modifier" />
+				<item Name="hero equipment energy recharge rate modifier" />
+				<item Name="hero equipment initial energy modifier" />
+				<item Name="equipment energy use rate modifier" />
+				<item Name="equipment energy recharge delay modifier" />
+				<item Name="equipment energy use recharge rate modifier" />
+				<item Name="equipment energy initial energy modifier" />
+				<item Name="switch speed modifier" />
+				<item Name="reload speed modifier" />
+				<item Name="ordnance points modifier" />
+				<item Name="explosive area of effect radius modifier" />
+				<item Name="gunner armor modifier" />
+				<item Name="stability armor modifier" />
+				<item Name="drop recon warning seconds" />
+				<item Name="drop recon distance modifier" />
+				<item Name="assassination speed modifier" />
+			</_field_long_flags>
+			<_field_real name="damage multiplier" />
+			<_field_real name="melee damage multiplier" />
+			<_field_real name="grenade recharge seconds frag" />
+			<_field_real name="grenade recharge seconds plasma" />
+			<_field_real name="grenade recharge seconds spike" />
+			<_field_real name="hero equipment energy use rate modifier" />
+			<_field_real name="hero equipment energy recharge delay modifier" />
+			<_field_real name="hero equipment energy recharge rate modifier" />
+			<_field_real name="hero equipment initial energy modifier" />
+			<_field_real name="equipment energy use rate modifier" />
+			<_field_real name="equipment energy recharge delay modifier" />
+			<_field_real name="equipment energy use recharge rate modifier" />
+			<_field_real name="equipment energy initial energy modifier" />
+			<_field_real name="switch speed modifier" />
+			<_field_real name="reload speed modifier" />
+			<_field_real name="ordnance points modifier" />
+			<_field_real name="explosive area of effect radius modifier" />
+			<_field_real name="gunner armor modifier" />
+			<_field_real name="stability armor modifier" />
+			<_field_real name="drop recon warning seconds" />
+			<_field_real name="drop recon distance modifier" />
+			<_field_real name="assassination speed modifier" />
+			<_field_char_enum name="weapon pickup allowed">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="initial grenade count">
+				<item Name="unchanged" />
+				<item Name="map_default" />
+				<item Name="0" />
+				<item Name="1_frag" />
+				<item Name="2_frag" />
+				<item Name="1_plasma" />
+				<item Name="2_plasma" />
+				<item Name="1_type2" />
+				<item Name="2_type2" />
+				<item Name="1_type3" />
+				<item Name="2_type3" />
+				<item Name="1_type4" />
+				<item Name="2_type4" />
+				<item Name="1_type5" />
+				<item Name="2_type5" />
+				<item Name="1_type6" />
+				<item Name="2_type6" />
+				<item Name="1_type7" />
+				<item Name="2_type7" />
+			</_field_char_enum>
+			<_field_char_enum name="infinite ammo">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="on" />
+				<item Name="bottomless_clip" />
+			</_field_char_enum>
+			<_field_char_enum name="equipment usage">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="not with objectives" />
+				<item Name="on" />
+			</_field_char_enum>
+			<_field_char_enum name="equipment usage excepting auto turret#false will disable all equipment except auto turret">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="not with objectives" />
+				<item Name="on" />
+			</_field_char_enum>
+			<_field_char_enum name="equipment drop">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="infinite equipment">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons ammopack">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons grenadier">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons explode on death armormod#spawns projectile specified in globals.globals">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="ordnance markers visible">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons ordnance reroll available">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons resourceful#grenade probabilities defined in grenade_list.game_globals_grenade_list">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="weapons well equipped">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="ordnance disabled">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_pad name="weapons_padding" length="1" />
+			<_field_explanation name="initial weapons/equipment">Type any string from the relevant sections of multiplayer/globals.multiplayer_object_type_list.</_field_explanation>
+			<_field_string_id name="initial primary weapon" />
+			<_field_string_id name="initial secondary weapon" />
+			<_field_string_id name="initial equipment" />
+			<_field_string_id name="initial tactical package" />
+			<_field_string_id name="initial support upgrade" />
+		</_field_block>
+		<_field_block name="movement traits" max="1" srcguid="3d67624f-616d-f646-a3a6-684d38c167b3" srcName="player_traits_movement_block">
+			<_field_long_flags name="should apply trait">
+				<item Name="speed" />
+				<item Name="gravity multiplier" />
+				<item Name="jump multiplier" />
+				<item Name="turn speed multiplier" />
+			</_field_long_flags>
+			<_field_real name="speed" />
+			<_field_real name="gravity multiplier" />
+			<_field_real name="jump multiplier" />
+			<_field_real name="turn speed multiplier" />
+			<_field_char_enum name="vehicle usage">
+				<item Name="unchanged" />
+				<item Name="none" />
+				<item Name="passenger_only" />
+				<item Name="driver_only" />
+				<item Name="gunner_only" />
+				<item Name="not_passenger" />
+				<item Name="not_driver" />
+				<item Name="not_gunner" />
+				<item Name="full" />
+			</_field_char_enum>
+			<_field_char_enum name="double jump">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="on" />
+				<item Name="on_plus_lunge" />
+			</_field_char_enum>
+			<_field_char_enum name="sprint usage">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="automatic momentum usage">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="vaulting enabled">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="stealthy">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_pad name="grue" length="2" />
+		</_field_block>
+		<_field_block name="appearance traits" max="1" srcguid="1258913f-75ea-dc41-a0bc-41a6e81cfc01" srcName="player_traits_appearance_block">
+			<_field_char_enum name="active camo">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="poor" />
+				<item Name="good" />
+				<item Name="excellent" />
+				<item Name="invisible" />
+			</_field_char_enum>
+			<_field_char_enum name="waypoint">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="allies" />
+				<item Name="all" />
+			</_field_char_enum>
+			<_field_char_enum name="gamertag visible">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="allies" />
+				<item Name="all" />
+			</_field_char_enum>
+			<_field_char_enum name="aura">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="team_color" />
+				<item Name="black" />
+				<item Name="white" />
+			</_field_char_enum>
+			<_field_explanation name="death effect/attached effect">Type any string from the relevant sections of multiplayer/megalo/multiplayer_effects.multiplayereffects.</_field_explanation>
+			<_field_string_id name="death effect" />
+			<_field_string_id name="attached effect" />
+		</_field_block>
+		<_field_block name="sensor traits" max="1" srcguid="0c0bc4e4-67e0-604b-aa10-33719bfe5daa" srcName="player_traits_sensors_block">
+			<_field_long_flags name="should apply trait">
+				<item Name="motion tracker range" />
+				<item Name="nemesis duration" />
+			</_field_long_flags>
+			<_field_real name="motion tracker range" />
+			<_field_real name="nemesis duration:seconds" />
+			<_field_char_enum name="motion tracker">
+				<item Name="unchanged" />
+				<item Name="off" />
+				<item Name="moving_friendly_bipeds_moving_neutral_vehicles" />
+				<item Name="moving_bipeds_moving_vehicles" />
+				<item Name="all_bipeds_moving_vehicles" />
+			</_field_char_enum>
+			<_field_char_enum name="motion tracker while zoomed">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="directional damage indicator">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="vision mode">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="battle awareness">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="threat view">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="aural enhancement">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+			<_field_char_enum name="nemesis">
+				<item Name="unchanged" />
+				<item Name="false" />
+				<item Name="true" />
+			</_field_char_enum>
+		</_field_block>
+	</_field_block>
+	<_field_block name="difficulty" max="1" srcguid="8c69849c-cfa3-b540-b473-6069abd1016b" srcName="difficulty_block">
+		<_field_explanation name="health">scale values for enemy health and damage settings</_field_explanation>
+		<_field_real name="easy enemy damage#enemy damage multiplier on easy difficulty" />
+		<_field_real name="normal enemy damage#enemy damage multiplier on normal difficulty" />
+		<_field_real name="hard enemy damage#enemy damage multiplier on hard difficulty" />
+		<_field_real name="imposs. enemy damage#enemy damage multiplier on impossible difficulty" />
+		<_field_real name="easy enemy vitality#enemy maximum body vitality scale on easy difficulty" />
+		<_field_real name="normal enemy vitality#enemy maximum body vitality scale on normal difficulty" />
+		<_field_real name="hard enemy vitality#enemy maximum body vitality scale on hard difficulty" />
+		<_field_real name="imposs. enemy vitality#enemy maximum body vitality scale on impossible difficulty" />
+		<_field_real name="easy enemy shield#enemy maximum shield vitality scale on easy difficulty" />
+		<_field_real name="normal enemy shield#enemy maximum shield vitality scale on normal difficulty" />
+		<_field_real name="hard enemy shield#enemy maximum shield vitality scale on hard difficulty" />
+		<_field_real name="imposs. enemy shield#enemy maximum shield vitality scale on impossible difficulty" />
+		<_field_real name="easy enemy recharge#enemy shield recharge scale on easy difficulty" />
+		<_field_real name="normal enemy recharge#enemy shield recharge scale on normal difficulty" />
+		<_field_real name="hard enemy recharge#enemy shield recharge scale on hard difficulty" />
+		<_field_real name="imposs. enemy recharge#enemy shield recharge scale on impossible difficulty" />
+		<_field_real name="easy friend damage#friend damage multiplier on easy difficulty" />
+		<_field_real name="normal friend damage#friend damage multiplier on normal difficulty" />
+		<_field_real name="hard friend damage#friend damage multiplier on hard difficulty" />
+		<_field_real name="imposs. friend damage#friend damage multiplier on impossible difficulty" />
+		<_field_real name="easy friend vitality#friend maximum body vitality scale on easy difficulty" />
+		<_field_real name="normal friend vitality#friend maximum body vitality scale on normal difficulty" />
+		<_field_real name="hard friend vitality#friend maximum body vitality scale on hard difficulty" />
+		<_field_real name="imposs. friend vitality#friend maximum body vitality scale on impossible difficulty" />
+		<_field_real name="easy friend shield#friend maximum shield vitality scale on easy difficulty" />
+		<_field_real name="normal friend shield#friend maximum shield vitality scale on normal difficulty" />
+		<_field_real name="hard friend shield#friend maximum shield vitality scale on hard difficulty" />
+		<_field_real name="imposs. friend shield#friend maximum shield vitality scale on impossible difficulty" />
+		<_field_real name="easy friend recharge#friend shield recharge scale on easy difficulty" />
+		<_field_real name="normal friend recharge#friend shield recharge scale on normal difficulty" />
+		<_field_real name="hard friend recharge#friend shield recharge scale on hard difficulty" />
+		<_field_real name="imposs. friend recharge#friend shield recharge scale on impossible difficulty" />
+		<_field_pad name="$" length="16" />
+		<_field_pad name="$$" length="16" />
+		<_field_explanation name="ranged fire">difficulty-affecting values for enemy ranged combat settings</_field_explanation>
+		<_field_real name="easy rate of fire#enemy rate of fire scale on easy difficulty" />
+		<_field_real name="normal rate of fire#enemy rate of fire scale on normal difficulty" />
+		<_field_real name="hard rate of fire#enemy rate of fire scale on hard difficulty" />
+		<_field_real name="imposs. rate of fire#enemy rate of fire scale on impossible difficulty" />
+		<_field_real name="easy projectile error#enemy projectile error scale, as a fraction of their base firing error. on easy difficulty" />
+		<_field_real name="normal projectile error#enemy projectile error scale, as a fraction of their base firing error. on normal difficulty" />
+		<_field_real name="hard projectile error#enemy projectile error scale, as a fraction of their base firing error. on hard difficulty" />
+		<_field_real name="imposs. projectile error#enemy projectile error scale, as a fraction of their base firing error. on impossible difficulty" />
+		<_field_real name="easy burst error#enemy burst error scale; reduces intra-burst shot distance. on easy difficulty" />
+		<_field_real name="normal burst error#enemy burst error scale; reduces intra-burst shot distance. on normal difficulty" />
+		<_field_real name="hard burst error#enemy burst error scale; reduces intra-burst shot distance. on hard difficulty" />
+		<_field_real name="imposs. burst error#enemy burst error scale; reduces intra-burst shot distance. on impossible difficulty" />
+		<_field_real name="easy new target delay#enemy new-target delay scale factor. on easy difficulty" />
+		<_field_real name="normal new target delay#enemy new-target delay scale factor. on normal difficulty" />
+		<_field_real name="hard new target delay#enemy new-target delay scale factor. on hard difficulty" />
+		<_field_real name="imposs. new target delay#enemy new-target delay scale factor. on impossible difficulty" />
+		<_field_real name="easy burst separation#delay time between bursts scale factor for enemies. on easy difficulty" />
+		<_field_real name="normal burst separation#delay time between bursts scale factor for enemies. on normal difficulty" />
+		<_field_real name="hard burst separation#delay time between bursts scale factor for enemies. on hard difficulty" />
+		<_field_real name="imposs. burst separation#delay time between bursts scale factor for enemies. on impossible difficulty" />
+		<_field_real name="easy target tracking#additional target tracking fraction for enemies. on easy difficulty" />
+		<_field_real name="normal target tracking#additional target tracking fraction for enemies. on normal difficulty" />
+		<_field_real name="hard target tracking#additional target tracking fraction for enemies. on hard difficulty" />
+		<_field_real name="imposs. target tracking#additional target tracking fraction for enemies. on impossible difficulty" />
+		<_field_real name="easy target leading#additional target leading fraction for enemies. on easy difficulty" />
+		<_field_real name="normal target leading#additional target leading fraction for enemies. on normal difficulty" />
+		<_field_real name="hard target leading#additional target leading fraction for enemies. on hard difficulty" />
+		<_field_real name="imposs. target leading#additional target leading fraction for enemies. on impossible difficulty" />
+		<_field_real name="easy overcharge chance#overcharge chance scale factor for enemies. on easy difficulty" />
+		<_field_real name="normal overcharge chance#overcharge chance scale factor for enemies. on normal difficulty" />
+		<_field_real name="hard overcharge chance#overcharge chance scale factor for enemies. on hard difficulty" />
+		<_field_real name="imposs. overcharge chance#overcharge chance scale factor for enemies. on impossible difficulty" />
+		<_field_real name="easy special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on easy difficulty" />
+		<_field_real name="normal special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on normal difficulty" />
+		<_field_real name="hard special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on hard difficulty" />
+		<_field_real name="imposs. special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on impossible difficulty" />
+		<_field_real name="easy guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on easy difficulty" />
+		<_field_real name="normal guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on normal difficulty" />
+		<_field_real name="hard guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on hard difficulty" />
+		<_field_real name="imposs. guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on impossible difficulty" />
+		<_field_real name="easy melee delay base#delay period added to all melee attacks, even when berserk. on easy difficulty" />
+		<_field_real name="normal melee delay base#delay period added to all melee attacks, even when berserk. on normal difficulty" />
+		<_field_real name="hard melee delay base#delay period added to all melee attacks, even when berserk. on hard difficulty" />
+		<_field_real name="imposs. melee delay base#delay period added to all melee attacks, even when berserk. on impossible difficulty" />
+		<_field_real name="easy melee delay scale#multiplier for all existing non-berserk melee delay times. on easy difficulty" />
+		<_field_real name="normal melee delay scale#multiplier for all existing non-berserk melee delay times. on normal difficulty" />
+		<_field_real name="hard melee delay scale#multiplier for all existing non-berserk melee delay times. on hard difficulty" />
+		<_field_real name="imposs. melee delay scale#multiplier for all existing non-berserk melee delay times. on impossible difficulty" />
+		<_field_pad name="$$$" length="16" />
+		<_field_explanation name="grenades">difficulty-affecting values for enemy grenade behavior</_field_explanation>
+		<_field_real name="easy grenade chance scale#scale factor affecting the desicions to throw a grenade. on easy difficulty" />
+		<_field_real name="normal grenade chance scale#scale factor affecting the desicions to throw a grenade. on normal difficulty" />
+		<_field_real name="hard grenade chance scale#scale factor affecting the desicions to throw a grenade. on hard difficulty" />
+		<_field_real name="imposs. grenade chance scale#scale factor affecting the desicions to throw a grenade. on impossible difficulty" />
+		<_field_real name="easy grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on easy difficulty" />
+		<_field_real name="normal grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on normal difficulty" />
+		<_field_real name="hard grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on hard difficulty" />
+		<_field_real name="imposs. grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on impossible difficulty" />
+		<_field_pad name="$$$$" length="16" />
+		<_field_pad name="$$$$$" length="16" />
+		<_field_pad name="$$$$$$" length="16" />
+		<_field_explanation name="placement">difficulty-affecting values for enemy placement</_field_explanation>
+		<_field_real name="easy major upgrade (normal)#fraction of actors upgraded to their major variant. on easy difficulty" />
+		<_field_real name="normal major upgrade (normal)#fraction of actors upgraded to their major variant. on normal difficulty" />
+		<_field_real name="hard major upgrade (normal)#fraction of actors upgraded to their major variant. on hard difficulty" />
+		<_field_real name="imposs. major upgrade (normal)#fraction of actors upgraded to their major variant. on impossible difficulty" />
+		<_field_real name="easy major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on easy difficulty" />
+		<_field_real name="normal major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on normal difficulty" />
+		<_field_real name="hard major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on hard difficulty" />
+		<_field_real name="imposs. major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on impossible difficulty" />
+		<_field_real name="easy major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on easy difficulty" />
+		<_field_real name="normal major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on normal difficulty" />
+		<_field_real name="hard major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on hard difficulty" />
+		<_field_real name="imposs. major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on impossible difficulty" />
+		<_field_explanation name="vehicles">difficulty-affecting values for vehicle driving/combat</_field_explanation>
+		<_field_real name="easy player vehicle ram chance#Chance of deciding to ram the player in a vehicle on easy difficulty" />
+		<_field_real name="normal player vehicle ram chance#Chance of deciding to ram the player in a vehicle on normal difficulty" />
+		<_field_real name="hard player vehicle ram chance#Chance of deciding to ram the player in a vehicle on hard difficulty" />
+		<_field_real name="imposs. player vehicle ram chance#Chance of deciding to ram the player in a vehicle on impossible difficulty" />
+		<_field_real name="easy trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on easy difficulty" />
+		<_field_real name="normal trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on normal difficulty" />
+		<_field_real name="hard trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on hard difficulty" />
+		<_field_real name="imposs. trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on impossible difficulty" />
+		<_field_pad name="$$$$$$$$" length="16" />
+		<_field_pad name="$$$$$$$$$" length="16" />
+		<_field_pad name="Q" length="84" />
+	</_field_block>
+	<_field_block name="co-op difficulty" max="1" srcguid="0544c277-61ca-7c4f-9192-d3bd88918045" srcName="coop_difficulty_block">
+		<_field_explanation name="vitality">scale values for enemy health and shield settings</_field_explanation>
+		<_field_real name="two-player shield recharge delay#multiplier on enemy shield recharge delay with two coop players" />
+		<_field_real name="four-player shield recharge delay#multiplier on enemy shield recharge delay with four coop players" />
+		<_field_real name="six-player shield recharge delay#multiplier on enemy shield recharge delay with six coop players or more" />
+		<_field_real name="two-player shield recharge timer#multiplier on enemy shield recharge timer with two coop players" />
+		<_field_real name="four-player shield recharge timer#multiplier on enemy shield recharge timer with four coop players" />
+		<_field_real name="six-player shield recharge timer#multiplier on enemy shield recharge timer with six coop players or more" />
+		<_field_explanation name="movement">scale values for enemy movement properties</_field_explanation>
+		<_field_real name="two-player grenade dive chance#multiplier on enemy grenade dive chance with two coop players" />
+		<_field_real name="four-player grenade dive chance#multiplier on enemy grenade dive chance with four coop players" />
+		<_field_real name="six-player grenade dive chance#multiplier on enemy grenade dive chance with six coop players or more" />
+		<_field_real name="two-player armor lock chance#multiplier on enemy armor lock chance with two coop players" />
+		<_field_real name="four-player armor lock chance#multiplier on enemy armor lock chance with four coop players" />
+		<_field_real name="six-player armor lock chance#multiplier on enemy armor lock chance with six coop players or more" />
+		<_field_explanation name="evasion">scale values for enemy evasion settings</_field_explanation>
+		<_field_real name="two-player evasion danger threshold#multiplier on enemy evasion danger threshold with two coop players" />
+		<_field_real name="four-player evasion danger threshold#multiplier on enemy evasion danger threshold with four coop players" />
+		<_field_real name="six-player evasion danger threshold#multiplier on enemy evasion danger threshold with six coop players or more" />
+		<_field_real name="two-player evasion delay timer#multiplier on enemy evasion delay timer with two coop players" />
+		<_field_real name="four-player evasion delay timer#multiplier on enemy evasion delay timer with four coop players" />
+		<_field_real name="six-player evasion delay timer#multiplier on enemy evasion delay timer with six coop players or more" />
+		<_field_real name="two-player evasion chance#multiplier on enemy evasion chance with two coop players" />
+		<_field_real name="four-player evasion chance#multiplier on enemy evasion chance with four coop players" />
+		<_field_real name="six-player evasion chance#multiplier on enemy evasion chance with six coop players or more" />
+		<_field_explanation name="shooting">scale values for enemy shooting settings</_field_explanation>
+		<_field_real name="two-player burst duration#multiplier on the enemy shooting burst duration with two coop players" />
+		<_field_real name="four-player burst duration#multiplier on the enemy shooting burst duration with four coop players" />
+		<_field_real name="six-player burst duration#multiplier on the enemy shooting burst duration with six coop players or more" />
+		<_field_real name="two-player burst separation#multipler on the enemy shooting burst separation with two coop players" />
+		<_field_real name="four-player burst separation#multipler on the enemy shooting burst separation with four coop players" />
+		<_field_real name="six-player burst separation#multipler on the enemy shooting burst separation with six coop players or more" />
+		<_field_real name="two-player damage modifier#multipler on the enemy shooting damage multiplier with two coop players" />
+		<_field_real name="four-player damage modifier#multipler on the enemy shooting damage multiplier with four coop players" />
+		<_field_real name="six-player damage modifier#multipler on the enemy shooting damage multiplier with six coop players or more" />
+		<_field_explanation name="projectile">scale values for enemy projectile settings</_field_explanation>
+		<_field_real name="two-player projectile speed#multiplier on the speed of projectiles fired by enemies with two coop players" />
+		<_field_real name="four-player projectile speed#multiplier on the speed of projectiles fired by enemies with four coop players" />
+		<_field_real name="six-player projectile speed#multiplier on the speed of projectiles fired by enemies with six coop players or more" />
+	</_field_block>
+	<_field_block name="soft ceilings" max="1" srcguid="5679e564-7336-a74b-83b6-cf77da4feaed" srcName="soft_ceiling_globals_block">
+		<_field_real name="biped spring constant" />
+		<_field_real name="biped normal damping" />
+		<_field_real name="biped tangent damping" />
+		<_field_real name="biped min tangent damp velocity" />
+		<_field_real name="vehicle spring constant" />
+		<_field_real name="vehicle normal damping" />
+		<_field_real name="vehicle tangent damping" />
+	</_field_block>
+	<_field_block name="interface tags" max="1" srcguid="42bdfcea-2627-fb4d-9c26-24c1928b0d3c" srcName="interface_tag_references">
+		<_field_tag_reference name="spinner bitmap" validtags="bitm" />
+		<_field_tag_reference name="obsolete2" validtags="bitm" />
+		<_field_tag_reference name="screen color table" validtags="colo" />
+		<_field_tag_reference name="hud color table" validtags="colo" />
+		<_field_tag_reference name="editor color table" validtags="colo" />
+		<_field_tag_reference name="dialog color table" validtags="colo" />
+		<_field_tag_reference name="motion sensor sweep bitmap" validtags="bitm" />
+		<_field_tag_reference name="motion sensor sweep bitmap mask" validtags="bitm" />
+		<_field_tag_reference name="multiplayer hud bitmap" validtags="bitm" />
+		<_field_tag_reference name="unused!" />
+		<_field_tag_reference name="motion sensor blip bitmap" validtags="bitm" />
+		<_field_tag_reference name="interface goo map1" validtags="bitm" />
+		<_field_tag_reference name="interface goo map2" validtags="bitm" />
+		<_field_tag_reference name="interface goo map3" validtags="bitm" />
+		<_field_tag_reference name="mainmenu ui globals" validtags="wgtz" />
+		<_field_tag_reference name="singleplayer ui globals" validtags="wgtz" />
+		<_field_tag_reference name="multiplayer ui globals" validtags="wgtz" />
+		<_field_tag_reference name="firefight ui globals" validtags="wgtz" />
+		<_field_tag_reference name="style sheet globals" validtags="uiss" />
+	</_field_block>
+	<_field_block name="@weapon list (update _weapon_list enum in game_globals.h)" max="20" srcguid="e7bb3cd1-ec9d-d64e-983b-a69c9d39ae04" srcName="cheat_weapons_block">
+		<_field_tag_reference name="weapon^" validtags="item" />
+	</_field_block>
+	<_field_block name="@cheat powerups" max="20" srcguid="087db560-5ff4-1c43-bcff-47933c28c018" srcName="cheat_powerups_block">
+		<_field_tag_reference name="powerup^" validtags="eqip" />
+	</_field_block>
+	<_field_block name="@player information" max="3" srcguid="4547af45-244d-7d47-a205-702ce5caebe7" srcName="player_information_block">
+		<_field_real name="walking speed:world units per second" />
+		<_field_real name="run forward:world units per second" />
+		<_field_real name="run backward:world units per second" />
+		<_field_real name="run sideways:world units per second" />
+		<_field_real name="run acceleration:world units per second squared" />
+		<_field_real name="sneak forward:world units per second" />
+		<_field_real name="sneak backward:world units per second" />
+		<_field_real name="sneak sideways:world units per second" />
+		<_field_real name="sneak acceleration:world units per second squared" />
+		<_field_real name="airborne acceleration:world units per second squared" />
+		<_field_real name="weapon ready anim scaler" />
+		<_field_real_point_3d name="grenade origin" />
+		<_field_struct name="grenade aiming#determines the distance along the aiming vector to orient the grenade based on the camera pitch" />
+		<_field_data name="data" />
+		<_field_real_bounds name="first person idle time:seconds" />
+		<_field_real_fraction name="first person skip fraction:[0,1]" />
+		<_field_tag_reference name="coop countdown sound" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="coop respawn sound" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="coop respawn effect" validtags="effe" />
+		<_field_tag_reference name="hologram death effect" validtags="effe" />
+		<_field_long_integer name="binoculars zoom count" />
+		<_field_real_bounds name="binoculars zoom range" />
+		<_field_tag_reference name="night vision on{flashlight on}" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="night vision off{flashlight off}" validtags="scmb, sndo, snd!" />
+		<_field_real name="fire team objective range" />
+		<_field_real name="fire team sandbox range" />
+		<_field_real name="fire team cone angle: in degrees" />
+		<_field_explanation name="sprinting/momentum" />
+		<_field_block name="momentum and sprinting" max="2" srcguid="2fb0a57a-d750-184b-892a-d20a2b334390" srcName="player_momentum_data_block">
+			<_field_byte_flags name="flag">
+				<item Name="disable soft ping check" />
+				<item Name="disable hard ping check" />
+			</_field_byte_flags>
+			<_field_pad name="PAD" length="3" />
+			<_field_real name="seconds to start#how long you must be pegged before you gain momentum" />
+			<_field_real name="seconds to full speed#how long you must have momentum before you reach top speed" />
+			<_field_real name="decay rate#how fast being unpegged decays the timer (seconds per second)" />
+			<_field_real name="full speed multiplier#how much faster we actually go when at full momentum" />
+			<_field_real name="sprint turn multiplier#how much faster to turn when sprinting" />
+			<_field_real name="pegged magnitude#how far the stick needs to be pressed before being considered pegged" />
+			<_field_real name="pegged angular threshold#how far off straight up (in degrees) we consider pegged" />
+			<_field_angle name="max look yaw velocity:degrees per second" />
+			<_field_angle name="max look pitch velocity:degrees per second" />
+			<_field_real name="minimum player velocity to be considered in a momentum state:world units per second" />
+			<_field_real name="look window length:seconds#period of time over which we record the biped's look angle for deciding if we should drop him out of momentum" />
+			<_field_string_id name="momentum animation stance" />
+			<_field_real name="min weapon error#[0, 1] while using this type of momentum, the player's weapon error cannot drop below this value" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="@player representation" max="3" srcguid="3ae2354f-cbfa-d143-90c6-d72649c496b7" srcName="player_representation_block">
+		<_field_byte_flags name="flags">
+			<item Name="can use health packs" />
+		</_field_byte_flags>
+		<_field_pad name="pad" length="3" />
+		<_field_tag_reference name="hud screen reference" validtags="cusc" />
+		<_field_tag_reference name="first person hands model" validtags="hlmt" />
+		<_field_string_id name="first person multiplayer hands variant" />
+		<_field_tag_reference name="first person body model" validtags="hlmt" />
+		<_field_string_id name="first person multiplayer body variant" />
+		<_field_block name="hidden fpBody regions" max="32" srcguid="1ff8c7b6-742d-114d-9ca9-b38f50f32bc5" srcName="firstPersonpHiddenBodyRegionsBlock">
+			<_field_string_id name="hidden region^" />
+			<_field_byte_flags name="flags">
+				<item Name="visible in ICS" />
+			</_field_byte_flags>
+			<_field_pad name="pad" length="3" />
+		</_field_block>
+		<_field_tag_reference name="third person unit" validtags="unit" />
+		<_field_string_id name="third person variant" />
+		<_field_tag_reference name="binoculars zoom in sound" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="binoculars zoom out sounds" validtags="scmb, sndo, snd!" />
+		<_field_long_block_index name="player information" targetGuid="4547af45-244d-7d47-a205-702ce5caebe7" targetName="player_information_block" />
+	</_field_block>
+	<_field_block name="damage{falling damage}" max="1" srcguid="2ae17c2b-fdc9-8441-a5b5-c9116d515d0a" srcName="damage_globals_block">
+		<_field_tag_reference name="falling damage" validtags="jpt!" />
+		<_field_tag_reference name="jumping damage" validtags="jpt!" />
+		<_field_tag_reference name="soft landing damage" validtags="jpt!" />
+		<_field_tag_reference name="hard landing damage" validtags="jpt!" />
+		<_field_tag_reference name="hs damage" validtags="jpt!" />
+		<_field_tag_reference name="hs fire damage" validtags="jpt!" />
+		<_field_real name="terminal velocity:wu/s#you die if you fall faster than this (non-multiplayer only)" />
+		<_field_tag_reference name="terminal velocity damage{distance damage}" validtags="jpt!" />
+		<_field_tag_reference name="default damage response{damage response}#fall back if none is specified in damage effect tags" validtags="drdf" />
+		<_field_tag_reference name="friendly fire damage response#anytime your teammate shoots you" validtags="drdf" />
+		<_field_real name="player shield spillover#the minimum amount of shield vitality needed to prevent spillover from damage types that do not spillover." />
+		<_field_custom name="damage decay" />
+		<_field_struct name="damage decay props*!" />
+		<_field_real name="current damage decay delay:seconds#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="current damage decay time:seconds#amount of time it would take for 100% current damage to decay to 0" />
+		<_field_real name="current damage decay rate:damage/second#amount of damage that decays from our current damage every second" />
+		<_field_real name="recent damage decay delay:seconds#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="recent damage decay time:seconds#amount of time it would take for 100% recent damage to decay to 0" />
+		<_field_custom name="AI damage decay" />
+		<_field_struct name="ai damage decay props*!" />
+		<_field_real name="current damage decay delay:seconds#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="current damage decay time:seconds#amount of time it would take for 100% current damage to decay to 0" />
+		<_field_real name="current damage decay rate:damage/second#amount of damage that decays from our current damage every second" />
+		<_field_real name="recent damage decay delay:seconds#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="recent damage decay time:seconds#amount of time it would take for 100% recent damage to decay to 0" />
+		<_field_custom name="shield impact decay" />
+		<_field_struct name="shield impact decay props" />
+		<_field_real name="current damage decay delay:seconds#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="current damage decay time:seconds#amount of time it would take for 100% current damage to decay to 0" />
+		<_field_real name="current damage decay rate:damage/second#amount of damage that decays from our current damage every second" />
+		<_field_real name="recent damage decay delay:seconds#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)" />
+		<_field_real name="recent damage decay time:seconds#amount of time it would take for 100% recent damage to decay to 0" />
+	</_field_block>
+	<_field_block name="shield boost" max="1" srcguid="0ed4a4c8-0f83-e449-9096-22711fdc8f7c" srcName="shield_boost_block">
+		<_field_explanation name="shield boosting">This feature was implemented for the engineer character in atlas. Shield dynamics overrides for when shields are being 'boosted' by an external source</_field_explanation>
+		<_field_real name="shield boost decay#amount of shield-boost to decay per second" />
+		<_field_real name="shield boost recharge time#time to recharge full shields when getting boosted" />
+		<_field_real name="shield boost stun time#stun time when getting boosted" />
+	</_field_block>
+	<_field_block name="materials" max="256" srcguid="53915f4d-b900-a347-bcaf-406fc56f065c" srcName="materials_block">
+		<_field_string_id name="name^" />
+		<_field_string_id name="parent name" />
+		<_field_short_integer name="runtime material index!" />
+		<_field_word_flags name="flags">
+			<item Name="flammable" />
+			<item Name="biomass" />
+			<item Name="rad xfer interior" />
+			<item Name="used directly!" />
+			<item Name="used by children!" />
+		</_field_word_flags>
+		<_field_string_id name="general armor" />
+		<_field_string_id name="specific armor" />
+		<_field_struct name="wet proxies" />
+		<_field_explanation name="when rained on, we report this material" />
+		<_field_string_id name="wet material" />
+		<_field_short_integer name="runtime proxy material index*!" />
+		<_field_pad name="wpb1" length="2" />
+		<_field_short_integer name="runtime dry base material index!" />
+		<_field_pad name="RMBP1" length="2" />
+		<_field_struct name="physics properties" />
+		<_field_long_integer name="flags!" />
+		<_field_real name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="density:kg/m^3" />
+		<_field_explanation name="Drag" />
+		<_field_tag_reference name="water physics drag properties" validtags="wpdp" />
+		<_field_block name="drag overrides" max="16" srcguid="b02bb212-9eaf-0649-b0cc-e6bab6c4e365" srcName="object_type_drag_properties_block">
+			<_field_tag_reference name="drag properties" validtags="wpdp" />
+		</_field_block>
+		<_field_explanation name="Floatation">objects of this flotation category have this density relative to being in this material (1.0f==neutral)</_field_explanation>
+		<_field_pad name="default" length="4" />
+		<_field_real name="super floater" />
+		<_field_real name="floater" />
+		<_field_real name="neutral" />
+		<_field_real name="sinker" />
+		<_field_real name="super sinker" />
+		<_field_pad name="none" length="4" />
+		<_field_tag_reference name="breakable surface" validtags="bsdt" />
+		<_field_struct name="sweeteners" />
+		<_field_tag_reference name="sound sweetener (small)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (medium)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (large)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener rolling" validtags="lsnd" />
+		<_field_tag_reference name="sound sweetener grinding" validtags="lsnd" />
+		<_field_tag_reference name="sound sweetener (melee small)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (melee)#this is a medium sweetener and was the old default" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (melee large)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="effect sweetener (small)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (medium)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (large)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener rolling" validtags="effe" />
+		<_field_tag_reference name="effect sweetener grinding" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (melee)" validtags="effe" />
+		<_field_tag_reference name="water ripple (small)" validtags="rwrd" />
+		<_field_tag_reference name="water ripple (medium)" validtags="rwrd" />
+		<_field_tag_reference name="water ripple (large)" validtags="rwrd" />
+		<_field_explanation name="sweetener inheritance flags">when a sweetener inheritance flag is set the sound\effect is not inherited from the parent material.  If you leave the sweetener blank and set the flag than no effect\sound will play</_field_explanation>
+		<_field_long_flags name="sweetener inheritance flags">
+			<item Name="sound_small" />
+			<item Name="sound_medium" />
+			<item Name="sound_large" />
+			<item Name="sound_rolling" />
+			<item Name="sound_grinding" />
+			<item Name="sound_melee_small" />
+			<item Name="sound_melee" />
+			<item Name="sound_melee_large" />
+			<item Name="effect_small" />
+			<item Name="effect_medium" />
+			<item Name="effect_large" />
+			<item Name="effect_rolling" />
+			<item Name="effect_grinding" />
+			<item Name="effect_melee" />
+			<item Name="water_ripple_small" />
+			<item Name="water_ripple_medium" />
+			<item Name="water_ripple_large" />
+		</_field_long_flags>
+		<_field_tag_reference name="material effects" validtags="foot" />
+		<_field_block name="underwater proxies" max="512" srcguid="53935fad-b9a0-a3c7-baa0-406fc16f2653" srcName="underwater_proxies_block">
+			<_field_explanation name="when this material is encounted under a material of this type ..." />
+			<_field_string_id name="underwater material" />
+			<_field_explanation name="... we report it as this material" />
+			<_field_string_id name="proxy material" />
+			<_field_short_integer name="underwater material type*!" />
+			<_field_short_integer name="proxy material type*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="profile colors" max="32" srcguid="56976c0a-e2f0-6648-a708-f3e9c9c41962" srcName="multiplayer_color_block">
+		<_field_real_rgb_color name="color" />
+	</_field_block>
+	<_field_block name="emblem colors" max="32" srcguid="56976c0a-e2f0-6648-a708-f3e9c9c41962" srcName="multiplayer_color_block">
+		<_field_real_rgb_color name="color" />
+	</_field_block>
+	<_field_block name="visor colors" max="32" srcguid="c23ac791-f284-bd47-933b-0bad26db133b" srcName="visor_color_block">
+		<_field_string_id name="name^" />
+		<_field_real_rgb_color name="tertiary color" />
+		<_field_real_rgb_color name="quaternary color" />
+	</_field_block>
+	<_field_custom name="Elite specular colors" />
+	<_field_struct name="elite specular color" />
+	<_field_real_rgb_color name="tertiary color" />
+	<_field_real_rgb_color name="quaternary color" />
+	<_field_tag_reference name="forge globals" validtags="forg" />
+	<_field_tag_reference name="game engine globals" validtags="gegl" />
+	<_field_tag_reference name="multiplayer globals" validtags="mulg" />
+	<_field_tag_reference name="survival_mode globals" validtags="smdt" />
+	<_field_tag_reference name="firefight globals" validtags="ffgd" />
+	<_field_tag_reference name="global multiplayer object type list" validtags="motl" />
+	<_field_tag_reference name="custom app globals" validtags="capg" />
+	<_field_tag_reference name="grenades" validtags="gggl" />
+	<_field_tag_reference name="ordnances" validtags="ggol" />
+	<_field_tag_reference name="silent assist" validtags="slag" />
+	<_field_block name="cinematics globals" max="1" srcguid="5b2a2f3b-df52-b04f-a68f-ff8b30d069d7" srcName="cinematics_globals_block">
+		<_field_tag_reference name="cinematic anchor reference" validtags="scen" />
+		<_field_real name="cinematic film aperture" />
+		<_field_real name="cinematic skip ui up time" />
+		<_field_fraction_bounds name="subtitle rect width#percentage towards the center - 0=default, 0.5=center of the screen" />
+		<_field_fraction_bounds name="subtitle rect height#0=default, 0.5=center of the screen" />
+		<_field_real_rgb_color name="default subtitle color" />
+		<_field_real_rgb_color name="default subtitle shadow color" />
+		<_field_block name="cinematic characters" max="16" srcguid="743d6e4a-07c5-8d47-862b-ff5f1f1fa177" srcName="cinematic_characters_block">
+			<_field_string_id name="character name^" />
+			<_field_real_rgb_color name="subtitle color" />
+			<_field_real_rgb_color name="shadow color" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="campaign metagame globals" max="1" srcguid="38cbd684-719f-ba47-8047-880000026d5c" srcName="campaign_metagame_globals_block">
+		<_field_block name="styles" max="100" srcguid="3012fa5d-3d8a-5346-9e93-d875afd34842" srcName="campaign_metagame_style_type_block">
+			<_field_string_id name="incident name^" />
+			<_field_real name="style multiplier" />
+		</_field_block>
+		<_field_block name="difficulty" max="4" srcguid="8ffa1d4c-1e20-aa4e-ad8b-851b7d67e295" srcName="campaign_metagame_difficulty_scale_block">
+			<_field_real name="difficulty multiplier" />
+		</_field_block>
+		<_field_block name="skulls{Primary Skulls}" max="17" srcguid="d930158f-ccc5-934c-a673-9313d5c8baae" srcName="campaign_metagame_skull_block">
+			<_field_real name="difficulty multiplier" />
+		</_field_block>
+		<_field_long_integer name="friendly_death_point_count" />
+		<_field_long_integer name="player_death_point_count" />
+		<_field_long_integer name="player_betrayal_point_count" />
+		<_field_real name="transient score time{multi kill window}:s#how long does transient score stay onscreen" />
+		<_field_real name="EMP kill window#time after taking a guys shields down with emp damage you have to get the emp kill bonus (seconds)" />
+	</_field_block>
+	<_field_tag_reference name="game medal globals" validtags="gmeg" />
+	<_field_struct name="language pack1!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack2!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack3!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack4!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack5!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack6!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack7!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack8!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack9!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack10!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack11!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack12!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack13!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack14!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack15!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack16!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_struct name="language pack17!" />
+	<_field_long_integer name="string reference pointer!" />
+	<_field_long_integer name="string data pointer!" />
+	<_field_long_integer name="number of strings!" />
+	<_field_long_integer name="string data size!" />
+	<_field_long_integer name="string reference cache offset!" />
+	<_field_long_integer name="string data cache offset!" />
+	<_field_array name="string reference checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_array name="string data checksum!">
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+		<_field_byte_integer name="hash byte!" />
+	</_field_array>
+	<_field_long_integer name="data loaded boolean~!" />
+	<_field_explanation name="Rasterizer globals" />
+	<_field_tag_reference name="rasterizer_globals_ref" validtags="rasg" />
+	<_field_explanation name="Default camera fx settings" />
+	<_field_tag_reference name="default camera fx settings" validtags="cfxs" />
+	<_field_explanation name="Default wind settings" />
+	<_field_tag_reference name="default wind settings" validtags="wind" />
+	<_field_explanation name="Weather globals" />
+	<_field_tag_reference name="weather globals" validtags="wxcg" />
+	<_field_explanation name="Default collision damage" />
+	<_field_tag_reference name="collision damage effect" validtags="jpt!" />
+	<_field_tag_reference name="collision damage" validtags="cddf" />
+	<_field_explanation name="global material types" />
+	<_field_string_id name="global water material#the default value for what material type water is" />
+	<_field_string_id name="global air material#the default value for what material type air is" />
+	<_field_short_integer name="global water material type!" />
+	<_field_short_integer name="global air material type!" />
+	<_field_tag_reference name="effect globals" validtags="effg" />
+	<_field_tag_reference name="havok collision filter" validtags="hcfd" />
+	<_field_tag_reference name="default item grounded friction" validtags="grfr" />
+	<_field_block name="active camo" max="1" srcguid="5eff3440-d839-2d4c-916c-a4fb0c7983bc" srcName="active_camo_globals_block">
+		<_field_real name="biped speed reference:wu/s#for bipeds, the speed at which you are on the far right of the 'speed to max camo' graph" />
+		<_field_real name="vehicle speed reference:wu/s#for vehicles, the speed at which you are on the far right of the 'speed to max camo' graph" />
+		<_field_real_fraction name="camo value for game name#minimum active camo percentage at which a player's game name will start becoming visible" />
+		<_field_struct name="camo value to distortion" />
+		<_field_data name="data" />
+		<_field_struct name="camo value to transparency#maps active-camo percentage to alpha for THIRD PERSON rendering" />
+		<_field_data name="data" />
+		<_field_struct name="camo value to fp transparency#maps active-camo percentage to alpha for FIRST PERSON rendering" />
+		<_field_data name="data" />
+		<_field_struct name="camo distortion texture strength" />
+		<_field_data name="data" />
+		<_field_real_vector_2d name="camo distortion scale" />
+		<_field_real_vector_2d name="camo distortion translate speed" />
+		<_field_tag_reference name="camo distortion texture" validtags="bitm" />
+		<_field_real name="camo depth bias max distance#This is used to deal with ugly rendering artifacts when camo is not fully on" />
+		<_field_struct name="camo depth bias function#This is used to deal with ugly rendering artifacts when camo is not fully on" />
+		<_field_data name="data" />
+		<_field_block name="camo levels" max="5" srcguid="aade83e2-7bd1-ff46-8002-f669f186e377" srcName="active_camo_level_definition_block">
+			<_field_real name="grenade throw penalty:0..1#reduces camo value by this much when throwing a grenade" />
+			<_field_real name="melee penalty:0..1#reduces camo by this much when meleeing" />
+			<_field_real name="minimum dinged value#when taking damage or doing other actions that reduce camo, we will never drop below this value" />
+			<_field_real name="interpolation time:s#time it takes to interpolate from 0.0 to 1.0" />
+			<_field_struct name="speed to maximum camo" />
+			<_field_data name="data" />
+		</_field_block>
+	</_field_block>
+	<_field_tag_reference name="incident global properties" validtags="igpd" />
+	<_field_tag_reference name="player grade globals" validtags="pggd" />
+	<_field_tag_reference name="enlistment globals" validtags="pegd" />
+	<_field_tag_reference name="player model customization globals" validtags="pmcg" />
+	<_field_tag_reference name="loadout globals" validtags="lgtd" />
+	<_field_tag_reference name="challenge globals" validtags="chdg" />
+	<_field_tag_reference name="game completion rewards globals" validtags="gcrg" />
+	<_field_tag_reference name="game achievements" validtags="achi" />
+	<_field_tag_reference name="game avatar awards" validtags="avat" />
+	<_field_tag_reference name="game performance thortles default" validtags="gptd" />
+	<_field_tag_reference name="armormod globals" validtags="armg" />
+	<_field_tag_reference name="progression globals" validtags="prog" />
+	<_field_block name="garbage collection" max="1" srcguid="e047b149-3c86-4748-be13-48aa6bc92d7e" srcName="garbage_collection_block">
+		<_field_explanation name="Garbage Times">time before the game considers that following entities as garbage</_field_explanation>
+		<_field_real name="Dropped item:seconds" />
+		<_field_real name="Dropped item by player:seconds" />
+		<_field_real name="Dropped item in multiplayer:seconds" />
+		<_field_real name="Broken constraints:seconds" />
+		<_field_real name="Dead unit:seconds" />
+		<_field_real name="Dead player:seconds" />
+		<_field_real name="Dead MP Player:seconds" />
+		<_field_real name="Dead MP Player overloaded: seconds" />
+		<_field_long_integer name="Max dead body count #above this number, overloaded mp time is used to garbage collect dead bodies" />
+	</_field_block>
+	<_field_block name="camera impulse" max="1" srcguid="4593f357-820b-6545-a343-c4b0fdad9a47" srcName="global_camera_impulse_block">
+		<_field_data name="data" />
+	</_field_block>
+	<_field_block name="runtime materials*!" max="512" srcguid="fbd6b983-f8e0-b845-945a-3f96d4f38aee" srcName="runtime_materials_block">
+		<_field_string_id name="name^" />
+		<_field_string_id name="parent name" />
+		<_field_short_integer name="runtime material index!" />
+		<_field_word_flags name="flags">
+			<item Name="flammable" />
+			<item Name="biomass" />
+			<item Name="rad xfer interior" />
+			<item Name="used directly!" />
+			<item Name="used by children!" />
+		</_field_word_flags>
+		<_field_string_id name="general armor" />
+		<_field_string_id name="specific armor" />
+		<_field_struct name="wet proxies" />
+		<_field_explanation name="when rained on, we report this material" />
+		<_field_string_id name="wet material" />
+		<_field_short_integer name="runtime proxy material index*!" />
+		<_field_pad name="wpb1" length="2" />
+		<_field_short_integer name="runtime dry base material index!" />
+		<_field_pad name="RMBP1" length="2" />
+		<_field_struct name="physics properties" />
+		<_field_long_integer name="flags!" />
+		<_field_real name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="density:kg/m^3" />
+		<_field_explanation name="Drag" />
+		<_field_tag_reference name="water physics drag properties" validtags="wpdp" />
+		<_field_block name="drag overrides" max="16" srcguid="b02bb212-9eaf-0649-b0cc-e6bab6c4e365" srcName="object_type_drag_properties_block">
+			<_field_tag_reference name="drag properties" validtags="wpdp" />
+		</_field_block>
+		<_field_explanation name="Floatation">objects of this flotation category have this density relative to being in this material (1.0f==neutral)</_field_explanation>
+		<_field_pad name="default" length="4" />
+		<_field_real name="super floater" />
+		<_field_real name="floater" />
+		<_field_real name="neutral" />
+		<_field_real name="sinker" />
+		<_field_real name="super sinker" />
+		<_field_pad name="none" length="4" />
+		<_field_tag_reference name="breakable surface" validtags="bsdt" />
+		<_field_struct name="sweeteners" />
+		<_field_tag_reference name="sound sweetener (small)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (medium)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (large)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener rolling" validtags="lsnd" />
+		<_field_tag_reference name="sound sweetener grinding" validtags="lsnd" />
+		<_field_tag_reference name="sound sweetener (melee small)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (melee)#this is a medium sweetener and was the old default" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="sound sweetener (melee large)" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="effect sweetener (small)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (medium)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (large)" validtags="effe" />
+		<_field_tag_reference name="effect sweetener rolling" validtags="effe" />
+		<_field_tag_reference name="effect sweetener grinding" validtags="effe" />
+		<_field_tag_reference name="effect sweetener (melee)" validtags="effe" />
+		<_field_tag_reference name="water ripple (small)" validtags="rwrd" />
+		<_field_tag_reference name="water ripple (medium)" validtags="rwrd" />
+		<_field_tag_reference name="water ripple (large)" validtags="rwrd" />
+		<_field_explanation name="sweetener inheritance flags">when a sweetener inheritance flag is set the sound\effect is not inherited from the parent material.  If you leave the sweetener blank and set the flag than no effect\sound will play</_field_explanation>
+		<_field_long_flags name="sweetener inheritance flags">
+			<item Name="sound_small" />
+			<item Name="sound_medium" />
+			<item Name="sound_large" />
+			<item Name="sound_rolling" />
+			<item Name="sound_grinding" />
+			<item Name="sound_melee_small" />
+			<item Name="sound_melee" />
+			<item Name="sound_melee_large" />
+			<item Name="effect_small" />
+			<item Name="effect_medium" />
+			<item Name="effect_large" />
+			<item Name="effect_rolling" />
+			<item Name="effect_grinding" />
+			<item Name="effect_melee" />
+			<item Name="water_ripple_small" />
+			<item Name="water_ripple_medium" />
+			<item Name="water_ripple_large" />
+		</_field_long_flags>
+		<_field_tag_reference name="material effects" validtags="foot" />
+		<_field_block name="underwater proxies" max="512" srcguid="53935fad-b9a0-a3c7-baa0-406fc16f2653" srcName="underwater_proxies_block">
+			<_field_explanation name="when this material is encounted under a material of this type ..." />
+			<_field_string_id name="underwater material" />
+			<_field_explanation name="... we report it as this material" />
+			<_field_string_id name="proxy material" />
+			<_field_short_integer name="underwater material type*!" />
+			<_field_short_integer name="proxy material type*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Hologram Lighting" max="1" srcguid="3b4b268e-d19f-4547-83bc-d78e9fbb73ac" srcName="hologramLightingGlobalsBlock">
+		<_field_custom name="HOLOGRAM FUNCTIONS" />
+		<_field_string_id name="Intensity" />
+		<_field_custom name="KEY LIGHT FUNCTIONS" />
+		<_field_struct name="Key Light Functions" />
+		<_field_string_id name="Intensity" />
+		<_field_string_id name="Forward" />
+		<_field_string_id name="Right" />
+		<_field_string_id name="Up" />
+		<_field_custom name="FILL LIGHT FUNCTIONS" />
+		<_field_struct name="Fill Light Functions" />
+		<_field_string_id name="Intensity" />
+		<_field_string_id name="Forward" />
+		<_field_string_id name="Right" />
+		<_field_string_id name="Up" />
+		<_field_custom name="RIM LIGHT FUNCTIONS" />
+		<_field_struct name="Rim Light Functions" />
+		<_field_string_id name="Intensity" />
+		<_field_string_id name="Forward" />
+		<_field_string_id name="Right" />
+		<_field_string_id name="Up" />
+	</_field_block>
+	<_field_tag_reference name="Narrative globals" validtags="narg" />
+</plugin>

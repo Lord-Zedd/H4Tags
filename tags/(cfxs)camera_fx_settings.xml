@@ -1,0 +1,256 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="exposure" />
+	<_field_explanation name="EXPOSURE">Controls the brightness of the scene, like exposure time on your camera.
+The actual exposure always blends towards the target exposure.
+With auto-exposure on, the target exposure is calculated relative to the brightness of what is on screen.</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="auto-adjust target" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="MKRGRF" length="2" />
+	<_field_real name="exposure:stops#the target exposure (ONLY USED WHEN AUTO-EXPOSURE IS OFF)" />
+	<_field_real name="maximum change:stops#the maximum allowed change in exposure between frames" />
+	<_field_real name="blend speed (0-1):percent per frame#1 is instantaneous, 0.01 is a good speed, 0.001 is slower" />
+	<_field_real name="minimum:stops#the absolute target exposure is clamped to this range" />
+	<_field_real name="maximum:stops#the absolute target exposure is clamped to this range" />
+	<_field_real name="auto-exposure screen brightness:[0.0001-1]#how bright you want the screen to be - auto-exposure will make it happen" />
+	<_field_real name="auto-exposure delay:[0.1-1]seconds#how long to wait before auto-exposure kicks in to adjust the exposure" />
+	<_field_struct name="auto_exposure_sensitivity" />
+	<_field_explanation name="AUTO EXPOSURE SENSITIVITY">How sensitive auto exposure is to small bright patches on the screen (like the sun)</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="MAKAMAKAHEY" length="2" />
+	<_field_real name="sensitivity (0-1)" />
+	<_field_struct name="bloom_highlight{bloom_point}" />
+	<_field_explanation name="HIGHLIGHT BLOOM">These parameters control bloom off the highlights (really bright stuff)</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="LOTPRER" length="2" />
+	<_field_real name="highlight bloom{bloom point}" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="bloom_inherent" />
+	<_field_explanation name="INHERENT BLOOM">These parameters control bloom off everything (bright and dark)</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="ERIRLE" length="2" />
+	<_field_real name="inherent bloom" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="bloom_self_illum" />
+	<_field_explanation name="SELF-ILLUM BLOOM">These parameters control off of self-illum pixels</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="ERIRLE" length="2" />
+	<_field_real name="self-illum bloom bloom" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="bloom_intensity" />
+	<_field_explanation name="BLOOM INTENSITY">These parameters control how bright the bloom is, relative to the underlying scene</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="SEMIFMD" length="2" />
+	<_field_real name="bloom intensity" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="bloom_large_color" />
+	<_field_explanation name="BLOOM LARGE COLOR">These parameters control the color of the large bloom</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="KKROFI" length="2" />
+	<_field_real_rgb_color name="large color" />
+	<_field_struct name="bloom_medium_color" />
+	<_field_explanation name="BLOOM MEDIUM COLOR">These parameters control the color of the medium bloom</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="LEORPP" length="2" />
+	<_field_real_rgb_color name="medium color" />
+	<_field_struct name="bloom_small_color" />
+	<_field_explanation name="BLOOM SMALL COLOR">These parameters control the color of the small bloom</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="JSIRWSFGAOD" length="2" />
+	<_field_real_rgb_color name="small color" />
+	<_field_struct name="bling_intensity!" />
+	<_field_word_flags name="flags!">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="QREWRER" length="2" />
+	<_field_real name="bling intensity!" />
+	<_field_real name="maximum change!" />
+	<_field_real name="blend speed (0-1)!" />
+	<_field_struct name="bling_size!" />
+	<_field_word_flags name="flags!">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="LSDFPO" length="2" />
+	<_field_real name="bling length!" />
+	<_field_real name="maximum change!" />
+	<_field_real name="blend speed (0-1)!" />
+	<_field_struct name="bling_angle!" />
+	<_field_word_flags name="flags!">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="ILJS" length="2" />
+	<_field_real name="bling angle!" />
+	<_field_real name="maximum change!" />
+	<_field_real name="blend speed (0-1)!" />
+	<_field_struct name="bling_count!" />
+	<_field_word_flags name="flags!">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="double sided bling" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_short_integer name="bling spikes!" />
+	<_field_struct name="self_illum_preferred" />
+	<_field_explanation name="SELF ILLUM EXPOSURE">These parameters control the self-illumination exposure
+preferred is the preferred exposure, and scale controls
+how much it varies from the preferred exposure</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="JJFJFJKE" length="2" />
+	<_field_real name="preferred exposure:stops#the preferred exposure for self illum" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="self_illum_scale" />
+	<_field_explanation name="SELF ILLUM CHANGE">How much self illum exposure is allowed to change
+0 means no change at all, 1 means it will
+equal the normal exposure</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="WOOGATCHOU" length="2" />
+	<_field_real name="exposure change:[0-1]#how much the self illum is allowed to change, as a percentage of the normal exposure change" />
+	<_field_real name="maximum change" />
+	<_field_real name="blend speed (0-1)" />
+	<_field_struct name="color_grading" />
+	<_field_explanation name="Color Grading">set the color grading texture</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="(unused2)!" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="SKHFDNV" length="2" />
+	<_field_tag_reference name="color grading texture" validtags="bitm" />
+	<_field_struct name="filmic_tone_curve" />
+	<_field_explanation name="Filmic Tone Curve">set the values for the filmic tone curve</_field_explanation>
+	<_field_word_flags name="flags">
+		<item Name="use default (ignore these values)" />
+		<item Name="maximum change is relative" />
+		<item Name="(unused)!" />
+		<item Name="bit3!" />
+		<item Name="fixed!" />
+		<item Name="enabled" />
+		<item Name="fixed2!" />
+	</_field_word_flags>
+	<_field_pad name="MKRGRF" length="2" />
+	<_field_real name="shoulder strength#How intense the shoulder is" />
+	<_field_real name="linear strength#How intense the linear portion is" />
+	<_field_real name="linear angle#Angle of linear portion of curve" />
+	<_field_real name="toe strength#How intense the toe is" />
+	<_field_real name="toe numerator#Numerator of toe slope" />
+	<_field_real name="toe denominator#Denominator of toe slope" />
+	<_field_real name="linear white point#The white point in linear space" />
+</plugin>

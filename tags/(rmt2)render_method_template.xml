@@ -1,0 +1,84 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="vertex shader" validtags="vtsh" />
+	<_field_tag_reference name="pixel shader" validtags="pixl" />
+	<_field_dword_integer name="available entry points*" />
+	<_field_block name="entry points" max="1024" srcguid="cb11d54c-57e0-a642-9b31-efb874d7bee6" srcName="tag_block_index_block">
+		<_field_struct name="block index" />
+		<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+	</_field_block>
+	<_field_block name="passes" max="64" srcguid="ae9ca810-c202-534e-b26a-4e022a6e6525" srcName="render_method_template_pass_block">
+		<_field_word_integer name="bitmaps#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="vertex real constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="vertex int constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="vertex bool constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="pixel real constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="pixel int constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="pixel bool constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="extern bitmaps#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="extern vertex real constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="extern vertex int constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="extern pixel real constants#divide by 1024 for count, remainder is start index" />
+		<_field_word_integer name="extern pixel int constants#divide by 1024 for count, remainder is start index" />
+		<_field_long_integer name="alpha blend mode" />
+	</_field_block>
+	<_field_block name="routing info" max="512" srcguid="29be3c3d-ec43-d644-961a-e5cb249a1d37" srcName="render_method_routing_info_block">
+		<_field_word_integer name="destination index#D3D constant index or sampler index" />
+		<_field_byte_integer name="source index#into constant tables below, unless this is an extern parameter" />
+		<_field_byte_integer name="type specific#bitmap flags or shader component mask" />
+	</_field_block>
+	<_field_block name="float constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+		<_field_string_id name="parameter name" />
+	</_field_block>
+	<_field_block name="int constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+		<_field_string_id name="parameter name" />
+	</_field_block>
+	<_field_block name="bool constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+		<_field_string_id name="parameter name" />
+	</_field_block>
+	<_field_block name="textures" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+		<_field_string_id name="parameter name" />
+	</_field_block>
+	<_field_block name="other platforms" max="1" srcguid="36c42619-3248-aa46-8606-7626533ddea8" srcName="render_method_template_platform_block">
+		<_field_tag_reference name="vertex shader" validtags="vtsh" />
+		<_field_tag_reference name="pixel shader" validtags="pixl" />
+		<_field_dword_integer name="available entry_points*" />
+		<_field_block name="entry points" max="1024" srcguid="cb11d54c-57e0-a642-9b31-efb874d7bee6" srcName="tag_block_index_block">
+			<_field_struct name="block index" />
+			<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="passes" max="64" srcguid="ae9ca810-c202-534e-b26a-4e022a6e6525" srcName="render_method_template_pass_block">
+			<_field_word_integer name="bitmaps#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="vertex real constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="vertex int constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="vertex bool constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="pixel real constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="pixel int constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="pixel bool constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="extern bitmaps#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="extern vertex real constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="extern vertex int constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="extern pixel real constants#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="extern pixel int constants#divide by 1024 for count, remainder is start index" />
+			<_field_long_integer name="alpha blend mode" />
+		</_field_block>
+		<_field_block name="routing info" max="512" srcguid="29be3c3d-ec43-d644-961a-e5cb249a1d37" srcName="render_method_routing_info_block">
+			<_field_word_integer name="destination index#D3D constant index or sampler index" />
+			<_field_byte_integer name="source index#into constant tables below, unless this is an extern parameter" />
+			<_field_byte_integer name="type specific#bitmap flags or shader component mask" />
+		</_field_block>
+		<_field_block name="float constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+			<_field_string_id name="parameter name" />
+		</_field_block>
+		<_field_block name="int constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+			<_field_string_id name="parameter name" />
+		</_field_block>
+		<_field_block name="bool constants" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+			<_field_string_id name="parameter name" />
+		</_field_block>
+		<_field_block name="textures" max="254" srcguid="bc3ac317-dec3-b746-b84e-cbca13595216" srcName="render_method_template_constant_table_block">
+			<_field_string_id name="parameter name" />
+		</_field_block>
+	</_field_block>
+</plugin>

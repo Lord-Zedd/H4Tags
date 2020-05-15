@@ -1,0 +1,110 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags!">
+		<item Name="is_distortion" />
+		<item Name="is_decal" />
+		<item Name="blended_materials" />
+		<item Name="no_physics_material" />
+		<item Name="is_volume_fog" />
+		<item Name="is_water" />
+		<item Name="is_waterfall" />
+		<item Name="is_hologram" />
+		<item Name="is_blended_hologram" />
+		<item Name="is_emblem" />
+		<item Name="blended_materials_2" />
+		<item Name="blended_materials_3" />
+		<item Name="is_alpha_clip" />
+		<item Name="is_lightable_transparent" />
+	</_field_long_flags>
+	<_field_block name="source shader files!" max="256" srcguid="564eddb9-7285-5b4a-9191-d4d2ef3d72ca" srcName="material_shader_source_file_block">
+		<_field_long_string name="shader path^" />
+		<_field_data name="shader data" />
+	</_field_block>
+	<_field_block name="compiled effects!" max="2" srcguid="0ff33519-bf65-9e4e-8fec-9cc49e114507" srcName="compiled_effects_block">
+		<_field_data name="compiled effect data" />
+	</_field_block>
+	<_field_long_integer name="source shader hash!" />
+	<_field_long_integer name="compiled shader hash!" />
+	<_field_tag_reference name="shader bank" validtags="mtsb" />
+	<_field_block name="vertex shader entry points*" max="48" srcguid="4fbcc9b4-1ea1-ae40-a23d-74eab323a5ea" srcName="material_vertex_shader_entry_point_block">
+		<_field_block name="vertex type shader indices" max="62" srcguid="8476fb6d-b7e9-f449-a401-b5521ddce7d1" srcName="compiled_vertex_shader_refererence_block">
+			<_field_long_integer name="hash" />
+			<_field_long_integer name="index" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="pixel shader entry points*" max="48" srcguid="8423fb6d-01a4-52dd-1dab-c7d1e97849f4" srcName="compiled_pixel_shader_refererence_block">
+		<_field_long_integer name="hash" />
+		<_field_long_integer name="index" />
+	</_field_block>
+	<_field_block name="material parameters*" max="111" srcguid="063e4b5e-a818-3647-becf-963f42cad69d" srcName="material_shader_parameter_block">
+		<_field_string_id name="parameter name^*" />
+		<_field_long_enum name="parameter type*">
+			<item Name="bitmap" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="color" />
+		</_field_long_enum>
+		<_field_long_integer name="parameter index*!" />
+		<_field_tag_reference name="bitmap" validtags="bitm" />
+		<_field_string_id name="bitmap path" />
+		<_field_real_argb_color name="color" />
+		<_field_real name="real" />
+		<_field_real_vector_3d name="vector" />
+		<_field_long_integer name="int/bool" />
+		<_field_word_integer name="bitmap flags" />
+		<_field_word_integer name="bitmap filter mode" />
+		<_field_word_integer name="bitmap address mode" />
+		<_field_word_integer name="bitmap address mode x" />
+		<_field_word_integer name="bitmap address mode y" />
+		<_field_word_integer name="bitmap sharpen mode" />
+		<_field_byte_integer name="bitmap extern mode" />
+		<_field_byte_integer name="bitmap min mipmap" />
+		<_field_byte_integer name="bitmap max mipmap" />
+		<_field_byte_integer name="render phases used" />
+		<_field_block name="function parameters" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale u" />
+				<item Name="scale v" />
+				<item Name="offset u" />
+				<item Name="offset v" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_char_enum name="Output Modifier!">
+				<item Name=" " />
+				<item Name="Add" />
+				<item Name="Multiply" />
+			</_field_char_enum>
+			<_field_pad name="BVCG" length="3" />
+			<_field_string_id name="Output Modifier Input!" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+		<_field_data name="display name*" />
+		<_field_data name="display group*" />
+		<_field_data name="display help text*" />
+		<_field_real name="display minimum" />
+		<_field_real name="display maximum" />
+		<_field_byte_integer name="register index*!" />
+		<_field_byte_integer name="register offset*!" />
+		<_field_byte_integer name="register count*!" />
+		<_field_char_enum name="register set*!">
+			<item Name="bool" />
+			<item Name="int" />
+			<item Name="float" />
+			<item Name="sampler" />
+			<item Name="vertex_bool" />
+			<item Name="vertex_int" />
+			<item Name="vertex_float" />
+			<item Name="vertex_sampler" />
+		</_field_char_enum>
+	</_field_block>
+</plugin>

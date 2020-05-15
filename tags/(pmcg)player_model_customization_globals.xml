@@ -1,0 +1,186 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="spartan render model#used for string list generation" validtags="mode" />
+	<_field_tag_reference name="elite render model!" validtags="mode" />
+	<_field_block name="helmet selections" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="chest selections" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="elite selections!" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="left shoulder" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="right shoulder" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="arms" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="legs" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="unused 5!" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="spartan armor effect selections" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="elite armor effect selections!" max="96" srcguid="9783052c-9b03-244b-93a3-e75d4e96c6d4" srcName="customized_model_selection_block">
+		<_field_string_id name="selection name^" />
+		<_field_string_id name="app name#Which player-stats modifier should be activated when this item is equipped" />
+		<_field_block name="customized bits" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+			<_field_string_id name="region name^" />
+			<_field_string_id name="permutation name" />
+			<_field_byte_flags name="flags">
+				<item Name="male_only#this permutation only applies to male players" />
+				<item Name="female_only#this permutation only applies to female players" />
+				<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+			</_field_byte_flags>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="male spartan selections" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+		<_field_string_id name="region name^" />
+		<_field_string_id name="permutation name" />
+		<_field_byte_flags name="flags">
+			<item Name="male_only#this permutation only applies to male players" />
+			<item Name="female_only#this permutation only applies to female players" />
+			<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+	</_field_block>
+	<_field_block name="female spartan selections" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+		<_field_string_id name="region name^" />
+		<_field_string_id name="permutation name" />
+		<_field_byte_flags name="flags">
+			<item Name="male_only#this permutation only applies to male players" />
+			<item Name="female_only#this permutation only applies to female players" />
+			<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+	</_field_block>
+	<_field_block name="spartan model defaults" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+		<_field_string_id name="region name^" />
+		<_field_string_id name="permutation name" />
+		<_field_byte_flags name="flags">
+			<item Name="male_only#this permutation only applies to male players" />
+			<item Name="female_only#this permutation only applies to female players" />
+			<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+	</_field_block>
+	<_field_block name="elite model defaults!" max="32" srcguid="ec47aa3a-f2b8-e54c-8b42-799205df23e2" srcName="customized_model_player_bits_block">
+		<_field_string_id name="region name^" />
+		<_field_string_id name="permutation name" />
+		<_field_byte_flags name="flags">
+			<item Name="male_only#this permutation only applies to male players" />
+			<item Name="female_only#this permutation only applies to female players" />
+			<item Name="mandibles_hidden#this permutation is an elite with enclosed helmet" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+	</_field_block>
+</plugin>

@@ -1,0 +1,146 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="UI Rendering Globals">miscellaneous rendering globals, more below...</_field_explanation>
+	<_field_short_integer name="inc. text update period:milliseconds" />
+	<_field_short_integer name="inc. text block character:ASCII code" />
+	<_field_real name="near clip plane distance:objects closer than this are not drawn" />
+	<_field_real name="projection plane distance:distance at which objects are rendered when z=0 (normal size)" />
+	<_field_real name="far clip plane distance:objects farther than this are not drawn" />
+	<_field_explanation name="Global Text Strings">Global UI Text goes here</_field_explanation>
+	<_field_tag_reference name="unicode string list tag" validtags="unic" />
+	<_field_tag_reference name="unicode damage reporting string list tag" validtags="unic" />
+	<_field_tag_reference name="unicode fire team member name string list{unicode fire team member string list tag}" validtags="unic" />
+	<_field_tag_reference name="unicode fire team member service tag string list" validtags="unic" />
+	<_field_explanation name="Main menu music">Looping sound that plays while the main menu is active</_field_explanation>
+	<_field_tag_reference name="main menu music" validtags="lsnd" />
+	<_field_tag_reference name="main menu alternate music" validtags="lsnd" />
+	<_field_long_integer name="music fade time:milliseconds" />
+	<_field_explanation name="Default Text and Shadow Colors">These are the default values used for text glyphs and text shadows</_field_explanation>
+	<_field_real_argb_color name="text color" />
+	<_field_real_argb_color name="shadow color" />
+	<_field_explanation name="Color presets">Colors are defined here and used in text widgets throughout the UI.  Specify a string_id here and the same one in a text widget.  If you don't specify one in a text widget, you'll use the first entry here.</_field_explanation>
+	<_field_block name="color presets" max="64" srcguid="36a8b526-5122-2e41-a23e-454a0039dcde" srcName="color_presets_block">
+		<_field_string_id name="name^" />
+		<_field_real_argb_color name="color" />
+	</_field_block>
+	<_field_explanation name="Tint colors">These colors are used for tinting widgets by team or player color.</_field_explanation>
+	<_field_block name="tint colors" max="1" srcguid="ee81c460-0080-a246-8304-da08ac51c372" srcName="tint_colors_block">
+		<_field_block name="text player" max="32" srcguid="c7625f0f-a2c6-784a-bccf-bb7af47b91cd" srcName="color_list_block">
+			<_field_real_argb_color name="color" />
+		</_field_block>
+		<_field_block name="text team" max="32" srcguid="c7625f0f-a2c6-784a-bccf-bb7af47b91cd" srcName="color_list_block">
+			<_field_real_argb_color name="color" />
+		</_field_block>
+		<_field_block name="bitmap player" max="32" srcguid="c7625f0f-a2c6-784a-bccf-bb7af47b91cd" srcName="color_list_block">
+			<_field_real_argb_color name="color" />
+		</_field_block>
+		<_field_block name="bitmap team" max="32" srcguid="c7625f0f-a2c6-784a-bccf-bb7af47b91cd" srcName="color_list_block">
+			<_field_real_argb_color name="color" />
+		</_field_block>
+		<_field_custom name="Affiliation" />
+		<_field_real_argb_color name="bitmap friend" />
+		<_field_real_argb_color name="bitmap enemy" />
+		<_field_real_argb_color name="bitmap neutral" />
+		<_field_custom name="Flood Team Colors" />
+		<_field_real_argb_color name="bitmap flood" />
+		<_field_real_argb_color name="bitmap spartans" />
+	</_field_block>
+	<_field_explanation name="Emblem counts">This lets us define how many images are in the emblem image bitmaps without opening them.</_field_explanation>
+	<_field_short_integer name="Primary emblem count" />
+	<_field_short_integer name="Secondary emblem count" />
+	<_field_explanation name="User interface sounds">Default sound effects for various UI actions</_field_explanation>
+	<_field_tag_reference name="default sounds" validtags="uise" />
+	<_field_explanation name="HaloX Alerts">Alerts are triggered by specific events that happen in the game.  The game can require that an error be resolved before the dialog can be dismissed.  Once the error is resolved (or if it doesn't require resolution,) the user can dismiss it.</_field_explanation>
+	<_field_block name="alert descriptions" max="512" srcguid="192e22be-2b7f-7447-8343-fcdb1e293d77" srcName="gui_alert_description_block">
+		<_field_string_id name="error name^" />
+		<_field_byte_flags name="flags">
+			<item Name="allow auto dismissal" />
+			<item Name="show spinner" />
+		</_field_byte_flags>
+		<_field_char_enum name="error category">
+			<item Name="default" />
+			<item Name="networking" />
+			<item Name="storage (reading/writing failure)" />
+			<item Name="controller" />
+		</_field_char_enum>
+		<_field_char_enum name="error icon">
+			<item Name="default alert" />
+			<item Name="downloading" />
+			<item Name="paused" />
+			<item Name="uploading" />
+			<item Name="completed" />
+		</_field_char_enum>
+		<_field_pad name="pad0" length="1" />
+		<_field_string_id name="title" />
+		<_field_string_id name="message" />
+	</_field_block>
+	<_field_explanation name="HaloX Dialogs">Dialogs are brought up by individual screens or UI systems to ask the user a question, typically of the Ok/Cancel sort such as: 'Are you sure you want to leave the game?'.
+Notes:
+- first item defaults to 'ok', second item defaults to 'cancel.  third and fourth items don't display if they're not set
+- if 'b button action' is set to 'button ignored' then the b button doesn't do anything (such as cancelling)</_field_explanation>
+	<_field_block name="dialog descriptions" max="256" srcguid="a493537c-7494-384f-8cc5-1e2d299dfbf4" srcName="gui_dialog_description_block">
+		<_field_string_id name="dialog name^" />
+		<_field_word_flags name="flags">
+			<item Name="unused" />
+		</_field_word_flags>
+		<_field_pad name="pad0" length="2" />
+		<_field_string_id name="title" />
+		<_field_string_id name="message" />
+		<_field_string_id name="first_item" />
+		<_field_string_id name="second_item" />
+		<_field_string_id name="third_item" />
+		<_field_string_id name="fourth_item" />
+		<_field_string_id name="button key" />
+		<_field_short_enum name="default item">
+			<item Name="first item" />
+			<item Name="second item" />
+			<item Name="third item" />
+			<item Name="fourth item" />
+		</_field_short_enum>
+		<_field_short_enum name="b button action">
+			<item Name="dismisses dialog" />
+			<item Name="button ignored" />
+			<item Name="first item activates" />
+			<item Name="second item activates" />
+			<item Name="third item activates" />
+			<item Name="fourth item activates" />
+		</_field_short_enum>
+	</_field_block>
+	<_field_explanation name="Content Aspect Ratio Scaling">These define the scaling that will get applied to UI content and animations when running at the specified display modes</_field_explanation>
+	<_field_real_vector_2d name="16x9" />
+	<_field_real_vector_2d name="4x3" />
+	<_field_explanation name="Blur Constants">These control the blur kernel used when blurring overlayed UI</_field_explanation>
+	<_field_real name="horizontal blur factor" />
+	<_field_real name="vertical blur factor" />
+	<_field_explanation name="Appearance Model Names">These specify the name of a scenario-placed biped to be used for the Start Menu Appearance model
+If you want to use a scenario-placed biped (non-AI), enter the biped name in the 'biped name' field
+If you want to use an AI-placed biped, enter the squad name string and starting position string_id</_field_explanation>
+	<_field_string_id name="mc biped name" />
+	<_field_string name="mc ai squad name" />
+	<_field_string_id name="mc ai start pos" />
+	<_field_string_id name="elite biped name" />
+	<_field_string name="elite ai squad name" />
+	<_field_string_id name="elite ai start pos" />
+	<_field_explanation name="Player Portrait Model Names">These specify the name of a scenario-placed biped to be used for the Player Portrait Appearance model
+Enter the scenario-placed biped (non-AI) name in the 'spartan biped name' and 'elite biped name' field</_field_explanation>
+	<_field_string_id name="spartan portrait biped name" />
+	<_field_string_id name="elite portrait biped name" />
+	<_field_explanation name="UI Navigation speed">This controls tabbing around the UI.  The tab delay is how fast you move around normally. 
+Tab fast wait is how long the UI waits till using the tab fast delay instead of the tab delay.</_field_explanation>
+	<_field_long_integer name="navigation tab delay msec" />
+	<_field_long_integer name="navigation tab fast wait msec" />
+	<_field_long_integer name="navigation tab fast delay msec" />
+	<_field_explanation name="Spinner tab speed">This is an alternate control for tabbing speed in the spinner.
+The input (x) is the time the stick has been held down.
+The output (y) is the time between tab events.</_field_explanation>
+	<_field_struct name="spinner tab speed function" />
+	<_field_data name="data" />
+	<_field_long_integer name="max input time (x) on the graph (msec)" />
+	<_field_explanation name="Attract Mode Settings">These control behavior of the attract mode movies</_field_explanation>
+	<_field_long_integer name="delay:seconds" />
+	<_field_block name="PGCR per player tracked incidents" max="50" srcguid="b3a87f17-61d2-2246-bbdf-9f2e00c598b9" srcName="pgcr_incident_block">
+		<_field_string_id name="incident name^" />
+		<_field_long_integer name="maximum stat count*#number of times this can happen before the PGCR stops tracking them" />
+	</_field_block>
+</plugin>

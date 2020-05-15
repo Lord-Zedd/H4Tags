@@ -1,0 +1,18 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="batteries" max="1" srcguid="008647e2-be27-d04d-9b3d-eb6cd71074b3" srcName="airstrike_battery_block">
+		<_field_real name="launch radius:wu#each shot will be fired with a random offset in this radius in the x/y plane above the target location" />
+		<_field_real name="launch z height:wu#strike will be launched at this plane height above the target location" />
+		<_field_real name="launch warmup:seconds#seconds to wait before launching the strike" />
+		<_field_real name="launch arrival:seconds#seconds to wait until the launch site marker is removed" />
+		<_field_real name="launch cooldown:seconds#seconds to wait before the next launch will be ready" />
+		<_field_real name="launch duration:seconds#how long a launch should take to fire all rounds" />
+		<_field_long_integer name="shots per launch#number of rounds to fire per launch" />
+		<_field_tag_reference name="fire effect#the effect that will be created when the strike fires." validtags="effe" />
+		<_field_tag_reference name="fire effect (indoor)#the effect that will be created when the strike fires and is indoors" validtags="effe" />
+		<_field_block name="fire offsets" max="16" srcguid="008647e2-be27-d04d-093d-eb6cd71074b3" srcName="airstrike_fire_location_block">
+			<_field_real_point_2d name="offset" />
+		</_field_block>
+	</_field_block>
+</plugin>

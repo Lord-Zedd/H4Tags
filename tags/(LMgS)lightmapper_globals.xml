@@ -1,0 +1,128 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_integer name="Version!" />
+	<_field_custom name="GLOBAL QUALITY SETTINGS" />
+	<_field_struct name="Global lightmapper settings" />
+	<_field_long_flags name="Global flags">
+		<item Name="Force draft lighting" />
+		<item Name="Perform sun multisampling" />
+		<item Name="Perform sky multisampling" />
+		<item Name="Use high resolution point shadows" />
+		<item Name="Use new atlaser" />
+		<item Name="Use high quality packing" />
+		<item Name="Include geometry from adjacent bsps" />
+		<item Name="Use 32-bit precision for direct pass" />
+		<item Name="Enable subsampling indirect acceleration" />
+		<item Name="Restrict lightmap samples to Maya regions" />
+		<item Name="Perform Repack" />
+		<item Name="Is Farm Burn" />
+	</_field_long_flags>
+	<_field_long_enum name="Mode">
+		<item Name="Direct only" />
+		<item Name="One bounce" />
+		<item Name="Two bounce" />
+	</_field_long_enum>
+	<_field_long_enum name="Hemicube resolution">
+		<item Name="64 x 64" />
+		<item Name="128 x 128" />
+		<item Name="256 x 256" />
+		<item Name="512 x 512" />
+		<item Name="32 x 32" />
+		<item Name="16 x 16" />
+	</_field_long_enum>
+	<_field_long_enum name="DXT compression quality">
+		<item Name="Draft" />
+		<item Name="High" />
+	</_field_long_enum>
+	<_field_long_enum name="Indirect quality">
+		<item Name="Low" />
+		<item Name="Medium" />
+		<item Name="High" />
+		<item Name="Very High" />
+	</_field_long_enum>
+	<_field_long_enum name="Direct shadow map resolution">
+		<item Name="1X" />
+		<item Name="2X" />
+		<item Name="4X" />
+	</_field_long_enum>
+	<_field_long_enum name="Super-sampling factor">
+		<item Name="1X" />
+		<item Name="2X" />
+		<item Name="4X" />
+		<item Name="8X" />
+	</_field_long_enum>
+	<_field_long_enum name="AO Sample Quality">
+		<item Name="Off" />
+		<item Name="1x" />
+		<item Name="2x" />
+		<item Name="4x" />
+	</_field_long_enum>
+	<_field_real_vector_3d name="Indirect Restrict AABB Min!" />
+	<_field_real_vector_3d name="Indirect Restrict AABB Max!" />
+	<_field_custom name="LOCAL SETTINGS" />
+	<_field_struct name="Local lightmapper settings" />
+	<_field_long_flags name="Local flags">
+		<item Name="Enable floating shadows" />
+		<item Name="Replace sun with brightest directional" />
+		<item Name="Use legacy magic light scalars" />
+		<item Name="Remove lights outside target bsp" />
+		<item Name="Include Skydome" />
+		<item Name="Include Sun" />
+		<item Name="Perform bad pixel analysis" />
+		<item Name="Enable AO" />
+		<item Name="Generate New AO" />
+		<item Name="Ignore sun solid angle" />
+		<item Name="Override AO only" />
+		<item Name="Perform analysis" />
+		<item Name="Global Illumination Falloff" />
+		<item Name="Generate BVH AO (GPU) " />
+		<item Name="Generate BVH AO (CPU) " />
+		<item Name="Build packing lightmaps (for lighting forge objects)" />
+		<item Name="Attempt to Use Diffuse UVs" />
+		<item Name="Corrected Light Linking" />
+		<item Name="Burn simplified irradiance lighting" />
+		<item Name="Disable Floating Shadow Geometry" />
+		<item Name="Disable Hybrid Refinement" />
+		<item Name="Burn Probe AO Lighting" />
+		<item Name="Opt Out Per-Vertex Lighting Fix" />
+		<item Name="Generate Adjacent Bounce Info" />
+		<item Name="No Shadow No AO Fix" />
+		<item Name="Allow Spot Suns" />
+		<item Name="Probes Ignore Shadow Linking" />
+	</_field_long_flags>
+	<_field_real name="Skydome amplification factor" />
+	<_field_real name="Indirect amplification factor" />
+	<_field_real name="Lightmap Compression Maximum" />
+	<_field_real name="Per Vertex AO Auto Threshold" />
+	<_field_custom name="Ambient occlusion settings" />
+	<_field_struct name="AO settings" />
+	<_field_real name="Radius{Offset}" />
+	<_field_real name="Falloff Power" />
+	<_field_real name="Multiplier" />
+	<_field_real name="MaxThreadCount" />
+	<_field_custom name="Global illumination falloff settings" />
+	<_field_struct name="Global illumination falloff settings" />
+	<_field_real name="Falloff Begin" />
+	<_field_real name="Falloff End" />
+	<_field_real_rgb_color name="Far Lighting Color" />
+	<_field_real name="Far Lighting Scalar" />
+	<_field_tag_reference name="Far Lighting Texture" validtags="bitm" />
+	<_field_custom name="Quality Overrides" />
+	<_field_struct name="Local lightmapper override settings" />
+	<_field_long_integer name="High Quality Average Jitter Samples" />
+	<_field_long_integer name="Per Vertex Supersample Count" />
+	<_field_long_integer name="Indirect Quality Offset" />
+	<_field_long_enum name="Forge Lightmap Size Class (if enabled)">
+		<item Name="32x32" />
+		<item Name="64x64" />
+		<item Name="128x128" />
+		<item Name="256x256 - 0.4 Meg{0.3Meg_256x256}" />
+		<item Name="512x512 - 1.5 Meg{1Meg_512x512}" />
+		<item Name="768x768 - 3.4 Meg{2.25Meg_768x768}" />
+		<item Name="1024x1024 - 6 Meg{4Meg_1024x1024}" />
+		<item Name="1280x1280 - 9.4 Meg{6.3Meg_1280x1280}" />
+		<item Name="1536x1536 - 13.5 Meg{9Meg_1536x1536}" />
+		<item Name="1792x1792 - 18.4Meg{12.3Meg_1792x1792}" />
+	</_field_long_enum>
+</plugin>

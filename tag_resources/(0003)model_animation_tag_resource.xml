@@ -1,0 +1,39 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="group_members" max="2048" srcguid="0e794af8-49bb-5c4c-a5d8-5b129758a12c" srcName="model_animation_tag_resource_member">
+		<_field_long_integer name="animation_index" />
+		<_field_dword_integer name="animation_checksum" />
+		<_field_short_integer name="frame count*" />
+		<_field_char_integer name="node count*" />
+		<_field_char_enum name="movement_data_type*">
+			<item Name="none" />
+			<item Name="dx,dy" />
+			<item Name="dx,dy,dyaw" />
+			<item Name="dx,dy,dz,dyaw" />
+			<item Name="dx,dy,dz,dangle-axis" />
+			<item Name="x,y,z - absolute" />
+			<item Name="auto" />
+		</_field_char_enum>
+		<_field_struct name="data sizes*!" />
+		<_field_long_integer name="static_node_flags!" />
+		<_field_long_integer name="animated_node_flags!" />
+		<_field_long_integer name="movement_data!" />
+		<_field_long_integer name="pill_offset_data!" />
+		<_field_long_integer name="default_data!" />
+		<_field_long_integer name="uncompressed_data!" />
+		<_field_long_integer name="compressed_data!" />
+		<_field_long_integer name="blend_screen_data!" />
+		<_field_long_integer name="object_space_offset_data!" />
+		<_field_long_integer name="ik_chain_event_data!" />
+		<_field_long_integer name="ik_chain_control_data!" />
+		<_field_long_integer name="ik_chain_proxy_data!" />
+		<_field_long_integer name="ik_chain_pole_vector_data!" />
+		<_field_long_integer name="uncompressed_object_space_data!" />
+		<_field_long_integer name="fik_anchor_data!" />
+		<_field_long_integer name="uncompressed_object_space_node_flags!" />
+		<_field_long_integer name="compressed_event_curve!" />
+		<_field_long_integer name="compressed_static_pose!" />
+		<_field_data name="animation_data*" />
+	</_field_block>
+</plugin>

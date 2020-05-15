@@ -1,0 +1,10 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="named playing fractions">these values correspond to the named play fractions in the dialogue editor (It's really skip fractions, but who cares?)</_field_explanation>
+	<_field_real name="almost never" />
+	<_field_real name="rarely" />
+	<_field_real name="somewhat" />
+	<_field_real name="often" />
+	<_field_pad name="VBEZIIDOF" length="24" />
+</plugin>

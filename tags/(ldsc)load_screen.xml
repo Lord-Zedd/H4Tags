@@ -1,0 +1,29 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="resolve two sided" />
+		<item Name="do not sort vertex order" />
+		<item Name="particles spawn radially#see particle initial offset multiplier" />
+	</_field_long_flags>
+	<_field_explanation name="Model parameters" />
+	<_field_tag_reference name="source render model" validtags="mode" />
+	<_field_real name="spawn rate multiplier#the higher this number, the sooner the model is fully spawned in" />
+	<_field_real_point_3d name="source scan position#the direction in model space that the scan starts from.
+Ignored if do not sort vertex order flag is set above" />
+	<_field_real name="scale factor#model scale to match camera space" />
+	<_field_explanation name="Camera parameters" />
+	<_field_real_point_3d name="camera position" />
+	<_field_real_point_3d name="camera target position" />
+	<_field_real name="camera orbit period#0 means camera is stationary" />
+	<_field_explanation name="Particles">The following control particle behavior</_field_explanation>
+	<_field_real name="particle scale#scale factor for individual particles" />
+	<_field_real name="particle acceleration#This is the acceleration rate when particles spawn in and move to their ultimate destination.  Higher numbers move faster." />
+	<_field_real name="particle initial offset multiplier#If flag particles spawn radially is set, this is the multiple of the particle location along the radial axis.
+If not, this the random spawn distance from the particle destination." />
+	<_field_explanation name="Generated data">the following are generated from running the tool generate-loadscreen command on this tag.</_field_explanation>
+	<_field_long_integer name="computed model vertex count:vertices" />
+	<_field_block name="model vertices*" max="77824" srcguid="415a5878-eeed-ef4c-8fa5-73a4b55aee3d" srcName="vertexBlock">
+		<_field_real_point_3d name="point*" />
+	</_field_block>
+</plugin>

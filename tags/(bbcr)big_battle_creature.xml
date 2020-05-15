@@ -1,0 +1,559 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="CREATURE" />
+	<_field_long_flags name="flags">
+		<item Name="unused" />
+		<item Name="immune to falling damage" />
+		<item Name="rotate while airborne" />
+		<item Name="zapped by shields" />
+		<item Name="attach upon impact" />
+		<item Name="not on motion sensor" />
+		<item Name="force ground movement" />
+	</_field_long_flags>
+	<_field_short_enum name="default team">
+		<item Name="default" />
+		<item Name="player" />
+		<item Name="human" />
+		<item Name="covenant" />
+		<item Name="brute" />
+		<item Name="mule" />
+		<item Name="spare" />
+		<item Name="covenant_player" />
+		<item Name="forerunner" />
+	</_field_short_enum>
+	<_field_short_enum name="motion sensor blip size">
+		<item Name="medium" />
+		<item Name="small" />
+		<item Name="large" />
+	</_field_short_enum>
+	<_field_angle name="turning velocity maximum:degrees per second" />
+	<_field_angle name="turning acceleration maximum:degrees per second squared" />
+	<_field_real_fraction name="casual turning modifier:[0,1]" />
+	<_field_real name="autoaim width:world units" />
+	<_field_struct name="physics" />
+	<_field_long_flags name="flags">
+		<item Name="centered_at_origin" />
+		<item Name="shape spherical" />
+		<item Name="use player physics" />
+		<item Name="climb any surface" />
+		<item Name="flying" />
+		<item Name="not physical" />
+		<item Name="dead character collision group" />
+		<item Name="suppress ground planes on bipeds" />
+		<item Name="physical ragdoll" />
+		<item Name="do not resize dead spheres" />
+		<item Name="multiple Mantis shapes" />
+		<item Name="I am an Extreme Slipsurface" />
+		<item Name="slips off movers" />
+	</_field_long_flags>
+	<_field_real name="height standing" />
+	<_field_real name="height crouching" />
+	<_field_real name="radius" />
+	<_field_real name="mass" />
+	<_field_string_id name="living material name#collision material used when character is alive" />
+	<_field_string_id name="dead material name#collision material used when character is dead" />
+	<_field_useless_pad name="" />
+	<_field_short_integer name="runtime global material type!" />
+	<_field_short_integer name="runtime dead global material type!" />
+	<_field_useless_pad name="" />
+	<_field_block name="dead sphere shapes*#don't be an asshole, edit something else!" max="16384" srcguid="eda7b1cd-bc43-8545-97cc-f77d018678c4" srcName="spheres_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="sphere shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn344" length="12" />
+		<_field_struct name="translate shape" />
+		<_field_struct name="convex" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_struct name="havok shape reference struct" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child shape size" />
+		<_field_real_vector_3d name="translation*!" />
+		<_field_real name="havok w translation*!!" />
+	</_field_block>
+	<_field_block name="pill shapes*#don't be an asshole, edit something else!" max="16384" srcguid="b350270e-ba8b-7f4b-ada7-73af644ad79a" srcName="pills_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="capsule shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn243" length="12" />
+		<_field_real_vector_3d name="bottom*!" />
+		<_field_real name="havok w bottom*!!" />
+		<_field_real_vector_3d name="top*!" />
+		<_field_real name="havok w top*!!" />
+	</_field_block>
+	<_field_block name="sphere shapes*#don't be an asshole, edit something else!" max="16384" srcguid="eda7b1cd-bc43-8545-97cc-f77d018678c4" srcName="spheres_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="sphere shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn344" length="12" />
+		<_field_struct name="translate shape" />
+		<_field_struct name="convex" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_struct name="havok shape reference struct" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child shape size" />
+		<_field_real_vector_3d name="translation*!" />
+		<_field_real name="havok w translation*!!" />
+	</_field_block>
+	<_field_block name="list sphere shapes*#don't be an asshole, edit something else!" max="16384" srcguid="eda7b1cd-bc43-8545-97cc-f77d018678c4" srcName="spheres_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="sphere shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn344" length="12" />
+		<_field_struct name="translate shape" />
+		<_field_struct name="convex" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_struct name="havok shape reference struct" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child shape size" />
+		<_field_real_vector_3d name="translation*!" />
+		<_field_real name="havok w translation*!!" />
+	</_field_block>
+	<_field_block name="list shapes*#don't be an asshole, edit something else!" max="64" srcguid="6ef863d6-d9b8-624d-922b-a3c3bb29d488" srcName="lists_block">
+		<_field_struct name="base" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_long_integer name="type*~!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_char_integer name="disable welding*~" />
+		<_field_char_integer name="collection type*~" />
+		<_field_pad name="VDVAPBSS" length="2" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_long_integer name="child shapes size*" />
+		<_field_long_integer name="child shapes capacity*!" />
+		<_field_pad name="nail_in_dick" length="12" />
+		<_field_real_vector_3d name="aabb half extents!*!" />
+		<_field_real name="havok w aabb half extents!*!!" />
+		<_field_real_vector_3d name="aabb center!*!" />
+		<_field_real name="havok w aabb center!*!!" />
+		<_field_long_integer name="enabled children0" />
+		<_field_long_integer name="enabled children1" />
+		<_field_long_integer name="enabled children2" />
+		<_field_long_integer name="enabled children3" />
+		<_field_long_integer name="enabled children4" />
+		<_field_long_integer name="enabled children5" />
+		<_field_long_integer name="enabled children6" />
+		<_field_long_integer name="enabled children7" />
+	</_field_block>
+	<_field_block name="list shape childInfos*#don't be an asshole, edit something else!" max="4096" srcguid="87ce2bb1-7fde-5545-ab45-0e0637a15489" srcName="list_shapes_block">
+		<_field_struct name="shape reference" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="collision filter*" />
+		<_field_long_integer name="shape size*" />
+		<_field_long_integer name="num child shapes*" />
+	</_field_block>
+	<_field_explanation name="ground" />
+	<_field_struct name="ground physics" />
+	<_field_angle name="maximum slope angle:degrees" />
+	<_field_angle name="downhill falloff angle:degrees" />
+	<_field_angle name="downhill cutoff angle:degrees" />
+	<_field_angle name="uphill falloff angle:degrees" />
+	<_field_angle name="uphill cutoff angle:degrees" />
+	<_field_real name="downhill velocity scale" />
+	<_field_real name="uphill velocity scale" />
+	<_field_real name="runtime_minimum_normal_k!" />
+	<_field_real name="runtime_downhill_k0!" />
+	<_field_real name="runtime_downhill_k1!" />
+	<_field_real name="runtime_uphill_k0!" />
+	<_field_real name="runtime_uphill_k1!" />
+	<_field_angle name="climb inflection angle#angle for bipeds at which climb direction changes between up and down" />
+	<_field_real name="scale airborne reaction time#scale on the time for the entity to realize it is airborne" />
+	<_field_real name="scale ground adhesion velocity#scale on velocity with which the entity is pushed back into its ground plane (set to -1 to lock to ground)" />
+	<_field_real name="gravity scale#scale on gravity for this entity" />
+	<_field_real name="airborne acceleration scale#scale on airborne acceleration maximum" />
+	<_field_explanation name="flying" />
+	<_field_struct name="flying physics" />
+	<_field_angle name="bank angle:degrees#angle at which we bank left/right when sidestepping or turning while moving forwards" />
+	<_field_real name="bank apply time:seconds#time it takes us to apply a bank" />
+	<_field_real name="bank decay time:seconds#time it takes us to recover from a bank" />
+	<_field_real name="pitch ratio#amount that we pitch up/down when moving up or down" />
+	<_field_real name="max velocity:world units per second#max velocity when not crouching" />
+	<_field_real name="max sidestep velocity:world units per second#max sideways or up/down velocity when not crouching" />
+	<_field_real name="acceleration:world units per second squared" />
+	<_field_real name="deceleration:world units per second squared" />
+	<_field_angle name="angular velocity maximum:degrees per second#turn rate" />
+	<_field_angle name="angular acceleration maximum:degrees per second squared#turn acceleration rate" />
+	<_field_real name="crouch velocity modifier:[0,1]#how much slower we fly if crouching (zero = same speed)" />
+	<_field_long_flags name="flags">
+		<item Name="use world up" />
+	</_field_long_flags>
+	<_field_tag_reference name="impact damage" validtags="jpt!" />
+	<_field_tag_reference name="impact shield damage#if not specified, uses 'impact damage'" validtags="jpt!" />
+	<_field_block name="campaign metagame bucket" max="1" srcguid="66eed763-e4cf-6f4d-bc5a-8e717128e562" srcName="campaign_metagame_bucket_block">
+		<_field_byte_flags name="flags">
+			<item Name="only counts with riders" />
+		</_field_byte_flags>
+		<_field_char_enum name="type">
+			<item Name="brute" />
+			<item Name="grunt" />
+			<item Name="jackel" />
+			<item Name="skirmisher" />
+			<item Name="marine" />
+			<item Name="spartan" />
+			<item Name="bugger" />
+			<item Name="hunter" />
+			<item Name="flood_infection" />
+			<item Name="flood_carrier" />
+			<item Name="flood_combat" />
+			<item Name="flood_pure" />
+			<item Name="sentinel" />
+			<item Name="elite" />
+			<item Name="engineer" />
+			<item Name="mule" />
+			<item Name="turret" />
+			<item Name="mongoose" />
+			<item Name="warthog" />
+			<item Name="scorpion" />
+			<item Name="hornet" />
+			<item Name="pelican" />
+			<item Name="revenant" />
+			<item Name="seraph" />
+			<item Name="shade" />
+			<item Name="watchtower" />
+			<item Name="ghost" />
+			<item Name="chopper" />
+			<item Name="mauler" />
+			<item Name="wraith" />
+			<item Name="banshee" />
+			<item Name="phantom" />
+			<item Name="scarab" />
+			<item Name="guntower" />
+			<item Name="tuning_fork" />
+			<item Name="broadsword" />
+			<item Name="mammoth" />
+			<item Name="lich" />
+			<item Name="mantis" />
+			<item Name="wasp" />
+			<item Name="phaeton" />
+			<item Name="bishop" />
+			<item Name="knight" />
+			<item Name="pawn" />
+		</_field_char_enum>
+		<_field_char_enum name="class">
+			<item Name="infantry" />
+			<item Name="leader" />
+			<item Name="hero" />
+			<item Name="specialist" />
+			<item Name="light vehicle" />
+			<item Name="heavy vehicle" />
+			<item Name="giant vehicle" />
+			<item Name="standard vehicle" />
+		</_field_char_enum>
+		<_field_pad name="pad0" length="1" />
+		<_field_short_integer name="point count" />
+		<_field_pad name="pad1" length="2" />
+	</_field_block>
+	<_field_explanation name="death and destruction" />
+	<_field_real_bounds name="destroy after death time:seconds#if non-zero, the creature will destroy itself upon death after this much time" />
+	<_field_explanation name="big battle">The following fields only affect creatures configured as boids for big battle</_field_explanation>
+	<_field_long_flags name="big battle flags">
+		<item Name="boid aims at big battle target#setting this forces boid to aim at target instead of firing straight ahead" />
+		<item Name="boids fly with no pitch#flying boids will always stay level when changing altitude" />
+		<item Name="boids fly non-directionally#flying boids will move like helicopters" />
+	</_field_long_flags>
+	<_field_tag_reference name="big battle weapon emitter" validtags="cpem" />
+	<_field_real_point_3d name="big battle weapon offset" />
+	<_field_tag_reference name="big battle weapon emitter 2#if you leave this empty, only the first emitter will fire" validtags="cpem" />
+	<_field_real_point_3d name="big battle weapon offset 2" />
+	<_field_block name="big battle weapon fire timing" max="1" srcguid="66e0f73b-b2d7-f444-a9a3-92e50bc191cf" srcName="creature_scalar_timing_block">
+		<_field_struct name="function_curve" />
+		<_field_data name="data" />
+	</_field_block>
+	<_field_tag_reference name="big battle expensive weapon effect#this fires a full effect from location up, oriented along vehicle's forward and up axes" validtags="effe" />
+	<_field_real_bounds name="expensive weapon fire time:seconds" />
+	<_field_tag_reference name="big battle death effect" validtags="effe" />
+	<_field_tag_reference name="imposter model" validtags="impo" />
+</plugin>

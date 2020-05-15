@@ -1,0 +1,196 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="area of effect behavior equipment#if a reference is here, area of effect damage will attach the equipment to the target" validtags="obje" />
+	<_field_real_bounds name="radius:world units" />
+	<_field_real_fraction name="cutoff scale:[0,1]" />
+	<_field_long_flags name="effect flags">
+		<item Name="don't scale damage by distance" />
+		<item Name="area damage players only#area of effect damage only affects players" />
+		<item Name="affects model targets#distribute the damage amongst the model targets. this is the default behavior for aoe damage, but can be set here for direct damage." />
+		<item Name="explosive area of effect" />
+	</_field_long_flags>
+	<_field_explanation name="damage" />
+	<_field_short_enum name="side effect">
+		<item Name="none" />
+		<item Name="harmless" />
+		<item Name="lethal to the unsuspecting" />
+		<item Name="emp" />
+	</_field_short_enum>
+	<_field_short_enum name="category">
+		<item Name="none" />
+		<item Name="falling" />
+		<item Name="bullet" />
+		<item Name="grenade" />
+		<item Name="high explosive" />
+		<item Name="sniper" />
+		<item Name="melee" />
+		<item Name="flame" />
+		<item Name="mounted weapon" />
+		<item Name="vehicle" />
+		<item Name="plasma" />
+		<item Name="needle" />
+		<item Name="shotgun" />
+		<item Name="assassinated" />
+	</_field_short_enum>
+	<_field_long_enum name="death vocalization">
+		<item Name="default#uses code to figure out what vocalization to use" />
+		<item Name="dth" />
+		<item Name="dth_fall" />
+		<item Name="dth_mjr" />
+		<item Name="dth_slw" />
+		<item Name="dth_hdsht" />
+		<item Name="dth_slnt" />
+		<item Name="dth_drama" />
+		<item Name="dth_reanimated" />
+		<item Name="thrwn" />
+		<item Name="die_space" />
+		<item Name="die_ass" />
+	</_field_long_enum>
+	<_field_long_flags name="flags">
+		<item Name="does not hurt owner" />
+		<item Name="can cause headshots" />
+		<item Name="ignores headshot obstructions#arms, held weapons, attachments" />
+		<item Name="pings resistant units" />
+		<item Name="does not hurt friends#affects aoe only" />
+		<item Name="does not ping units" />
+		<item Name="detonates explosives" />
+		<item Name="only hurts shields" />
+		<item Name="causes flaming death" />
+		<item Name="skips shields" />
+		<item Name="transfer dmg always uses min" />
+		<item Name="ignore seat scale for dir. dmg" />
+		<item Name="forces hard ping if body dmg{forces hard ping}" />
+		<item Name="forces hard ping always" />
+		<item Name="does not hurt players" />
+		<item Name="enables special death" />
+		<item Name="cannot cause betrayals" />
+		<item Name="uses old EMP behavior" />
+		<item Name="ignores damage resistance" />
+		<item Name="force s_kill on death" />
+		<item Name="cause magic deceleration" />
+		<item Name="aoe skip obstruction test" />
+		<item Name="does not spill over" />
+		<item Name="does not hurt boarders" />
+		<item Name="does not cause biped aoe effect" />
+		<item Name="causes biped 'knockback'" />
+		<item Name="apply tree of life#as if a tree of life was near 'victim'" />
+		<item Name="hurt only friends#affects aoe only" />
+		<item Name="causes incineration dissolve" />
+		<item Name="causes incineration dissolve on headshot" />
+		<item Name="does not hurt damage source" />
+		<item Name="damage vehicles only" />
+	</_field_long_flags>
+	<_field_long_flags name="secondary flags">
+		<item Name="causes incineration dissolve to dead units" />
+		<item Name="force hard ping as attachment feedback#force a hard ping as a notification to the player that the sticky grenade has attached" />
+	</_field_long_flags>
+	<_field_real name="headshot damage multiplier#ignored if zero or if headshot flag is not set above; 
+otherwise, makes headshot not instantly lethal, but multiplies damage done to head by this much.  
+2 does 2x damage to head for headshot.  note that head still has different health than body." />
+	<_field_real name="AOE core radius:world units#if &gt;0 then higher fidelity obstruction collision checks are preformed. This field has no other ramifications." />
+	<_field_real name="damage lower bound" />
+	<_field_real_bounds name="damage upper bound" />
+	<_field_struct name="damage falloff function" />
+	<_field_data name="data" />
+	<_field_angle name="dmg inner cone angle" />
+	<_field_struct name="blah" />
+	<_field_angle name="dmg outer cone angle" />
+	<_field_real name="active camouflage damage:[0,1]#how much more visible this damage makes a player who is active camouflaged" />
+	<_field_real name="stun:[0,1]#amount of stun added to damaged unit" />
+	<_field_real name="maximum stun:[0,1]#damaged unit's stun will never exceed this amount" />
+	<_field_real name="stun time:seconds#duration of stun due to this damage" />
+	<_field_long_integer name="damage stun:ticks#how long we stun recovering current body damage" />
+	<_field_real name="instantaneous acceleration:[0,+inf]" />
+	<_field_real name="alt instantaneous acceleration:[0,+inf]#This field can be used for an alternative acceleration if the corresponding flags are set, e.g. check vehicle-&gt;flags.vehicle wants reduced weapon impulse when airborne" />
+	<_field_real name="acceleration cap#set to zero to disable cap" />
+	<_field_useless_pad name="" />
+	<_field_useless_pad name="" />
+	<_field_explanation name="DEPRECATED - rider damage scales" />
+	<_field_real name="rider direct damage scale" />
+	<_field_real name="rider maximum transfer damage scale" />
+	<_field_real name="rider minimum transfer damage scale" />
+	<_field_real name="vehicle damage multiplier" />
+	<_field_real_fraction name="soft ping pain screen scale:[0,1]#The maximum amount to apply the pain screen pose overlay" />
+	<_field_useless_pad name="" />
+	<_field_string_id name="general_damage" />
+	<_field_string_id name="specific_damage" />
+	<_field_block name="custom response labels" max="8" srcguid="bd92ea26-8be5-f240-91d3-34d4e8a82956" srcName="custom_damage_response_label_block">
+		<_field_string_id name="custom label#label used to control what damage response will fire.^" />
+	</_field_block>
+	<_field_real name="AI stun radius:world units" />
+	<_field_real_bounds name="AI stun bounds:(0-1)" />
+	<_field_real name="shake radius" />
+	<_field_real name="EMP radius" />
+	<_field_real name="aoe spike radius" />
+	<_field_real name="aoe spike damage bump" />
+	<_field_real name="shield render effects scale" />
+	<_field_long_integer name="stasis time:ticks#duration of stasis due to this damage, zero disables" />
+	<_field_real name="stasis time dilation" />
+	<_field_real name="stasis max biped turning rate" />
+	<_field_real name="stasis gravity multiplier" />
+	<_field_real name="equipment hack time:seconds" />
+	<_field_explanation name="if 'Apply Tree Of Life'" />
+	<_field_real name="tree_of_life shield regen modifier#regen velocity of TOL:if non-1.0 this overrides any 'shield recharge rate' trait" />
+	<_field_real name="minimum shield level:[0, 1]#when hit, shield will be reset to this percentage of full strength if it is below" />
+	<_field_real name="shield stun time:seconds#time after damage applied before shield recharges" />
+	<_field_real name="minimum health level:[0, 1]#when hit, health will be reset to this percentage of full health if it is below" />
+	<_field_real name="health stun time:seconds#time after damage applied before health recharges" />
+	<_field_real name="minimum energy level:[0, 1]#like above, TOL reset minimum equipment energy to this" />
+	<_field_real name="maximum energy level:[0, 1]#cap equipment energy to this" />
+	<_field_real name="equipment stun time:seconds#time after damage applied before equipment recharges" />
+	<_field_explanation name="Modifies TOL logic so that (above) unstun will only happen if (below) minimum stun time has passed" />
+	<_field_real name="shield minimum stun time:seconds" />
+	<_field_real name="health minimum stun time:seconds" />
+	<_field_explanation name="damage response" />
+	<_field_tag_reference name="damage response" validtags="drdf" />
+	<_field_explanation name="sound" />
+	<_field_tag_reference name="old melee sound{sound}" validtags="scmb, sndo, snd!" />
+	<_field_block name="damage sounds" max="4" srcguid="9191e298-fd66-134a-bd13-153468160a3f" srcName="damage_effect_sound_block">
+		<_field_tag_reference name="sound" validtags="scmb, sndo, snd!" />
+		<_field_word_flags name="damage types">
+			<item Name="none!" />
+			<item Name="lethal instantaneous#headshots and assassinations" />
+			<item Name="lethal#excludes headshots and assassinations" />
+			<item Name="non lethal" />
+		</_field_word_flags>
+		<_field_word_flags name="object types">
+			<item Name="biped" />
+			<item Name="vehicle" />
+			<item Name="weapon" />
+			<item Name="equipment" />
+			<item Name="terminal" />
+			<item Name="projectile" />
+			<item Name="scenery" />
+			<item Name="machine" />
+			<item Name="control" />
+			<item Name="dispenser" />
+			<item Name="sound_scenery" />
+			<item Name="crate" />
+			<item Name="creature" />
+			<item Name="giant" />
+			<item Name="effect_scenery" />
+			<item Name="spawner" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_useless_pad name="" />
+	<_field_explanation name="breaking effect">Controls particle velocities when a damage effect shatters a materal.
+
+All particles created within 'forward radius' will be kicked along the
+damage direction with a speed equivalent to 'forward velocity' at the
+epicenter of the damage and 0 at the outer radius.  'Forward exponent'
+is used to modify the velocity scale.  A low exponent (like 0.5) means that
+particles between the epicenter and the radius will be kicked out with a speed
+closer to 'forward velocity' than if a higher exponent (like 2.0) was used
+
+The outward fields work in a similar way, except instead of kicking along the
+damage direction, they get kick away from the damage epicenter.</_field_explanation>
+	<_field_real name="forward velocity:world units per second" />
+	<_field_real name="forward radius:world units" />
+	<_field_real name="forward exponent" />
+	<_field_useless_pad name="" />
+	<_field_real name="outward velocity:world units per second" />
+	<_field_real name="outward radius:world units" />
+	<_field_real name="outward exponent" />
+	<_field_useless_pad name="" />
+</plugin>

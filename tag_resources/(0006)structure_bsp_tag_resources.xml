@@ -1,0 +1,218 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="resource_items" />
+	<_field_block name="collision bsp*" max="1" srcguid="1b4f5ee1-171f-2d44-8730-f6bbc0e02045" srcName="global_collision_bsp_block">
+		<_field_block name="bsp3d nodes*" max="8388608" srcguid="21fcd8b5-8eff-e748-9261-1f523e7371a3" srcName="bsp3d_nodes_block">
+			<_field_int64_integer name="node data designator!" />
+		</_field_block>
+		<_field_block name="bsp3d supernodes*" max="2048" srcguid="01c2cdab-1210-a94f-a740-0ab4e01ab4bc" srcName="bsp3d_kd_supdernodes_block">
+			<_field_real name="plane 0*!" />
+			<_field_real name="plane 1*!" />
+			<_field_real name="plane 2*!" />
+			<_field_real name="plane 3*!" />
+			<_field_real name="plane 4*!" />
+			<_field_real name="plane 5*!" />
+			<_field_real name="plane 6*!" />
+			<_field_real name="plane 7*!" />
+			<_field_real name="plane 8*!" />
+			<_field_real name="plane 9*!" />
+			<_field_real name="plane10*!" />
+			<_field_real name="plane11*!" />
+			<_field_real name="plane12*!" />
+			<_field_real name="plane13*!" />
+			<_field_real name="plane14*!" />
+			<_field_long_integer name="plane dimensions*!" />
+			<_field_long_integer name="child index 0*!" />
+			<_field_long_integer name="child index 1*!" />
+			<_field_long_integer name="child index 2*!" />
+			<_field_long_integer name="child index 3*!" />
+			<_field_long_integer name="child index 4*!" />
+			<_field_long_integer name="child index 5*!" />
+			<_field_long_integer name="child index 6*!" />
+			<_field_long_integer name="child index 7*!" />
+			<_field_long_integer name="child index 8*!" />
+			<_field_long_integer name="child index 9*!" />
+			<_field_long_integer name="child index10*!" />
+			<_field_long_integer name="child index11*!" />
+			<_field_long_integer name="child index12*!" />
+			<_field_long_integer name="child index13*!" />
+			<_field_long_integer name="child index14*!" />
+			<_field_long_integer name="child index15*!" />
+		</_field_block>
+		<_field_block name="planes*" max="536870911" srcguid="8d8a185d-9c71-0d4e-8015-a6da22e342eb" srcName="planes_block">
+			<_field_real_plane_3d name="plane*" />
+		</_field_block>
+		<_field_block name="leaves*" max="8388608" srcguid="e38efda5-649a-cc4e-9ceb-f2fb45030ca1" srcName="leaves_block">
+			<_field_byte_flags name="flags*">
+				<item Name="contains double-sided surfaces" />
+			</_field_byte_flags>
+			<_field_pad name="pad" length="1" />
+			<_field_word_integer name="bsp2d reference count*" />
+			<_field_dword_integer name="first bsp2d reference*" />
+		</_field_block>
+		<_field_block name="bsp2d references*" max="196608" srcguid="9e801e59-388c-5f44-b889-de6f3b5474ff" srcName="bsp2d_references_block">
+			<_field_short_integer name="plane*" />
+			<_field_short_integer name="bsp2d node*" />
+		</_field_block>
+		<_field_block name="bsp2d nodes*" max="32767" srcguid="8c0cd66c-3bc7-2441-b339-408c966ad3be" srcName="bsp2d_nodes_block">
+			<_field_real_plane_2d name="plane*" />
+			<_field_short_integer name="left child*" />
+			<_field_short_integer name="right child*" />
+		</_field_block>
+		<_field_block name="surfaces*" max="32767" srcguid="3519b87a-0a01-884b-ab12-de8085cd9139" srcName="surfaces_block">
+			<_field_word_integer name="plane index*" />
+			<_field_word_integer name="first edge*" />
+			<_field_short_integer name="material*" />
+			<_field_short_integer name="breakable surface set*" />
+			<_field_short_integer name="breakable surface*" />
+			<_field_byte_flags name="flags*">
+				<item Name="two sided" />
+				<item Name="invisible" />
+				<item Name="climbable" />
+				<item Name="breakable" />
+				<item Name="invalid" />
+				<item Name="conveyor" />
+				<item Name="slip" />
+				<item Name="plane negated" />
+			</_field_byte_flags>
+			<_field_byte_integer name="best plane calculation vertex index *!" />
+		</_field_block>
+		<_field_block name="edges*" max="65535" srcguid="35a61db5-53ec-0044-81b5-8c33d1dccafd" srcName="edges_block">
+			<_field_word_integer name="start vertex*" />
+			<_field_word_integer name="end vertex*" />
+			<_field_word_integer name="forward edge*" />
+			<_field_word_integer name="reverse edge*" />
+			<_field_word_integer name="left surface*" />
+			<_field_word_integer name="right surface*" />
+		</_field_block>
+		<_field_block name="vertices*" max="131072" srcguid="606a3f6c-ce1f-6a4c-8f89-e265e56d2f60" srcName="vertices_block">
+			<_field_real_point_3d name="point*" />
+			<_field_word_integer name="first edge*" />
+			<_field_short_integer name="sink*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="large collision bsp*" max="1" srcguid="1baf5ae1-17bf-2d42-b730-f6dbcde02043" srcName="global_large_collision_bsp_block">
+		<_field_block name="bsp3d nodes*" max="536870911" srcguid="e27060b1-3c37-dd48-bc53-6e38a979e2e0" srcName="large_bsp3d_nodes_block">
+			<_field_long_integer name="plane*" />
+			<_field_long_integer name="back child*" />
+			<_field_long_integer name="front child*" />
+		</_field_block>
+		<_field_block name="bsp3d supernodes*" max="2048" srcguid="01c2cdab-1210-a94f-a740-0ab4e01ab4bc" srcName="bsp3d_kd_supdernodes_block">
+			<_field_real name="plane 0*!" />
+			<_field_real name="plane 1*!" />
+			<_field_real name="plane 2*!" />
+			<_field_real name="plane 3*!" />
+			<_field_real name="plane 4*!" />
+			<_field_real name="plane 5*!" />
+			<_field_real name="plane 6*!" />
+			<_field_real name="plane 7*!" />
+			<_field_real name="plane 8*!" />
+			<_field_real name="plane 9*!" />
+			<_field_real name="plane10*!" />
+			<_field_real name="plane11*!" />
+			<_field_real name="plane12*!" />
+			<_field_real name="plane13*!" />
+			<_field_real name="plane14*!" />
+			<_field_long_integer name="plane dimensions*!" />
+			<_field_long_integer name="child index 0*!" />
+			<_field_long_integer name="child index 1*!" />
+			<_field_long_integer name="child index 2*!" />
+			<_field_long_integer name="child index 3*!" />
+			<_field_long_integer name="child index 4*!" />
+			<_field_long_integer name="child index 5*!" />
+			<_field_long_integer name="child index 6*!" />
+			<_field_long_integer name="child index 7*!" />
+			<_field_long_integer name="child index 8*!" />
+			<_field_long_integer name="child index 9*!" />
+			<_field_long_integer name="child index10*!" />
+			<_field_long_integer name="child index11*!" />
+			<_field_long_integer name="child index12*!" />
+			<_field_long_integer name="child index13*!" />
+			<_field_long_integer name="child index14*!" />
+			<_field_long_integer name="child index15*!" />
+		</_field_block>
+		<_field_block name="planes*" max="536870911" srcguid="8d8a185d-9c71-0d4e-8015-a6da22e342eb" srcName="planes_block">
+			<_field_real_plane_3d name="plane*" />
+		</_field_block>
+		<_field_block name="leaves*" max="134217728" srcguid="aaafac6f-1c8b-584c-9133-73aa7c8a9e94" srcName="large_leaves_block">
+			<_field_word_flags name="flags*">
+				<item Name="contains double-sided surfaces" />
+			</_field_word_flags>
+			<_field_short_integer name="bsp2d reference count*" />
+			<_field_long_integer name="first bsp2d reference*" />
+		</_field_block>
+		<_field_block name="bsp2d references*" max="536870911" srcguid="6508607e-1348-ee49-aa59-55664fd9c2bb" srcName="large_bsp2d_references_block">
+			<_field_long_integer name="plane*" />
+			<_field_long_integer name="bsp2d node*" />
+		</_field_block>
+		<_field_block name="bsp2d nodes*" max="536870911" srcguid="c77379c1-c116-e54e-a40f-a277212d8050" srcName="large_bsp2d_nodes_block">
+			<_field_real_plane_2d name="plane*" />
+			<_field_long_integer name="left child*" />
+			<_field_long_integer name="right child*" />
+		</_field_block>
+		<_field_block name="surfaces*" max="262136" srcguid="980bf8ab-1600-5b4c-bace-563d04a14589" srcName="large_surfaces_block">
+			<_field_long_integer name="plane index*" />
+			<_field_long_integer name="first edge*" />
+			<_field_short_integer name="material*" />
+			<_field_short_integer name="breakable surface set*" />
+			<_field_short_integer name="breakable surface*" />
+			<_field_byte_flags name="flags*">
+				<item Name="two sided" />
+				<item Name="invisible" />
+				<item Name="climbable" />
+				<item Name="breakable" />
+				<item Name="invalid" />
+				<item Name="conveyor" />
+				<item Name="slip" />
+				<item Name="plane negated" />
+			</_field_byte_flags>
+			<_field_byte_integer name="best plane calculation vertex index *!" />
+		</_field_block>
+		<_field_block name="edges*" max="2621440" srcguid="e84bb276-57e1-6444-b7c0-9c61948f3471" srcName="large_edges_block">
+			<_field_long_integer name="start vertex*" />
+			<_field_long_integer name="end vertex*" />
+			<_field_long_integer name="forward edge*" />
+			<_field_long_integer name="reverse edge*" />
+			<_field_long_integer name="left surface*" />
+			<_field_long_integer name="right surface*" />
+		</_field_block>
+		<_field_block name="vertices*" max="1310720" srcguid="7b795904-3bf0-8641-aa63-8c78d41b79dd" srcName="large_vertices_block">
+			<_field_real_point_3d name="point*" />
+			<_field_long_integer name="first edge*" />
+			<_field_long_integer name="sink*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="instanced geometries definitions*" max="2048" srcguid="5f0b1df5-9591-b14e-8b0c-7e1f85168f82" srcName="structure_bsp_instanced_geometry_definition_block">
+		<_field_long_integer name="checksum*" />
+		<_field_long_flags name="flags*">
+			<item Name="miscolored bsp" />
+			<item Name="error free" />
+			<item Name="surface to triangle remapped" />
+			<item Name="external reference mesh" />
+			<item Name="no physics" />
+			<item Name="stitched physics" />
+		</_field_long_flags>
+		<_field_short_integer name="mesh index" />
+		<_field_short_integer name="compression index" />
+		<_field_real name="global lightmap resolution scale" />
+		<_field_short_integer name="external_index" />
+		<_field_pad name="useme" length="2" />
+	</_field_block>
+	<_field_block name="Havok Data*" max="1" srcguid="29073207-6a54-8d46-bdb6-3f21f4c58c41" srcName="structureIOHavokDataBlock">
+		<_field_long_integer name="version*" />
+		<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+		<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+		<_field_long_integer name="Prefab Index*!" />
+		<_field_data name="Serialized Havok Data*" />
+		<_field_block name="Serialized Per Collision Type Havok Geometry" max="5" srcguid="b0d031b8-3412-f246-832b-b0cf6cddb759" srcName="SerializedHavokGeometryDataBlock">
+			<_field_data name="Serialized Havok Data*" />
+			<_field_data name="Serialized Static Havok Data*" />
+			<_field_long_integer name="collision type" />
+			<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+			<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+		</_field_block>
+		<_field_real_point_3d name="Shapes bounds min!*" />
+		<_field_real_point_3d name="Shapes bounds max!*" />
+	</_field_block>
+</plugin>

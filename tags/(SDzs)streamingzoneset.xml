@@ -1,0 +1,18 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_real_point_2d name="resource subregion AABB min" />
+	<_field_real_vector_2d name="resource subregion block size" />
+	<_field_block name="streaming resource ids" max="4096" srcguid="6a1e5fb7-40c7-a34e-9887-d44019a74440" srcName="StreamingZoneSetResourceIdBlock">
+		<_field_tag_reference name="streaming_reference_tag" validtags="bitm" />
+	</_field_block>
+	<_field_block name="streaming resource subregions" max="65536" srcguid="90ba5936-27eb-394e-8321-b27821709f01" srcName="StreamingZoneSetResourceSubregionDataBlock">
+		<_field_long_integer name="block offset X" />
+		<_field_long_integer name="block offset Y" />
+		<_field_real name="min Z" />
+		<_field_real name="max Z" />
+		<_field_block name="resource levels" max="4096" srcguid="489bf96a-c835-bc44-bd96-021946328592" srcName="StreamingZoneSetResourceLevelsBlock">
+			<_field_byte_integer name="streaming subregion requested resolution" />
+		</_field_block>
+	</_field_block>
+</plugin>

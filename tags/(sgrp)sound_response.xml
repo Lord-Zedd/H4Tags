@@ -1,0 +1,33 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="responses" max="10" srcguid="d1d759fe-348b-1049-91a5-9cf1932b62a0" srcName="sound_response_data_block">
+		<_field_string_id name="name" />
+		<_field_string_id name="channel" />
+		<_field_string_id name="category" />
+		<_field_long_integer name="category priority" />
+		<_field_real name="queue timeout" />
+		<_field_real name="consideration time" />
+		<_field_real name="gap after sound" />
+		<_field_byte_flags name="queue behavior">
+			<item Name="bypass queue" />
+			<item Name="clear queue" />
+			<item Name="stop active sound" />
+			<item Name="do not track" />
+		</_field_byte_flags>
+		<_field_pad name="SRBQXEK" length="3" />
+		<_field_block name="potential responses" max="10" srcguid="9114ff4e-fd3f-fb46-bcb2-ba6632d82ad5" srcName="sound_response_permutation_block">
+			<_field_tag_reference name="sound" validtags="scmb, sndo, snd!" />
+		</_field_block>
+		<_field_block name="combiners" max="10" srcguid="48044779-270e-0f47-974c-fbf38ec2ca95" srcName="sound_combine_response_block">
+			<_field_string_id name="name" />
+			<_field_byte_flags name="response behavior">
+				<item Name="cancel queued" />
+				<item Name="cancel active" />
+				<item Name="cancel new" />
+			</_field_byte_flags>
+			<_field_pad name="SRBQXEK" length="3" />
+			<_field_tag_reference name="response" validtags="sgrp" />
+		</_field_block>
+	</_field_block>
+</plugin>

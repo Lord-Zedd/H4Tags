@@ -1,0 +1,38 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Enlistments">!!! DO NOT, UNDER ANY CIRCUMSTANCES, REORDER THIS BLOCK AFTER SHIP !!!</_field_explanation>
+	<_field_block name="enlistments" max="15" srcguid="fd9a1f4e-5d50-f240-a048-fabbc8d79f05" srcName="playerEnlistmentDefinitionBlock">
+		<_field_string_id name="name#the string id of the name of this enlistment" />
+		<_field_string_id name="description#the string id of the description of this enlistment" />
+		<_field_short_integer name="sprite index#the sprite index of the icon for this enlistment" />
+		<_field_byte_flags name="flags">
+			<item Name="disabled#since we can't reorder the list after ship, this allows us to disable/enable this enlistment" />
+		</_field_byte_flags>
+		<_field_pad name="PAD0" length="1" />
+		<_field_string_id name="unlocked emblem fg" />
+		<_field_string_id name="unlocked emblem bg" />
+		<_field_string_id name="unlocked helmet" />
+		<_field_string_id name="unlocked chest" />
+		<_field_string_id name="unlocked left shoulder" />
+		<_field_string_id name="unlocked right shoulder" />
+		<_field_string_id name="unlocked arms" />
+		<_field_string_id name="unlocked legs" />
+		<_field_string_id name="unlocked visor" />
+		<_field_block name="grades#the grades that define the leveling track for this enlistment" max="127" srcguid="6081e906-d6d9-b446-bd60-54a2970ce24b" srcName="player_grade_definition_block">
+			<_field_long_integer name="xp threshold #total earned XP needed to reach this rank" />
+			<_field_string_id name="name" />
+			<_field_short_integer name="sprite index" />
+			<_field_pad name="pad0" length="2" />
+			<_field_real name="time played multiplier#This is an additional multiplier to rewards given for time played for players at this grade" />
+			<_field_block name="level up rewards#These rewards will be given to the player when they reach this grade" max="2" srcguid="932e9cf5-81ff-3444-b447-120d3229de7f" srcName="rewardBlock">
+				<_field_char_enum name="currency type#Type of currency given by this reward.">
+					<item Name="cookies" />
+					<item Name="xp" />
+				</_field_char_enum>
+				<_field_pad name="PJB1" length="1" />
+				<_field_short_integer name="reward amount#Amount of the given currency to be given with this reward." />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+</plugin>

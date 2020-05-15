@@ -1,0 +1,38 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags!">
+		<item Name="collides structure" />
+		<item Name="collides objects" />
+		<item Name="collides water" />
+		<item Name="affected by explosions" />
+	</_field_long_flags>
+	<_field_string_id name="marker attach name" />
+	<_field_tag_reference name="bitmap sprite plate" validtags="bitm" />
+	<_field_real_bounds name="emission rate#seconds" />
+	<_field_real name="lifetime" />
+	<_field_real_bounds name="wind min/max#default 0,0" />
+	<_field_real name="wind scale" />
+	<_field_real name="time scale" />
+	<_field_real_bounds name="fade distance!#from maximum movement range (10+). default 0!" />
+	<_field_real name="emissions sphere radius" />
+	<_field_real name="movement cylinder radius" />
+	<_field_real name="fade in time!" />
+	<_field_real name="fade out time!" />
+	<_field_block name="leaf types" max="16" srcguid="259db09c-39b3-2145-bc22-82fdfa4aed55" srcName="leaf_type_block">
+		<_field_short_integer name="bitmap sprite index#assumes sequence 0. if no sprites uses full bitmap" />
+		<_field_pad name="UNAX" length="2" />
+		<_field_real name="frequency" />
+		<_field_real name="mass" />
+		<_field_real_bounds name="geometry scale#default of 0 for both means 0.1" />
+		<_field_real name="flitteriness" />
+		<_field_real name="flitteriness swing arm length*" />
+		<_field_real name="flitteriness scale*" />
+		<_field_real name="flitteriness speed*" />
+		<_field_real name="flitteriness leaves phase*" />
+		<_field_real name="tumble scale" />
+		<_field_real name="rotation scale" />
+		<_field_real name="starting velocity" />
+		<_field_fraction_bounds name="air friction XY and Z" />
+	</_field_block>
+</plugin>

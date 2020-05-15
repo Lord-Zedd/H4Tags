@@ -1,0 +1,31 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="interpolators" max="32" srcguid="3dafa42f-8e65-1d4c-8b56-1159ee9a1051" srcName="scenario_interpolator_data_block">
+		<_field_word_flags name="flags">
+			<item Name="loops#will continue to play until stopped.  if checked, no wrap should also be checked" />
+			<item Name="always active#will be started when the map loads.  good for looping interpolators" />
+		</_field_word_flags>
+		<_field_pad name="SCBP1" length="2" />
+		<_field_string_id name="name^" />
+		<_field_data name="data" />
+		<_field_real name="duration:seconds" />
+		<_field_long_enum name="map reset type">
+			<item Name="initial" />
+			<item Name="ending" />
+			<item Name="custom" />
+		</_field_long_enum>
+		<_field_real_fraction name="custom map reset value" />
+		<_field_long_enum name="start type">
+			<item Name="initial" />
+			<item Name="unchanged" />
+		</_field_long_enum>
+		<_field_long_enum name="stop type">
+			<item Name="initial" />
+			<item Name="hold" />
+			<item Name="ending" />
+			<item Name="custom" />
+		</_field_long_enum>
+		<_field_real_fraction name="custom stop value" />
+	</_field_block>
+</plugin>

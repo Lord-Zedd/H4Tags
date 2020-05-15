@@ -1,0 +1,34 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_short_enum name="collection type">
+		<item Name="screen-facing" />
+		<item Name="viewer-facing" />
+	</_field_short_enum>
+	<_field_pad name="YN" length="2" />
+	<_field_real name="global z offset:applied to all detail objects of in this collection so they don't float above the ground" />
+	<_field_pad name="EBGQ" length="44" />
+	<_field_tag_reference name="sprite plate" validtags="bitm" />
+	<_field_block name="types" max="16" srcguid="eca81bad-6d9d-814b-941e-1c746b46f40a" srcName="detail_object_type_block">
+		<_field_string name="name^" />
+		<_field_char_integer name="sequence index:[0,15]" />
+		<_field_byte_flags name="type flags">
+			<item Name="unused0!" />
+			<item Name="unused1!" />
+			<item Name="interpolate color in hsv" />
+			<item Name="...more colors" />
+		</_field_byte_flags>
+		<_field_pad name="VYF" length="2" />
+		<_field_real_fraction name="color override factor#fraction of detail object color to use instead of the base map color in the environment:[0,1]" />
+		<_field_pad name="QMOOJ" length="8" />
+		<_field_real name="near fade distance:world units" />
+		<_field_real name="far fade distance:world units" />
+		<_field_real name="size:world units per pixel" />
+		<_field_pad name="TDAQ" length="4" />
+		<_field_real_rgb_color name="minimum color:[0,1]" />
+		<_field_real_rgb_color name="maximum color:[0,1]" />
+		<_field_argb_color name="ambient color:[0,255]" />
+		<_field_pad name="VCXJHYY" length="4" />
+	</_field_block>
+	<_field_pad name="ZQUVEZKGL" length="48" />
+</plugin>

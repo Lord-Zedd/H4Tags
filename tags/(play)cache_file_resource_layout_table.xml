@@ -1,0 +1,133 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="codec identifiers*" max="127" srcguid="7e45bc98-ea5f-264c-9c9e-fcf1fb46c21f" srcName="cache_file_codec_identifier_block">
+		<_field_long_integer name="identifier part 0" />
+		<_field_long_integer name="identifier part 1" />
+		<_field_long_integer name="identifier part 2" />
+		<_field_long_integer name="identifier part 3" />
+	</_field_block>
+	<_field_block name="shared files" max="7" srcguid="ec7d0213-9efa-114c-bd81-b8e7d68881e9" srcName="cache_file_shared_file_block">
+		<_field_long_string name="dvd relative path^" />
+		<_field_word_flags name="flags">
+			<item Name="use header io offset" />
+			<item Name="not required" />
+			<item Name="use header locations" />
+		</_field_word_flags>
+		<_field_short_integer name="global shared location offset" />
+		<_field_long_integer name="io offset" />
+	</_field_block>
+	<_field_block name="file pages" max="65535" srcguid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" srcName="cache_file_resource_file_page_block">
+		<_field_short_integer name="header salt at runtime" />
+		<_field_byte_flags name="flags">
+			<item Name="valid checksum" />
+			<item Name="shared and required" />
+			<item Name="dvd only shared and required" />
+			<item Name="dvd only and required" />
+			<item Name="referenced by cache file header" />
+			<item Name="only full valid checksum" />
+		</_field_byte_flags>
+		<_field_char_block_index name="codec" targetGuid="7e45bc98-ea5f-264c-9c9e-fcf1fb46c21f" targetName="cache_file_codec_identifier_block" />
+		<_field_short_block_index name="shared file^" targetGuid="ec7d0213-9efa-114c-bd81-b8e7d68881e9" targetName="cache_file_shared_file_block" />
+		<_field_short_integer name="shared file location index" />
+		<_field_long_integer name="file offset" />
+		<_field_long_integer name="file size" />
+		<_field_long_integer name="size" />
+		<_field_struct name="checksum" />
+		<_field_long_integer name="checksum" />
+		<_field_array name="entire hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_array name="first chunk hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_array name="last chunk hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_short_integer name="resource reference count" />
+		<_field_short_block_index name="streaming subpage table" targetGuid="33eacf41-56c3-9049-aba2-2b6bf24eb390" targetName="cache_file_resource_streaming_subpage_table_block" />
+	</_field_block>
+	<_field_block name="streaming subpage tables" max="32767" srcguid="33eacf41-56c3-9049-aba2-2b6bf24eb390" srcName="cache_file_resource_streaming_subpage_table_block">
+		<_field_long_integer name="total memory size" />
+		<_field_block name="streaming subpages" max="32767" srcguid="7a944d18-8272-c543-8329-e7b3f3fb0838" srcName="cache_file_resource_streaming_subpage_block">
+			<_field_long_integer name="memory offset" />
+			<_field_long_integer name="memory size" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="sections" max="32767" srcguid="8936cee8-2841-df48-8d98-ba3d43333461" srcName="cache_file_resource_section_block">
+		<_field_array name="page offsets">
+			<_field_long_integer name="offset" />
+			<_field_long_integer name="offset" />
+			<_field_long_integer name="offset" />
+		</_field_array>
+		<_field_array name="file page indexes">
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+		</_field_array>
+		<_field_array name="subpage table indexes">
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+		</_field_array>
+	</_field_block>
+	<_field_long_integer name="required location count" />
+	<_field_long_integer name="required dvd location count" />
+</plugin>

@@ -1,0 +1,108 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="medal aggregators" validtags="mech" />
+	<_field_block name="challenge_categories" max="5" srcguid="9d62f31b-fa7d-aa41-b84f-471fb5d25884" srcName="challenge_category_block">
+		<_field_string_id name="category_name^" />
+		<_field_char_enum name="challenge category^">
+			<item Name="campaign" />
+			<item Name="competitive" />
+			<item Name="spartan ops" />
+			<item Name="waypoint" />
+		</_field_char_enum>
+		<_field_pad name="WAT1" length="3" />
+		<_field_block name="challenges" max="200" srcguid="39ac40ae-4fd2-b444-8fd8-9cff20129e29" srcName="challenge_block">
+			<_field_string_id name="challenge_name^" />
+			<_field_string_id name="display_string#in the UI, name and description" />
+			<_field_string_id name="display_name#in the UI, name" />
+			<_field_string_id name="display_description#in the UI, description" />
+			<_field_string_id name="completion_toast_string#in the UI, the text on the toast when you complete this challenge" />
+			<_field_long_integer name="required_progress_count#How many times this challenge must be progressed to complete it (unless overridden by LSP)." />
+			<_field_long_integer name="cookies reward#cookies for completing this challenge; can be overridden by LSP" />
+			<_field_long_integer name="XP reward#XP for completing this challenge; can be overridden by LSP" />
+			<_field_long_integer name="progress_tracking_interval#Frequency we toast your progress (think pink and deadly)." />
+			<_field_string_id name="chud_progress_string#progress toast string (presumably very concise)." />
+			<_field_long_integer name="chud_progress_bitmap_sequence_index#What icon is shown in the progress toast?" />
+			<_field_byte_flags name="flags">
+				<item Name="progress_resets_at_end_of_game" />
+			</_field_byte_flags>
+			<_field_char_enum name="icon">
+				<item Name="iron" />
+				<item Name="bronze" />
+				<item Name="silver" />
+				<item Name="gold" />
+				<item Name="onyx" />
+				<item Name="daily" />
+				<item Name="weekly" />
+			</_field_char_enum>
+			<_field_pad name="PJB1" length="2" />
+			<_field_long_flags name="auto progress on:#Conditions that progress this challenge magically (aside from incidents, which can progress any challenge)">
+				<item Name="matchmaking_multiplayer_game_won" />
+				<item Name="campaign_mission_beaten" />
+				<item Name="matchmaking_multiplayer_game_completed" />
+				<item Name="complete_single_daily_challenge" />
+				<item Name="complete_single_weekly_challenge" />
+				<item Name="complete_single_monthly_challenge" />
+				<item Name="complete_all_daily_challenges_in_a_day" />
+				<item Name="upload_film_clip_that_you_authored" />
+				<item Name="wear_a_piece_of_armor_in_armory" />
+				<item Name="auto_progress#progresses the instant all requirements are met" />
+				<item Name="spartan ops- mission beaten" />
+				<item Name="spartan ops- completed all weekly missions on easy (or harder)" />
+				<item Name="spartan ops- completed all weekly missions on normal (or harder)" />
+				<item Name="spartan ops- completed all weekly missions on hard (or harder)" />
+				<item Name="spartan ops- completed all weekly missions on impossible" />
+			</_field_long_flags>
+			<_field_custom name="requirements" />
+			<_field_custom name="permitted game types" />
+			<_field_struct name="permitted game types" />
+			<_field_byte_flags name="game mode">
+				<item Name="campaign" />
+				<item Name="firefight" />
+				<item Name="multiplayer" />
+			</_field_byte_flags>
+			<_field_byte_flags name="matchmaking type">
+				<item Name="custom game" />
+				<item Name="matchmaking" />
+			</_field_byte_flags>
+			<_field_byte_flags name="difficulty">
+				<item Name="easy" />
+				<item Name="normal" />
+				<item Name="heroic" />
+				<item Name="legendary" />
+			</_field_byte_flags>
+			<_field_char_enum name="player count">
+				<item Name="any" />
+				<item Name="1 player only" />
+				<item Name="4 players only" />
+				<item Name="more than one player" />
+			</_field_char_enum>
+			<_field_string_id name="level_name#can only be progressed on this level, if specified" />
+			<_field_long_integer name="map_id#can only be progressed on this map, if &gt; 0 (only works for campaign and spartan ops)" />
+			<_field_short_integer name="mission id#can only be progressed on this mission, if &gt;= 0 (only works for spartan ops)" />
+			<_field_pad name="PJB2" length="2" />
+			<_field_long_flags name="skulls#this challenge can only be progressed with at least these skulls enabled in the game options (only works for campaign)">
+				<item Name="skull_iron" />
+				<item Name="skull_black_eye" />
+				<item Name="skull_tough_luck" />
+				<item Name="skull_catch" />
+				<item Name="skull_fog" />
+				<item Name="skull_famine" />
+				<item Name="skull_thunderstorm" />
+				<item Name="skull_tilt" />
+				<item Name="skull_mythic" />
+				<item Name="skull_assassin" />
+				<item Name="skull_blind" />
+				<item Name="skull_superman" />
+				<item Name="skull_birthday_party" />
+				<item Name="skull_daddy" />
+				<item Name="skull_red" />
+				<item Name="skull_yellow" />
+				<item Name="skull_blue" />
+			</_field_long_flags>
+			<_field_long_integer name="minimum_score#must score at least this many points, if &gt; 0 (only works for campaign)" />
+			<_field_long_integer name="maximum_player_death_count#must die no more than this many times, if &gt;= 0" />
+			<_field_long_integer name="maximum_level_completion_seconds#must complete the level in no more than this many seconds, if &gt; 0" />
+		</_field_block>
+	</_field_block>
+</plugin>

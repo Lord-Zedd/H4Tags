@@ -1,0 +1,12 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="underwater propagation globals" />
+	<_field_struct name="underwater propagation" />
+	<_field_tag_reference name="sound environment" validtags="snde" />
+	<_field_tag_reference name="background sound" validtags="lsnd" />
+	<_field_real name="background sound gain#scale for fog background sound:dB" />
+	<_field_real name="environment ducking#scales the surrounding background sound by this much:dB" />
+	<_field_tag_reference name="entry sound" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="exit sound" validtags="scmb, sndo, snd!" />
+</plugin>

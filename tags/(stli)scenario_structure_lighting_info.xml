@@ -1,0 +1,341 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_integer name="import info checksum" />
+	<_field_block name="generic light definitions" max="32767" srcguid="737aad5c-5e81-8440-bec0-19f8b6d14d02" srcName="structure_lighting_generic_light_definition_block">
+		<_field_int64_integer name="Definition Identifier!" />
+		<_field_struct name="Midnight_Light_Parameters" />
+		<_field_long_integer name="Version!" />
+		<_field_explanation name="Dynamic/Static Shared Light Parameters" />
+		<_field_string_id name="haloLightNode:^#Light node name in DCC." />
+		<_field_long_enum name="Light Type:#Geometry shape of light.">
+			<item Name="Point" />
+			<item Name="Spot" />
+			<item Name="Directional" />
+			<item Name="Area" />
+			<item Name="Sun" />
+		</_field_long_enum>
+		<_field_real_rgb_color name="Light Color:" />
+		<_field_struct name="Intensity:[0-1+]" />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_long_enum name="Lighting Mode:#Attenuation overrides.">
+			<item Name="Physically Correct" />
+			<item Name="Artistic" />
+		</_field_long_enum>
+		<_field_real name="Distance Attenuation Start:#Inner penumbra start." />
+		<_field_struct name="Distance Attenuation End:#Radius or size of light" />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="Camera Distance Fade Start:#Distance at which we start to fade out this light" />
+		<_field_real name="Camera Distance Fade End:#Distance at which the light should be completely faded out and not seen" />
+		<_field_real name="Specular Power:#For screen-space dynamic lights" />
+		<_field_real name="Specular Intensity:#For screen-space dynamic lights" />
+		<_field_explanation name="Shared Spot Parameters" />
+		<_field_real name="Inner Cone Angle:[0-160 degrees]#Inner hotspot attenuation end." />
+		<_field_struct name="Outer Cone End:[0-160 degrees]#Angle size of spotlight." />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_long_enum name="Cone Projection Shape:#Use cone in all cases unless you have a gobo you need to project, frustum uses the full clip area of the light">
+			<item Name="Cone" />
+			<item Name="Frustum" />
+		</_field_long_enum>
+		<_field_explanation name="Dynamic Only Parameters" />
+		<_field_real name="Shadow Near Clip Plane" />
+		<_field_real name="Shadow Far Clip Plane" />
+		<_field_real name="Shadow Bias Offset" />
+		<_field_real_rgb_color name="Shadow Color:#Shadow tint." />
+		<_field_short_enum name="Dynamic Shadow Quality">
+			<item Name="Normal" />
+			<item Name="Expensive (cinematics only)" />
+		</_field_short_enum>
+		<_field_short_enum name="Shadows:">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_short_enum>
+		<_field_char_enum name="Screenspace Light">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Ignore Dynamic Objects">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Cinema Objects Only#This should only be turned on if you have light linking data correctly setup">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Cinema Only">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Cinema Exclude">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_pad name="PADDING1" length="1" />
+		<_field_char_enum name="Specular Contribution">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Diffuse Contribution">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_explanation name="Dynamic Gobo" />
+		<_field_tag_reference name="Gobo Tag Path:#Bitmap file for spotlight. Cube map for point light. Gobo bitmap must be synced to xbox." validtags="bitm" />
+		<_field_struct name="Rotation:[0-360 degrees]" />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="Aspect Ratio:[-0-1+]#Shape length and width of Gobo." />
+		<_field_long_enum name="Tile Behavior:#Gobo texture lookup behavior when tiled.">
+			<item Name="Clamp" />
+			<item Name="Repeat" />
+			<item Name="Mirror" />
+		</_field_long_enum>
+		<_field_real name="Repeat X:[0-1+]#Tile Gobo." />
+		<_field_real name="Repeat Y:[0-1+]#Tile Gobo." />
+		<_field_struct name="Offset X:#Offset Gobo." />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_struct name="Offset Y:#Offset Gobo." />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_explanation name="Color Change" />
+		<_field_struct name="Interpolation Function" />
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_short_enum name="Output Modifier!">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_short_enum>
+		<_field_pad name="BVCG" length="2" />
+		<_field_string_id name="Output Modifier Input!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real_rgb_color name="Target Color" />
+		<_field_explanation name="Channels" />
+		<_field_long_flags name="Light Channels:">
+			<item Name="0" />
+			<item Name="1" />
+			<item Name="2" />
+			<item Name="3" />
+			<item Name="4" />
+			<item Name="5" />
+			<item Name="6" />
+			<item Name="7" />
+			<item Name="8" />
+			<item Name="9" />
+			<item Name="10" />
+			<item Name="11" />
+			<item Name="12" />
+			<item Name="13" />
+			<item Name="14" />
+			<item Name="15" />
+			<item Name="16" />
+			<item Name="17" />
+			<item Name="18" />
+			<item Name="19" />
+			<item Name="20" />
+			<item Name="21" />
+			<item Name="22" />
+			<item Name="23" />
+			<item Name="24" />
+			<item Name="25" />
+			<item Name="26" />
+			<item Name="27" />
+			<item Name="28" />
+			<item Name="29" />
+			<item Name="30" />
+			<item Name="31" />
+		</_field_long_flags>
+		<_field_long_flags name="Shadow Channels:">
+			<item Name="0" />
+			<item Name="1" />
+			<item Name="2" />
+			<item Name="3" />
+			<item Name="4" />
+			<item Name="5" />
+			<item Name="6" />
+			<item Name="7" />
+			<item Name="8" />
+			<item Name="9" />
+			<item Name="10" />
+			<item Name="11" />
+			<item Name="12" />
+			<item Name="13" />
+			<item Name="14" />
+			<item Name="15" />
+			<item Name="16" />
+			<item Name="17" />
+			<item Name="18" />
+			<item Name="19" />
+			<item Name="20" />
+			<item Name="21" />
+			<item Name="22" />
+			<item Name="23" />
+			<item Name="24" />
+			<item Name="25" />
+			<item Name="26" />
+			<item Name="27" />
+			<item Name="28" />
+			<item Name="29" />
+			<item Name="30" />
+			<item Name="31" />
+		</_field_long_flags>
+		<_field_explanation name="Bungie Parameters" />
+		<_field_long_flags name="flags">
+			<item Name="allow shadows and gels!#" />
+			<item Name="shadow casting#turns on shadow casting" />
+			<item Name="render first person only#only render when camera is 1st person" />
+			<item Name="render third person only#don't render when camera is 1st person" />
+			<item Name="dont render splitscreen#no rendering this light in splitscreen mode" />
+			<item Name="render while active camo#keep rendering this light when the attached player goes camo" />
+			<item Name="render in multiplayer override#overrides game settings that disable dynamic lights" />
+			<item Name="move to camera in first person#moves the light to match the camera" />
+			<item Name="never priority cull#never cull this light because of low priority" />
+			<item Name="affected by game_can_use_flashlights" />
+			<item Name="screenspace specular lighting#uses expensive specular lighting on screenspace lights" />
+			<item Name="always on for weapon#even it is dropped" />
+		</_field_long_flags>
+		<_field_real name="destroy light after:seconds#automatically destroys the light after it has existed this long (0 to disable)" />
+		<_field_tag_reference name="Lens Flare" validtags="lens" />
+		<_field_long_integer name="Source File Identifier!" />
+		<_field_explanation name="Static Only Parameters" />
+		<_field_real name="indirect amplification factor" />
+		<_field_real name="jitter sphere radius" />
+		<_field_real name="jitter angle" />
+		<_field_short_enum name="jitter quality">
+			<item Name="low" />
+			<item Name="medium" />
+			<item Name="high" />
+		</_field_short_enum>
+		<_field_char_enum name="sun">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="indirect only">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_long_flags name="flags">
+			<item Name="use near attenuation" />
+			<item Name="use far attenuation" />
+			<item Name="invere squared falloff" />
+			<item Name="light version 1" />
+		</_field_long_flags>
+		<_field_char_enum name="static analytic">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_pad name="pdd" length="3" />
+	</_field_block>
+	<_field_block name="generic light instances" max="32767" srcguid="bf5b0009-134e-684b-9b53-bfcc6cc50117" srcName="structure_lighting_generic_light_instance_block">
+		<_field_int64_integer name="Light Definition ID!" />
+		<_field_int64_integer name="Light Instance ID!" />
+		<_field_long_integer name="Light Definition Index!" />
+		<_field_long_integer name="Maya Source Hash!" />
+		<_field_tag_reference name="runtime definition!" validtags="ligh" />
+		<_field_long_enum name="light mode">
+			<item Name="Dynamic" />
+			<item Name="Static" />
+			<item Name="Analytic" />
+		</_field_long_enum>
+		<_field_real_point_3d name="origin" />
+		<_field_real_vector_3d name="forward" />
+		<_field_real_vector_3d name="up" />
+		<_field_real name="fade out distance" />
+		<_field_real name="fade start distance" />
+		<_field_long_integer name="Shadow Geometry Checksum" />
+		<_field_pad name="pdd" length="4" />
+	</_field_block>
+	<_field_block name="screen space light shader override" max="32767" srcguid="864608c1-ca18-2e4c-9ea0-adf9c22c29df" srcName="screen_space_light_shader_override_block">
+		<_field_real_rgb_color name="specular color normal" />
+		<_field_real name="specular steepness" />
+		<_field_real_rgb_color name="specular color gazing" />
+		<_field_real name="specular coeff" />
+		<_field_real name="diffuse coeff" />
+		<_field_real name="roughness offset" />
+		<_field_real name="albedo blend" />
+	</_field_block>
+	<_field_block name="cinematic light instances" max="32767" srcguid="d7431960-22aa-b140-b21a-772503a7d78d" srcName="structureLightingCinematicLightInstanceBlock">
+		<_field_int64_integer name="Light Instance ID!" />
+		<_field_long_block_index name="Light Definition Index" targetGuid="737aad5c-5e81-8440-bec0-19f8b6d14d02" targetName="structure_lighting_generic_light_definition_block" />
+		<_field_long_block_index name="Light Instance Index" targetGuid="bf5b0009-134e-684b-9b53-bfcc6cc50117" targetName="structure_lighting_generic_light_instance_block" />
+		<_field_array name="Active Shots">
+			<_field_dword_integer name="shot flag data" />
+			<_field_dword_integer name="shot flag data" />
+		</_field_array>
+		<_field_block name="Linked Objects" max="32767" srcguid="e6b66973-0828-0d42-8f97-aaaf27c9838d" srcName="structureLightingCinematicObjectBlock">
+			<_field_string_id name="name" />
+		</_field_block>
+		<_field_pad name="padding" length="4" />
+	</_field_block>
+	<_field_struct name="Sun Intensity Multiplier" />
+	<_field_string_id name="Input Variable!" />
+	<_field_string_id name="Range Variable!" />
+	<_field_short_enum name="Output Modifier!">
+		<item Name=" " />
+		<item Name="Plus" />
+		<item Name="Times" />
+	</_field_short_enum>
+	<_field_pad name="BVCG" length="2" />
+	<_field_string_id name="Output Modifier Input!" />
+	<_field_struct name="Mapping" />
+	<_field_data name="data" />
+</plugin>

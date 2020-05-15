@@ -1,0 +1,85 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="never obstruct#disable occlusion/obstruction for this sound" />
+		<item Name="use huge sound transmission" />
+		<item Name="link count to owner unit" />
+		<item Name="don't use lipsync data" />
+		<item Name="instant sound propagation" />
+		<item Name="optional player sound event!*" />
+		<item Name="fallback sound event!*" />
+		<item Name="has lipsync data" />
+		<item Name="is deterministic" />
+		<item Name="is external source" />
+		<item Name="override external source event" />
+		<item Name="use don't play time!" />
+		<item Name="delay start if sound bank not loaded" />
+		<item Name="use fallback only for DVD" />
+		<item Name="has subtitle!*" />
+		<item Name="ignore node transform#use this if you're getting wacky spatialization (such as scorpion cannon)" />
+		<item Name="radio combo voice" />
+		<item Name="cinematic allow tails to play out" />
+	</_field_long_flags>
+	<_field_long_flags name="import flags!">
+		<item Name="duplicate directory name" />
+		<item Name="cut to block size" />
+		<item Name="use markers" />
+		<item Name="use layer markers" />
+	</_field_long_flags>
+	<_field_long_flags name="xsync flags!">
+		<item Name="processed language times" />
+		<item Name="optimized facial animation" />
+	</_field_long_flags>
+	<_field_string_id name="Event Name#Sound event name." />
+	<_field_string_id name="Player Event Name#Optional sound event name for player only." />
+	<_field_string_id name="Fallback Event Name#Fallback sound event if the others don't play - should be an a guaranteed bank." />
+	<_field_real name="Max Radius" />
+	<_field_real name="Max Duration#Max duration of this event. Enter manually for now - will auto-fill later." />
+	<_field_real name="Don't play time.#Time the event will not retrigger for (global)" />
+	<_field_long_integer name="Hidden runtime info index!" />
+	<_field_tag_reference name="Sound bank#Reference to the sound bank tag this event is in. Can be empty." validtags="sbnk" />
+	<_field_block name="lipsync info" max="1" srcguid="4687e90c-dad3-3b48-aed2-6267cd83dd37" srcName="soundLipSyncInfoBlock">
+		<_field_long_integer name="number of usable facial animations" />
+		<_field_block name="deterministic event info" max="32" srcguid="28b3ed7e-25ce-c343-b20b-798bee2d947a" srcName="deterministicSpeechEventBlock">
+			<_field_long_flags name="flags">
+				<item Name="Campaign Only" />
+				<item Name="Exclude from certain missions" />
+				<item Name="Exclude from M10" />
+				<item Name="Exclude from M20" />
+				<item Name="Exclude from M30" />
+				<item Name="Exclude from M40" />
+				<item Name="Exclude from M60" />
+				<item Name="Exclude from M70" />
+				<item Name="Exclude from M80" />
+				<item Name="Exclude from M90" />
+			</_field_long_flags>
+			<_field_string_id name="voice file path" />
+			<_field_real name="event duration" />
+			<_field_real name="skip fraction#Percent this file will be skipped when picked. 0 is always, 0.99 is almost never" />
+		</_field_block>
+		<_field_block name="facial animation resource languages" max="17" srcguid="a0f08052-80a2-454a-b651-2d4532312fb4" srcName="facial_animation_language_block">
+			<_field_pageable_resource name="facial animation resource" />
+			<_field_long_enum name="language">
+				<item Name="english" />
+				<item Name="japanese" />
+				<item Name="german" />
+				<item Name="french" />
+				<item Name="spanish" />
+				<item Name="mexican spanish" />
+				<item Name="italian" />
+				<item Name="korean" />
+				<item Name="chinese-traditional" />
+				<item Name="chinese-simplified" />
+				<item Name="portuguese" />
+				<item Name="polish" />
+				<item Name="russian" />
+				<item Name="danish" />
+				<item Name="finnish" />
+				<item Name="dutch" />
+				<item Name="norwegian" />
+			</_field_long_enum>
+		</_field_block>
+	</_field_block>
+	<_field_long_integer name="deterministic flag index" />
+</plugin>

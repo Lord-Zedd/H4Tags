@@ -1,0 +1,38 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_api_interop name="texture interop" srcguid="71760164-7a43-f046-9a33-c422517096e3">
+		<_field_data name="pixel data*" />
+		<_field_data name="medium res data*" />
+		<_field_data name="high res data*" />
+		<_field_short_integer name="width*" />
+		<_field_short_integer name="height*" />
+		<_field_char_integer name="depth*" />
+		<_field_char_integer name="total mipmap count*" />
+		<_field_char_enum name="type*">
+			<item Name="2D texture" />
+			<item Name="3D texture" />
+			<item Name="cube map" />
+			<item Name="array" />
+		</_field_char_enum>
+		<_field_char_integer name="pad1_1" />
+		<_field_char_enum name="is high res bitmap">
+			<item Name="false" />
+			<item Name="true" />
+		</_field_char_enum>
+		<_field_char_enum name="is medium res bitmap">
+			<item Name="false" />
+			<item Name="true" />
+		</_field_char_enum>
+		<_field_char_enum name="pad2_1">
+			<item Name="false" />
+			<item Name="true" />
+		</_field_char_enum>
+		<_field_char_enum name="pad2_2">
+			<item Name="false" />
+			<item Name="true" />
+		</_field_char_enum>
+		<_field_long_integer name="exponent bias" />
+		<_field_long_integer name="xenon d3d format*" />
+	</_field_api_interop>
+</plugin>

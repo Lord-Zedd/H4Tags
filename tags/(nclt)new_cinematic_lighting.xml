@@ -1,0 +1,164 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="Cinematic Lighting" />
+	<_field_custom name="Cinema Lighting" />
+	<_field_long_integer name="version!" />
+	<_field_custom name="Direction&amp;Direction(D)" />
+	<_field_real name="Direction&amp;Direction(D)" />
+	<_field_custom name="Front-Back&amp;Front-Back(D)" />
+	<_field_real name="Front-Back&amp;Front-Back(D)" />
+	<_field_custom name="Shadow Interpolation" />
+	<_field_real name="Shadow Interpolation" />
+	<_field_custom name="Overall weight" />
+	<_field_real name="Overall weight" />
+	<_field_custom name="Direct weight" />
+	<_field_real name="Direct weight" />
+	<_field_custom name="Indirect weight" />
+	<_field_real name="Indirect weight" />
+	<_field_custom name="Airprobe weight" />
+	<_field_real name="Airprobe weight" />
+	<_field_custom name="Sun weight" />
+	<_field_real name="Sun weight" />
+	<_field_real_rgb_color name="Direct color" />
+	<_field_custom name="Direct intensity" />
+	<_field_real name="Direct intensity" />
+	<_field_real_rgb_color name="Indirect color" />
+	<_field_custom name="Indirect intensity" />
+	<_field_real name="Indirect intensity" />
+	<_field_custom name="Interpolation" />
+	<_field_real name="Interpolation" />
+	<_field_block name="Authored Light Probe" max="1" srcguid="eae05661-9b19-e852-6afc-c92dd2ffebeb" srcName="authored_light_probe_block">
+		<_field_explanation name="Character Lighting"></_field_explanation>
+		<_field_block name="Lights*" max="1" srcguid="ad80eac2-b9e1-adc6-667e-d3be79a6a3ff" srcName="authored_light_probe_lights_block">
+			<_field_custom name="Authored Light Probe" />
+			<_field_custom name="Direction 1&amp;Direction(D)" />
+			<_field_real name="Direction 1&amp;Direction(D)" />
+			<_field_custom name="Front-Back 1&amp;Front-Back(D)" />
+			<_field_real name="Front-Back 1&amp;Front-Back(D)" />
+			<_field_real_rgb_color name="Direct color 1" />
+			<_field_custom name="Direct intensity 1" />
+			<_field_real name="Direct intensity 1" />
+			<_field_custom name="Direction 2&amp;Direction(D)" />
+			<_field_real name="Direction 2&amp;Direction(D)" />
+			<_field_custom name="Front-Back 2&amp;Front-Back(D)" />
+			<_field_real name="Front-Back 2&amp;Front-Back(D)" />
+			<_field_real_rgb_color name="Direct color 2" />
+			<_field_custom name="Direct intensity 2" />
+			<_field_real name="Direct intensity 2" />
+			<_field_custom name="Authored Light Probe Intensity Scale" />
+			<_field_real name="Authored Light Probe Intensity Scale" />
+			<_field_custom name="Generated Air Probe Intensity Scale" />
+			<_field_real name="Generated Air Probe Intensity Scale" />
+		</_field_block>
+		<_field_custom name="Authored Light Probe Intensity Scale!" />
+		<_field_real name="Authored Light Probe Intensity Scale!" />
+		<_field_custom name="Generated Air Probe Intensity Scale!" />
+		<_field_real name="Generated Air Probe Intensity Scale!" />
+		<_field_array name="raw sh data!">
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+			<_field_real name="sh data" />
+		</_field_array>
+		<_field_char_enum name="Is Camera-space">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_char_enum name="Apply to First Person Geometry">
+			<item Name="Off" />
+			<item Name="On" />
+		</_field_char_enum>
+		<_field_pad name="pdd" length="2" />
+		<_field_explanation name="Object Shadows (all objects, not just characters)"></_field_explanation>
+		<_field_custom name="IO Direct Lighting Minimum Percentage (When in Shadow)" />
+		<_field_real name="IO Direct Lighting Minimum Percentage (When in Shadow)" />
+	</_field_block>
+	<_field_block name="Cortana Lighting" max="1" srcguid="ca32e3e3-e4a5-fc4d-81e9-fcb66198694a" srcName="hologramLightingBlock">
+		<_field_custom name="HOLOGRAM" />
+		<_field_custom name="Intensity" />
+		<_field_real name="Intensity" />
+		<_field_real name="Intensity Input!" />
+		<_field_char_enum name="Transparency Mode">
+			<item Name="cheap" />
+			<item Name="expensive" />
+		</_field_char_enum>
+		<_field_pad name="PADDING1" length="3" />
+		<_field_custom name="KEY LIGHT" />
+		<_field_struct name="Key Light" />
+		<_field_custom name="Hologram Light" />
+		<_field_custom name="Direction" />
+		<_field_real name="Direction" />
+		<_field_custom name="Front-Back" />
+		<_field_real name="Front-Back" />
+		<_field_custom name="Intensity" />
+		<_field_real name="Intensity" />
+		<_field_real name="Intensity Input!" />
+		<_field_real name="Forward Input!" />
+		<_field_real name="Right Input!" />
+		<_field_real name="Up Input!" />
+		<_field_custom name="FILL LIGHT" />
+		<_field_struct name="Fill Light" />
+		<_field_custom name="Hologram Light" />
+		<_field_custom name="Direction" />
+		<_field_real name="Direction" />
+		<_field_custom name="Front-Back" />
+		<_field_real name="Front-Back" />
+		<_field_custom name="Intensity" />
+		<_field_real name="Intensity" />
+		<_field_real name="Intensity Input!" />
+		<_field_real name="Forward Input!" />
+		<_field_real name="Right Input!" />
+		<_field_real name="Up Input!" />
+		<_field_custom name="RIM LIGHT" />
+		<_field_struct name="Rim Light" />
+		<_field_custom name="Hologram Light" />
+		<_field_custom name="Direction" />
+		<_field_real name="Direction" />
+		<_field_custom name="Front-Back" />
+		<_field_real name="Front-Back" />
+		<_field_custom name="Intensity" />
+		<_field_real name="Intensity" />
+		<_field_real name="Intensity Input!" />
+		<_field_real name="Forward Input!" />
+		<_field_real name="Right Input!" />
+		<_field_real name="Up Input!" />
+	</_field_block>
+	<_field_block name="dynamic lights!" max="16" srcguid="fd68956d-8d44-364f-9c59-40f515b39d09" srcName="cinematic_dynamic_light_block">
+		<_field_long_flags name="Flags">
+			<item Name="debug this light" />
+			<item Name="follow object" />
+			<item Name="position at marker" />
+		</_field_long_flags>
+		<_field_custom name="Dynamic Light" />
+		<_field_custom name="Direction" />
+		<_field_real name="Direction" />
+		<_field_custom name="Front-Back" />
+		<_field_real name="Front-Back" />
+		<_field_real name="Distance:world units" />
+		<_field_tag_reference name="light" validtags="ligh" />
+	</_field_block>
+</plugin>

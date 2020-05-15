@@ -1,0 +1,7 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="Lightmapped Models" max="32767" srcguid="314e13d9-31ee-4531-9a55-ecd475aeaa8b" srcName="lightmap_model_reference_block">
+		<_field_tag_reference name="Model Reference" validtags="hlmt" />
+	</_field_block>
+</plugin>

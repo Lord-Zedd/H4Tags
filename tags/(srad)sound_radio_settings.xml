@@ -1,0 +1,40 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="mix settings" />
+	<_field_long_enum name="mix">
+		<item Name="full#full unspatialized radio effect" />
+		<item Name="3d#mixes in the unspatialized radio effect with distance" />
+		<item Name="none#essentially turns off the radio effect!" />
+	</_field_long_enum>
+	<_field_explanation name="distortion settings" />
+	<_field_struct name="distortion settings" />
+	<_field_custom name="table size" />
+	<_field_long_integer name="table size" />
+	<_field_custom name="noise amount" />
+	<_field_real name="noise amount" />
+	<_field_long_flags name="flags">
+		<item Name="interpolate" />
+	</_field_long_flags>
+	<_field_explanation name="equalizer settings" />
+	<_field_struct name="equalizer settings" />
+	<_field_custom name="input gain:dB" />
+	<_field_real name="input gain:dB" />
+	<_field_custom name="output gain:dB" />
+	<_field_real name="output gain:dB" />
+	<_field_block name="band settings" max="3" srcguid="0c609cf8-da62-2a42-af5b-1d5d0d1dd0db" srcName="sound_equalizer_band_settings_block">
+		<_field_long_enum name="type^">
+			<item Name="band pass" />
+			<item Name="low shelf" />
+			<item Name="high shelf" />
+			<item Name="low pass" />
+			<item Name="high pass" />
+		</_field_long_enum>
+		<_field_custom name="frequency:Hz" />
+		<_field_real name="frequency:Hz" />
+		<_field_custom name="gain:dB" />
+		<_field_real name="gain:dB" />
+		<_field_custom name="q" />
+		<_field_real name="q" />
+	</_field_block>
+</plugin>

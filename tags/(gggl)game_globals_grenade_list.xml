@@ -1,0 +1,25 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="grenades" max="8" srcguid="10d45ffb-b743-074b-94cd-a4f519f43a56" srcName="GameGlobalsGrenadeBlock">
+		<_field_short_integer name="maximum count" />
+		<_field_pad name="CXVLKJE" length="2" />
+		<_field_short_integer name="initial count (Campaign)" />
+		<_field_short_integer name="initial count (Firefight)" />
+		<_field_short_integer name="initial count (Multiplayer)" />
+		<_field_short_integer name="grenadier extra count (Campaign)" />
+		<_field_short_integer name="grenadier extra count (Firefight)" />
+		<_field_short_integer name="grenadier extra count (Multiplayer)" />
+		<_field_real name="drop percentage (Campaign)" />
+		<_field_real name="drop percentage (Firefight)" />
+		<_field_real name="drop percentage (Multiplayer)" />
+		<_field_real name="resourceful scavenge percentage (Campaign)" />
+		<_field_real name="resourceful scavenge percentage (Firefight)" />
+		<_field_real name="resourceful scavenge percentage (Multiplayer)" />
+		<_field_tag_reference name="throwing effect" validtags="effe" />
+		<_field_tag_reference name="equipment" validtags="eqip" />
+		<_field_tag_reference name="projectile" validtags="proj" />
+		<_field_tag_reference name="equipment (PvE)" validtags="eqip" />
+		<_field_tag_reference name="projectile (PvE)" validtags="proj" />
+	</_field_block>
+</plugin>

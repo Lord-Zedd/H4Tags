@@ -1,0 +1,26 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="property values" max="64" srcguid="a0316526-f883-c742-802a-a55c5a9d94be" srcName="sandbox_property_allowed_values_reference_block">
+		<_field_string_id name="property name" />
+		<_field_char_enum name="parameter_type">
+			<item Name="integer" />
+			<item Name="string id" />
+			<item Name="real range" />
+			<item Name="real" />
+		</_field_char_enum>
+		<_field_pad name="blug" length="3" />
+		<_field_block name="allowed values" max="100" srcguid="b982aef7-a5ce-494d-abc0-2f9f5ab01e19" srcName="text_value_pair_reference_block">
+			<_field_byte_flags name="flags">
+				<item Name="default setting" />
+				<item Name="real value "unchanged"" />
+			</_field_byte_flags>
+			<_field_pad name="grug" length="3" />
+			<_field_long_integer name="enumerated value" />
+			<_field_real name="real value" />
+			<_field_string_id name="string_id value" />
+			<_field_string_id name="label string id" />
+			<_field_string_id name="description string id" />
+		</_field_block>
+	</_field_block>
+</plugin>

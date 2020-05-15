@@ -1,0 +1,35 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="sound effects" max="128" srcguid="381b4a33-c494-5c4b-9cbd-395c8a7b7f5a" srcName="platform_sound_playback_block">
+		<_field_string_id name="name^" />
+		<_field_struct name="playback" />
+		<_field_long_flags name="flags">
+			<item Name="turn off in splitscreen" />
+			<item Name="only turn on in first person" />
+		</_field_long_flags>
+		<_field_tag_reference name="radio effect" validtags="srad" />
+		<_field_tag_reference name="Start event" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="End event" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="Immediate stop event#Must clear the effect without any transition - used for exiting levels, etc" validtags="scmb, sndo, snd!" />
+		<_field_block name="lowpass effect" max="1" srcguid="19121a88-de01-a74e-8bc6-3300baa416ab" srcName="platform_sound_playback_lowpass_block">
+			<_field_real name="attack:seconds" />
+			<_field_real name="release:seconds" />
+			<_field_struct name="settings" />
+			<_field_custom name="cutoff frequency:Hz" />
+			<_field_real name="cutoff frequency:Hz" />
+			<_field_custom name="output gain:dB" />
+			<_field_real name="output gain:dB" />
+		</_field_block>
+		<_field_block name="sound components" max="16" srcguid="268c147f-184a-3f43-a475-41015b0e7f87" srcName="platform_sound_playback_component_block">
+			<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+			<_field_real name="gain:dB#additional attenuation to sound" />
+			<_field_long_flags name="flags">
+				<item Name="don't play at start" />
+				<item Name="play on stop" />
+				<item Name="play alternate" />
+				<item Name="sync with origin looping sound" />
+			</_field_long_flags>
+		</_field_block>
+	</_field_block>
+</plugin>

@@ -1,0 +1,89 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_word_flags name="Flags">
+		<item Name="Sky Fog Enabled" />
+		<item Name="Ground Fog Enabled" />
+		<item Name="Ceiling Fog Enabled" />
+		<item Name="Fog Light Enabled" />
+		<item Name="Patchy Fog Enabled" />
+		<item Name="Sky Fog Height Camera Relative" />
+		<item Name="Ground Fog Height Camera Relative" />
+		<item Name="Use Floating Shadow for Fog Light" />
+		<item Name="Only use fog light for light shafts" />
+	</_field_word_flags>
+	<_field_byte_integer name="Version!" />
+	<_field_pad name="ABCDEFGH" length="1" />
+	<_field_explanation name="Ambient Fog Parameters">All heights are absolute world space height</_field_explanation>
+	<_field_real name="distance bias:world units#negative means into the screen" />
+	<_field_custom name="Sky Fog" />
+	<_field_struct name="sky fog" />
+	<_field_real name="base height:world units" />
+	<_field_real name="fog height:world units" />
+	<_field_real name="fog thickness [0.0 to 1.0]" />
+	<_field_real name="fog falloff end{max fog distance}" />
+	<_field_real_rgb_color name="fog color" />
+	<_field_real name="fog color intensity#scales color up or down to allow for HDR values" />
+	<_field_block name="Function" max="1" srcguid="29d5f9d1-069b-e1d3-d509-793c3631af50" srcName="soloFogFunctionBlock">
+		<_field_data name="data" />
+	</_field_block>
+	<_field_custom name="Ground Fog" />
+	<_field_struct name="ground fog" />
+	<_field_real name="base height:world units" />
+	<_field_real name="fog height:world units" />
+	<_field_real name="fog thickness [0.0 to 1.0]" />
+	<_field_real name="fog falloff end{max fog distance}" />
+	<_field_real_rgb_color name="fog color" />
+	<_field_real name="fog color intensity#scales color up or down to allow for HDR values" />
+	<_field_block name="Function" max="1" srcguid="29d5f9d1-069b-e1d3-d509-793c3631af50" srcName="soloFogFunctionBlock">
+		<_field_data name="data" />
+	</_field_block>
+	<_field_custom name="Ceiling Fog BEWARE!" />
+	<_field_struct name="ceiling fog" />
+	<_field_real name="base height:world units" />
+	<_field_real name="fog height:world units" />
+	<_field_real name="fog thickness [0.0 to 1.0]" />
+	<_field_real name="fog falloff end{max fog distance}" />
+	<_field_real_rgb_color name="fog color" />
+	<_field_real name="fog color intensity#scales color up or down to allow for HDR values" />
+	<_field_block name="Function" max="1" srcguid="29d5f9d1-069b-e1d3-d509-793c3631af50" srcName="soloFogFunctionBlock">
+		<_field_data name="data" />
+	</_field_block>
+	<_field_custom name="Fog Light" />
+	<_field_struct name="fog light" />
+	<_field_real name="pitch angle [-90 to 90]:degree" />
+	<_field_real name="yaw angle [0 to 360]:degree" />
+	<_field_real name="angular radius [0 to 180]:degree" />
+	<_field_real_rgb_color name="tint color" />
+	<_field_real name="tint color intensity" />
+	<_field_real name="angular falloff steepness" />
+	<_field_real name="distance falloff steepness" />
+	<_field_real name="nearby cutoff percentage" />
+	<_field_explanation name="Patchy Fog Per-Cluster Parameters">Sheet density.............Intensity scaling factor applied to all sheets
+Full intensity height.....Height above 0 below which fog should be at full intensity
+Half intensity height.....Height at which fog should be attenuated to half intensity
+Wind......................Direction and intensity of fog motion due to wind</_field_explanation>
+	<_field_real name="Sheet density" />
+	<_field_real_rgb_color name="Color tint" />
+	<_field_real_rgb_color name="Color tint inner" />
+	<_field_real name="Intensity" />
+	<_field_real name="Full intensity height" />
+	<_field_real name="Half intensity height" />
+	<_field_real_vector_3d name="Wind direction" />
+	<_field_real name="Reference plane height" />
+	<_field_custom name="Volume Fog" />
+	<_field_struct name="volume fog" />
+	<_field_real_rgb_color name="volume fog color" />
+	<_field_real name="volume fog color intensity" />
+	<_field_custom name="Light Shafts" />
+	<_field_struct name="light shaft" />
+	<_field_real_rgb_color name="light shaft tint color" />
+	<_field_real name="light shaft intensity" />
+	<_field_real name="light shaft decay rate" />
+	<_field_real name="maximum screen distance" />
+	<_field_real name="sample density" />
+	<_field_real name="minimum caster distance" />
+	<_field_explanation name="Weather effect">Effect tag to create nearby raindrops, snowflakes, etc.
+Particle systems from this effect will follow the camera and wrap seamlessly as you turn or move.</_field_explanation>
+	<_field_tag_reference name="Weather effect" validtags="effe" />
+</plugin>

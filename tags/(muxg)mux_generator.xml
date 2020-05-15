@@ -1,0 +1,30 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="generate" />
+	<_field_explanation name="Blend Map">The blend map determines which material shows up where in your mux shader.
+Where the blend map is black (color 0) you will see the first material
+Where it is white (color 255), you will see the last material
+In between it will blend through all the materials in order (at least once through the list)
+So if you have 5 materials, first set to 1, and last set to 2, the material order is:
+1-2-3-4-0-1-2
+By default, it starts and ends at the first material:
+0-1-2-3-4-0</_field_explanation>
+	<_field_tag_reference name="blend texture" validtags="bitm" />
+	<_field_long_block_index name="first material in blend map" targetGuid="dc541aeb-5346-9c4b-bea3-c266bdae8035" targetName="mux_generator_material_block" />
+	<_field_long_block_index name="last material in blend map" targetGuid="dc541aeb-5346-9c4b-bea3-c266bdae8035" targetName="mux_generator_material_block" />
+	<_field_block name="materials" max="16" srcguid="dc541aeb-5346-9c4b-bea3-c266bdae8035" srcName="mux_generator_material_block">
+		<_field_string_id name="name^" />
+		<_field_tag_reference name="mux material" validtags="rmmm" />
+	</_field_block>
+	<_field_explanation name="TARGETS">these will be filled out automatically if you don't specify them
+these are the tags that will be modified by this mux generator</_field_explanation>
+	<_field_tag_reference name="target mux shader" validtags="rmmx" />
+	<_field_tag_reference name="target albedo base" validtags="bitm" />
+	<_field_tag_reference name="target albedo detail" validtags="bitm" />
+	<_field_tag_reference name="target bump base" validtags="bitm" />
+	<_field_tag_reference name="target bump detail" validtags="bitm" />
+	<_field_tag_reference name="target parallax" validtags="bitm" />
+	<_field_tag_reference name="target material 0" validtags="bitm" />
+	<_field_tag_reference name="target material 1" validtags="bitm" />
+</plugin>

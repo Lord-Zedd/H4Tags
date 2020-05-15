@@ -1,0 +1,12 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="avatar_award" max="3" srcguid="ef40cb69-57b1-0c4b-90bd-263487f8862d" srcName="single_avatar_award_definition_block">
+		<_field_string_id name="name^" />
+		<_field_long_enum name="type">
+			<item Name="award_0" />
+			<item Name="award_1" />
+			<item Name="award_2" />
+		</_field_long_enum>
+	</_field_block>
+</plugin>

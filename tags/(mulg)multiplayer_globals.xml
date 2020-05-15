@@ -1,0 +1,361 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="universal" max="1" srcguid="90f8002f-5f34-b745-879f-73d40a5d9aec" srcName="multiplayer_universal_block">
+		<_field_tag_reference name="random player names" validtags="unic" />
+		<_field_tag_reference name="team names" validtags="unic" />
+		<_field_block name="teams" max="8" srcguid="446775c4-5d3b-e44a-9435-88c81a348142" srcName="teamDefinitionBlock">
+			<_field_string_id name="name^" />
+			<_field_real_rgb_color name="primary color" />
+			<_field_real_rgb_color name="secondary color" />
+			<_field_custom name="- Emblem Data" />
+			<_field_byte_integer name="foreground emblem index" />
+			<_field_byte_integer name="background emblem index" />
+			<_field_byte_flags name="info flags">
+				<item Name="alternate foreground channel off" />
+				<item Name="flip foreground" />
+				<item Name="flip background" />
+			</_field_byte_flags>
+			<_field_char_enum name="primary color index">
+				<item Name="player color 0" />
+				<item Name="player color 1" />
+				<item Name="player color 2" />
+				<item Name="player color 3" />
+				<item Name="player color 4" />
+				<item Name="player color 5" />
+				<item Name="player color 6" />
+				<item Name="player color 7" />
+				<item Name="player color 8" />
+				<item Name="player color 9" />
+				<item Name="player color 10" />
+				<item Name="player color 11" />
+				<item Name="player color 12" />
+				<item Name="player color 13" />
+				<item Name="player color 14" />
+				<item Name="player color 15" />
+				<item Name="player color 16" />
+				<item Name="player color 17" />
+				<item Name="player color 18" />
+				<item Name="player color 19" />
+				<item Name="player color 20" />
+				<item Name="player color 21" />
+				<item Name="player color 22" />
+				<item Name="player color 23" />
+				<item Name="player color 24" />
+				<item Name="player color 25" />
+				<item Name="player color 26" />
+				<item Name="player color 27" />
+				<item Name="player color 28" />
+				<item Name="player color 29" />
+				<item Name="player color 30" />
+				<item Name="player color 31" />
+			</_field_char_enum>
+			<_field_char_enum name="secondary color index">
+				<item Name="player color 0" />
+				<item Name="player color 1" />
+				<item Name="player color 2" />
+				<item Name="player color 3" />
+				<item Name="player color 4" />
+				<item Name="player color 5" />
+				<item Name="player color 6" />
+				<item Name="player color 7" />
+				<item Name="player color 8" />
+				<item Name="player color 9" />
+				<item Name="player color 10" />
+				<item Name="player color 11" />
+				<item Name="player color 12" />
+				<item Name="player color 13" />
+				<item Name="player color 14" />
+				<item Name="player color 15" />
+				<item Name="player color 16" />
+				<item Name="player color 17" />
+				<item Name="player color 18" />
+				<item Name="player color 19" />
+				<item Name="player color 20" />
+				<item Name="player color 21" />
+				<item Name="player color 22" />
+				<item Name="player color 23" />
+				<item Name="player color 24" />
+				<item Name="player color 25" />
+				<item Name="player color 26" />
+				<item Name="player color 27" />
+				<item Name="player color 28" />
+				<item Name="player color 29" />
+				<item Name="player color 30" />
+				<item Name="player color 31" />
+			</_field_char_enum>
+			<_field_char_enum name="background color index">
+				<item Name="player color 0" />
+				<item Name="player color 1" />
+				<item Name="player color 2" />
+				<item Name="player color 3" />
+				<item Name="player color 4" />
+				<item Name="player color 5" />
+				<item Name="player color 6" />
+				<item Name="player color 7" />
+				<item Name="player color 8" />
+				<item Name="player color 9" />
+				<item Name="player color 10" />
+				<item Name="player color 11" />
+				<item Name="player color 12" />
+				<item Name="player color 13" />
+				<item Name="player color 14" />
+				<item Name="player color 15" />
+				<item Name="player color 16" />
+				<item Name="player color 17" />
+				<item Name="player color 18" />
+				<item Name="player color 19" />
+				<item Name="player color 20" />
+				<item Name="player color 21" />
+				<item Name="player color 22" />
+				<item Name="player color 23" />
+				<item Name="player color 24" />
+				<item Name="player color 25" />
+				<item Name="player color 26" />
+				<item Name="player color 27" />
+				<item Name="player color 28" />
+				<item Name="player color 29" />
+				<item Name="player color 30" />
+				<item Name="player color 31" />
+			</_field_char_enum>
+			<_field_pad name="pad" length="2" />
+		</_field_block>
+		<_field_tag_reference name="multiplayer text" validtags="unic" />
+		<_field_tag_reference name="sandbox text" validtags="unic" />
+		<_field_tag_reference name="sandbox object properties values" validtags="jmrq" />
+		<_field_tag_reference name="effects" validtags="mgee" />
+		<_field_block name="multiplayer roles" max="8" srcguid="de7e1a97-8d2f-6c42-9fe8-0dd71dd603fb" srcName="global_team_role_block">
+			<_field_long_flags name="flags!">
+				<item Name="UNUSED" />
+			</_field_long_flags>
+			<_field_short_enum name="team^!">
+				<item Name="defender" />
+				<item Name="attacker" />
+				<item Name="third party" />
+				<item Name="fourth party" />
+				<item Name="fifth party" />
+				<item Name="sixth party" />
+				<item Name="seventh party" />
+				<item Name="eighth party{eigth party}" />
+				<item Name="neutral" />
+			</_field_short_enum>
+			<_field_pad name="QVO" length="2" />
+			<_field_block name="player roles" max="64" srcguid="c82f7478-ac50-be4e-b089-2d256c8578cb" srcName="player_role_block">
+				<_field_string_id name="role name^" />
+				<_field_long_flags name="flags!">
+					<item Name="UNUSED" />
+				</_field_long_flags>
+				<_field_tag_reference name="primary weapon" validtags="weap" />
+				<_field_short_integer name="primary weapon rounds loaded" />
+				<_field_short_integer name="primary weapon rounds total" />
+				<_field_tag_reference name="secondary weapon" validtags="weap" />
+				<_field_short_integer name="secondary weapon rounds loaded" />
+				<_field_short_integer name="secondary weapon rounds total" />
+				<_field_short_integer name="frag grenade count" />
+				<_field_short_integer name="plasma grenade count" />
+				<_field_short_integer name="UNUSED!" />
+				<_field_short_integer name="spawn location index!" />
+				<_field_tag_reference name="starting equipment!" validtags="eqip" />
+				<_field_string name="display name" />
+				<_field_long_flags name="installed apps">
+					<item Name="Weightless" />
+					<item Name="Defiance" />
+					<item Name="Maltreat" />
+					<item Name="Recharge" />
+					<item Name="Impervious" />
+					<item Name="Exploiter" />
+					<item Name="Momentum" />
+					<item Name="Reclaim" />
+					<item Name="Detector" />
+					<item Name="Scrimmage" />
+					<item Name="Sprint" />
+					<item Name="Twofold" />
+					<item Name="Supplement" />
+					<item Name="Manifest" />
+				</_field_long_flags>
+				<_field_long_integer name="killstreak bonus time:secs" />
+				<_field_real name="movement speed multiplier" />
+				<_field_tag_reference name="killstreak bonus equipment" validtags="eqip" />
+				<_field_tag_reference name="killstreak bonus activation sound" validtags="scmb, sndo, snd!" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="requisition constants" max="1" srcguid="1e1896a1-06fd-bc47-8145-0bed8d1f89ed" srcName="requisition_constants_block">
+			<_field_real name="FTL bonus fraction#multiplier to apply to money earned by minions to also give to the fireteam leader" />
+			<_field_explanation name="AWARD AMOUNTS">These are requisition award amounts for various thing players can get money for</_field_explanation>
+			<_field_long_integer name="Kill" />
+			<_field_long_integer name="Assist" />
+			<_field_long_integer name="Fire team leader kill" />
+			<_field_long_integer name="vehicle kill#Default, only applies if the vehicle doesn't have a custom award amount in the scenario requisition palette." />
+			<_field_long_integer name="objective destroyed#awarded to entire team" />
+			<_field_long_integer name="objective armed#awarded to entire team" />
+			<_field_long_integer name="objective disarmed#awarded to entire team" />
+			<_field_long_integer name="objective defending#awarded every 3 seconds to any individuals near secondary defensive objectives" />
+			<_field_long_integer name="neutral territory owned#awarded every 3 seconds to entire team that owns BFG" />
+			<_field_long_integer name="served as reinforcement target#awarded to a reinforcement target when a teammate spawns on him (to encourage cooperation)" />
+			<_field_long_integer name="uberassault gun captured#awarded on gaining ownership of a gun to every member of the new owning team" />
+			<_field_long_integer name="uberassault gun owned#awarded every 3 seconds to the entire team that owns this gun.  Money from multiple guns stacks (so if you own all 3, you'll get 3x this money every 3 seconds)." />
+			<_field_explanation name="PENALTY AMOUNTS">Requisition penalties for various discouraged actions</_field_explanation>
+			<_field_long_integer name="Betrayed a teammate" />
+			<_field_explanation name="FIRE TEAM TIER KILL REQUIREMENTS">Number of kills a fireteam must have to reach each fire team tier</_field_explanation>
+			<_field_long_integer name="Bronze kill minimum" />
+			<_field_long_integer name="Silver kill minimum" />
+			<_field_long_integer name="Gold kill minimum" />
+			<_field_explanation name="FIRE TEAM TIER BONUS MULTIPLIERS">Applied to money earned from biped kills and assists</_field_explanation>
+			<_field_real name="Bronze multiplier" />
+			<_field_real name="Silver multiplier" />
+			<_field_real name="Gold multiplier" />
+			<_field_explanation name="FIRE TEAM TIER TIME REQUIREMENT">Game time in seconds after which everyone is promoted to at least this tier</_field_explanation>
+			<_field_long_integer name="Bronze advancement time" />
+			<_field_long_integer name="Silver advancement time" />
+			<_field_long_integer name="Gold advancement time" />
+			<_field_block name="Requisition palette" max="64" srcguid="a5176c0e-1b17-f74e-8a0e-0e6a11c92e17" srcName="requisition_palette_block">
+				<_field_explanation name="CUSTOM APPS">If you want the award to be a custom app, point at globals/custom_app_globals, and match one of the names from that tag for "display_name"</_field_explanation>
+				<_field_tag_reference name="name" validtags="obje, vehi, capg" />
+				<_field_string_id name="display_name^" />
+				<_field_long_enum name="special_buy">
+					<item Name="none" />
+					<item Name="airstrike!" />
+					<item Name="mac cannon" />
+					<item Name="magnetic ammo" />
+					<item Name="laser ammo" />
+					<item Name="explosive ammo" />
+					<item Name="normal ammo" />
+					<item Name="friendly ai light infantry" />
+					<item Name="friendly ai heavy infantry" />
+					<item Name="friendly ai light vehicle" />
+					<item Name="friendly ai heavy vehicle" />
+					<item Name="friendly ai flyer" />
+				</_field_long_enum>
+			</_field_block>
+		</_field_block>
+		<_field_block name="player starting profile" max="256" srcguid="8164fb5a-d96e-dc40-855c-b02ab73d1ac4" srcName="scenario_profiles_block">
+			<_field_string name="name^" />
+			<_field_real_fraction name="starting health damage:[0,1]" />
+			<_field_real_fraction name="starting shield damage:[0,1]" />
+			<_field_tag_reference name="primary weapon" validtags="weap" />
+			<_field_short_integer name="primaryrounds loaded#-1 = weapon default" />
+			<_field_short_integer name="primaryrounds total#-1 = weapon default" />
+			<_field_real name="primaryage remaining#0.0 = default, 1.0 = full" />
+			<_field_tag_reference name="secondary weapon" validtags="weap" />
+			<_field_short_integer name="secondaryrounds loaded#-1 = weapon default" />
+			<_field_short_integer name="secondaryrounds total#-1 = weapon default" />
+			<_field_real name="secondaryage remaining#0.0 = default, 1.0 = full" />
+			<_field_char_integer name="starting fragmentation grenade count" />
+			<_field_char_integer name="starting plasma grenade count" />
+			<_field_char_integer name="starting grenade 3 count" />
+			<_field_char_integer name="starting grenade 4 count" />
+			<_field_char_integer name="starting grenade 5 count" />
+			<_field_char_integer name="starting grenade 6 count" />
+			<_field_char_integer name="starting grenade 7 count" />
+			<_field_char_integer name="starting grenade 8 count" />
+			<_field_tag_reference name="starting equipment" validtags="eqip" />
+			<_field_string_id name="starting tactical package" />
+			<_field_string_id name="starting support upgrade" />
+			<_field_short_block_index name="editor folder!" targetGuid="596a9d0b-579a-cb41-a1d7-a5d19f085a3d" targetName="g_scenario_editor_folder_block" />
+			<_field_pad name="AHDVHJE" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="runtime" max="1" srcguid="4d15176f-5648-054d-b362-026a93f87f54" srcName="multiplayer_runtime_block">
+		<_field_tag_reference name="editor biped" validtags="unit" />
+		<_field_tag_reference name="editor helper" validtags="obje" />
+		<_field_tag_reference name="flag" validtags="item" />
+		<_field_tag_reference name="ball" validtags="item" />
+		<_field_tag_reference name="assault bomb" validtags="item" />
+		<_field_tag_reference name="vip influence area" validtags="obje" />
+		<_field_tag_reference name="in game text" validtags="unic" />
+		<_field_block name="sounds" max="60" srcguid="02d0d28f-e4d5-174f-9066-0349a707d3bb" srcName="sounds_block">
+			<_field_tag_reference name="sound^" validtags="scmb, sndo, snd!" />
+		</_field_block>
+		<_field_block name="looping sounds" max="60" srcguid="e2f1b244-0f22-4e4c-bbec-639948a923a2" srcName="looping_sounds_block">
+			<_field_tag_reference name="looping sound^" validtags="lsnd" />
+		</_field_block>
+		<_field_tag_reference name="megalo sounds{english}" validtags="mgls" />
+		<_field_tag_reference name="communication sounds{comm english}" validtags="coms" />
+		<_field_long_integer name="maximum frag count" />
+		<_field_long_integer name="maximum plasma count" />
+		<_field_block name="multiplayer constants" max="1" srcguid="962afc8f-dfd8-0342-bbf5-dd91e6c61e5a" srcName="multiplayer_constants_block">
+			<_field_explanation name="PLAYER SPAWN INFLUENCERS">These are the default spawn influencer settings which can be overridden by scenario tags</_field_explanation>
+			<_field_tag_reference name="Default Spawn Settings" validtags="ssdf" />
+			<_field_explanation name="MORE MP CONSTANTS">More old Halo2 stuff follows...</_field_explanation>
+			<_field_real name="teleporter recharge time:seconds" />
+			<_field_tag_reference name="sandbox effect" validtags="effe" />
+			<_field_string_id name="blocked teleporter string" />
+			<_field_explanation name="RESPAWN STRINGS">These are used for respawn status message displays
+The text comes from the in-game-text multiplayer message strings list tag
+in the multiplayer runtime globals block above</_field_explanation>
+			<_field_string_id name="voluntary respawn control instructions" />
+			<_field_string_id name="spawn allowed default respawn" />
+			<_field_string_id name="spawn at player allowed looking at self" />
+			<_field_string_id name="spawn at player allowed looking at target" />
+			<_field_string_id name="spawn at player allowed looking at potential target" />
+			<_field_string_id name="spawn at territory allowed looking at target" />
+			<_field_string_id name="spawn at territory allowed looking at potential target" />
+			<_field_string_id name="you are out of lives" />
+			<_field_string_id name="invalid spawn target selected" />
+			<_field_string_id name="targetted player enemies nearby" />
+			<_field_string_id name="targetted player unfriendly team" />
+			<_field_string_id name="targetted player dead" />
+			<_field_string_id name="targetted player in combat" />
+			<_field_string_id name="targetted player too far from owned flag" />
+			<_field_string_id name="no available netpoints" />
+			<_field_string_id name="targetted netpoint contested" />
+		</_field_block>
+		<_field_block name="state responses" max="32" srcguid="8a81a479-a8cc-1f4a-96b1-b1d43f614f45" srcName="game_engine_status_response_block">
+			<_field_word_flags name="flags">
+				<item Name="unused" />
+			</_field_word_flags>
+			<_field_pad name="FAW" length="2" />
+			<_field_short_enum name="state^">
+				<item Name="waiting for space to clear" />
+				<item Name="observing" />
+				<item Name="respawning soon" />
+				<item Name="sitting out" />
+				<item Name="out of lives" />
+				<item Name="playing (winning)" />
+				<item Name="playing (tied)" />
+				<item Name="playing (losing)" />
+				<item Name="game over (won)" />
+				<item Name="game over (tied)" />
+				<item Name="game over (lost)" />
+				<item Name="game over (you lost, but game tied)" />
+				<item Name="you have flag" />
+				<item Name="enemy has flag" />
+				<item Name="flag not home" />
+				<item Name="carrying oddball" />
+				<item Name="you are juggy" />
+				<item Name="you control hill" />
+				<item Name="switching sides soon" />
+				<item Name="player recently started" />
+				<item Name="you have bomb" />
+				<item Name="flag contested" />
+				<item Name="bomb contested" />
+				<item Name="limited lives left (multiple)" />
+				<item Name="limited lives left (single)" />
+				<item Name="limited lives left (final)" />
+				<item Name="playing (winning, unlimited)" />
+				<item Name="playing (tied, unlimited)" />
+				<item Name="playing (losing, unlimited)" />
+				<item Name="waiting to spawn" />
+				<item Name="waiting for game start" />
+				<item Name="blank" />
+			</_field_short_enum>
+			<_field_pad name="BNYFIDDGX" length="2" />
+			<_field_string_id name="ffa message" />
+			<_field_string_id name="team message" />
+			<_field_tag_reference name="unused!" />
+			<_field_pad name="GTL" length="4" />
+		</_field_block>
+		<_field_tag_reference name="scoreboard emblem bitmap" validtags="bitm" />
+		<_field_tag_reference name="scoreboard dead emblem bitmap" validtags="bitm" />
+		<_field_tag_reference name="hill shader" validtags="mat , rm  " />
+		<_field_tag_reference name="default_biped_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="default_vehicle_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="default_crate_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="default_item_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="default_projectile_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="default_object_simulation_interpolation" validtags="siin" />
+		<_field_tag_reference name="co-op spawning globals" validtags="coop" />
+		<_field_tag_reference name="megalo string_id table" validtags="msit" />
+		<_field_tag_reference name="killcam parameters# Used for non projectile killcams." validtags="kccd" />
+	</_field_block>
+</plugin>

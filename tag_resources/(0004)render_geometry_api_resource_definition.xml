@@ -1,0 +1,34 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="pc vertex buffers*" max="65535" srcguid="2973dd10-7fe0-8048-bc8b-b79a253227ee" srcName="vertex_buffers_block">
+		<_field_byte_integer name="declaration type*" />
+		<_field_byte_integer name="stride*" />
+		<_field_pad name="vertex buffer pad" length="2" />
+		<_field_dword_integer name="count*" />
+		<_field_long_integer name="d3d hardware format*" />
+	</_field_block>
+	<_field_block name="pc index buffers*" max="8191" srcguid="9ec247c7-d188-3b48-9336-ec15f00bdd09" srcName="index_buffers_block">
+		<_field_byte_integer name="declaration type*" />
+		<_field_byte_integer name="stride*" />
+		<_field_pad name="vertex buffer pad" length="2" />
+		<_field_dword_integer name="count*" />
+		<_field_long_integer name="d3d hardware format*" />
+	</_field_block>
+	<_field_block name="xenon vertex buffers*" max="65535" srcguid="906402fb-1ed4-4141-a8a0-23be06497b4e" srcName="render_vertex_buffer_block">
+		<_field_api_interop name="vertex buffer interop" srcguid="7f3a9544-b473-cb48-a68e-5a4428379244">
+			<_field_long_integer name="vertex count*" />
+			<_field_short_integer name="declaration*" />
+			<_field_short_integer name="stride*" />
+			<_field_data name="vertices*" />
+		</_field_api_interop>
+	</_field_block>
+	<_field_block name="xenon index buffers*" max="8191" srcguid="76834f03-bbe6-0e4e-8039-cb4be53ec97c" srcName="render_index_buffer_block">
+		<_field_api_interop name="index buffer interop" srcguid="62ffb192-fc80-264c-8bdc-1478642346d2">
+			<_field_long_integer name="primitive type*" />
+			<_field_char_integer name="is index32*" />
+			<_field_pad name="index buffer descicriptor padding" length="3" />
+			<_field_data name="index_data*" />
+		</_field_api_interop>
+	</_field_block>
+</plugin>

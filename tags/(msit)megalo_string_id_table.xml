@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="megalo string_ids" max="255" srcguid="8721786b-c232-8d4e-be17-e379eb772b96" srcName="megalo_string_id_block">
+		<_field_string_id name="string_id^" />
+	</_field_block>
+	<_field_block name="megalo string_ids sprite mapping" max="255" srcguid="c97a7dfc-f8ad-4845-8019-b5cbc6c6fdad" srcName="megalo_string_id_to_sprite_index_block">
+		<_field_custom_long_block_index name="from megalo string_id" targetName="megalo_string_collection_search_definition" />
+		<_field_long_integer name="loadout menu sprite frame" />
+	</_field_block>
+</plugin>

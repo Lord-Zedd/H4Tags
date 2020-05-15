@@ -1,0 +1,54 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="static data" />
+	<_field_block name="columns" max="128" srcguid="41b0c01f-b9cf-0944-beb2-930605894cd1" srcName="static_data_column">
+		<_field_string_id name="name^" />
+		<_field_short_enum name="type">
+			<item Name="boolean" />
+			<item Name="long" />
+			<item Name="real" />
+			<item Name="string" />
+			<item Name="component" />
+			<item Name="tag reference" />
+			<item Name="string id" />
+			<item Name="argb color" />
+			<item Name="emblem info" />
+		</_field_short_enum>
+		<_field_pad name="pad0" length="2" />
+	</_field_block>
+	<_field_block name="rows" max="256" srcguid="45eca7b1-3dbc-9e43-a6d9-f1a4a30957af" srcName="static_data_row">
+		<_field_block name="long properties" max="8192" srcguid="2928dd63-f1d1-144d-9638-79528fcc1ffc" srcName="property_long_value">
+			<_field_string_id name="name^" />
+			<_field_long_integer name="value" />
+		</_field_block>
+		<_field_block name="real properties" max="8192" srcguid="a4a88d75-1259-9040-a1fb-5462d2453c69" srcName="property_real_value">
+			<_field_string_id name="name^" />
+			<_field_real name="value" />
+		</_field_block>
+		<_field_block name="string_id properties" max="8192" srcguid="70f9ca63-af0f-a94e-b3fe-b12ca47c0015" srcName="property_string_id_value">
+			<_field_string_id name="name^" />
+			<_field_string_id name="value" />
+		</_field_block>
+		<_field_block name="component ptr properties" max="8192" srcguid="c9c824b8-e49f-af44-a4aa-330e970b0eb6" srcName="propertyComponentPtrValue">
+			<_field_string_id name="name^" />
+			<_field_string_id name="value" />
+			<_field_byte_flags name="flags">
+				<item Name="source is in external system" />
+			</_field_byte_flags>
+			<_field_pad name="pad0" length="3" />
+		</_field_block>
+		<_field_block name="tag reference properties" max="8192" srcguid="140aa8ca-129b-b545-a53a-40f5ffa44c2e" srcName="property_tag_reference_value">
+			<_field_string_id name="name^" />
+			<_field_tag_reference name="value" />
+		</_field_block>
+		<_field_block name="string properties" max="8192" srcguid="d3dc809b-f8d0-464f-af7a-604397549dda" srcName="property_text_value">
+			<_field_string_id name="name^" />
+			<_field_long_string name="value" />
+		</_field_block>
+		<_field_block name="argb color properties" max="8192" srcguid="9bc86fa8-8a47-ac4b-97ed-6b44c3099ab8" srcName="property_argb_color_value">
+			<_field_string_id name="name^" />
+			<_field_real_argb_color name="value" />
+		</_field_block>
+	</_field_block>
+</plugin>

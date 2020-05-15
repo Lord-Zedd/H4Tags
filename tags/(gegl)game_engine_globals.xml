@@ -1,0 +1,70 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="game engine settings" validtags="wezr" />
+	<_field_tag_reference name="game engine text" validtags="unic" />
+	<_field_block name="game engine event response list" max="1000" srcguid="70155c93-05f1-7842-9211-0297df082665" srcName="game_engine_event_block">
+		<_field_string_id name="name{incident}^" />
+		<_field_char_enum name="audience^">
+			<item Name="cause player" />
+			<item Name="cause team" />
+			<item Name="effect player" />
+			<item Name="effect team" />
+			<item Name="all" />
+		</_field_char_enum>
+		<_field_pad name="pad0" length="3" />
+		<_field_string_id name="display string#This string can use a bunch of neat tokens for substitution of runtime data (e.g. player names).  See an engineer for more info." />
+		<_field_char_enum name="required field">
+			<item Name="NONE" />
+			<item Name="cause player" />
+			<item Name="cause team" />
+			<item Name="effect player" />
+			<item Name="effect team" />
+		</_field_char_enum>
+		<_field_byte_flags name="excluded audience">
+			<item Name="NONE" />
+			<item Name="cause player" />
+			<item Name="cause team" />
+			<item Name="effect player" />
+			<item Name="effect team" />
+		</_field_byte_flags>
+		<_field_char_enum name="splitscreen suppression">
+			<item Name="NONE" />
+			<item Name="Suppress Audio" />
+			<item Name="Suppress Audio if Overlapping" />
+			<item Name="Suppress Text" />
+			<item Name="Suppress Audio and Text" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags">
+			<item Name="always play sound#used for respawn ticks and final tick in halo 3" />
+			<item Name="always play sound in mp#so you can make multi kill sounds never be suppressed in MP" />
+		</_field_byte_flags>
+		<_field_string_id name="primary string#This string can use a bunch of neat tokens for substitution of runtime data (e.g. player names).  See an engineer for more info." />
+		<_field_long_integer name="primary string duration:seconds" />
+		<_field_real name="sound delay (announcer only)#After we commit to playing this sound, wait this long to actually play it.  Used to control announcer cadence." />
+		<_field_struct name="default_sound" />
+		<_field_byte_flags name="sound flags">
+			<item Name="announcer sound" />
+		</_field_byte_flags>
+		<_field_pad name="AGQD" length="3" />
+		<_field_tag_reference name="sound{english sound}^" validtags="scmb, sndo, snd!" />
+		<_field_real name="probability#Ignored for the default sound - used for sound permutation block entries only." />
+		<_field_explanation name="SOUND PRIORITIZATION">A data-driven way to choose between halo 3 mp's always-queue behavior vs. odst firefight's always-suppress-older-multikills behavior.</_field_explanation>
+		<_field_string_id name="category_for_prioritization#which family does this response live in for announcer-spew-suppression?  e.g. all multi-kills should use the same string_id here." />
+		<_field_long_integer name="sound priority#higher numbers mean more important" />
+		<_field_real name="priority_suppression_age_max_seconds:seconds#If a sound from this event has been queued for more than this long, it can't be suppressed anymore.  Higher values cause a shallower announcer queue for these sounds." />
+		<_field_explanation name="SOUND PAIR CULLING">A way to say flag taken + flag dropped = silence.</_field_explanation>
+		<_field_string_id name="category_for_pair_culling#e.g. flag taken and flag dropped should use the same id here, while ball taken and ball dropped should use another shared id." />
+		<_field_long_integer name="pair_id#0 or 1, used to recognized matched pairs.  If both a 0 and a 1 are in the queue at the same time, and neither has started playing, both are removed." />
+		<_field_real name="delay_before_considering_sound_seconds:seconds#Used to keep a sound in the queue so later sounds can priority-suppress or pair-suppress it" />
+		<_field_block name="sound permutations" max="10" srcguid="8c4eb8df-8319-5740-80b7-14a7ee445191" srcName="sound_response_definition_block">
+			<_field_struct name="sound_response_definition_struct" />
+			<_field_byte_flags name="sound flags">
+				<item Name="announcer sound" />
+			</_field_byte_flags>
+			<_field_pad name="AGQD" length="3" />
+			<_field_tag_reference name="sound{english sound}^" validtags="scmb, sndo, snd!" />
+			<_field_real name="probability#Ignored for the default sound - used for sound permutation block entries only." />
+		</_field_block>
+	</_field_block>
+</plugin>

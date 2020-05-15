@@ -1,0 +1,60 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="properties" max="256" srcguid="e2b59ad2-2bc5-ec48-8c23-c5a173a0916c" srcName="fx_property_block">
+		<_field_string name="name^" />
+		<_field_long_flags name="flags">
+			<item Name="predefined" />
+			<item Name="state" />
+			<item Name="derived" />
+		</_field_long_flags>
+		<_field_long_integer name="scope" />
+		<_field_long_enum name="value type">
+			<item Name="default" />
+			<item Name="expression" />
+			<item Name="texture" />
+			<item Name="function" />
+		</_field_long_enum>
+		<_field_long_string name="expression" />
+		<_field_long_string name="initialize" />
+		<_field_long_string name="update" />
+		<_field_block name="defaults" max="64" srcguid="5c67db74-0b01-6d40-abdd-47f24ca2c6ac" srcName="fx_property_default_block">
+			<_field_string_id name="name^" />
+		</_field_block>
+		<_field_string_id name="default name" />
+		<_field_tag_reference name="reference" validtags="bitm" />
+		<_field_char_enum name="filter_mode">
+			<item Name="default" />
+			<item Name="point" />
+			<item Name="bilinear" />
+			<item Name="trilinear" />
+			<item Name="anisotropic_2x" />
+			<item Name="anisotropic_4x" />
+		</_field_char_enum>
+		<_field_char_enum name="address_mode_x">
+			<item Name="default" />
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="border" />
+		</_field_char_enum>
+		<_field_char_enum name="address_mode_y">
+			<item Name="default" />
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="border" />
+		</_field_char_enum>
+		<_field_char_enum name="mip_bias_mode">
+			<item Name="default" />
+			<item Name="bias 0" />
+			<item Name="bias 1" />
+			<item Name="bias 2" />
+			<item Name="bias 3" />
+		</_field_char_enum>
+		<_field_string_id name="Input Variable!" />
+		<_field_string_id name="Range Variable!" />
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+	</_field_block>
+</plugin>

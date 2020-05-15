@@ -1,0 +1,33 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Character Light Rig" />
+	<_field_custom name="Environment vmf lobe weight" />
+	<_field_real name="Environment vmf lobe weight" />
+	<_field_real_rgb_color name="Rig fill color" />
+	<_field_custom name="Rig fill scale" />
+	<_field_real name="Rig fill scale" />
+	<_field_block name="Directional light rigs" max="16" srcguid="592dfd43-bc55-174e-93a3-350a7ce1dd69" srcName="directionalLightRigBlock">
+		<_field_long_flags name="Location">
+			<item Name="follow object" />
+			<item Name="position at marker" />
+		</_field_long_flags>
+		<_field_custom name="Theta" />
+		<_field_real name="Theta" />
+		<_field_custom name="Phi" />
+		<_field_real name="Phi" />
+		<_field_real name="Distance from location:" />
+		<_field_tag_reference name="Midnight light" validtags="ligh" />
+	</_field_block>
+	<_field_real_rgb_color name="Rig vmf lobe color" />
+	<_field_custom name="Rig vmf lobe intensity" />
+	<_field_real name="Rig vmf lobe intensity" />
+	<_field_custom name="Rig vmf lobe theta" />
+	<_field_real name="Rig vmf lobe theta" />
+	<_field_custom name="Rig vmf lobe phi" />
+	<_field_real name="Rig vmf lobe phi" />
+	<_field_custom name="Rig vmf lobe scale" />
+	<_field_real name="Rig vmf lobe scale" />
+	<_field_custom name="Rig vmf lobe vs fill scale" />
+	<_field_real name="Rig vmf lobe vs fill scale" />
+</plugin>

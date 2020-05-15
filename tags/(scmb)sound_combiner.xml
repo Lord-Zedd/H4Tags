@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="entries" max="32" srcguid="a1add832-efdf-3a40-8826-f6bc9605d1d2" srcName="sound_combiner_definition_entry_block">
+		<_field_tag_reference name="sound^" validtags="sndo, snd!" />
+		<_field_real_bounds name="delay bounds:seconds#delay before this sound is played" />
+	</_field_block>
+	<_field_real name="maximum play seconds!#this is determined at post process time" />
+	<_field_real name="minimum distance default!#this is determined at post process time" />
+	<_field_real name="maximum distance default!#this is determined at post process time" />
+</plugin>

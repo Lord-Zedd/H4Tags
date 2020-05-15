@@ -1,0 +1,139 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="commendation aggregators" validtags="coag" />
+	<_field_tag_reference name="medal aggregators" validtags="meco" />
+	<_field_tag_reference name="commendation text" validtags="unic" />
+	<_field_short_integer name="progress display time{progression display time}:seconds" />
+	<_field_short_integer name="complete display time{callout display time}:seconds" />
+	<_field_block name="commendations" max="160" srcguid="8d831006-38ca-eb4a-9a5f-622df2945cbc" srcName="commendationBlock">
+		<_field_string_id name="name^" />
+		<_field_string_id name="description" />
+		<_field_byte_flags name="flags">
+			<item Name="hidden" />
+		</_field_byte_flags>
+		<_field_pad name="CB_PAD0" length="3" />
+		<_field_char_enum name="category">
+			<item Name="default" />
+			<item Name="weapons" />
+			<item Name="ordnance" />
+			<item Name="enemies" />
+			<item Name="vehicles" />
+			<item Name="player" />
+			<item Name="armor abilities" />
+			<item Name="objectives" />
+			<item Name="customs" />
+			<item Name="UGC" />
+		</_field_char_enum>
+		<_field_char_enum name="subcategory">
+			<item Name="default" />
+			<item Name="unsc" />
+			<item Name="covenant" />
+			<item Name="forerunner" />
+			<item Name="Covenant Enemy" />
+			<item Name="Forerunner Enemy" />
+			<item Name="Campaign" />
+			<item Name="War Games" />
+			<item Name="Slayer" />
+			<item Name="Regicide" />
+			<item Name="CTF" />
+			<item Name="Extraction" />
+			<item Name="Oddball" />
+			<item Name="King of the Hill" />
+			<item Name="Dominion" />
+			<item Name="Flood" />
+		</_field_char_enum>
+		<_field_char_integer name="sequence index" />
+		<_field_pad name="CB_PAD1" length="1" />
+		<_field_short_integer name="medal sprite index" />
+		<_field_short_integer name="game type sprite index" />
+		<_field_custom name="unlock prerequisites" />
+		<_field_struct name="prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_block name="levels" max="10" srcguid="8513f6d0-2bf5-994a-b017-8b5495cb7360" srcName="commendationLevelBlock">
+			<_field_string_id name="level name^" />
+			<_field_short_integer name="progress ticks to level#number of ticks to reach this level" />
+			<_field_short_integer name="progress display interval#number of ticks between displaying progress toast; 0=never display progress, 1=display every tick, 2=every other, etc." />
+			<_field_string_id name="achievement" />
+			<_field_block name="level up rewards#rewards given for reaching this level" max="2" srcguid="9a1a1437-d696-7d47-9a77-cfd4f2005522" srcName="commendationRewardBlock">
+				<_field_char_enum name="currency type#Type of currency given by this reward.">
+					<item Name="cookies" />
+					<item Name="xp" />
+				</_field_char_enum>
+				<_field_pad name="CRB_PAD1" length="1" />
+				<_field_short_integer name="reward value" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+</plugin>

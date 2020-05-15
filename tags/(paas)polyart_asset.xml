@@ -1,0 +1,54 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_char_enum name="runtime flags*!">
+		<item Name="processed*!" />
+		<item Name="available*!" />
+	</_field_char_enum>
+	<_field_char_enum name="Polyart vertex type">
+		<item Name="Position" />
+		<item Name="Position And UV" />
+	</_field_char_enum>
+	<_field_char_integer name="uvSet index" />
+	<_field_pad name="MERP" length="1" />
+	<_field_real name="antialiasing extent size" />
+	<_field_block name="placement data" max="1" srcguid="2a4e0999-53f7-484a-81ec-33430888b0cd" srcName="polyartCameraBlock">
+		<_field_real name="horizontal fov" />
+		<_field_real name="vertical fov" />
+		<_field_real name="near z plane distance" />
+		<_field_real name="far z plane distance" />
+		<_field_real_point_3d name="camera position" />
+	</_field_block>
+	<_field_block name="vertices*" max="32768" srcguid="c3948411-3fb7-9b4b-a474-4ddc0674329b" srcName="polyartVertexBlock">
+		<_field_short_integer name="half x*" />
+		<_field_short_integer name="half y*" />
+		<_field_short_integer name="half z*" />
+		<_field_short_integer name="half alpha*" />
+		<_field_short_integer name="half u*" />
+		<_field_short_integer name="half v*" />
+	</_field_block>
+	<_field_block name="indices*" max="32768" srcguid="01cbc7a4-4025-144d-b5a2-7fa293764df2" srcName="polyartIndexBlock">
+		<_field_short_integer name="index*" />
+	</_field_block>
+	<_field_block name="pc vertex buffers*" max="1" srcguid="ab1689f3-2aca-5e43-bcb3-53b157130d3e" srcName="vertexBuffersBlock">
+		<_field_byte_integer name="declaration type*" />
+		<_field_byte_integer name="stride*" />
+		<_field_pad name="vertex buffer pad" length="2" />
+		<_field_dword_integer name="count*" />
+		<_field_long_integer name="d3d hardware format*" />
+	</_field_block>
+	<_field_block name="pc index buffers*" max="1" srcguid="8ba37afb-e53c-2546-b96c-000360812bbc" srcName="indexBuffersBlock">
+		<_field_byte_integer name="declaration type*" />
+		<_field_byte_integer name="stride*" />
+		<_field_pad name="vertex buffer pad" length="2" />
+		<_field_dword_integer name="count*" />
+		<_field_long_integer name="d3d hardware format*" />
+	</_field_block>
+	<_field_api_interop name="vertex buffer interop*" srcguid="fd98a6dc-1b81-6246-a0e5-06ea7ed63171">
+		<_field_data name="vertices*" />
+		<_field_long_integer name="vertex type*" />
+	</_field_api_interop>
+	<_field_api_interop name="index buffer interop*" srcguid="4fb78dc6-9b2b-5242-b42c-6c7553870bea">
+		<_field_data name="index_data*" />
+	</_field_api_interop>
+</plugin>

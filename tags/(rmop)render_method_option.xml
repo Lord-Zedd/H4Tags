@@ -1,0 +1,136 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="parameters" max="32" srcguid="c268bb11-6a75-924f-bc2d-aaf6ef1ab32e" srcName="render_method_option_parameter_block">
+		<_field_string_id name="parameter name" />
+		<_field_string_id name="parameter ui override name" />
+		<_field_long_enum name="parameter type">
+			<item Name="bitmap" />
+			<item Name="color" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="argb color" />
+		</_field_long_enum>
+		<_field_long_enum name="source extern">
+			<item Name="none" />
+			<item Name="texaccum target" />
+			<item Name="normal target" />
+			<item Name="z target" />
+			<item Name="shadow mask" />
+			<item Name="shadow 1 target" />
+			<item Name="shadow 2 target" />
+			<item Name="shadow 3 target" />
+			<item Name="shadow 4 target" />
+			<item Name="texture camera target" />
+			<item Name="reflection target" />
+			<item Name="refraction target" />
+			<item Name="dualvmf direction ps" />
+			<item Name="dualvmf intensity ps" />
+			<item Name="dualvmf direction vs" />
+			<item Name="dualvmf intensity vs" />
+			<item Name="gel texture of analytical light" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="change color primary" />
+			<item Name="change color secondary" />
+			<item Name="change color tertiary" />
+			<item Name="change color quaternary" />
+			<item Name="emblem color background" />
+			<item Name="emblem color primary" />
+			<item Name="emblem color secondary" />
+			<item Name="dynamic environment map 1" />
+			<item Name="dynamic environment map 2" />
+			<item Name="cook torrance array" />
+			<item Name="vmf diffuse table" />
+			<item Name="vmf diffuse table vs" />
+			<item Name="direction lut" />
+			<item Name="zonal rotation table" />
+			<item Name="phong specular table" />
+			<item Name="diffuse power specular table" />
+			<item Name="light dir 0" />
+			<item Name="light color 0" />
+			<item Name="light dir 1" />
+			<item Name="light color 1" />
+			<item Name="light dir 2" />
+			<item Name="light color 2" />
+			<item Name="light dir 3" />
+			<item Name="light color 3" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="dynamic light gel 0" />
+			<item Name="flat envmap matrix x" />
+			<item Name="flat envmap matrix y" />
+			<item Name="flat envmap matrix z" />
+			<item Name="debug tint" />
+			<item Name="screen constants" />
+			<item Name="active camo distortion texture" />
+			<item Name="scene ldr texture" />
+			<item Name="water memexport addr" />
+			<item Name="tree animation timer" />
+			<item Name="depth constants" />
+			<item Name="camera forward" />
+			<item Name="wrinkle weights a" />
+			<item Name="wrinkle weights b" />
+			<item Name="static lighting previs" />
+		</_field_long_enum>
+		<_field_tag_reference name="default bitmap" validtags="bitm" />
+		<_field_real name="default real value" />
+		<_field_long_integer name="default int/bool value" />
+		<_field_word_integer name="flags" />
+		<_field_short_enum name="default filter mode">
+			<item Name="trilinear" />
+			<item Name="point" />
+			<item Name="bilinear" />
+			<item Name="UNUSED 0" />
+			<item Name="anisotropic (2) expensive" />
+			<item Name="UNUSED 1" />
+			<item Name="anisotropic (4) EXPENSIVE" />
+			<item Name="lightprobe texture array" />
+			<item Name="texture array quadlinear" />
+			<item Name="texture array quadanisotropic (2)" />
+		</_field_short_enum>
+		<_field_short_enum name="default address mode">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_word_integer name="anisotropy amount" />
+		<_field_argb_color name="default color" />
+		<_field_real name="default bitmap scale" />
+		<_field_long_flags name="usage flags">
+			<item Name="use force function type" />
+			<item Name="use force function color count" />
+			<item Name="parameter invisible in ui" />
+			<item Name="lock function value" />
+		</_field_long_flags>
+		<_field_short_enum name="force function type">
+			<item Name="identity" />
+			<item Name="constant" />
+			<item Name="transition" />
+			<item Name="periodic" />
+			<item Name="linear" />
+			<item Name="linear key" />
+			<item Name="multi linear key" />
+			<item Name="spline" />
+			<item Name="multi spline" />
+			<item Name="exponent" />
+			<item Name="spline2" />
+		</_field_short_enum>
+		<_field_short_enum name="force function color count">
+			<item Name="scalar (intensity)" />
+			<item Name="constant" />
+			<item Name="2-color" />
+			<item Name="3-color" />
+			<item Name="4-color" />
+		</_field_short_enum>
+		<_field_real name="suggested real min" />
+		<_field_real name="suggested real max" />
+		<_field_long_integer name="ticks from min to max" />
+		<_field_data name="help text" />
+	</_field_block>
+</plugin>

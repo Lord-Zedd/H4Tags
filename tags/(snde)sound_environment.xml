@@ -1,0 +1,44 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Reverb Settings" />
+	<_field_struct name="reverb settings" />
+	<_field_custom name="room intensity:dB#intensity of the room effect" />
+	<_field_real name="room intensity:dB#intensity of the room effect" />
+	<_field_custom name="room intensity hf:dB#intensity of the room effect above the reference high frequency" />
+	<_field_real name="room intensity hf:dB#intensity of the room effect above the reference high frequency" />
+	<_field_custom name="room rolloff (0 to 10)#how quickly the room effect rolls off, from 0.0 to 10.0" />
+	<_field_real name="room rolloff (0 to 10)#how quickly the room effect rolls off, from 0.0 to 10.0" />
+	<_field_custom name="decay time (.1 to 20):seconds" />
+	<_field_real name="decay time (.1 to 20):seconds" />
+	<_field_custom name="decay hf ratio (.1 to 2)" />
+	<_field_real name="decay hf ratio (.1 to 2)" />
+	<_field_custom name="reflections intensity:dB[-100,10]" />
+	<_field_real name="reflections intensity:dB[-100,10]" />
+	<_field_custom name="reflections delay (0 to .3):seconds" />
+	<_field_real name="reflections delay (0 to .3):seconds" />
+	<_field_custom name="reverb intensity:dB[-100,20]" />
+	<_field_real name="reverb intensity:dB[-100,20]" />
+	<_field_custom name="reverb delay (0 to .1):seconds" />
+	<_field_real name="reverb delay (0 to .1):seconds" />
+	<_field_custom name="diffusion" />
+	<_field_real name="diffusion" />
+	<_field_custom name="density" />
+	<_field_real name="density" />
+	<_field_custom name="hf reference(20 to 20,000):Hz#for hf values, what frequency defines hf, from 20 to 20,000" />
+	<_field_real name="hf reference(20 to 20,000):Hz#for hf values, what frequency defines hf, from 20 to 20,000" />
+	<_field_explanation name="WWise Environment">Use these values for WWise reverb. Above stuff will be removed eventually.</_field_explanation>
+	<_field_string_id name="Environment name#Name of the environment from WWise. This will be a DSP effect with Environmental Effect checked." />
+	<_field_custom name="Dry mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_real name="Dry mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_custom name="Wet mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_real name="Wet mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_custom name="Player wet mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_real name="Player wet mix value#0 to 1 with 0 being none, and 1 being full." />
+	<_field_explanation name="Forced Lowpass">This will override obstruction and occlusion if you set the cutoff frequency to a non-zero value. Use the individual classes' "forced lowpass wet mix" value to alter the mix.</_field_explanation>
+	<_field_struct name="lowpass settings" />
+	<_field_custom name="cutoff frequency:Hz" />
+	<_field_real name="cutoff frequency:Hz" />
+	<_field_custom name="output gain:dB" />
+	<_field_real name="output gain:dB" />
+</plugin>

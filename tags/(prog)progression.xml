@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_integer name="ordnance points gained on killing another player" />
+	<_field_long_integer name="ordnance points gained on killing an NPC" />
+	<_field_long_integer name="ordnance points lost on death" />
+	<_field_tag_reference name="droppod UI remote strike#special version of RS used by player to position droppod location" validtags="eqip" />
+	<_field_tag_reference name="drop pod (object)" validtags="scen" />
+	<_field_tag_reference name="drop pod warning (effect)#spawned at drop location at start of fanfare delay" validtags="effe" />
+	<_field_tag_reference name="drop pod locator (effect)#used by random ordnance drop system for air drops" validtags="effe" />
+</plugin>

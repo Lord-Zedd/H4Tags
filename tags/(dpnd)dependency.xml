@@ -1,0 +1,7 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="dependency list" max="10240" srcguid="d15e5ed3-12e8-c546-aa31-f5533a8a909c" srcName="one_dependency_block_definition">
+		<_field_tag_reference name="tag reference" />
+	</_field_block>
+</plugin>

@@ -1,0 +1,213 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="deafening to AIs#when used as a background stereo track, causes nearby AIs to be unable to hear" />
+		<item Name="not a loop#this is a collection of permutations strung together that should play once then stop." />
+		<item Name="stops music#all other music loops will stop when this one starts." />
+		<item Name="always spatialize#always play as 3d sound, even in first person" />
+		<item Name="synchronize with owner{synchronize playback}#synchronizes playback with other looping sounds attached to the owner of this sound" />
+		<item Name="synchronize tracks" />
+		<item Name="fake spatialization with distance" />
+		<item Name="combine all 3d playback" />
+		<item Name="persistent flyby#like a laser blast" />
+		<item Name="don't apply random spatialization to details" />
+		<item Name="allow marker stitching#you need to reimport the sound_looping for this to take effect" />
+		<item Name="don't delay retries!#don't delay retrying the looping sound, in case the bank is loaded now" />
+		<item Name="Use vehicle parent for playerness#Look to the parent of the vehicle. Only works on vehicles. Duh" />
+		<item Name="Implicit speed RPTC#looping_sound_speed" />
+	</_field_long_flags>
+	<_field_real_bounds name="marty's music time:seconds" />
+	<_field_real_bounds name="runtime distance bounds!" />
+	<_field_real name="maximum flyby range distance" />
+	<_field_short_enum name="runtime sound class!">
+		<item Name="projectile_impact" />
+		<item Name="projectile_detonation" />
+		<item Name="projectile_flyby" />
+		<item Name="projectile_detonation_lod" />
+		<item Name="weapon_fire" />
+		<item Name="weapon_ready" />
+		<item Name="weapon_reload" />
+		<item Name="weapon_empty" />
+		<item Name="weapon_charge" />
+		<item Name="weapon_overheat" />
+		<item Name="weapon_idle" />
+		<item Name="weapon_melee" />
+		<item Name="weapon_animation" />
+		<item Name="object_impacts" />
+		<item Name="particle_impacts" />
+		<item Name="weapon_fire_lod" />
+		<item Name="water_transitions" />
+		<item Name="lowpass_effects" />
+		<item Name="unit_footsteps" />
+		<item Name="unit_dialog" />
+		<item Name="unit_animation" />
+		<item Name="unit_unused!" />
+		<item Name="vehicle_collision" />
+		<item Name="vehicle_engine" />
+		<item Name="vehicle_animation" />
+		<item Name="vehicle_engine_lod" />
+		<item Name="device_door" />
+		<item Name="device_unused0!" />
+		<item Name="device_machinery" />
+		<item Name="device_stationary" />
+		<item Name="device_unused1!" />
+		<item Name="device_unused2!" />
+		<item Name="music" />
+		<item Name="ambient_nature" />
+		<item Name="ambient_machinery" />
+		<item Name="ambient_stationary" />
+		<item Name="huge_ass" />
+		<item Name="object_looping" />
+		<item Name="cinematic_music" />
+		<item Name="unknown_unused0!" />
+		<item Name="unknown_unused1!" />
+		<item Name="ambient_flock" />
+		<item Name="no_pad" />
+		<item Name="no_pad_stationary" />
+		<item Name="equipment_effect" />
+		<item Name="mission_dialog" />
+		<item Name="cinematic_dialog" />
+		<item Name="scripted_cinematic_foley" />
+		<item Name="game_event" />
+		<item Name="ui" />
+		<item Name="test" />
+		<item Name="multiplayer_dialog" />
+		<item Name="ambient_nature_details" />
+		<item Name="ambient_machinery_details" />
+		<item Name="inside_surround_tail" />
+		<item Name="outside_surround_tail" />
+		<item Name="vehicle_detonation" />
+		<item Name="ambient_detonation" />
+		<item Name="first_person_inside" />
+		<item Name="first_person_outside" />
+		<item Name="first_person_anywhere" />
+		<item Name="space_projectile_detonation" />
+		<item Name="space_projectile_flyby" />
+		<item Name="space_vehicle_engine" />
+		<item Name="space_weapon_fire" />
+		<item Name="player_voice_team" />
+		<item Name="player_voice_proxy" />
+		<item Name="projectile_impact_postpone" />
+		<item Name="unit_footsteps_postpone" />
+		<item Name="weapon_ready_third_person" />
+		<item Name="ui_music" />
+	</_field_short_enum>
+	<_field_pad name="asdf" length="2" />
+	<_field_string_id name="master marker track*#This track's markers, flags, gain and fade settings are copied to the other tracks. Its gain and fadeout settings are also copied to the details. If you want to change the master track use the sound-looping tool command" />
+	<_field_real name="maximum radius" />
+	<_field_block name="tracks#tracks play in parallel and loop continuously for the duration of the looping sound." max="4" srcguid="ed504e27-b34c-fa4c-8469-f40fedaf50ac" srcName="looping_sound_track_block">
+		<_field_string_id name="name^!" />
+		<_field_word_flags name="flags">
+			<item Name="fade in at start#the loop sound should fade in while the start sound is playing." />
+			<item Name="fade out at stop#the loop sound should fade out while the stop sound is playing." />
+			<item Name="fade out at alt stop#the alt loop sound should fade out while the alt stop sound is playing." />
+			<item Name="crossfade alt loop#crossfade when switching between alt loop and loop." />
+			<item Name="make fades wait for markers" />
+			<item Name="master surround sound track" />
+		</_field_word_flags>
+		<_field_short_enum name="output effect">
+			<item Name="none" />
+			<item Name="output front speakers" />
+			<item Name="output rear speakers" />
+			<item Name="output center speakers" />
+		</_field_short_enum>
+		<_field_real name="gain:dB" />
+		<_field_tag_reference name="in" validtags="sndo, snd!" />
+		<_field_tag_reference name="loop" validtags="sndo, snd!" />
+		<_field_tag_reference name="out" validtags="sndo, snd!" />
+		<_field_tag_reference name="alt loop" validtags="sndo, snd!" />
+		<_field_tag_reference name="alt out" validtags="sndo, snd!" />
+		<_field_tag_reference name="alt trans in" validtags="sndo, snd!" />
+		<_field_tag_reference name="alt trans out" validtags="sndo, snd!" />
+		<_field_real name="fade in duration:seconds" />
+		<_field_long_enum name="fade in mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_real name="fade out duration:seconds" />
+		<_field_long_enum name="fade out mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_real name="alt crossfade duration:seconds" />
+		<_field_long_enum name="alt crossfade mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_real name="alt fade out duration:seconds" />
+		<_field_long_enum name="alt fade out mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_explanation name="Layer Settings" />
+		<_field_short_enum name="layer">
+			<item Name="none" />
+			<item Name="1" />
+			<item Name="2" />
+			<item Name="3" />
+			<item Name="4" />
+		</_field_short_enum>
+		<_field_word_flags name="layer flags">
+			<item Name="make layer wait for markers" />
+		</_field_word_flags>
+		<_field_real name="layer fade in duration:seconds" />
+		<_field_long_enum name="layer fade in mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_real name="layer fade out duration:seconds" />
+		<_field_long_enum name="layer fade out mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+	</_field_block>
+	<_field_block name="detail sounds#detail sounds play at random throughout the duration of the looping sound." max="12" srcguid="5ea917a6-744f-c147-b140-46e5ae77ae0f" srcName="looping_sound_detail_block">
+		<_field_string_id name="name^" />
+		<_field_tag_reference name="sound" validtags="sndo, snd!" />
+		<_field_explanation name="frequency of play" />
+		<_field_long_enum name="period type">
+			<item Name="ignores playback time" />
+			<item Name="relative to end of playback" />
+		</_field_long_enum>
+		<_field_real_bounds name="random period bounds:seconds#the time between successive playings of this sound will be randomly selected from this range." />
+		<_field_real name="detail gain:dB" />
+		<_field_real name="fade out duration:seconds" />
+		<_field_long_enum name="fade out mode">
+			<item Name="default" />
+			<item Name="linear" />
+			<item Name="equal power" />
+			<item Name="inverse power" />
+			<item Name="s curve" />
+		</_field_long_enum>
+		<_field_long_flags name="flags">
+			<item Name="don't play with alternate" />
+			<item Name="don't play without alternate" />
+			<item Name="start immediately with loop" />
+			<item Name="inherit scale from loop" />
+			<item Name="don't fade with loop" />
+		</_field_long_flags>
+		<_field_explanation name="random spatialization">if the flag above is not set, this detail will be randomly spatialized according to the following constraints. if both lower and upper bounds are zero for any of the following fields, the sound's position will be randomly selected from all possible directions or distances.</_field_explanation>
+		<_field_angle_bounds name="yaw bounds:degrees#the sound's position along the horizon will be randomly selected from this range." />
+		<_field_angle_bounds name="pitch bounds:degrees#the sound's position above (positive values) or below (negative values) the horizon will be randomly selected from this range." />
+		<_field_real_bounds name="distance bounds:world units#the sound's distance (from its spatialized looping sound or from the listener if the looping sound is stereo) will be randomly selected from this range." />
+	</_field_block>
+</plugin>

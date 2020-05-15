@@ -1,0 +1,28 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_short_integer name="bsp reference index" />
+	<_field_pad name="LHWCHFX" length="2" />
+	<_field_long_integer name="structure BSP import checksum" />
+	<_field_long_integer name="lightmap BSP import checksum" />
+	<_field_long_integer name="design BSP checksum" />
+	<_field_long_integer name="air_probe offset" />
+	<_field_long_integer name="senary_probe offset" />
+	<_field_long_integer name="machinery_offset" />
+	<_field_tag_reference name="wetness pervertrex texture reference" validtags="bitm" />
+	<_field_block name="wetness" max="65535" srcguid="27f9967d-bae3-d94e-8548-24abe8bd309c" srcName="wentness_bit_vector">
+		<_field_long_integer name="bits" />
+	</_field_block>
+	<_field_block name="wetness in bytes" max="65535" srcguid="0df3a13c-64be-284e-9ba6-2c05f671c6db" srcName="wentness_byte_vector">
+		<_field_char_integer name="bytes" />
+	</_field_block>
+	<_field_block name="cluster_offset" max="65535" srcguid="0f13c434-829f-fa4e-a1ed-71c72ffb56de" srcName="cluster_wetness_offset_block">
+		<_field_long_integer name="cluster offset" />
+	</_field_block>
+	<_field_block name="instance_offset" max="65535" srcguid="21a5d86a-2cbb-cf42-8cd6-143247116636" srcName="instance_wetness_instance_block">
+		<_field_long_integer name="cluster offset" />
+		<_field_char_integer name="single probe" />
+		<_field_pad name="LHWCHFX" length="1" />
+		<_field_pad name="DWCIEFG" length="2" />
+	</_field_block>
+</plugin>

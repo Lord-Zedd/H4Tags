@@ -1,0 +1,1311 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="item" />
+	<_field_struct name="object" />
+	<_field_custom name="OBJECT" />
+	<_field_short_integer name="runtime object type!" />
+	<_field_char_enum name="Nav Mesh Cutting">
+		<item Name="Default" />
+		<item Name="Cut" />
+		<item Name="NotCut" />
+	</_field_char_enum>
+	<_field_char_enum name="Nav Mesh Obstacle">
+		<item Name="Default" />
+		<item Name="Yes" />
+		<item Name="No" />
+	</_field_char_enum>
+	<_field_real_vector_3d name="Nav Mesh Cutting OBB Offset" />
+	<_field_real_vector_3d name="Nav Mesh Cutting OBB Scale" />
+	<_field_long_flags name="flags">
+		<item Name="does not cast shadow" />
+		<item Name="children do not cast shadow" />
+		<item Name="first class child" />
+		<item Name="object samples lightprobes only" />
+		<item Name="object uses only own static lightmap" />
+		<item Name="search cardinal direction lightmaps on failure" />
+		<item Name="preserves initial damage owner" />
+		<item Name="not a pathfinding obstacle" />
+		<item Name="extension of parent#object uses parent's markers" />
+		<item Name="does not cause collision damage" />
+		<item Name="early mover" />
+		<item Name="early mover localized physics" />
+		<item Name="object scales attachments" />
+		<item Name="inherits player's appearance" />
+		<item Name="non physical in map editor" />
+		<item Name="object is always on the ceiling" />
+		<item Name="sample enviroment lighting only ignore object lighting" />
+		<item Name="effects created by this object do not spawn objects in multiplayer" />
+		<item Name="does not collide with camera#force camera not to collide with object.  By default small sweetener objects do not collide" />
+		<item Name="force collide with camera#force the camera to collide with this object,  By default small sweetener objects do not collide" />
+		<item Name="damage not blocked by obstructions#AOE damage being applied to this object does not test for obstrutions." />
+		<item Name="does not damage breakable surfaces" />
+		<item Name="early mover localize projectiles" />
+		<item Name="requires shadow bounds visibility test" />
+		<item Name="grab parent object in forge editing" />
+		<item Name="never use imposter for shadow generation" />
+		<item Name="Hoistable from stand" />
+		<item Name="Hoistable from crouch" />
+		<item Name="vaultable" />
+		<item Name="collides with own projectiles" />
+		<item Name="object rejects dynamic decals" />
+	</_field_long_flags>
+	<_field_real name="bounding radius#If you edit this field manually, beware that the render model is no longer respected for radius calculation and that you need to set the bounding offset as well." />
+	<_field_real_point_3d name="bounding offset" />
+	<_field_real name="horizontal acceleration scale{acceleration scale}:[0,+inf]" />
+	<_field_real name="vertical acceleration scale" />
+	<_field_real name="angular acceleration scale" />
+	<_field_short_enum name="lightmap shadow mode">
+		<item Name="default" />
+		<item Name="never" />
+		<item Name="always" />
+		<item Name="blur" />
+	</_field_short_enum>
+	<_field_char_enum name="sweetener size">
+		<item Name="default" />
+		<item Name="small" />
+		<item Name="medium" />
+		<item Name="large" />
+	</_field_char_enum>
+	<_field_char_enum name="water density">
+		<item Name="default" />
+		<item Name="super_floater" />
+		<item Name="floater" />
+		<item Name="neutral" />
+		<item Name="sinker" />
+		<item Name="super_sinker" />
+		<item Name="none" />
+	</_field_char_enum>
+	<_field_long_integer name="runtime flags!*" />
+	<_field_real name="dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0" />
+	<_field_real_point_3d name="dynamic light sphere offset#only used if radius not 0" />
+	<_field_string_id name="generic hud text" />
+	<_field_tag_reference name="generic name list" validtags="unic" />
+	<_field_tag_reference name="generic service tag list" validtags="unic" />
+	<_field_block name="source sidecar" max="1" srcguid="648f2edd-5f0f-f142-8d1a-df7f29bd247d" srcName="sidecarBlock">
+		<_field_long_string name="sidecar path*" />
+	</_field_block>
+	<_field_string_id name="default model variant" />
+	<_field_tag_reference name="model" validtags="hlmt" />
+	<_field_tag_reference name="crate object" validtags="bloc" />
+	<_field_explanation name="only set this tag if you want to override the default collision damage values in globals.globals" />
+	<_field_tag_reference name="collision damage" validtags="cddf" />
+	<_field_tag_reference name="brittle collision damage" validtags="cddf" />
+	<_field_block name="early mover OBB" max="1" srcguid="ffffd17a-aaaa-ff48-cb36-77d4ffe70e3b" srcName="object_early_mover_obb_block">
+		<_field_string_id name="node name#empty mean object space" />
+		<_field_long_integer name="runtime node index*!" />
+		<_field_real name="x0" />
+		<_field_real name="x1" />
+		<_field_real name="y0" />
+		<_field_real name="y1" />
+		<_field_real name="z0" />
+		<_field_real name="z1" />
+		<_field_real_euler_angles_3d name="angles" />
+	</_field_block>
+	<_field_tag_reference name="creation effect" validtags="effe" />
+	<_field_tag_reference name="material effects" validtags="foot" />
+	<_field_tag_reference name="melee sound#this is the sound that is made when I am meleed.  This overrides the sweetener sound of my material." validtags="scmb, sndo, snd!" />
+	<_field_real name="self-destruct time:seconds#if non-zero, any instances of this object will destroy themselves after this many seconds." />
+	<_field_block name="ai properties" max="1" srcguid="3553fb26-2e71-7d44-93f7-7f52affd7871" srcName="object_ai_properties_block">
+		<_field_long_flags name="ai flags">
+			<item Name="detroyable cover" />
+			<item Name="pathfinding ignore when dead" />
+			<item Name="dynamic cover" />
+			<item Name="non flight-blocking" />
+			<item Name="dynamic cover from centre" />
+			<item Name="has corner markers!" />
+			<item Name="idle when flying" />
+			<item Name="consider for interaction" />
+		</_field_long_flags>
+		<_field_string_id name="ai type name#used for combat dialogue, etc." />
+		<_field_string_id name="interaction name#if you checked the consider for interaction flag, type what interaction the AI should do with this object (NYI - you can use any)" />
+		<_field_short_enum name="ai size">
+			<item Name="default" />
+			<item Name="tiny" />
+			<item Name="small" />
+			<item Name="medium" />
+			<item Name="large" />
+			<item Name="huge" />
+			<item Name="immobile" />
+		</_field_short_enum>
+		<_field_short_enum name="leap jump speed">
+			<item Name="NONE" />
+			<item Name="down" />
+			<item Name="step" />
+			<item Name="crouch" />
+			<item Name="stand" />
+			<item Name="storey" />
+			<item Name="tower" />
+			<item Name="infinite" />
+		</_field_short_enum>
+	</_field_block>
+	<_field_block name="functions" max="256" srcguid="e6dbefd2-ee41-c24d-805f-241082f5bad9" srcName="object_function_block">
+		<_field_long_flags name="flags">
+			<item Name="invert#result of function is one minus actual result" />
+			<item Name="mapping does not controls active#the curve mapping can make the function active/inactive" />
+			<item Name="always active#function does not deactivate when at or below lower bound" />
+			<item Name="random time offset#function offsets periodic function input by random value between 0 and 1" />
+			<item Name="always exports value#when this function is deactivated, it still exports its value" />
+			<item Name="turn off with uses magnitude#the function will be turned off if the value of the turns_off_with function is 0" />
+		</_field_long_flags>
+		<_field_string_id name="import name#if you leave this field blank then you can set this function's input value with the hs_function object_set_function_variable" />
+		<_field_string_id name="export name" />
+		<_field_string_id name="turn off with#if the specified function is off, so is this function" />
+		<_field_string_id name="ranged interpolation name#if you have the ranged button checked" />
+		<_field_real name="min value#function must exceed this value (after mapping) to be active 0. means do nothing" />
+		<_field_struct name="default function" />
+		<_field_data name="data" />
+		<_field_string_id name="scale by" />
+		<_field_block name="interpolation" max="2" srcguid="3e87965a-0dac-1c4c-8a0b-654146288d2e" srcName="object_function_interpolation_block">
+			<_field_long_enum name="interpolation mode">
+				<item Name="constant velocity" />
+				<item Name="linear acceleration" />
+				<item Name="damped spring" />
+				<item Name="fractional#covers a fixed fraction of the distance to the target on each update" />
+			</_field_long_enum>
+			<_field_real name="linear travel time:s#used by constant velocity" />
+			<_field_real name="acceleration:1/s/s#used by linear acceleration" />
+			<_field_explanation name="springs">the damping ratio is c/(2*sqrt(k)). if this ratio is:
+= 0 : oscillates forever
+&lt; 1 : oscillates with decreasing amplitude
+= 1 : reaches the target precisely and quickly (no oscillation)
+&gt; 1 : reaches the target slowly
+the higher the value of k, the quicker the system will reach the target value</_field_explanation>
+			<_field_real name="spring k#used by damped spring
+determines acceleration by displacement" />
+			<_field_real name="spring c#used by damped spring
+determines damping based on velocity" />
+			<_field_real name="fraction:0-1#used by fractional
+how mush of the distance to the target to cover each update" />
+		</_field_block>
+		<_field_long_block_index name="runtime interpolator index*!" targetGuid="e6dbefa2-ee4b-c24d-305f-241032f5bad9" targetName="object_runtime_interpolator_functions_block" />
+	</_field_block>
+	<_field_block name="runtime interpolator functions*!" max="256" srcguid="e6dbefa2-ee4b-c24d-305f-241032f5bad9" srcName="object_runtime_interpolator_functions_block">
+		<_field_long_integer name="runtime interpolator to object function mapping*!" />
+	</_field_block>
+	<_field_block name="function switches" max="32" srcguid="fc9999cd-66ab-ce42-b74f-17531ea31c54" srcName="objectFunctionSwitchBlock">
+		<_field_string_id name="switch function name" />
+		<_field_string_id name="export name" />
+		<_field_block name="switched functions" max="8" srcguid="23614342-0f65-bf44-93c1-6ec7d73545f7" srcName="objectFunctionSwitchFunctionBlock">
+			<_field_real_bounds name="selection bounds#if the switch function is between these values, this function will be picked" />
+			<_field_string_id name="function name^" />
+		</_field_block>
+	</_field_block>
+	<_field_short_integer name="hud text message index" />
+	<_field_word_flags name="secondary flags">
+		<item Name="does not affect projectile aiming" />
+		<item Name="update state animation and keyframe rigid bodies every frame" />
+	</_field_word_flags>
+	<_field_block name="attachments" max="48" srcguid="57720911-7547-9c42-a775-d933ee75453f" srcName="global_object_attachment_block">
+		<_field_tag_reference name="type^" validtags="ligh, gldf, ltvl, effe, lsnd, lens, cpem, egfd, decs" />
+		<_field_old_string_id name="marker" />
+		<_field_char_enum name="change color">
+			<item Name="none" />
+			<item Name="primary" />
+			<item Name="secondary" />
+			<item Name="tertiary" />
+			<item Name="quaternary" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags">
+			<item Name="force always on#when this flag is clear we only create the attachment when the function object function is active or set to empty string" />
+			<item Name="effect size scale from object scale" />
+		</_field_byte_flags>
+		<_field_pad name="DPKP" length="2" />
+		<_field_string_id name="primary scale" />
+		<_field_string_id name="secondary scale" />
+	</_field_block>
+	<_field_block name="hull surfaces" max="64" srcguid="c3151420-4b12-f845-b711-8f83a4ad5b50" srcName="water_physics_hull_surface_definition_block">
+		<_field_word_flags name="flags">
+			<item Name="works on land#drives on an extruded version of everything physical in your level" />
+			<item Name="effects only" />
+		</_field_word_flags>
+		<_field_pad name="pad0" length="2" />
+		<_field_string_id name="marker name^" />
+		<_field_real name="radius" />
+		<_field_block name="drag" max="512" srcguid="ba020e52-6023-fa44-a553-78a7a40af1d2" srcName="water_physics_material_override">
+			<_field_string_id name="material^" />
+			<_field_struct name="drag" />
+			<_field_custom name="Pressure" />
+			<_field_struct name="pressure" />
+			<_field_struct name="velocity to pressure" />
+			<_field_data name="data" />
+			<_field_real name="max velocity:wu/s" />
+			<_field_custom name="Suction" />
+			<_field_struct name="suction" />
+			<_field_struct name="velocity to pressure" />
+			<_field_data name="data" />
+			<_field_real name="max velocity:wu/s" />
+			<_field_real name="linear damping" />
+			<_field_real name="angular damping" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="jetwash" max="4" srcguid="72a87ac4-220a-c54b-9b77-c99379969cab" srcName="jetwash_definition_block">
+		<_field_string_id name="marker name^" />
+		<_field_real name="radius" />
+		<_field_long_integer name="maximum traces!:traces per second" />
+		<_field_real name="maximum emission length:world units" />
+		<_field_angle_bounds name="trace yaw angle: degrees" />
+		<_field_angle_bounds name="trace pitch angle: degrees" />
+		<_field_real name="particle offset:world units" />
+	</_field_block>
+	<_field_block name="widgets" max="4" srcguid="1e9b9162-aaa5-6146-b831-7d8a3ac0ddaa" srcName="object_widget_block">
+		<_field_tag_reference name="type" validtags="ant!, clwd" />
+		<_field_useless_pad name="" />
+	</_field_block>
+	<_field_block name="change colors" max="4" srcguid="ad56b00a-328f-c941-9edb-b26a9b24f6fe" srcName="object_change_colors">
+		<_field_useless_pad name="" />
+		<_field_block name="initial permutations" max="32" srcguid="793e40fc-a6a7-2e4d-ad0c-6c21c2a06c7b" srcName="object_change_color_initial_permutation">
+			<_field_real name="weight" />
+			<_field_real_rgb_color name="color lower bound" />
+			<_field_real_rgb_color name="color upper bound" />
+			<_field_string_id name="variant name#if empty, may be used by any model variant" />
+		</_field_block>
+		<_field_block name="functions" max="4" srcguid="7ccb699f-0dba-584f-96ce-a30cd0a89c28" srcName="object_change_color_function">
+			<_field_pad name="TJJWBYNU" length="4" />
+			<_field_long_flags name="scale flags">
+				<item Name="blend in hsv#blends colors in hsv rather than rgb space" />
+				<item Name="...more colors#blends colors through more hues (goes the long way around the color wheel)" />
+			</_field_long_flags>
+			<_field_real_rgb_color name="color lower bound" />
+			<_field_real_rgb_color name="color upper bound" />
+			<_field_string_id name="darken by" />
+			<_field_string_id name="scale by" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="predicted resources*" max="0" srcguid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" srcName="g_null_block">
+	</_field_block>
+	<_field_block name="multiplayer object" max="1" srcguid="63027b02-76e9-de43-b173-536b73aee467" srcName="multiplayer_object_block">
+		<_field_explanation name="GAME ENGINE INCLUSION">Set which game engines you desire this object to appear in</_field_explanation>
+		<_field_byte_flags name="game engine flags">
+			<item Name="none" />
+			<item Name="sandbox" />
+			<item Name="megalogamengine" />
+			<item Name="campaign" />
+			<item Name="survival" />
+			<item Name="firefight" />
+		</_field_byte_flags>
+		<_field_explanation name="TYPE AND FLAGS">Type pertains to how you want the game engine to handle this object
+Certain flags applicable only to certain object types, should be self evident</_field_explanation>
+		<_field_char_enum name="type">
+			<item Name="ordinary" />
+			<item Name="weapon" />
+			<item Name="grenade" />
+			<item Name="projectile" />
+			<item Name="powerup" />
+			<item Name="equipment" />
+			<item Name="ammo pack" />
+			<item Name="light land vehicle" />
+			<item Name="heavy land vehicle" />
+			<item Name="flying vehicle" />
+			<item Name="turret" />
+			<item Name="device" />
+			<item Name="dispenser" />
+			<item Name="teleporter 2way" />
+			<item Name="teleporter sender" />
+			<item Name="teleporter receiver" />
+			<item Name="player spawn location" />
+			<item Name="player respawn zone" />
+			<item Name="secondary objective" />
+			<item Name="primary objective" />
+			<item Name="named location area" />
+			<item Name="danger zone" />
+			<item Name="fireteam 1 respawn zone" />
+			<item Name="fireteam 2 respawn zone" />
+			<item Name="fireteam 3 respawn zone" />
+			<item Name="fireteam 4 respawn zone" />
+			<item Name="safe volume" />
+			<item Name="kill volume" />
+			<item Name="cinematic camera position" />
+			<item Name="mosh enemy spawn location" />
+			<item Name="ordnance drop point" />
+			<item Name="trait zone" />
+			<item Name="initial ordnance drop point" />
+			<item Name="random ordnance drop point" />
+			<item Name="objective ordnance drop point" />
+			<item Name="personal ordnance drop point" />
+		</_field_char_enum>
+		<_field_byte_flags name="teleporter passability:used only for teleporters">
+			<item Name="disallow players" />
+			<item Name="allow light land vehicles" />
+			<item Name="allow heavy land vehicles" />
+			<item Name="allow flying vehicles" />
+			<item Name="allow projectiles" />
+		</_field_byte_flags>
+		<_field_char_enum name="spawn timer type">
+			<item Name="starts on death" />
+			<item Name="starts on disturbance" />
+		</_field_char_enum>
+		<_field_explanation name="GOAL &amp; RESPAWN ZONE OBJECT BOUNDARY">These fields are only used for goal area objects with boundaries, and for respawn zones</_field_explanation>
+		<_field_real name="boundary width/radius" />
+		<_field_real name="boundary box length" />
+		<_field_real name="boundary +height" />
+		<_field_real name="boundary -height" />
+		<_field_char_enum name="boundary shape">
+			<item Name="unused" />
+			<item Name="sphere" />
+			<item Name="cylinder" />
+			<item Name="box" />
+		</_field_char_enum>
+		<_field_pad name="pad_shape" length="3" />
+		<_field_explanation name="SPAWNING DATA">These fields are used for default spawning times and remapping</_field_explanation>
+		<_field_short_integer name="default spawn time:seconds" />
+		<_field_short_integer name="default abandonment time:seconds" />
+		<_field_word_flags name="flags">
+			<item Name="only visible in editor" />
+			<item Name="phased physics in forge" />
+			<item Name="valid initial player spawn" />
+			<item Name="fixed boundary orientation" />
+			<item Name="candy monitor should ignore" />
+			<item Name="inherit owning team color" />
+			<item Name="boundary volume doesn't kill immediately" />
+		</_field_word_flags>
+		<_field_pad name="pad1" length="2" />
+		<_field_explanation name="RESPAWN ZONE DATA">These are respawn zone weights, used only for respawn zones</_field_explanation>
+		<_field_real name="normal weight:aka natural weight" />
+		<_field_block name="falloff function#Multiplier applied to weight (domain is center to radius, range should be 0 to 1)." max="1" srcguid="5f406e50-033d-de40-989e-403d8f7516c3" srcName="spawn_influence_weight_falloff_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_explanation name="MARKER DATA">These fields are only used for defining certain, special markers to use for positional locations if the default position (object origin) is not sufficient</_field_explanation>
+		<_field_string_id name="boundary center marker" />
+		<_field_string_id name="spawned object marker name" />
+		<_field_explanation name="SPAWNED OBJECT">If this object is intended to spawn something, the object it spawns should be specified here</_field_explanation>
+		<_field_tag_reference name="spawned object" validtags="obje" />
+		<_field_string_id name="NYI boundary material" />
+		<_field_explanation name="BOUNDARY SHADER - DEFAULT">These are default shaders used for boundary geometry</_field_explanation>
+		<_field_tag_reference name="boundary standard shader" validtags="mat , rm  " />
+		<_field_tag_reference name="boundary opaque shader" validtags="mat , rm  " />
+		<_field_explanation name="BOUNDARY SHADER - SPHERE">These are custom shaders used for spherical boundary geometry</_field_explanation>
+		<_field_tag_reference name="sphere standard shader" validtags="mat , rm  " />
+		<_field_tag_reference name="sphere opaque shader" validtags="mat , rm  " />
+		<_field_explanation name="BOUNDARY SHADER - CYLINDER">These are custom shaders used for cylindrical boundary geometry</_field_explanation>
+		<_field_tag_reference name="cylinder standard shader" validtags="mat , rm  " />
+		<_field_tag_reference name="cylinder opaque shader" validtags="mat , rm  " />
+		<_field_explanation name="BOUNDARY SHADER - BOX">These are custom shaders used for box boundary geometry</_field_explanation>
+		<_field_tag_reference name="box standard shader" validtags="mat , rm  " />
+		<_field_tag_reference name="box opaque shader" validtags="mat , rm  " />
+	</_field_block>
+	<_field_tag_reference name="simulation_interpolation#Set to a specific interpolation definition, or leave blank to inherit the default for the object type (there are defaults for bipeds, vehicles, and crates in multiplayer_globals).  To disable interpolation on a particular object whose type has interpolation by default, set this reference to the special disable_interpolation.simulation_interpolation tag." validtags="siin" />
+	<_field_block name="spawn effects" max="1" srcguid="2865a3ca-d44b-304d-92db-feeca3a75c32" srcName="object_spawn_effects_block">
+		<_field_explanation name="Spawn Effects">Effect played when an object of this type spawns in during each game mode.
+Unlike creation effect, it is only played when the object spawns in through certain methods, not whenever one is created.</_field_explanation>
+		<_field_tag_reference name="multiplayer spawn effect#effect played when this object spawns in MP games" validtags="effe" />
+		<_field_tag_reference name="survival spawn effect#effect played when this object spawns in Firefight games" validtags="effe" />
+		<_field_tag_reference name="campaign spawn effect#effect played when this object spawns in Campaign games" validtags="effe" />
+	</_field_block>
+	<_field_block name="model dissolve data" max="13" srcguid="9f4a6995-e993-6b4f-8959-ad4096a8a349" srcName="modelDissolveDataBlock">
+		<_field_tag_reference name="model dissolve data" validtags="mdsv" />
+	</_field_block>
+	<_field_struct name="script data*!" />
+	<_field_block name="source file references*" max="128" srcguid="3a6bf38c-228c-cc4f-a38a-9b83cec80ed2" srcName="hs_source_reference_block">
+		<_field_tag_reference name="reference^" validtags="hsc*" />
+	</_field_block>
+	<_field_block name="external source references" max="128" srcguid="3a6bf38c-228c-cc4f-a38a-9b83cec80ed2" srcName="hs_source_reference_block">
+		<_field_tag_reference name="reference^" validtags="hsc*" />
+	</_field_block>
+	<_field_tag_reference name="compiled script*!" validtags="hsdt" />
+	<_field_block name="script tagalongs" max="1024" srcguid="5a1a08d5-aeaa-b049-a3dd-5c21984c1a8b" srcName="hs_references_block">
+		<_field_tag_reference name="reference*^" />
+	</_field_block>
+	<_field_block name="scripted dependencies" max="1024" srcguid="5a1a08d5-aeaa-b049-a3dd-5c21984c1a8b" srcName="hs_references_block">
+		<_field_tag_reference name="reference*^" />
+	</_field_block>
+	<_field_explanation name="Object Abandoment" />
+	<_field_struct name="object abandonment" />
+	<_field_real name="Vitality Limit To Start Countdown" />
+	<_field_real name="Countdown Time In Seconds" />
+	<_field_byte_flags name="flags">
+		<item Name="Enable In Multiplayer" />
+		<item Name="Enable In Single Player" />
+	</_field_byte_flags>
+	<_field_pad name="DPKP" length="3" />
+	<_field_custom name="$$$ ITEM $$$" />
+	<_field_long_flags name="flags">
+		<item Name="always maintains z up" />
+		<item Name="blocks headshots#like jackal shield" />
+		<item Name="use ground scale for all unspecified attachments" />
+		<item Name="fixup position upon detaching from parent" />
+		<item Name="fixup position after attaching to parent" />
+	</_field_long_flags>
+	<_field_short_integer name="OLD message index" />
+	<_field_short_integer name="sort order" />
+	<_field_real name="OLD multiplayer on-ground scale" />
+	<_field_real name="OLD campaign on-ground scale" />
+	<_field_explanation name="NEW hud messages">everything you need to display shite</_field_explanation>
+	<_field_string_id name="pickup message" />
+	<_field_string_id name="swap message" />
+	<_field_string_id name="pickup message (dual)" />
+	<_field_string_id name="swap message (dual)" />
+	<_field_string_id name="picked up msg" />
+	<_field_string_id name="switch-to msg" />
+	<_field_string_id name="switch-to from ai msg" />
+	<_field_string_id name="notify empty msg" />
+	<_field_string_id name="notify overheated message" />
+	<_field_tag_reference name="collision sound" validtags="scmb, sndo, snd!" />
+	<_field_block name="predicted bitmaps" max="8" srcguid="836e457a-9f47-1842-bef9-9b2a0736b520" srcName="predicted_bitmaps_block">
+		<_field_tag_reference name="bitmap" validtags="bitm" />
+	</_field_block>
+	<_field_tag_reference name="detonation damage effect" validtags="jpt!" />
+	<_field_real_bounds name="detonation delay:seconds" />
+	<_field_tag_reference name="detonating effect" validtags="effe" />
+	<_field_tag_reference name="detonation effect" validtags="effe" />
+	<_field_explanation name="Item scale settings">because grenades look better as coconuts. 0==1</_field_explanation>
+	<_field_real name="ground scale" />
+	<_field_real name="small unit (armed)" />
+	<_field_real name="small unit (stowed)" />
+	<_field_real name="medium unit (armed)" />
+	<_field_real name="medium unit (stowed)" />
+	<_field_real name="large unit (armed)" />
+	<_field_real name="large unit (stowed)" />
+	<_field_real name="huge unit (armed)" />
+	<_field_real name="huge unit (stowed)" />
+	<_field_tag_reference name="grounded friction settings#If not present, the default from global.globals is used." validtags="grfr" />
+	<_field_tag_reference name="Tossed Override# Used to override the object tossed when item owner is killed.  Is overridden by tossed weapon override." validtags="obje" />
+	<_field_custom name="$$$ WEAPON $$$" />
+	<_field_long_flags name="flags">
+		<item Name="vertical heat display" />
+		<item Name="mutually exclusive triggers" />
+		<item Name="attacks automatically on bump" />
+		<item Name="must be readied" />
+		<item Name="doesn't count toward maximum" />
+		<item Name="aim assists only when zoomed" />
+		<item Name="prevents grenade throwing" />
+		<item Name="must be picked up" />
+		<item Name="holds triggers when dropped" />
+		<item Name="prevents melee attack" />
+		<item Name="detonates when dropped" />
+		<item Name="cannot fire at maximum age" />
+		<item Name="secondary trigger overrides grenades" />
+		<item Name="support weapon" />
+		<item Name="hide FP weapon when in iron sights#for scoped weapons" />
+		<item Name="AIs use weapon melee damage" />
+		<item Name="allows binoculars" />
+		<item Name="loop fp firing animation" />
+		<item Name="prevents crouching" />
+		<item Name="cannot fire while boosting" />
+		<item Name="use empty melee on empty" />
+		<item Name="uses 3rd person camera" />
+		<item Name="can be dual wielded" />
+		<item Name="can only be dual wielded" />
+		<item Name="melee only" />
+		<item Name="cant fire if parent dead" />
+		<item Name="weapon ages with each kill#see 'weapon ages when damage is inflicted', 'per kill or hit aging amount'" />
+		<item Name="allows unaimed lunge" />
+		<item Name="cannot be used by player" />
+		<item Name="hold fp firing animation" />
+		<item Name="strict deviation angle#deviation angle is allowed to be less than primary autoaim angle - for the rocket launcher" />
+		<item Name="notifies target units#aiming this weapon at another player can be important to them - for lock-on weapons" />
+	</_field_long_flags>
+	<_field_long_flags name="secondary flags">
+		<item Name="magnetizes only when zoomed" />
+		<item Name="force enable equipment tossing" />
+		<item Name="non-lunge melee dash disabled#melee-physics dash is disabled on melees that are not lunges" />
+		<item Name="don't drop on dual wield melee" />
+		<item Name="is equipment special weapon#when checked, this weapon
+-is deleted when dropped
+-does not count against maximum inventory
+-gets deleted on host migrations
+-prevents swapping or switching weapons" />
+		<item Name="uses ghost reticle" />
+		<item Name="never overheats" />
+		<item Name="force tracers to come from weapon barrel#setting this forces effects tracers to come from weapon barrel instead of eye point" />
+		<item Name="cannot fire during emp" />
+		<item Name="weapon can headshot" />
+		<item Name="AI cannot fire tracking projectiles#setting this will remove tracking data from AI-fired projectiles" />
+		<item Name="second barrel fires if friend is targeted#bishop beam support- primary barrel fires if foe is targeted, secondary if targeting friend" />
+		<item Name="weapon unzooms on damage#taking damage while wielding this will ping player out of zoom/iron sights" />
+		<item Name="do not drop on equipment activation#will counteract default support weapon behavior to drop on equipment activation" />
+		<item Name="weapon can not be dropped#used for CTF magnum, weapon can not be dropped or swapped out" />
+		<item Name="disable function overlays during reload" />
+		<item Name="throw weapon instead of grenade#Throws weapon when grenade trigger is pressed" />
+		<item Name="do not drop 'must be readied' on primary trigger#Allows 'must be readied' weapons to have a primary attack" />
+		<item Name="delete on drop" />
+		<item Name="allow melee when using device#Default behavior prevents melee attacks when using device.  Setting this bit allows them." />
+		<item Name="do not lower weapon when using device#Default behavior lowers weapon when using device.  Setting this leaves the weapon up." />
+		<item Name="cannot fire while zooming" />
+		<item Name="weapon ages when damage is inflicted#see 'weapon ages with each kill', 'per kill or hit aging amount'" />
+		<item Name="apply gunner armor mod abilites#Apply weapon's gunner armor mod movement penalty multipliers rather than base multipliers when gunner armor mod is active in _trait_weapons_gunner_armor_modifier" />
+		<item Name="wielders sprint is unaffected by soft ping#see momentum globals 'disable soft ping check'" />
+		<item Name="weapon drops further away#Adds velocity to weapon's default drop (useful for weapons with auto-pickup)" />
+		<item Name="use automatic firing looping sounds" />
+		<item Name="do not drop on assassination#Keeps the weapon in your hand while being assassinated or performing an assassination (for must_be_readied or support weapons)" />
+		<item Name="is part of body#Keeps the weapon from dropping or being hidden at the start of assassinations, and must instead be dropped using the drop weapon keyframe" />
+		<item Name="force deny equipment use#Disallows any equipment usage while holding this weapon regardless of any other traits you may have" />
+		<item Name="hide pickup prompt unless special pickup priority#Used for Oddball that only shows the pickup prompt when megalo script sets pickup priority to special" />
+		<item Name="weapon ignores player_pickup_allowed trait#Player will always pickup this weapon if requested, Used for CTF that needs to force storm_magnum_ctf onto the player" />
+	</_field_long_flags>
+	<_field_old_string_id name="unused label!" />
+	<_field_short_enum name="secondary trigger mode">
+		<item Name="normal" />
+		<item Name="slaved to primary" />
+		<item Name="inhibits primary" />
+		<item Name="loads alterate ammunition" />
+		<item Name="loads multiple primary ammunition" />
+	</_field_short_enum>
+	<_field_short_integer name="maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time" />
+	<_field_real name="turn on time#how long after being readied it takes this weapon to switch its 'turned_on' attachment to 1.0" />
+	<_field_explanation name="weapon vision mode settings" />
+	<_field_tag_reference name="vision mode#activated when this weapon is charging" validtags="vmdx" />
+	<_field_real name="vision cooldown time:seconds" />
+	<_field_explanation name="old obsolete export to functions" />
+	<_field_real name="ready time:seconds" />
+	<_field_tag_reference name="ready effect" validtags="sndo, effe" />
+	<_field_tag_reference name="ready damage effect" validtags="jpt!, drdf" />
+	<_field_explanation name="heat" />
+	<_field_real_fraction name="heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place" />
+	<_field_real_fraction name="overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)" />
+	<_field_real_fraction name="heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired" />
+	<_field_real_fraction name="heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold" />
+	<_field_real_fraction name="heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired" />
+	<_field_string_id name="heat loss#function values sets the current heat loss per second" />
+	<_field_string_id name="heat loss venting#function value sets the heat loss per second while weapon is being vented" />
+	<_field_real name="heat venting time:seconds" />
+	<_field_real_fraction name="heat venting exit heat#heat at which to begin the venting exit animations so that the weapon is just about fully cooled when the exit animation completes." />
+	<_field_real_fraction name="heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated" />
+	<_field_real_fraction name="heat warning threshold#the amount of heat at which a warning will be displayed on the hud" />
+	<_field_real_fraction name="overheated heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired" />
+	<_field_string_id name="overheated heat loss#function values sets the heat loss per second when weapon is overheated" />
+	<_field_tag_reference name="overheated" validtags="sndo, effe" />
+	<_field_tag_reference name="overheated damage effect" validtags="jpt!, drdf" />
+	<_field_tag_reference name="detonation" validtags="sndo, effe" />
+	<_field_tag_reference name="detonation damage effect" validtags="jpt!, drdf" />
+	<_field_block name="melee damage parameters" max="2" srcguid="2ea0ebb9-95e8-6ca7-ab8b-ea74409cc1a5" srcName="melee_damage_parameters_block">
+		<_field_explanation name="melee damage parameters">damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets
+damage pyramid depth: how far the melee attack searches for a target</_field_explanation>
+		<_field_real_euler_angles_2d name="damage pyramid angles" />
+		<_field_real name="damage pyramid depth:wu#0 defaults to 0.8f" />
+		<_field_real name="maximum lunge range:wu#0 defaults to 1.22f" />
+		<_field_real name="damage lunge explosive depth:wu#the distance out from the pyramid center to spawn explosive effects.  This value will be clamped to the damage pyramid depth. 0 defaults to the damage pyramid depth" />
+		<_field_real name="runtime damage lunge explosive fraction*!" />
+		<_field_tag_reference name="melee damage" validtags="jpt!" />
+		<_field_tag_reference name="melee response" validtags="jpt!, drdf" />
+		<_field_tag_reference name="lunge melee damage#this is only important for the energy sword" validtags="jpt!" />
+		<_field_tag_reference name="lunge melee response#this is only important for the energy sword" validtags="jpt!, drdf" />
+		<_field_tag_reference name="empty melee damage#this is only important for the energy sword" validtags="jpt!" />
+		<_field_tag_reference name="empty melee response#this is only important for the energy sword" validtags="jpt!, drdf" />
+		<_field_tag_reference name="clang melee damage#this is only important for the energy sword" validtags="jpt!" />
+		<_field_tag_reference name="clang melee response#this is only important for the energy sword" validtags="jpt!, drdf" />
+		<_field_tag_reference name="clang melee against melee weapon damage#e.g. used by AR to damage sword guy when clanging sword attack" validtags="jpt!" />
+		<_field_tag_reference name="clang melee against melee weapon damage response#e.g. used by AR to damage sword guy when clanging sword attack" validtags="jpt!, drdf" />
+		<_field_tag_reference name="lunge melee explosive damage" validtags="effe" />
+	</_field_block>
+	<_field_tag_reference name="clang effect#effect that is played in the air between two players that clang with this weapon" validtags="sndo, effe" />
+	<_field_char_enum name="melee damage reporting type">
+		<item Name="unknown" />
+		<item Name="teh guardians" />
+		<item Name="scripting" />
+		<item Name="ai suicide" />
+		<item Name="forerunner smg" />
+		<item Name="spread gun" />
+		<item Name="forerunner rifle" />
+		<item Name="forerunner sniper" />
+		<item Name="bishop beam" />
+		<item Name="bolt pistol" />
+		<item Name="pulse grenade" />
+		<item Name="incineration launcher" />
+		<item Name="magnum pistol" />
+		<item Name="assault rifle" />
+		<item Name="marksman rifle" />
+		<item Name="shotgun" />
+		<item Name="battle rifle" />
+		<item Name="sniper rifle" />
+		<item Name="rocket launcher" />
+		<item Name="spartan laser" />
+		<item Name="frag grenade" />
+		<item Name="sticky grenade launcher" />
+		<item Name="light machine gun" />
+		<item Name="rail gun" />
+		<item Name="plasma pistol" />
+		<item Name="needler" />
+		<item Name="gravity hammer" />
+		<item Name="energy sword" />
+		<item Name="plasma grenade" />
+		<item Name="carbine" />
+		<item Name="beam rifle" />
+		<item Name="assault carbine" />
+		<item Name="concussion rifle" />
+		<item Name="fuel rod cannon" />
+		<item Name="ghost" />
+		<item Name="revenant driver" />
+		<item Name="revenant gunner" />
+		<item Name="wraith" />
+		<item Name="wraith anti-infantry" />
+		<item Name="banshee" />
+		<item Name="banshee bomb" />
+		<item Name="seraph" />
+		<item Name="revenant deux driver" />
+		<item Name="revenant deux gunner" />
+		<item Name="lich driver" />
+		<item Name="lich gunner" />
+		<item Name="mongoose" />
+		<item Name="warthog driver" />
+		<item Name="warthog gunner" />
+		<item Name="warthog gunner gauss" />
+		<item Name="warthog gunner rocket" />
+		<item Name="scorpion" />
+		<item Name="scorpion gunner" />
+		<item Name="falcon driver" />
+		<item Name="falcon gunner" />
+		<item Name="wasp driver" />
+		<item Name="wasp gunner" />
+		<item Name="wasp gunner heavy" />
+		<item Name="mech melee" />
+		<item Name="mech chaingun" />
+		<item Name="mech cannon" />
+		<item Name="mech rocket" />
+		<item Name="broadsword" />
+		<item Name="broadsword missile" />
+		<item Name="tortoise driver" />
+		<item Name="tortoise gunner" />
+		<item Name="MAC cannon" />
+		<item Name="Target designator" />
+		<item Name="Ordnance drop pod" />
+		<item Name="Orbital cruise missile" />
+		<item Name="Portable shield" />
+		<item Name="Personal auto turret" />
+		<item Name="Thruster pack" />
+		<item Name="falling damage" />
+		<item Name="generic collision damage" />
+		<item Name="generic melee damage" />
+		<item Name="generic explosion" />
+		<item Name="fire damage" />
+		<item Name="birthday party explosion" />
+		<item Name="flag melee damage" />
+		<item Name="bomb melee damage" />
+		<item Name="bomb explosion damage" />
+		<item Name="ball melee damage" />
+		<item Name="teleporter" />
+		<item Name="transfer damage" />
+		<item Name="armor lock crush" />
+		<item Name="human turret" />
+		<item Name="plasma cannon" />
+		<item Name="plasma mortar" />
+		<item Name="plasma turret" />
+		<item Name="shade turret" />
+		<item Name="forerunner turret" />
+		<item Name="tank" />
+		<item Name="chopper" />
+		<item Name="hornet" />
+		<item Name="mantis" />
+		<item Name="magnum pistol ctf" />
+		<item Name="flood prongs" />
+	</_field_char_enum>
+	<_field_pad name="FEOROBJE" length="1" />
+	<_field_explanation name="zoom" />
+	<_field_short_integer name="magnification levels#the number of magnification levels this weapon allows" />
+	<_field_real_bounds name="magnification range" />
+	<_field_char_integer name="zoom effect ticks#how often 'zoom effect' will be triggered (while zoomed)" />
+	<_field_pad name="wzt" length="3" />
+	<_field_tag_reference name="zoom effect#effect that is played while zoomed" validtags="sndo, effe" />
+	<_field_explanation name="weapon aim assist!#DEPRECATED -- this will go away in favor of aim assist modes below">DEPRECATED -- this will go away in favor of aim assist modes below</_field_explanation>
+	<_field_struct name="weapon aim assist" />
+	<_field_real name="autoaim stick time:seconds!#the number of seconds that the crosshair needs to be on target before the larger autoaim stick kicks in" />
+	<_field_angle name="autoaim stick angle:degrees!#the maximum angle that autoaim works to 'stick' a target.  set to zero to use default behavior." />
+	<_field_angle name="autoaim angle:degrees#the maximum angle that autoaim works at full strength!" />
+	<_field_real name="autoaim range:world units#the maximum distance that autoaim works at full strength!" />
+	<_field_real name="autoaim falloff range:world units#at what point the autoaim starts falling off!" />
+	<_field_real name="autoaim near falloff range:world units#at what point the autoaim reaches full power!" />
+	<_field_angle name="magnetism angle:degrees#the maximum angle that magnetism works at full strength!" />
+	<_field_real name="magnetism range:world units#the maximum distance that magnetism works at full strength!" />
+	<_field_real name="magnetism falloff range:world units#at what point magnetism starts falling off!" />
+	<_field_real name="magnetism near falloff range:world units#at what point magnetism reaches full power!" />
+	<_field_angle name="deviation angle:degrees#the maximum angle that a projectile is allowed to deviate from the gun barrel due to autoaim OR network lead vector reconstruction!" />
+	<_field_pad name="ZHV" length="4" />
+	<_field_pad name="CVYGPMLMX" length="16" />
+	<_field_pad name="UQXKLVAXI" length="4" />
+	<_field_struct name="iron sights modifiers" />
+	<_field_real name="spread multiplier#multiplies the spread error - use &lt; 1.0 for more accuracy" />
+	<_field_real name="movement multiplier#multipliers player maximum move speed" />
+	<_field_real name="aim speed multiplier" />
+	<_field_real name="auto zoom out time#tick delay before zooming out upon release of iron sights zoom -- use 0 for single-zoom weapons, 5-10 for multi-zooms like sniper rifle" />
+	<_field_block name="aim assist modes#First mode is normal, second mode is iron sights/scoped" max="3" srcguid="7a0f0836-930f-af42-80a0-5aebde985a08" srcName="globalAimAssistBlock">
+		<_field_real name="autoaim stick time:seconds#the number of seconds that the crosshair needs to be on target before the larger autoaim stick kicks in" />
+		<_field_angle name="autoaim stick angle:degrees#the maximum angle that autoaim works to 'stick' a target.  set to zero to use default behavior." />
+		<_field_angle name="autoaim angle:degrees#the maximum angle that autoaim works at full strength" />
+		<_field_real name="autoaim range:world units#the maximum distance that autoaim works at full strength" />
+		<_field_real name="autoaim falloff range:world units#at what point the autoaim starts falling off" />
+		<_field_real name="autoaim near falloff range:world units#at what point the autoaim reaches full power" />
+		<_field_angle name="magnetism angle:degrees#the maximum angle that magnetism works at full strength" />
+		<_field_real name="magnetism range:world units#the maximum distance that magnetism works at full strength" />
+		<_field_real name="magnetism falloff range:world units#at what point magnetism starts falling off" />
+		<_field_real name="magnetism near falloff range:world units#at what point magnetism reaches full power" />
+		<_field_angle name="deviation angle:degrees#the maximum angle that a projectile is allowed to deviate from the gun barrel due to autoaim OR network lead vector reconstruction" />
+		<_field_pad name="ZHV" length="4" />
+		<_field_pad name="CVYGPMLMX" length="16" />
+		<_field_pad name="UQXKLVAXI" length="4" />
+	</_field_block>
+	<_field_block name="target tracking" max="1" srcguid="a7cd0d5c-922d-ba44-940b-e4eb94d50b22" srcName="global_target_tracking_parameters_block">
+		<_field_block name="tracking types#specify the kinds of targets this tracking system can lock on" max="16" srcguid="d69a361e-c088-a043-aa0a-675ae3762650" srcName="tracking_type_block">
+			<_field_string_id name="tracking type^" />
+		</_field_block>
+		<_field_real name="acquire time:s" />
+		<_field_real name="grace time:s" />
+		<_field_real name="decay time:s" />
+		<_field_tag_reference name="tracking sound" validtags="scmb, sndo, lsnd, snd!" />
+		<_field_tag_reference name="locked sound" validtags="scmb, sndo, lsnd, snd!" />
+	</_field_block>
+	<_field_explanation name="aim swim indexing">swim index 0 used when unzoomed, index 1 is for first zoom level, index 2 is 2nd zoom, etc.</_field_explanation>
+	<_field_block name="aim swim" max="3" srcguid="17d12401-360f-7d4b-8cfc-f7cb18fe29c7" srcName="globalAimSwimBlock">
+		<_field_explanation name="x axis curve" />
+		<_field_real name="x period:seconds" />
+		<_field_real name="x amplitude" />
+		<_field_explanation name="y axis curve" />
+		<_field_real name="y period:seconds" />
+		<_field_real name="y amplitude" />
+		<_field_explanation name="biped state scalers" />
+		<_field_real name="non-moving, crouched" />
+		<_field_real name="non-moving, standing" />
+		<_field_real name="moving" />
+		<_field_explanation name="biped state transition times" />
+		<_field_real name="to crouched:seconds" />
+		<_field_real name="to standing:seconds" />
+	</_field_block>
+	<_field_explanation name="ballistics" />
+	<_field_real_bounds name="ballistic arcing firing bounds:world units#At the min range (or closer), the minimum ballistic arcing is used, at the max (or farther away), the maximum arcing is used" />
+	<_field_real_bounds name="ballistic arcing fraction bounds:[0-1]#Controls speed and degree of arc. 0 = low, fast, 1 = high, slow" />
+	<_field_explanation name="movement" />
+	<_field_short_enum name="movement penalized">
+		<item Name="always" />
+		<item Name="when zoomed" />
+		<item Name="when zoomed or reloading" />
+	</_field_short_enum>
+	<_field_pad name="GTIXVRPA" length="2" />
+	<_field_real_fraction name="forward movement penalty#percent slowdown to forward movement for units carrying this weapon" />
+	<_field_real_fraction name="sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon" />
+	<_field_real_fraction name="gunner armor mod forward movement penalty#percent slowdown to forward movement for units carrying this weapon with the gunner armor mod active" />
+	<_field_real_fraction name="gunner armor mod sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon with the gunner armor mod active" />
+	<_field_explanation name="Aiming" />
+	<_field_real name="Maximum pitch rate:degrees per second#This will cap the speed at which the player can aim when holding this weapon, probably want to set something sensible for turrets etc" />
+	<_field_explanation name="ArmorMod Parameters" />
+	<_field_real name="Ammopack power capacity#Ammopack armormod - 0.2 would give 20% additional capacity to an energy weapon" />
+	<_field_explanation name="AI targeting parameters" />
+	<_field_real name="AI scariness" />
+	<_field_explanation name="miscellaneous" />
+	<_field_real name="weapon power-on time:seconds" />
+	<_field_real name="weapon power-off time:seconds" />
+	<_field_tag_reference name="weapon power-on effect" validtags="sndo, effe" />
+	<_field_tag_reference name="weapon power-off effect" validtags="sndo, effe" />
+	<_field_real name="age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages" />
+	<_field_real name="age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages" />
+	<_field_real_fraction name="age misfire start:[0,1]#the age threshold when the weapon begins to misfire" />
+	<_field_real_fraction name="age misfire chance:[0,1]#at age 1.0, the misfire chance per shot" />
+	<_field_tag_reference name="pickup sound" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="zoom-in sound" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="zoom-out sound" validtags="scmb, sndo, snd!" />
+	<_field_real name="active camo ding#how much to decrease active camo when a round is fired" />
+	<_field_string_id name="handle node#the node that get's attached to the unit's hand" />
+	<_field_explanation name="weapon labels" />
+	<_field_string_id name="weapon class" />
+	<_field_string_id name="weapon name" />
+	<_field_explanation name="more miscellaneous" />
+	<_field_char_enum name="first time pickup type">
+		<item Name="unassigned" />
+		<item Name="bolt pistol" />
+		<item Name="light rifle" />
+		<item Name="suppressor" />
+		<item Name="binary rifle" />
+		<item Name="scattershot" />
+		<item Name="incineration cannon" />
+	</_field_char_enum>
+	<_field_pad name="PAD" length="3" />
+	<_field_short_enum name="weapon type">
+		<item Name="undefined" />
+		<item Name="shotgun" />
+		<item Name="needler" />
+		<item Name="plasma pistol" />
+		<item Name="plasma rifle" />
+		<item Name="rocket launcher" />
+		<item Name="energy blade" />
+		<item Name="splaser" />
+		<item Name="shield" />
+		<item Name="scarab gun" />
+		<item Name="wolverine quad" />
+		<item Name="flak cannon" />
+		<item Name="plasma launcher" />
+		<item Name="laser designator" />
+		<item Name="sticky detonator" />
+	</_field_short_enum>
+	<_field_short_integer name="low ammo threshold" />
+	<_field_struct name="player interface" />
+	<_field_explanation name="interface" />
+	<_field_struct name="shared interface" />
+	<_field_pad name="PWGUS" length="16" />
+	<_field_block name="first person" max="2" srcguid="0ed1473b-0cb5-c24e-a64b-eb32712f5a86" srcName="weapon_first_person_interface_block">
+		<_field_tag_reference name="first person model" validtags="mode" />
+		<_field_tag_reference name="first person animations" validtags="jmad" />
+		<_field_real name="first person fov scale#the multiplier by the standard first person FOV to use when this weapon is held" />
+		<_field_real name="first person dof distance#the distance to apply depth of field to the weapon" />
+	</_field_block>
+	<_field_tag_reference name="hud screen reference" validtags="cusc" />
+	<_field_tag_reference name="alternate hud screen reference#the parent of the weapon can indicate that this hud should be used instead of the default" validtags="cusc" />
+	<_field_block name="predicted resources" max="0" srcguid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" srcName="g_null_block">
+	</_field_block>
+	<_field_block name="magazines" max="2" srcguid="a4f9fcb8-19a0-8e4c-8cfe-64c5b1cfc041" srcName="magazines">
+		<_field_long_flags name="flags">
+			<item Name="wastes rounds when reloaded" />
+			<item Name="every round must be chambered" />
+			<item Name="magazine cannot change state while firing#will prevent reload until fire is complete (sticky det)" />
+			<item Name="allow overheated reload when empty" />
+			<item Name="bottomless inventory" />
+		</_field_long_flags>
+		<_field_short_integer name="rounds recharged:per second" />
+		<_field_short_integer name="rounds total initial" />
+		<_field_short_integer name="rounds total maximum" />
+		<_field_short_integer name="rounds loaded maximum" />
+		<_field_short_integer name="runtime rounds inventory maximum" />
+		<_field_short_integer name="Ammopack rounds total initial#AmmoPack armormod - alternate total_initial value due to AmmoPack" />
+		<_field_short_integer name="Ammopack rounds total maximum#AmmoPack armormod - alternate total_maximum value due to armor mod AmmoPack" />
+		<_field_pad name="pad" length="2" />
+		<_field_real name="reload dialogue time:seconds#the length of time we wait before saying the reload dialogue" />
+		<_field_short_integer name="rounds reloaded" />
+		<_field_pad name="VJGZW" length="2" />
+		<_field_real name="chamber time:seconds - NOT USED!#the length of time it takes to chamber the next round" />
+		<_field_pad name="HPMIV" length="8" />
+		<_field_pad name="P" length="16" />
+		<_field_tag_reference name="reloading effect" validtags="sndo, effe" />
+		<_field_tag_reference name="reloading damage effect" validtags="jpt!, drdf" />
+		<_field_tag_reference name="chambering effect" validtags="sndo, effe" />
+		<_field_tag_reference name="chambering damage effect" validtags="jpt!, drdf" />
+		<_field_useless_pad name="" />
+		<_field_block name="magazines" max="8" srcguid="7239f33e-acc4-514c-96b5-84127427d4ac" srcName="magazine_objects">
+			<_field_short_integer name="rounds" />
+			<_field_pad name="DTDPY" length="2" />
+			<_field_tag_reference name="equipment^" validtags="eqip" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="new triggers" max="2" srcguid="94ed8c90-1329-da4a-9600-e10a2c4ed066" srcName="weapon_triggers">
+		<_field_long_flags name="flags">
+			<item Name="autofire single action only" />
+		</_field_long_flags>
+		<_field_short_enum name="input">
+			<item Name="right trigger" />
+			<item Name="left trigger" />
+			<item Name="melee attack" />
+			<item Name="ai only secondary" />
+		</_field_short_enum>
+		<_field_short_enum name="behavior">
+			<item Name="spew#fires its primary action barrel whenever the trigger is down" />
+			<item Name="latch#fires its primary action barrel when the trigger is down and then latches" />
+			<item Name="latch-autofire#fires its primary action barrel once if pulsed quickly or if not depressed all the way, otherwise does secondary behavior" />
+			<item Name="latch-tether#tethers projectiles if latched long enough, on release the tethered projectile detonates" />
+			<item Name="charge#charges the trigger" />
+			<item Name="latch-zoom#latched; fires its primary action barrel when unzoomed, secondary when zoomed" />
+			<item Name="spew-charge" />
+			<item Name="sword-charge" />
+			<item Name="paint-target" />
+			<item Name="double-latch-tether#projectile is tethered by 1st latch, 2nd releases and detonates it" />
+			<item Name="charge-with-magazine#like charge, but pays attention to any magazine and will not charge unless magazine is idle and barrel is actually able to fire" />
+		</_field_short_enum>
+		<_field_short_block_index name="primary barrel" targetGuid="b0b3d652-3432-3b42-9512-5b72fc44714a" targetName="weapon_barrels" />
+		<_field_short_block_index name="secondary barrel" targetGuid="b0b3d652-3432-3b42-9512-5b72fc44714a" targetName="weapon_barrels" />
+		<_field_short_enum name="prediction">
+			<item Name="none" />
+			<item Name="spew" />
+			<item Name="charge" />
+		</_field_short_enum>
+		<_field_pad name="GNFR" length="2" />
+		<_field_useless_pad name="" />
+		<_field_struct name="autofire" />
+		<_field_explanation name="AUTOFIRE" />
+		<_field_real name="autofire time" />
+		<_field_real name="autofire throw" />
+		<_field_short_enum name="secondary action">
+			<item Name="fire" />
+			<item Name="charge" />
+			<item Name="fire other" />
+		</_field_short_enum>
+		<_field_short_enum name="primary action">
+			<item Name="fire" />
+			<item Name="charge" />
+			<item Name="fire other" />
+		</_field_short_enum>
+		<_field_struct name="charging" />
+		<_field_explanation name="CHARGING" />
+		<_field_real name="charging time:seconds#the amount of time it takes for this trigger to become fully charged" />
+		<_field_real name="charged time:seconds#the amount of time this trigger can be charged before becoming overcharged" />
+		<_field_char_enum name="overcharged action">
+			<item Name="none" />
+			<item Name="explode" />
+			<item Name="discharge" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags">
+			<item Name="can fire from partial charge#discharging a partially charged weapon will spew for the charged fraction of the spew time set below" />
+			<item Name="limit to current rounds loaded#if magazine present, do not fire more than current rounds loaded (mantis rocket launcher)" />
+			<item Name="Wont charge unless tracked target is valid#spew-charge triggers only" />
+		</_field_byte_flags>
+		<_field_short_integer name="cancelled trigger throw#96 was the constant in code for the pp" />
+		<_field_real name="charged illumination:[0,1]#the amount of illumination given off when the weapon is fully charged" />
+		<_field_tag_reference name="charging effect#the charging effect is created once when the trigger begins to charge" validtags="sndo, effe" />
+		<_field_tag_reference name="charging damage effect#the charging effect is created once when the trigger begins to charge" validtags="jpt!, drdf" />
+		<_field_tag_reference name="charging continuous damage response#plays every tick you're charging or charged, scaled to charging fraction" validtags="drdf" />
+		<_field_real name="charged drain rate#how much battery to drain per second when charged" />
+		<_field_tag_reference name="discharge effect#the discharging effect is created once when the trigger releases its charge" validtags="sndo, effe" />
+		<_field_tag_reference name="discharge damage effect#the discharging effect is created once when the trigger releases its charge" validtags="jpt!, drdf" />
+		<_field_block name="fire fractions" max="16" srcguid="5c2a0859-8689-6e45-bf03-4b9a229b0b5e" srcName="weapon_trigger_charging_fire_fraction">
+			<_field_real_fraction name="charge fraction^:[0.1]#charging fraction at which the weapon should additionally fire a shot." />
+		</_field_block>
+		<_field_tag_reference name="double latch projectile releasable effect#created once player is able to release the tethered projectile" validtags="effe" />
+		<_field_tag_reference name="double latch projectile released effect#created when player releases the tethered projectile" validtags="effe" />
+	</_field_block>
+	<_field_block name="barrels" max="2" srcguid="b0b3d652-3432-3b42-9512-5b72fc44714a" srcName="weapon_barrels">
+		<_field_long_flags name="flags">
+			<item Name="random firing effects#rather than being chosen sequentially, firing effects are picked randomly" />
+			<item Name="can fire with partial ammo#allows a weapon to be fired as long as there is a non-zero amount of ammunition loaded" />
+			<item Name="projectiles use weapon origin#instead of coming out of the magic first person camera origin, the projectiles for this weapon actually come out of the gun" />
+			<item Name="ejects during chamber#this trigger's ejection port is started during the key frame of its chamber animation" />
+			<item Name="projectile vector cannot be adjusted#projectiles fired by this weapon cannot have their direction adjusted by the AI to hit the target" />
+			<item Name="projectiles have identical error" />
+			<item Name="projectiles fire parallel#If there are multiple guns for this trigger, the projectiles emerge in parallel beams (rather than independant aiming)" />
+			<item Name="cant fire when others firing" />
+			<item Name="cant fire when others recovering" />
+			<item Name="don't clear fire bit after recovering" />
+			<item Name="stagger fire across multiple markers" />
+			<item Name="can fire at maximum age" />
+			<item Name="use 1 firing effect per burst" />
+			<item Name="prevent marker deviation#the barrel will not fire if all markers are pointed further away from the desired aiming vector than the aim assist deviation angle" />
+			<item Name="error ignores zoom#disables of the barrel error inversely with the zoom magnification" />
+			<item Name="projectile fires in marker direction#projectiles shoot out the marker direction instead of the player's aim vector" />
+			<item Name="skip test for object being outside BSP#Prevents projectile origin from changing when object is outside of BSP; Useful for units that can be placed inside physics." />
+			<item Name="only reload if all barrels idle" />
+			<item Name="only switch weapons if barrel idle#the weapon's owner cannot switch weapons unless this barrel is in the idle state" />
+		</_field_long_flags>
+		<_field_explanation name="firing" />
+		<_field_struct name="firing" />
+		<_field_real_bounds name="rounds per second#the number of firing effects created per second" />
+		<_field_string_id name="rate of fire acceleration#function value sets the current rate of fire when the barrel is firing" />
+		<_field_real name="acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second" />
+		<_field_string_id name="rate of fire deceleration#function value sets the current rate of fire when the barrel is not firing" />
+		<_field_real name="deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial" />
+		<_field_real name="barrel spin scale#scale the barrel spin speed by this amount" />
+		<_field_real_fraction name="blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs" />
+		<_field_short_integer_bounds name="shots per fire#allows designer caps to the shots you can fire from one firing action" />
+		<_field_real name="fire recovery time:seconds#how long after a set of shots it takes before the barrel can fire again" />
+		<_field_real_fraction name="soft recovery fraction#how much of the recovery allows shots to be queued" />
+		<_field_real name="melee  fire recovery time:seconds#how long after a set of shots it takes before the weapon can melee" />
+		<_field_real_fraction name="melee soft recovery fraction#how much of the melee recovery allows melee to be queued" />
+		<_field_short_block_index name="magazine#the magazine from which this trigger draws its ammunition" targetGuid="a4f9fcb8-19a0-8e4c-8cfe-64c5b1cfc041" targetName="magazines" />
+		<_field_short_integer name="rounds per shot#the number of rounds expended to create a single firing effect" />
+		<_field_short_integer name="minimum rounds loaded#the minimum number of rounds necessary to fire the weapon" />
+		<_field_short_integer name="rounds between tracers#the number of non-tracer rounds fired between tracers" />
+		<_field_string_id name="optional barrel marker name" />
+		<_field_short_enum name="firing noise#how loud this weapon appears to the AI">
+			<item Name="silent#ai will not respond to this sound" />
+			<item Name="quiet" />
+			<item Name="medium" />
+			<item Name="shout" />
+			<item Name="loud#ai can hear this sound at any range" />
+		</_field_short_enum>
+		<_field_explanation name="prediction properties">what the behavior of this barrel is in a predicted network game</_field_explanation>
+		<_field_short_enum name="prediction type">
+			<item Name="none" />
+			<item Name="continuous" />
+			<item Name="instant" />
+		</_field_short_enum>
+		<_field_real name="event_synchronized_projectiles_per_second#Valid only for barrels set to prediction type &quot;continuous&quot;. Controls how many projectiles per second can be individually synchronized (use debug_projectiles to diagnose)." />
+		<_field_real name="maximum_barrel_error_for_event_synchronization#Valid only for barrels set to prediction type &quot;continuous&quot;. If the barrel's current error level is over this value (zero to one scale), we will not consider synchronizing projectiles with individual events (use debug_projectiles to diagnose)." />
+		<_field_explanation name="firing error">full error look pitch rate controlls how fast you can turn 
+with full error, yaw is implied from pitch. 0==130.
+for reference, profile sensitivities are set to:
+1: 40
+3: 60
+9: 130</_field_explanation>
+		<_field_struct name="firing error" />
+		<_field_real name="deceleration time:seconds#the continuous idle time it would take for a barrel_error of 1.0 to return to its minimum value.
+Minimum value is usually 0.0 but sprinting can override this. See
+'globals@Player information.momentum and sprinting.min weapon error'" />
+		<_field_real_bounds name="damage error#the range of angles (in degrees) that a damaged weapon will skew fire" />
+		<_field_angle name="min error look pitch rate#yaw rate is doubled" />
+		<_field_angle name="full error look pitch rate#yaw rate is doubled" />
+		<_field_real name="look pitch error power#use to soften or sharpen the rate ding" />
+		<_field_explanation name="projectile" />
+		<_field_short_enum name="distribution function">
+			<item Name="point" />
+			<item Name="horizontal fan" />
+			<item Name="custom vectors" />
+			<item Name="custom positions" />
+		</_field_short_enum>
+		<_field_short_integer name="projectiles per shot" />
+		<_field_block name="custom vectors#Custom vectors must be set in distribution function above" max="16" srcguid="182eb09d-2dcd-eb4f-a6b7-bdab84e8773c" srcName="projectileDistributionCustomVector">
+			<_field_real_point_2d name="Point offset^:[-1.1]#x-y offset - +x is right, +y is up" />
+		</_field_block>
+		<_field_real name="distribution angle:degrees#used by distribution function 'horizontal fan' above" />
+		<_field_angle name="minimum error:degrees#projectile direction is randomly selected between this and max_error_angle below" />
+		<_field_angle_bounds name="error angle:degrees (max_error_angle)#current barrel_error is linearly interpolated between these to generate max_error_angle" />
+		<_field_struct name="accuracy penalties" />
+		<_field_custom name="accuracy penalties" />
+		<_field_real name="reload penalty#percentage accuracy lost when reloading" />
+		<_field_real name="switch penalty#percentage accuracy lost when switching weapons" />
+		<_field_real name="zoom penalty#percentage accuracy lost when zooming in/out" />
+		<_field_real name="jump penalty#percentage accuracy lost when jumping" />
+		<_field_explanation name="barrel_error penalty functions">barrel_error = barrel_error + penaltyfunction(barrel_error)
+Where input value 'X' produces output value 'Y'</_field_explanation>
+		<_field_custom name="single wield penalties" />
+		<_field_struct name="single wield penalties" />
+		<_field_block name="firing penalty function#percentage accuracy lost when the barrel has fired" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="firing crouched penalty function#percentage accuracy lost when the barrel has fired from a crouched position" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="moving penalty function#percentage accuracy lost when moving" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="turning penalty function#percentage accuracy lost when turning the camera" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_real name="error angle max rotation#angle which represents the maximum input to the turning penalty function." />
+		<_field_custom name="dual wield penalties" />
+		<_field_struct name="dual wield penalties" />
+		<_field_block name="firing penalty function#percentage accuracy lost when the barrel has fired" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="firing crouched penalty function#percentage accuracy lost when the barrel has fired from a crouched position" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="moving penalty function#percentage accuracy lost when moving" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_block name="turning penalty function#percentage accuracy lost when turning the camera" max="1" srcguid="50bbb07d-6ddd-b64a-b168-0928130ae1c8" srcName="weapon_barrel_function_block">
+			<_field_data name="data" />
+		</_field_block>
+		<_field_real name="error angle max rotation#angle which represents the maximum input to the turning penalty function." />
+		<_field_block name="first person offset" max="3" srcguid="d83eeb0a-edcd-7045-a10b-29fdcfa4104a" srcName="weapon_barrel_first_person_offset_block">
+			<_field_real_point_3d name="first person offset:world units#+x is forward, +z is up, +y is left" />
+		</_field_block>
+		<_field_char_enum name="damage effect reporting type">
+			<item Name="unknown" />
+			<item Name="teh guardians" />
+			<item Name="scripting" />
+			<item Name="ai suicide" />
+			<item Name="forerunner smg" />
+			<item Name="spread gun" />
+			<item Name="forerunner rifle" />
+			<item Name="forerunner sniper" />
+			<item Name="bishop beam" />
+			<item Name="bolt pistol" />
+			<item Name="pulse grenade" />
+			<item Name="incineration launcher" />
+			<item Name="magnum pistol" />
+			<item Name="assault rifle" />
+			<item Name="marksman rifle" />
+			<item Name="shotgun" />
+			<item Name="battle rifle" />
+			<item Name="sniper rifle" />
+			<item Name="rocket launcher" />
+			<item Name="spartan laser" />
+			<item Name="frag grenade" />
+			<item Name="sticky grenade launcher" />
+			<item Name="light machine gun" />
+			<item Name="rail gun" />
+			<item Name="plasma pistol" />
+			<item Name="needler" />
+			<item Name="gravity hammer" />
+			<item Name="energy sword" />
+			<item Name="plasma grenade" />
+			<item Name="carbine" />
+			<item Name="beam rifle" />
+			<item Name="assault carbine" />
+			<item Name="concussion rifle" />
+			<item Name="fuel rod cannon" />
+			<item Name="ghost" />
+			<item Name="revenant driver" />
+			<item Name="revenant gunner" />
+			<item Name="wraith" />
+			<item Name="wraith anti-infantry" />
+			<item Name="banshee" />
+			<item Name="banshee bomb" />
+			<item Name="seraph" />
+			<item Name="revenant deux driver" />
+			<item Name="revenant deux gunner" />
+			<item Name="lich driver" />
+			<item Name="lich gunner" />
+			<item Name="mongoose" />
+			<item Name="warthog driver" />
+			<item Name="warthog gunner" />
+			<item Name="warthog gunner gauss" />
+			<item Name="warthog gunner rocket" />
+			<item Name="scorpion" />
+			<item Name="scorpion gunner" />
+			<item Name="falcon driver" />
+			<item Name="falcon gunner" />
+			<item Name="wasp driver" />
+			<item Name="wasp gunner" />
+			<item Name="wasp gunner heavy" />
+			<item Name="mech melee" />
+			<item Name="mech chaingun" />
+			<item Name="mech cannon" />
+			<item Name="mech rocket" />
+			<item Name="broadsword" />
+			<item Name="broadsword missile" />
+			<item Name="tortoise driver" />
+			<item Name="tortoise gunner" />
+			<item Name="MAC cannon" />
+			<item Name="Target designator" />
+			<item Name="Ordnance drop pod" />
+			<item Name="Orbital cruise missile" />
+			<item Name="Portable shield" />
+			<item Name="Personal auto turret" />
+			<item Name="Thruster pack" />
+			<item Name="falling damage" />
+			<item Name="generic collision damage" />
+			<item Name="generic melee damage" />
+			<item Name="generic explosion" />
+			<item Name="fire damage" />
+			<item Name="birthday party explosion" />
+			<item Name="flag melee damage" />
+			<item Name="bomb melee damage" />
+			<item Name="bomb explosion damage" />
+			<item Name="ball melee damage" />
+			<item Name="teleporter" />
+			<item Name="transfer damage" />
+			<item Name="armor lock crush" />
+			<item Name="human turret" />
+			<item Name="plasma cannon" />
+			<item Name="plasma mortar" />
+			<item Name="plasma turret" />
+			<item Name="shade turret" />
+			<item Name="forerunner turret" />
+			<item Name="tank" />
+			<item Name="chopper" />
+			<item Name="hornet" />
+			<item Name="mantis" />
+			<item Name="magnum pistol ctf" />
+			<item Name="flood prongs" />
+		</_field_char_enum>
+		<_field_pad name="DGSXQ" length="3" />
+		<_field_tag_reference name="projectile" validtags="proj" />
+		<_field_tag_reference name="optional secondary projectile" validtags="proj" />
+		<_field_struct name="eh" />
+		<_field_tag_reference name="damage effect" validtags="jpt!" />
+		<_field_tag_reference name="crate projectile" validtags="bloc" />
+		<_field_real name="crate projectile speed" />
+		<_field_explanation name="misc" />
+		<_field_real name="ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired" />
+		<_field_real name="illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired" />
+		<_field_real_fraction name="heat generated per round:[0,1]#the amount of heat generated each time the barrel fires. Unlike the name suggests, this amount of heat is NOT applied per projectile created." />
+		<_field_string_id name="heat generated per round function&amp;heat generated per round#function value sets the amount of heat to add to the weapon each tick the barrel is firing" />
+		<_field_real_fraction name="age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired" />
+		<_field_real_fraction name="CAMPAIGN age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired" />
+		<_field_real name="overload time:seconds#the next trigger fires this often while holding down this trigger" />
+		<_field_real name="runtime illumination recovery rate!" />
+		<_field_real name="runtime ejection port recovery rate!" />
+		<_field_real name="runtime rate of fire acceleration rate!" />
+		<_field_real name="runtime rate of fire deceleration rate!" />
+		<_field_real name="runtime error deceleration rate!" />
+		<_field_block name="firing effects#firing effects determine what happens when this trigger is fired" max="5" srcguid="00fabb28-6875-b042-94e7-5cd1b8e7f4e6" srcName="barrel_firing_effect_block">
+			<_field_short_integer name="shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen" />
+			<_field_short_integer name="shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen" />
+			<_field_tag_reference name="firing effect^#this effect is used when the weapon is loaded and fired normally" validtags="sndo, effe" />
+			<_field_tag_reference name="critical effect^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+			<_field_tag_reference name="misfire effect#this effect is used when the weapon is loaded but fired while overheated" validtags="sndo, effe" />
+			<_field_tag_reference name="empty effect#this effect is used when the weapon is not loaded" validtags="sndo, effe" />
+			<_field_tag_reference name="optional secondary firing effect#this effect is used when the weapon is not loaded" validtags="sndo, effe" />
+			<_field_tag_reference name="firing damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+			<_field_tag_reference name="critical damage^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+			<_field_tag_reference name="misfire damage#this effect is used when the weapon is loaded but fired while overheated" validtags="jpt!, drdf" />
+			<_field_tag_reference name="empty damage#this effect is used when the weapon is not loaded" validtags="jpt!, drdf" />
+			<_field_tag_reference name="optional secondary firing damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+			<_field_tag_reference name="firing rider damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+			<_field_tag_reference name="critical rider damage^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+			<_field_tag_reference name="misfire rider damage#this effect is used when the weapon is loaded but fired while overheated" validtags="jpt!, drdf" />
+			<_field_tag_reference name="empty rider damage#this effect is used when the weapon is not loaded" validtags="jpt!, drdf" />
+			<_field_tag_reference name="optional secondary firing rider damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+		</_field_block>
+	</_field_block>
+	<_field_explanation name="scaleshot">Allows the weapon to scale up and fire different projectiles based upon how many hits you get etc.</_field_explanation>
+	<_field_block name="scaleshot parameters" max="1" srcguid="ae676d17-c5e4-7d48-9d62-b8705ad61b72" srcName="weaponScaleshotStruct">
+		<_field_long_flags name="flags">
+			<item Name="level latches#if true, once you hit a power level, you stay at that level or higher until your power value hits 0; otherwise your power level is recomputed constantly" />
+		</_field_long_flags>
+		<_field_real name="power per shot#the amount of scaleshot power you get when this weapon is fired" />
+		<_field_real name="power per hit#the amount of scaleshot power you get when a projectile from this weapon hits an enemy" />
+		<_field_real name="power change per second#the change per second in power" />
+		<_field_explanation name="power levels">IMPORTANT: put these in increasing order, by "minimum power level".  I claim no responsibility for weird behavior if they're out of order.</_field_explanation>
+		<_field_block name="power levels" max="10" srcguid="3ec04fe7-2227-964c-ab42-3829624f9ba0" srcName="weaponScaleshotLevelStruct">
+			<_field_long_flags name="flags">
+				<item Name="cannot gain power at this level#if true, as long as the weapon is at this level, you cannot gain positive power, only negative values are applied" />
+			</_field_long_flags>
+			<_field_real name="minimum power level^#the minimum power at which this scaleshot level kicks in" />
+			<_field_real name="power change per shot#the change per shot in power when you're at this level" />
+			<_field_real name="power change per second#the change per second in power when you're at this level" />
+			<_field_tag_reference name="projectile#the projectile to fire at this level" validtags="proj" />
+			<_field_block name="firing effects#firing effects when firing at this level" max="5" srcguid="00fabb28-6875-b042-94e7-5cd1b8e7f4e6" srcName="barrel_firing_effect_block">
+				<_field_short_integer name="shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen" />
+				<_field_short_integer name="shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen" />
+				<_field_tag_reference name="firing effect^#this effect is used when the weapon is loaded and fired normally" validtags="sndo, effe" />
+				<_field_tag_reference name="critical effect^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+				<_field_tag_reference name="misfire effect#this effect is used when the weapon is loaded but fired while overheated" validtags="sndo, effe" />
+				<_field_tag_reference name="empty effect#this effect is used when the weapon is not loaded" validtags="sndo, effe" />
+				<_field_tag_reference name="optional secondary firing effect#this effect is used when the weapon is not loaded" validtags="sndo, effe" />
+				<_field_tag_reference name="firing damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+				<_field_tag_reference name="critical damage^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+				<_field_tag_reference name="misfire damage#this effect is used when the weapon is loaded but fired while overheated" validtags="jpt!, drdf" />
+				<_field_tag_reference name="empty damage#this effect is used when the weapon is not loaded" validtags="jpt!, drdf" />
+				<_field_tag_reference name="optional secondary firing damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+				<_field_tag_reference name="firing rider damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+				<_field_tag_reference name="critical rider damage^#this effect is used when the weapon is loaded and will do critical damage" validtags="sndo, effe" />
+				<_field_tag_reference name="misfire rider damage#this effect is used when the weapon is loaded but fired while overheated" validtags="jpt!, drdf" />
+				<_field_tag_reference name="empty rider damage#this effect is used when the weapon is not loaded" validtags="jpt!, drdf" />
+				<_field_tag_reference name="optional secondary firing rider damage#this effect is used when the weapon is loaded and fired normally" validtags="jpt!, drdf" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_real name="runtime weapon power on velocity!" />
+	<_field_real name="runtime weapon power off velocity!" />
+	<_field_useless_pad name="" />
+	<_field_explanation name="first-person movement control" />
+	<_field_real name="max movement acceleration" />
+	<_field_real name="max movement velocity" />
+	<_field_real name="max turning acceleration" />
+	<_field_real name="max turning velocity" />
+	<_field_tag_reference name="deployed vehicle" validtags="vehi" />
+	<_field_tag_reference name="tossed weapon" validtags="weap" />
+	<_field_tag_reference name="age effect" validtags="effe" />
+	<_field_tag_reference name="aged weapon" validtags="weap" />
+	<_field_tag_reference name="aged material effects" validtags="foot" />
+	<_field_real name="per kill or hit aging amount#aging applied for 'weapon ages when damage is inflicted' or 'weapon ages with each kill' flags" />
+	<_field_real name="external aging amount" />
+	<_field_real name="campaign external aging amount" />
+	<_field_real name="external heat amount" />
+	<_field_real_fraction name="age recovered per second:[0,1]#the amount of age the weapon recovers per second" />
+	<_field_tag_reference name="age fully recovered (sound or effect)#the sound or effect played when the weapon's age reaches fully recovered" validtags="sndo, effe" />
+	<_field_real_vector_3d name="first person weapon offset" />
+	<_field_real_vector_2d name="first person scope size" />
+	<_field_real_bounds name="support third person camera range:degrees#range in degrees. 0 is straight, -90 is down, 90 is up" />
+	<_field_real name="weapon zoom time#seconds" />
+	<_field_real name="weapon ready-for-use time#seconds" />
+	<_field_real name="weapon ready 1st person animation playback scale#e.g. - 2.0 makes playspeed twice as fast" />
+	<_field_real name="tether transition to linked time:seconds#begins when tethered projectile is LNKED" />
+	<_field_real name="tether transition from linked time:seconds#begins when tethered projectile becomes non-LNKED" />
+	<_field_string_id name="unit stow anchor name" />
+	<_field_block name="screen effects" max="4" srcguid="47592113-dbd5-9c4a-9d86-32e0fdaf513d" srcName="weapon_screen_effect_block">
+		<_field_byte_flags name="flags">
+			<item Name="overrides unit and camera screen effects" />
+			<item Name="unzoomed" />
+			<item Name="zoom level 1" />
+			<item Name="zoom level 2" />
+		</_field_byte_flags>
+		<_field_pad name="LKSZJFSE" length="3" />
+		<_field_tag_reference name="screen effect^" validtags="sefc" />
+	</_field_block>
+	<_field_tag_reference name="Player sound bank#High quality player sound bank to be prefetched. Can be empty." validtags="sbnk" />
+	<_field_string_id name="Player EQ preset name#Name of the EQ shareset in WWise to apply when this weapon is active" />
+	<_field_long_integer name="Player EQ preset hash!" />
+	<_field_string_id name="Reload cancel event#Note - this is a direct event string - not a .sound" />
+	<_field_long_integer name="Reload cancel event hash!" />
+	<_field_tag_reference name="single shot fire for automatics" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="firing loop for automatics" validtags="lsnd" />
+	<_field_block name="Sound RTPCs" max="16" srcguid="7ae7f6e1-1c86-fd42-959c-4f0c143b5506" srcName="WeaponSoundRTPCBlock">
+		<_field_long_block_index name="Attachment Index#Sound attachment to affect - leave empty for main body" targetGuid="57720911-7547-9c42-a775-d933ee75453f" targetName="global_object_attachment_block" />
+		<_field_string_id name="Function#Function to drive the RTPC" />
+		<_field_string_id name="RTPC Name#WWise RTPC string name" />
+		<_field_long_integer name="RTPC name hash value*!" />
+	</_field_block>
+	<_field_block name="Sound Sweeteners" max="16" srcguid="86fed52f-1534-4345-b2b2-2e12e0fe66f0" srcName="WeaponSoundSweetenerBlock">
+		<_field_string_id name="Function#Function to trigger the sweetener" />
+		<_field_tag_reference name="sound" validtags="scmb, sndo, snd!" />
+		<_field_real name="Switch point#value of the function (between 0 and 1) where the sound is triggered" />
+		<_field_long_integer name="Mode#0 for triggering while function is decreasing, 1 for increasing (more modes to come?)" />
+	</_field_block>
+	<_field_string_id name="Locking Reticle Screen Name" />
+	<_field_string_id name="Locked On Reticle Screen Name" />
+</plugin>

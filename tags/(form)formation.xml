@@ -1,0 +1,22 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_string_id name="name^" />
+	<_field_block name="primitives" max="4" srcguid="08d7a08f-f3b9-884f-8545-8122ccca2133" srcName="formation_primitive_definition">
+		<_field_word_flags name="flags">
+			<item Name="radial" />
+			<item Name="leader" />
+		</_field_word_flags>
+		<_field_short_integer name="priority" />
+		<_field_short_integer name="capacity*!" />
+		<_field_pad name="post-capacity-pad" length="2" />
+		<_field_real name="dist forwards" />
+		<_field_real name="dist backwards" />
+		<_field_real name="rank spacing" />
+		<_field_real name="file spacing" />
+		<_field_block name="points" max="8" srcguid="b1aaab23-04a5-7e40-a02e-a842827b6483" srcName="formation_point_definition">
+			<_field_angle name="angle" />
+			<_field_real name="offset" />
+		</_field_block>
+	</_field_block>
+</plugin>

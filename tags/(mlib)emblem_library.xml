@@ -1,0 +1,273 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Emblem Library">This library contains the definitions of all the player emblems
+All the compositions and transformations that build an emblem are defined in this tag.
+Each emblem is composed of a number of shapes.
+And each shape is defined by transformations on an emblem bitmap.</_field_explanation>
+	<_field_short_integer name="version!" />
+	<_field_pad name="jfejkjjg" length="2" />
+	<_field_custom name="Bitmaps" />
+	<_field_explanation name="Bitmaps"></_field_explanation>
+	<_field_real name="bitmap resolution:pixels#used to calculate appropriate antialiasing settings" />
+	<_field_real name="antialias sharpen#default 1.0, global control on antialias sharpness" />
+	<_field_tag_reference name="emblem bitmaps" validtags="bitm" />
+	<_field_tag_reference name="emblem bitmaps hi rez" validtags="bitm" />
+	<_field_block name="bitmaps" max="256" srcguid="7e4713eb-ba34-3147-a70a-97e446849752" srcName="emblem_bitmap_list">
+		<_field_string_id name="name^" />
+		<_field_short_integer name="bitmap index#the index of the bitmap in the bitmap group" />
+		<_field_pad name="ASDFJIJJGHJFL" length="2" />
+		<_field_real name="gradient size:pixels#the size of the gradient (from white to black) in this bitmap" />
+	</_field_block>
+	<_field_explanation name="Shapes"></_field_explanation>
+	<_field_block name="shapes" max="512" srcguid="1e96044d-8e23-154d-b14d-00363247a29b" srcName="emblem_shape_list">
+		<_field_string_id name="name^" />
+		<_field_short_block_index name="bitmap" targetGuid="7e4713eb-ba34-3147-a70a-97e446849752" targetName="emblem_bitmap_list" />
+		<_field_short_enum name="address mode x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="address mode y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_pad name="FGKKGKHL" length="2" />
+		<_field_struct name="transform" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+	</_field_block>
+	<_field_explanation name="Emblems"></_field_explanation>
+	<_field_block name="front emblems" max="256" srcguid="ab388e89-afa7-7d4a-9ea8-0f57753e62b1" srcName="emblem_front_list">
+		<_field_string_id name="name^" />
+		<_field_explanation name="Layer 0 (foreground)">Composed of two shapes</_field_explanation>
+		<_field_struct name="layer 0" />
+		<_field_explanation name="Shape 0">Multiplier allows you to control how these shapes are combined.
+For example, mult0= 1.0 and mult1= -1.0 causes shape 1 to be subtracted from shape 0.</_field_explanation>
+		<_field_short_block_index name="shape 0" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkll" length="2" />
+		<_field_real name="multiplier 0" />
+		<_field_struct name="transform 0" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+		<_field_explanation name="Shape 1"></_field_explanation>
+		<_field_short_block_index name="shape 1" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkllf" length="2" />
+		<_field_real name="multiplier 1" />
+		<_field_struct name="transform 1" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+		<_field_explanation name="Layer 1 (midground)">This layer is behind the foreground, and in front of the background</_field_explanation>
+		<_field_struct name="layer 1" />
+		<_field_explanation name="Shape 0">Multiplier allows you to control how these shapes are combined.
+For example, mult0= 1.0 and mult1= -1.0 causes shape 1 to be subtracted from shape 0.</_field_explanation>
+		<_field_short_block_index name="shape 0" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkll" length="2" />
+		<_field_real name="multiplier 0" />
+		<_field_struct name="transform 0" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+		<_field_explanation name="Shape 1"></_field_explanation>
+		<_field_short_block_index name="shape 1" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkllf" length="2" />
+		<_field_real name="multiplier 1" />
+		<_field_struct name="transform 1" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+		<_field_explanation name="Misc">Extra configuration</_field_explanation>
+		<_field_char_enum name="primary layer#layer that is considered &quot;primary&quot; and which will use the primary color">
+			<item Name="Layer 0 (foreground)" />
+			<item Name="Layer 1 (midground)" />
+		</_field_char_enum>
+		<_field_pad name="pad0" length="1" />
+		<_field_pad name="pad1" length="2" />
+	</_field_block>
+	<_field_block name="back emblems" max="256" srcguid="2de653fe-2d2e-7f4d-84df-f7681b3c9141" srcName="emblem_back_list">
+		<_field_string_id name="name^" />
+		<_field_explanation name="Layer 2 (background)"></_field_explanation>
+		<_field_struct name="layer 2" />
+		<_field_explanation name="Shape 0">Multiplier allows you to control how these shapes are combined.
+For example, mult0= 1.0 and mult1= -1.0 causes shape 1 to be subtracted from shape 0.</_field_explanation>
+		<_field_short_block_index name="shape 0" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkll" length="2" />
+		<_field_real name="multiplier 0" />
+		<_field_struct name="transform 0" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+		<_field_explanation name="Shape 1"></_field_explanation>
+		<_field_short_block_index name="shape 1" targetGuid="1e96044d-8e23-154d-b14d-00363247a29b" targetName="emblem_shape_list" />
+		<_field_pad name="fkkfkllf" length="2" />
+		<_field_real name="multiplier 1" />
+		<_field_struct name="transform 1" />
+		<_field_real_point_2d name="scale" />
+		<_field_real_point_2d name="shear" />
+		<_field_real name="rotation" />
+		<_field_real_point_2d name="offset" />
+		<_field_real name="expand contract#amount to expand (positive) or contract (negative) the shape outline" />
+		<_field_real name="blur#amount to blur the shape outline" />
+	</_field_block>
+	<_field_block name="runtime front!" max="256" srcguid="f960873b-e521-a14d-b61f-e7d6960c88fb" srcName="emblem_runtime_front_list">
+		<_field_string_id name="name0" />
+		<_field_short_integer name="bitmap0_index" />
+		<_field_short_enum name="bitmap0_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap0_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_integer name="bitmap1_index" />
+		<_field_short_enum name="bitmap1_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap1_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_real_quaternion name="bitmap_transform0" />
+		<_field_real_quaternion name="bitmap_transform1" />
+		<_field_real_quaternion name="bitmap_transform2" />
+		<_field_real_quaternion name="bitmap_transform3" />
+		<_field_real_quaternion name="bitmap_params0" />
+		<_field_real_quaternion name="bitmap_params1" />
+		<_field_string_id name="name1" />
+		<_field_short_integer name="bitmap2_index" />
+		<_field_short_enum name="bitmap2_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap2_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_integer name="bitmap3_index" />
+		<_field_short_enum name="bitmap3_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap3_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_real_quaternion name="bitmap_transform4" />
+		<_field_real_quaternion name="bitmap_transform5" />
+		<_field_real_quaternion name="bitmap_transform6" />
+		<_field_real_quaternion name="bitmap_transform7" />
+		<_field_real_quaternion name="bitmap_params2" />
+		<_field_real_quaternion name="bitmap_params3" />
+		<_field_char_enum name="primary layer">
+			<item Name="Layer 0 (foreground)" />
+			<item Name="Layer 1 (midground)" />
+		</_field_char_enum>
+		<_field_pad name="pad0" length="1" />
+		<_field_pad name="pad1" length="2" />
+	</_field_block>
+	<_field_block name="runtime back!" max="256" srcguid="7151feab-18f0-fa4f-8f2e-9e1c87e32991" srcName="emblem_runtime_back_list">
+		<_field_string_id name="name" />
+		<_field_short_integer name="bitmap0_index" />
+		<_field_short_enum name="bitmap0_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap0_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_integer name="bitmap1_index" />
+		<_field_short_enum name="bitmap1_address_x">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_short_enum name="bitmap1_address_y">
+			<item Name="wrap" />
+			<item Name="clamp" />
+			<item Name="mirror" />
+			<item Name="black border" />
+			<item Name="mirroronce" />
+			<item Name="mirroronce border" />
+		</_field_short_enum>
+		<_field_real_quaternion name="bitmap_transform0" />
+		<_field_real_quaternion name="bitmap_transform1" />
+		<_field_real_quaternion name="bitmap_transform2" />
+		<_field_real_quaternion name="bitmap_transform3" />
+		<_field_real_quaternion name="bitmap_params0" />
+		<_field_real_quaternion name="bitmap_params1" />
+	</_field_block>
+</plugin>

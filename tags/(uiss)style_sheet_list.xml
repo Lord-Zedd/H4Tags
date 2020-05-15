@@ -1,0 +1,140 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="style sheet languages" max="17" srcguid="80f1a0b9-9ac7-664d-aee6-1e303f3dcc4f" srcName="UserInterfaceStyleSheetLanguagesBlock">
+		<_field_long_enum name="language^">
+			<item Name="english" />
+			<item Name="japanese" />
+			<item Name="german" />
+			<item Name="french" />
+			<item Name="spanish" />
+			<item Name="mexican spanish" />
+			<item Name="italian" />
+			<item Name="korean" />
+			<item Name="chinese-traditional" />
+			<item Name="chinese-simplified" />
+			<item Name="portuguese" />
+			<item Name="polish" />
+			<item Name="russian" />
+			<item Name="danish" />
+			<item Name="finnish" />
+			<item Name="dutch" />
+			<item Name="norwegian" />
+		</_field_long_enum>
+		<_field_block name="font style sheets" max="64" srcguid="e62811b1-2168-3745-a8e9-32604e69f10f" srcName="UserInterfaceStyleSheetsFontBlock">
+			<_field_string_id name="style sheet name^" />
+			<_field_block name="font id" max="1" srcguid="a71be85b-0018-8046-a65e-b74c4e929fbd" srcName="UserInterfaceStyleSheetFontIdBlock">
+				<_field_long_enum name="font id">
+					<item Name="terminal font" />
+					<item Name="baksheesh_15_font" />
+					<item Name="baksheesh_16_font" />
+					<item Name="baksheesh_17_font" />
+					<item Name="baksheesh_18_font" />
+					<item Name="baksheesh_20_font" />
+					<item Name="baksheesh_21_font" />
+					<item Name="baksheesh_22_font" />
+					<item Name="baksheesh_28_font" />
+					<item Name="baksheesh_36_font" />
+					<item Name="baksheesh_38_font" />
+					<item Name="baksheesh_bold_16_font" />
+					<item Name="baksheesh_bold_20_font" />
+					<item Name="baksheesh_bold_21_font" />
+					<item Name="baksheesh_bold_23_font" />
+					<item Name="baksheesh_bold_24_font" />
+					<item Name="baksheesh_thin_36" />
+					<item Name="baksheesh_thin_42" />
+					<item Name="arame_regular_16" />
+					<item Name="arame_regular_18" />
+					<item Name="arame_regular_23" />
+					<item Name="arame_stencil_16" />
+					<item Name="arame_stencil_18" />
+					<item Name="arame_stencil_23" />
+					<item Name="arame_thin_14" />
+					<item Name="arame_thin_16" />
+					<item Name="arame_thin_18" />
+					<item Name="arame_thin_23" />
+					<item Name="arame_extra_01" />
+					<item Name="arame_extra_02" />
+					<item Name="arame_extra_03" />
+				</_field_long_enum>
+			</_field_block>
+			<_field_block name="text case" max="1" srcguid="49255fb0-bb82-5942-8f19-d0c0516f62b1" srcName="UserInterfaceStyleSheetTextCaseBlock">
+				<_field_long_enum name="text case">
+					<item Name="normal" />
+					<item Name="uppercase" />
+					<item Name="lowercase" />
+				</_field_long_enum>
+			</_field_block>
+			<_field_block name="justification" max="1" srcguid="66c18d7a-d665-a143-b073-6299edda2df0" srcName="UserInterfaceStyleSheetJustificationBlock">
+				<_field_long_enum name="justification">
+					<item Name="left" />
+					<item Name="right" />
+					<item Name="center" />
+				</_field_long_enum>
+			</_field_block>
+			<_field_block name="alignment" max="1" srcguid="01a8814b-cb5b-f244-85ce-1aff52b2b89c" srcName="UserInterfaceStyleSheetAlignmentBlock">
+				<_field_long_enum name="alignment">
+					<item Name="top" />
+					<item Name="bottom" />
+					<item Name="center" />
+				</_field_long_enum>
+			</_field_block>
+			<_field_block name="scale" max="1" srcguid="733af6c5-7ad2-b94a-98fa-924ced24c942" srcName="UserInterfaceStyleSheetScaleBlock">
+				<_field_real name="value" />
+			</_field_block>
+			<_field_block name="fixed height" max="1" srcguid="ac3cc984-cd83-cc4c-998c-57e3bf18bc0b" srcName="UserInterfaceStyleSheetFixedHeightBlock">
+				<_field_real name="height" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="visual style sheets" max="64" srcguid="b64f8747-7b2a-7c45-acfa-fe1abccc9980" srcName="UserInterfaceStyleSheetsVisualBlock">
+			<_field_string_id name="style sheet name^" />
+			<_field_block name="drop shadow style" max="1" srcguid="b2d30ed1-5d6c-224a-8546-7b00716a2fec" srcName="UserInterfaceStyleSheetDropShadowStyleBlock">
+				<_field_long_enum name="drop shadow style">
+					<item Name="none" />
+					<item Name="drop" />
+					<item Name="outline" />
+				</_field_long_enum>
+			</_field_block>
+			<_field_block name="text color" max="1" srcguid="b693af5f-f95a-a643-a765-5cbef33914e7" srcName="UserInterfaceStyleSheetColorBlock">
+				<_field_real_argb_color name="color" />
+			</_field_block>
+			<_field_block name="drop shadow color" max="1" srcguid="b693af5f-f95a-a643-a765-5cbef33914e7" srcName="UserInterfaceStyleSheetColorBlock">
+				<_field_real_argb_color name="color" />
+			</_field_block>
+			<_field_string_id name="gradient name" />
+			<_field_string_id name="dropshadow name" />
+			<_field_string_id name="outer glow name" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="gradients" max="32" srcguid="38dfc51a-a66e-1c4b-aa35-ed88791d8f42" srcName="UserInterfaceStyleSheetGradientBlock">
+		<_field_string_id name="gradient name^" />
+		<_field_real_argb_color name="color1" />
+		<_field_real_argb_color name="color2" />
+		<_field_real_argb_color name="color3" />
+		<_field_real_argb_color name="color4" />
+		<_field_real name="angle" />
+		<_field_real name="scale" />
+		<_field_real_vector_2d name="offset" />
+		<_field_long_integer name="number of colors" />
+		<_field_long_enum name="gradient shape">
+			<item Name="linear" />
+			<item Name="circular" />
+			<item Name="diamond" />
+			<item Name="square" />
+		</_field_long_enum>
+	</_field_block>
+	<_field_block name="dropshadows" max="32" srcguid="41e887da-af04-a340-a13a-c821a28e40c4" srcName="UserInterfaceStyleSheetDropshadowBlock">
+		<_field_string_id name="dropshadow name^" />
+		<_field_real_argb_color name="color" />
+		<_field_real name="angle" />
+		<_field_real name="distance" />
+		<_field_real name="spread" />
+		<_field_real name="size" />
+	</_field_block>
+	<_field_block name="outer glows" max="32" srcguid="67c437c3-0e11-4643-8c3a-ecd19d9d6605" srcName="UserInterfaceStyleSheetOuterGlowBlock">
+		<_field_string_id name="outer glow name^" />
+		<_field_real_argb_color name="color" />
+		<_field_real name="spread" />
+		<_field_real name="size" />
+	</_field_block>
+</plugin>

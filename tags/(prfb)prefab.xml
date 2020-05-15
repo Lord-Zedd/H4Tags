@@ -1,0 +1,5 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="bsp reference" validtags="sbsp" />
+</plugin>

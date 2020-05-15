@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_string name="name*" />
+	<_field_data name="source*" />
+	<_field_long_flags name="flags">
+		<item Name="generated at runtime" />
+		<item Name="ai fragments" />
+		<item Name="ai performances" />
+	</_field_long_flags>
+</plugin>

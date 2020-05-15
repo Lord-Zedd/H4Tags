@@ -1,0 +1,21 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="global dialogue info" validtags="adlg" />
+	<_field_long_flags name="flags">
+		<item Name="female" />
+	</_field_long_flags>
+	<_field_block name="vocalizations" max="500" srcguid="80bc5167-51af-4843-886a-f0f068db8f16" srcName="sound_references_block">
+		<_field_string_id name="vocalization^" />
+		<_field_block name="stimuli" max="6" srcguid="7cb8a88e-3ce7-e84e-8c95-d4feb6ef9ec6" srcName="vocalization_stimuli_block_definition">
+			<_field_word_flags name="flags">
+				<item Name="additive#this stimulus should add to the default vocalization instead of replacing it" />
+				<item Name="don't suppress#this stimulus cannot be suppressed" />
+			</_field_word_flags>
+			<_field_pad name="AN" length="2" />
+			<_field_string_id name="stimulus^" />
+			<_field_tag_reference name="sound" validtags="snd!" />
+		</_field_block>
+	</_field_block>
+	<_field_string_id name="mission dialogue designator#3-letter mission dialogue designator name" />
+</plugin>

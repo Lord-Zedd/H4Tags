@@ -1,0 +1,88 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="loadouts" max="128" srcguid="6c240c5c-6732-aa4b-9c95-c60d7f5607d6" srcName="loadout_definition_block">
+		<_field_string_id name="loadout name^" />
+		<_field_string_id name="app1#name of an element from custom_app_globals/custom_apps.  Can be left empty." />
+		<_field_string_id name="app2#see above" />
+		<_field_string_id name="initial primary weapon#name of an element from global starting weapons block. Other values:
+(empty) - unchanged
+unchanged - unchanged
+default - take from starting profiles in scenario
+none - no weapon
+random - use random item from valid starting weapons" />
+		<_field_string_id name="initial primary weapon variant name" />
+		<_field_string_id name="initial secondary weapon#see above" />
+		<_field_string_id name="initial secondary weapon variant name" />
+		<_field_string_id name="initial equipment#see above" />
+		<_field_char_enum name="initial grenade count">
+			<item Name="unchanged" />
+			<item Name="map_default" />
+			<item Name="0" />
+			<item Name="1_frag" />
+			<item Name="2_frag" />
+			<item Name="1_plasma" />
+			<item Name="2_plasma" />
+			<item Name="1_type2" />
+			<item Name="2_type2" />
+			<item Name="1_type3" />
+			<item Name="2_type3" />
+			<item Name="1_type4" />
+			<item Name="2_type4" />
+			<item Name="1_type5" />
+			<item Name="2_type5" />
+			<item Name="1_type6" />
+			<item Name="2_type6" />
+			<item Name="1_type7" />
+			<item Name="2_type7" />
+		</_field_char_enum>
+		<_field_pad name="SDJCESLRN" length="3" />
+	</_field_block>
+	<_field_block name="loadout palettes" max="64" srcguid="f1f13bea-791e-794e-a7a6-cff012b16524" srcName="loadout_palette_definition_block">
+		<_field_string_id name="palette name" />
+		<_field_block name="loadout choices" max="5" srcguid="af945c9f-6ada-2d4e-96f5-5a0d2ed3bcd3" srcName="loadout_index_block">
+			<_field_short_block_index name="loadout^" targetGuid="6c240c5c-6732-aa4b-9c95-c60d7f5607d6" targetName="loadout_definition_block" />
+			<_field_pad name="padding0" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="loadout names" max="128" srcguid="088739ec-8826-124e-8afc-21cdfcc7ef66" srcName="loadout_name_block">
+		<_field_string_id name="display name^" />
+	</_field_block>
+	<_field_block name="default custom loadouts" max="5" srcguid="6c240c5c-6732-aa4b-9c95-c60d7f5607d6" srcName="custom_loadout_defaults_block">
+		<_field_string_id name="loadout name^" />
+		<_field_string_id name="app1#name of an element from custom_app_globals/custom_apps.  Can be left empty." />
+		<_field_string_id name="app2#see above" />
+		<_field_string_id name="initial primary weapon#name of an element from global starting weapons block. Other values:
+(empty) - unchanged
+unchanged - unchanged
+default - take from starting profiles in scenario
+none - no weapon
+random - use random item from valid starting weapons" />
+		<_field_string_id name="initial primary weapon variant name" />
+		<_field_string_id name="initial secondary weapon#see above" />
+		<_field_string_id name="initial secondary weapon variant name" />
+		<_field_string_id name="initial equipment#see above" />
+		<_field_char_enum name="initial grenade count">
+			<item Name="unchanged" />
+			<item Name="map_default" />
+			<item Name="0" />
+			<item Name="1_frag" />
+			<item Name="2_frag" />
+			<item Name="1_plasma" />
+			<item Name="2_plasma" />
+			<item Name="1_type2" />
+			<item Name="2_type2" />
+			<item Name="1_type3" />
+			<item Name="2_type3" />
+			<item Name="1_type4" />
+			<item Name="2_type4" />
+			<item Name="1_type5" />
+			<item Name="2_type5" />
+			<item Name="1_type6" />
+			<item Name="2_type6" />
+			<item Name="1_type7" />
+			<item Name="2_type7" />
+		</_field_char_enum>
+		<_field_pad name="SDJCESLRN" length="3" />
+	</_field_block>
+</plugin>

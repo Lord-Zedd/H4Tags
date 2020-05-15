@@ -1,0 +1,96 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="Controller Input Events" />
+	<_field_tag_reference name="tab up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="tab left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="tab right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="tab down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt stick up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt stick left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt stick right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt stick down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt tab up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt tab left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt tab right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alt tab down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="A button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="B button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="X button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="Y button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left trigger pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right trigger pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad up pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad left pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad right pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad down pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="start button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="back button pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left bumper pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right bumper pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left thumbstick pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right thumbstick pressed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick pressed left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick pressed right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick pressed up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick pressed down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick pressed left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick pressed right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick pressed up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick pressed down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="A button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="B button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="X button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="Y button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left trigger released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right trigger released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad up released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad left released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad right released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="D-pad down released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="start button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="back button released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left bumper released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right bumper released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left thumbstick released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right thumbstick released" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick released left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick released right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick released up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="left stick released down" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick released left" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick released right" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick released up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="right stick released down" validtags="scmb, sndo, snd!" />
+	<_field_custom name="General" />
+	<_field_tag_reference name="error" validtags="scmb, sndo, snd!" />
+	<_field_custom name="Screen" />
+	<_field_tag_reference name="screen transition in" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="screen transition out" validtags="scmb, sndo, snd!" />
+	<_field_custom name="Timers" />
+	<_field_tag_reference name="game start countdown timer first tick" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="game start countdown timer tick" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="game start countdown timer final tick" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alternate countdown timer first tick" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alternate countdown timer tick" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="alternate countdown timer final tick" validtags="scmb, sndo, snd!" />
+	<_field_custom name="Misc" />
+	<_field_tag_reference name="matchmaking reveal" validtags="scmb, sndo, snd!" />
+	<_field_custom name="Exit Experience" />
+	<_field_tag_reference name="game completion" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="winning bonus" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="hopper bonus" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="boost bonus" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="fasttrack bonus" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="totals" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="subrank up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="rank up" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="completed" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="counter loop" validtags="lsnd" />
+	<_field_tag_reference name="score bonus" validtags="scmb, sndo, snd!" />
+	<_field_tag_reference name="rewards" validtags="scmb, sndo, snd!" />
+</plugin>

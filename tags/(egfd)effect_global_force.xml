@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_byte_flags name="flags">
+		<item Name="is infinitely long cylinder" />
+	</_field_byte_flags>
+	<_field_pad name="grog" length="3" />
+	<_field_real name="force strength#positive pushes out, negative pulls in" />
+	<_field_real name="sphere falloff begin:wus#doesn't work on cylinders, due to shader constant constraints" />
+	<_field_real name="sphere falloff end:wus#doesn't work on cylinders, due to shader constant constraints" />
+</plugin>

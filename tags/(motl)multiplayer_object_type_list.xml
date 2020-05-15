@@ -1,0 +1,72 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="MEGALO">After changing this tag you will need to run the tool command multiplayer-generate-global-object-type-list (once) and rebuild the .mapinfo file for each multiplayer scenario in order to use the new objects in megalo</_field_explanation>
+	<_field_block name="object types" max="2048" srcguid="ba827e81-b5fc-3e4e-81a6-43459eda7b38" srcName="multiplayer_object_type_block">
+		<_field_explanation name="WARNING">This block is readonly because adding, removing, reordering, or renaming elements after we ship a map pack will completely break the game.  And I will punch you.  Hard.  In the face.</_field_explanation>
+		<_field_string_id name="name^" />
+		<_field_tag_reference name="object" validtags="obje" />
+	</_field_block>
+	<_field_block name="weapons" max="64" srcguid="5e2f9b92-fd14-2040-87a0-c0be54a4f353" srcName="multiplayer_weapon_collection_block">
+		<_field_long_block_index name="object type^" targetGuid="ba827e81-b5fc-3e4e-81a6-43459eda7b38" targetName="multiplayer_object_type_block" />
+		<_field_string_id name="object description" />
+		<_field_string_id name="object header text" />
+		<_field_string_id name="object help text" />
+		<_field_real name="random weight" />
+		<_field_long_integer name="loadout menu sprite frame" />
+		<_field_string_id name="icon string id" />
+	</_field_block>
+	<_field_block name="vehicles" max="64" srcguid="5e2f9b92-fd14-2040-87a0-c0be54a4f353" srcName="multiplayer_vehicle_collection_block">
+		<_field_long_block_index name="object type^" targetGuid="ba827e81-b5fc-3e4e-81a6-43459eda7b38" targetName="multiplayer_object_type_block" />
+		<_field_string_id name="object description" />
+		<_field_string_id name="object header text" />
+		<_field_string_id name="object help text" />
+		<_field_real name="random weight" />
+		<_field_long_integer name="loadout menu sprite frame" />
+		<_field_string_id name="icon string id" />
+	</_field_block>
+	<_field_block name="grenades" max="8" srcguid="5e2f9b92-fd14-2040-87a0-c0be54a4f353" srcName="multiplayer_grenade_collection_block">
+		<_field_long_block_index name="object type^" targetGuid="ba827e81-b5fc-3e4e-81a6-43459eda7b38" targetName="multiplayer_object_type_block" />
+		<_field_string_id name="object description" />
+		<_field_string_id name="object header text" />
+		<_field_string_id name="object help text" />
+		<_field_real name="random weight" />
+		<_field_long_integer name="loadout menu sprite frame" />
+		<_field_string_id name="icon string id" />
+	</_field_block>
+	<_field_block name="equipment" max="32" srcguid="5e2f9b92-fd14-2040-87a0-c0be54a4f353" srcName="multiplayer_equipment_collection_block">
+		<_field_long_block_index name="object type^" targetGuid="ba827e81-b5fc-3e4e-81a6-43459eda7b38" targetName="multiplayer_object_type_block" />
+		<_field_string_id name="object description" />
+		<_field_string_id name="object header text" />
+		<_field_string_id name="object help text" />
+		<_field_real name="random weight" />
+		<_field_long_integer name="loadout menu sprite frame" />
+		<_field_string_id name="icon string id" />
+	</_field_block>
+	<_field_explanation name="REMAPPING TABLES">Note - if a remap table has a single element whose 'from' is NONE, then every object will be remapped to the 'to' object</_field_explanation>
+	<_field_block name="weapon remapping" max="32" srcguid="309f3d5d-0090-b34c-96c2-0653745d3f42" srcName="multiplayer_weapon_remap_table_block">
+		<_field_string_id name="name^" />
+		<_field_block name="remap table" max="32" srcguid="bc7e7e4c-9dbf-5743-8bac-b0763dfc779a" srcName="multiplayer_weapon_remap_table_entry_block">
+			<_field_custom_long_block_index name="from object" targetName="multiplayer_weapon_collection_search_definition" />
+			<_field_custom_long_block_index name="to object" targetName="multiplayer_weapon_collection_search_definition" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="vehicle remapping" max="32" srcguid="afa7c3fc-c257-dd46-85d8-5e798fa0c8a0" srcName="multiplayer_vehicle_remap_table_block">
+		<_field_string_id name="name^" />
+		<_field_block name="remap table" max="32" srcguid="65b390fd-8080-2f4e-b147-502f907d75db" srcName="multiplayer_vehicle_remap_table_entry_block">
+			<_field_custom_long_block_index name="from object" targetName="multiplayer_vehicle_collection_search_definition" />
+			<_field_custom_long_block_index name="to object" targetName="multiplayer_vehicle_collection_search_definition" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="equipment remapping" max="32" srcguid="65136081-3720-a745-851c-3490e5f4ebea" srcName="multiplayer_equipment_remap_table_block">
+		<_field_string_id name="name^" />
+		<_field_block name="remap table" max="32" srcguid="d8242328-1ad0-ab40-b324-58cc06e2fb06" srcName="multiplayer_equipment_remap_table_entry_block">
+			<_field_custom_long_block_index name="from object" targetName="multiplayer_equipment_collection_search_definition" />
+			<_field_custom_long_block_index name="to object" targetName="multiplayer_equipment_collection_search_definition" />
+		</_field_block>
+	</_field_block>
+	<_field_long_integer name="random weapon menu sprite frame" />
+	<_field_long_integer name="random equipment menu sprite frame" />
+	<_field_string_id name="random weapon icon string id" />
+	<_field_string_id name="random equipment icon string id" />
+</plugin>

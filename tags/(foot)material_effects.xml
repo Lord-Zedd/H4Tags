@@ -1,0 +1,47 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="effects" max="24" srcguid="672d03b0-1d82-b841-ae3f-37ac6cc0fd16" srcName="material_effect_block_v2">
+		<_field_block name="old materials (DO NOT USE)!" max="33" srcguid="7da2364f-fd89-9845-8e5e-3ad5f3f90ada" srcName="old_material_effect_material_block">
+			<_field_tag_reference name="effect" validtags="effe" />
+			<_field_tag_reference name="sound" validtags="scmb, sndo, lsnd, snd!" />
+			<_field_string_id name="material name^" />
+			<_field_short_integer name="runtime material index!" />
+			<_field_pad name="KTRVUIKB" length="2" />
+			<_field_char_enum name="sweetener mode">
+				<item Name="sweetener default" />
+				<item Name="sweetener enabled" />
+				<item Name="sweetener disabled" />
+			</_field_char_enum>
+			<_field_pad name="QNGPTA" length="3" />
+			<_field_useless_pad name="" />
+		</_field_block>
+		<_field_block name="sounds" max="500" srcguid="6567ce8f-5c94-5c43-9241-de33dc8ed887" srcName="material_effect_material_block">
+			<_field_tag_reference name="tag (effect or sound)" validtags="sndo, lsnd, snd!, effe" />
+			<_field_tag_reference name="secondary tag (effect or sound)" validtags="sndo, lsnd, snd!, effe" />
+			<_field_string_id name="material name^" />
+			<_field_short_integer name="runtime material index!" />
+			<_field_char_enum name="sweetener mode">
+				<item Name="sweetener default" />
+				<item Name="sweetener enabled" />
+				<item Name="sweetener disabled" />
+			</_field_char_enum>
+			<_field_pad name="L" length="1" />
+			<_field_real name="max_visibility_distance#manual override for the max distance this effect can be from the camera and still be rendered (not valid for sounds)." />
+		</_field_block>
+		<_field_block name="effects" max="500" srcguid="6567ce8f-5c94-5c43-9241-de33dc8ed887" srcName="material_effect_material_block">
+			<_field_tag_reference name="tag (effect or sound)" validtags="sndo, lsnd, snd!, effe" />
+			<_field_tag_reference name="secondary tag (effect or sound)" validtags="sndo, lsnd, snd!, effe" />
+			<_field_string_id name="material name^" />
+			<_field_short_integer name="runtime material index!" />
+			<_field_char_enum name="sweetener mode">
+				<item Name="sweetener default" />
+				<item Name="sweetener enabled" />
+				<item Name="sweetener disabled" />
+			</_field_char_enum>
+			<_field_pad name="L" length="1" />
+			<_field_real name="max_visibility_distance#manual override for the max distance this effect can be from the camera and still be rendered (not valid for sounds)." />
+		</_field_block>
+	</_field_block>
+	<_field_useless_pad name="" />
+</plugin>

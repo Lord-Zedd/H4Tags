@@ -1,0 +1,406 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="bsp pathfinding data" max="32" srcguid="3cab35d9-ac86-1642-bcb7-36bb9ae0727c" srcName="pathfinding_data_block">
+		<_field_long_integer name="runtimeNavMesh*~!" />
+		<_field_long_integer name="runtimeNavGraph*~!" />
+		<_field_long_integer name="runtimeNavMediator*~!" />
+		<_field_pad name="pads" length="4" />
+		<_field_data name="navGraphData*~" />
+		<_field_data name="navMediatorData*~" />
+		<_field_block name="faceUserData*~" max="262144" srcguid="3c6ef940-eaa1-4246-9824-e997515857cb" srcName="FaceUserDataBlock">
+			<_field_short_integer name="m_flags*~" />
+			<_field_pad name="pad" length="2" />
+			<_field_real name="currentMinPathDistance!*~" />
+			<_field_real name="currentMinTargetApproachDistance!*~" />
+		</_field_block>
+		<_field_long_integer name="structure checksum*~" />
+		<_field_pad name="pads2" length="8" />
+	</_field_block>
+	<_field_block name="mobileNavMeshes*~" max="128" srcguid="30c71794-6426-5941-9ceb-6cb28574a920" srcName="MobileNavMeshBlock">
+		<_field_long_integer name="runtimeNavMesh*~!" />
+		<_field_long_integer name="runtimeNavGraph*~!" />
+		<_field_long_integer name="runtimeNavMediator*~!" />
+		<_field_pad name="pads2" length="4" />
+		<_field_data name="navGraphData*~" />
+		<_field_data name="navMediatorData*~" />
+		<_field_block name="faceUserData*~" max="262144" srcguid="3c6ef940-eaa1-4246-9824-e997515857cb" srcName="FaceUserDataBlock">
+			<_field_short_integer name="m_flags*~" />
+			<_field_pad name="pad" length="2" />
+			<_field_real name="currentMinPathDistance!*~" />
+			<_field_real name="currentMinTargetApproachDistance!*~" />
+		</_field_block>
+		<_field_struct name="object id" />
+		<_field_long_integer name="unique id*" />
+		<_field_short_block_index name="origin bsp index*" targetGuid="8b8ccce6-6b3b-104e-897c-b89e1fa22862" targetName="scenario_structure_bsp_reference_block" />
+		<_field_char_enum name="type*">
+			<item Name="biped" />
+			<item Name="vehicle" />
+			<item Name="weapon" />
+			<item Name="equipment" />
+			<item Name="terminal" />
+			<item Name="projectile" />
+			<item Name="scenery" />
+			<item Name="machine" />
+			<item Name="control" />
+			<item Name="dispenser" />
+			<item Name="sound_scenery" />
+			<item Name="crate" />
+			<item Name="creature" />
+			<item Name="giant" />
+			<item Name="effect_scenery" />
+			<item Name="spawner" />
+		</_field_char_enum>
+		<_field_char_enum name="source*">
+			<item Name="structure" />
+			<item Name="editor" />
+			<item Name="dynamic" />
+			<item Name="legacy" />
+			<item Name="sky" />
+			<item Name="parent" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags">
+			<item Name="always loaded" />
+		</_field_byte_flags>
+		<_field_pad name="pads" length="3" />
+	</_field_block>
+	<_field_block name="navVolumes*~" max="256" srcguid="d51d7c96-6d6b-3443-884f-288fd1aebbc8" srcName="NavVolumeBlock">
+		<_field_short_integer name="zoneIndex*~" />
+		<_field_short_integer name="areaIndex*~" />
+		<_field_long_integer name="runtimeNavVolume*~!" />
+		<_field_long_integer name="runtimeNavMediator*~!" />
+		<_field_data name="navMediatorData*~" />
+	</_field_block>
+	<_field_block name="navClimbs*~" max="256" srcguid="03e2345c-5df7-214f-b939-2d664b604601" srcName="NavClimbBlock">
+		<_field_long_integer name="runtimeNavMesh*~!" />
+		<_field_long_integer name="runtimeNavGraph*~!" />
+		<_field_long_integer name="runtimeNavMediator*~!" />
+		<_field_pad name="pads" length="4" />
+		<_field_data name="navGraphData*~" />
+		<_field_data name="navMediatorData*~" />
+		<_field_block name="faceUserData*~" max="262144" srcguid="3c6ef940-eaa1-4246-9824-e997515857cb" srcName="FaceUserDataBlock">
+			<_field_short_integer name="m_flags*~" />
+			<_field_pad name="pad" length="2" />
+			<_field_real name="currentMinPathDistance!*~" />
+			<_field_real name="currentMinTargetApproachDistance!*~" />
+		</_field_block>
+		<_field_short_integer name="zoneIndex*~" />
+		<_field_short_integer name="areaIndex*~" />
+		<_field_pad name="pads2" length="8" />
+	</_field_block>
+	<_field_block name="user edges*~" max="4096" srcguid="0d3fbd4d-d282-cd42-a695-a5ce2c7c98db" srcName="user_edge_block">
+		<_field_real_vector_3d name="m_x*~" />
+		<_field_real name="havok w m_x*~!" />
+		<_field_real_vector_3d name="m_y*~" />
+		<_field_real name="havok w m_y*~!" />
+		<_field_real_vector_3d name="m_z*~" />
+		<_field_real name="havok w m_z*~!" />
+		<_field_long_integer name="m_meshUidA*~" />
+		<_field_long_integer name="m_meshUidB*~" />
+		<_field_long_integer name="m_faceA*~" />
+		<_field_long_integer name="m_faceB*~" />
+		<_field_long_integer name="m_userDataA*~" />
+		<_field_long_integer name="m_userDataB*~" />
+		<_field_short_integer name="m_costAtoB*~" />
+		<_field_short_integer name="m_costBtoA*~" />
+		<_field_char_integer name="m_direction*~" />
+		<_field_pad name="padding" length="3" />
+	</_field_block>
+	<_field_block name="hints" max="1" srcguid="ed7e858e-a1ec-744c-b042-e3d8772b85fb" srcName="user_hint_block">
+		<_field_block name="line segment geometry" max="1000" srcguid="9ae292a3-11ee-f945-93fd-f5520799be4b" srcName="user_hint_line_segment_block">
+			<_field_long_flags name="Flags">
+				<item Name="bidirectional" />
+				<item Name="closed" />
+			</_field_long_flags>
+			<_field_real_point_3d name="Point 0" />
+			<_field_custom_long_block_index name="packedKeyOffaceref0~!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref0~!" targetName="void" />
+			<_field_real_point_3d name="Point 1" />
+			<_field_custom_long_block_index name="packedKeyOffaceref1~!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref1~!" targetName="void" />
+		</_field_block>
+		<_field_block name="parallelogram geometry" max="1000" srcguid="7e2c70de-546c-f74f-92c3-136131033915" srcName="user_hint_parallelogram_block">
+			<_field_long_flags name="Flags">
+				<item Name="bidirectional" />
+				<item Name="closed" />
+			</_field_long_flags>
+			<_field_real_point_3d name="Point 0" />
+			<_field_custom_long_block_index name="packedKeyOffaceref0!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref0!" targetName="void" />
+			<_field_real_point_3d name="Point 1" />
+			<_field_custom_long_block_index name="packedKeyOffaceref1!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref1!" targetName="void" />
+			<_field_real_point_3d name="Point 2" />
+			<_field_custom_long_block_index name="packedKeyOffaceref2!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref2!" targetName="void" />
+			<_field_real_point_3d name="Point 3" />
+			<_field_custom_long_block_index name="packedKeyOffaceref3!" targetName="void" />
+			<_field_custom_long_block_index name="navMeshUIDOffaceref3!" targetName="void" />
+			<_field_word_flags name="invalid_points*">
+				<item Name="1" />
+				<item Name="2" />
+				<item Name="3" />
+				<item Name="4" />
+			</_field_word_flags>
+			<_field_pad name="KJHIUF" length="2" />
+		</_field_block>
+		<_field_block name="jump hints" max="1000" srcguid="77c3af5f-b1a4-ac46-a6a3-74c60dafee5a" srcName="user_hint_jump_block">
+			<_field_short_enum name="hint type">
+				<item Name="jump link" />
+				<item Name="climb link" />
+				<item Name="vault link" />
+				<item Name="mount link" />
+				<item Name="hoist link" />
+				<item Name="wall jump link" />
+				<item Name="takeoff link" />
+				<item Name="jump mandatory approach" />
+			</_field_short_enum>
+			<_field_short_block_index name="Squad group filter" targetGuid="164b4c92-a087-624e-9a76-7f703116a14f" targetName="squad_groups_block" />
+			<_field_block name="hint vertices*~" max="1024" srcguid="076dbed1-8fa7-2243-9931-36ec1c79f419" srcName="hint_vertex_block">
+				<_field_real_point_3d name="point*" />
+			</_field_block>
+			<_field_long_integer name="hint data 0*" />
+			<_field_short_integer name="hint data 1*" />
+			<_field_byte_integer name="hint data 2*" />
+			<_field_byte_integer name="pad1*" />
+			<_field_word_flags name="Flags">
+				<item Name="bidirectional" />
+				<item Name="closed" />
+			</_field_word_flags>
+			<_field_short_block_index name="geometry index*" targetGuid="7e2c70de-546c-f74f-92c3-136131033915" targetName="user_hint_parallelogram_block" />
+			<_field_short_enum name="force jump height">
+				<item Name="NONE" />
+				<item Name="down" />
+				<item Name="step" />
+				<item Name="crouch" />
+				<item Name="stand" />
+				<item Name="storey" />
+				<item Name="tower" />
+				<item Name="infinite" />
+			</_field_short_enum>
+			<_field_word_flags name="control flags">
+				<item Name="magic lift" />
+				<item Name="vehicle only" />
+				<item Name="railing" />
+				<item Name="vault" />
+				<item Name="down" />
+				<item Name="phase" />
+				<item Name="stop autodown" />
+			</_field_word_flags>
+		</_field_block>
+		<_field_block name="climb hints" max="200" srcguid="6bcd676a-6d70-614b-a2ac-7d7f935b4514" srcName="user_hint_climb_block">
+			<_field_short_enum name="hint type">
+				<item Name="jump link" />
+				<item Name="climb link" />
+				<item Name="vault link" />
+				<item Name="mount link" />
+				<item Name="hoist link" />
+				<item Name="wall jump link" />
+				<item Name="takeoff link" />
+				<item Name="jump mandatory approach" />
+			</_field_short_enum>
+			<_field_short_block_index name="Squad group filter" targetGuid="164b4c92-a087-624e-9a76-7f703116a14f" targetName="squad_groups_block" />
+			<_field_block name="hint vertices*~" max="1024" srcguid="076dbed1-8fa7-2243-9931-36ec1c79f419" srcName="hint_vertex_block">
+				<_field_real_point_3d name="point*" />
+			</_field_block>
+			<_field_long_integer name="hint data 0*" />
+			<_field_short_integer name="hint data 1*" />
+			<_field_byte_integer name="hint data 2*" />
+			<_field_byte_integer name="pad1*" />
+			<_field_word_flags name="Flags">
+				<item Name="bidirectional" />
+				<item Name="closed" />
+			</_field_word_flags>
+			<_field_short_block_index name="geometry index*" targetGuid="9ae292a3-11ee-f945-93fd-f5520799be4b" targetName="user_hint_line_segment_block" />
+			<_field_short_enum name="force hoist height">
+				<item Name="none" />
+				<item Name="step" />
+				<item Name="crouch" />
+				<item Name="stand" />
+			</_field_short_enum>
+			<_field_pad name="post-forced-hoist-height" length="2" />
+		</_field_block>
+		<_field_block name="well hints" max="1000" srcguid="090e5eb8-8677-dd4a-8518-bc914109dac4" srcName="user_hint_well_block">
+			<_field_long_flags name="flags">
+				<item Name="bidirectional" />
+			</_field_long_flags>
+			<_field_block name="points" max="1000" srcguid="2f1b1fec-283f-044d-8be1-74d190862606" srcName="user_hint_well_point_block">
+				<_field_short_enum name="type">
+					<item Name="jump" />
+					<item Name="invalid" />
+					<item Name="hoist" />
+				</_field_short_enum>
+				<_field_pad name="CNXLP" length="2" />
+				<_field_real_point_3d name="point" />
+				<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+				<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+				<_field_real_euler_angles_2d name="normal" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="flight hints" max="256" srcguid="4ee881b5-ff09-9746-b585-94a3dd4ddf06" srcName="user_hint_flight_block">
+			<_field_block name="points" max="10" srcguid="2444a62a-f8ba-3846-89bf-b4aa35a278b4" srcName="user_hint_flight_point_block">
+				<_field_real_vector_3d name="point" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="volume avoidance hints" max="512" srcguid="8e5a2429-490a-c94e-bd64-b83d2522cb5d" srcName="user_hint_volume_avoidance">
+			<_field_long_enum name="type">
+				<item Name="sphere" />
+				<item Name="pill" />
+			</_field_long_enum>
+			<_field_real_point_3d name="origin{center}" />
+			<_field_real name="radius" />
+			<_field_real_vector_3d name="facing vector#for pills" />
+			<_field_real name="height#for pills" />
+			<_field_short_block_index name="bsp" targetGuid="8b8ccce6-6b3b-104e-897c-b89e1fa22862" targetName="scenario_structure_bsp_reference_block" />
+			<_field_short_integer name="spline_count*!" />
+			<_field_short_integer name="zone_index*!" />
+			<_field_short_integer name="area_index*!" />
+		</_field_block>
+		<_field_block name="spline hints" max="256" srcguid="83bb9541-8e5f-8a42-85e9-00ea15fc8c7e" srcName="user_hint_spline_block">
+			<_field_string_id name="name" />
+			<_field_real name="radius:wus" />
+			<_field_real name="time between points:sec" />
+			<_field_block name="control points" max="32" srcguid="6b894ce4-dd73-164d-a510-b2d573ac4d5d" srcName="user_hint_spline_control_point_block">
+				<_field_word_flags name="flags">
+					<item Name="no attach-detach" />
+				</_field_word_flags>
+				<_field_pad name="post-flags-pad" length="2" />
+				<_field_real_point_3d name="point" />
+				<_field_real_vector_3d name="tangent" />
+				<_field_real name="segment arc length*!" />
+			</_field_block>
+			<_field_short_block_index name="bsp" targetGuid="8b8ccce6-6b3b-104e-897c-b89e1fa22862" targetName="scenario_structure_bsp_reference_block" />
+			<_field_pad name="post-bsp-pad" length="2" />
+			<_field_block name="volume intersect points*!" max="2" srcguid="5de913e1-b2be-4948-9ccc-eca48ee06828" srcName="user_hint_spline_intersect_point_block">
+				<_field_short_block_index name="volume index" targetGuid="8e5a2429-490a-c94e-bd64-b83d2522cb5d" targetName="user_hint_volume_avoidance" />
+				<_field_pad name="post-volume-index-pad" length="2" />
+				<_field_real_point_3d name="point" />
+				<_field_real_vector_3d name="tangent" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="cookie cutters" max="512" srcguid="1ef1c751-06a5-3845-aaaf-ea9c8154a396" srcName="user_hint_cookie_cutter_block">
+			<_field_long_integer name="hkaiVolume vtable*~!" />
+			<_field_short_integer name="size*~!" />
+			<_field_short_integer name="count*~!" />
+			<_field_block name="points" max="32" srcguid="5b0c1733-6012-ff41-8ebb-d6a44c98464e" srcName="user_hint_sector_point_block">
+				<_field_real_point_3d name="point" />
+				<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+				<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+				<_field_real_euler_angles_2d name="normal" />
+			</_field_block>
+			<_field_block name="pointsObjectIds" max="32" srcguid="2182759b-b24a-c243-9a3b-5fe5a09a93e0" srcName="hint_object_id_block">
+				<_field_struct name="object ID*!" />
+				<_field_long_integer name="unique id*" />
+				<_field_short_block_index name="origin bsp index*" targetGuid="8b8ccce6-6b3b-104e-897c-b89e1fa22862" targetName="scenario_structure_bsp_reference_block" />
+				<_field_char_enum name="type*">
+					<item Name="biped" />
+					<item Name="vehicle" />
+					<item Name="weapon" />
+					<item Name="equipment" />
+					<item Name="terminal" />
+					<item Name="projectile" />
+					<item Name="scenery" />
+					<item Name="machine" />
+					<item Name="control" />
+					<item Name="dispenser" />
+					<item Name="sound_scenery" />
+					<item Name="crate" />
+					<item Name="creature" />
+					<item Name="giant" />
+					<item Name="effect_scenery" />
+					<item Name="spawner" />
+				</_field_char_enum>
+				<_field_char_enum name="source*">
+					<item Name="structure" />
+					<item Name="editor" />
+					<item Name="dynamic" />
+					<item Name="legacy" />
+					<item Name="sky" />
+					<item Name="parent" />
+				</_field_char_enum>
+			</_field_block>
+			<_field_real name="z height" />
+			<_field_real name="z sink" />
+			<_field_short_enum name="type">
+				<item Name="carve out" />
+				<item Name="preserve" />
+				<item Name="carve air volume" />
+			</_field_short_enum>
+			<_field_short_integer name="pad*!" />
+			<_field_long_integer name="runtimeObjectTransformOverrideIndex*~!" />
+			<_field_char_integer name="invalid*!" />
+			<_field_char_integer name="pad2*!" />
+			<_field_char_integer name="pad3*!" />
+			<_field_char_integer name="pad4*!" />
+		</_field_block>
+		<_field_block name="navmesh areas" max="512" srcguid="a6e6c660-9cec-6b44-ac02-f347acfe022e" srcName="user_hint_navmesh_area_block">
+			<_field_long_integer name="hkaiVolume vtable*~!" />
+			<_field_short_integer name="size*~!" />
+			<_field_short_integer name="count*~!" />
+			<_field_block name="points" max="32" srcguid="5b0c1733-6012-ff41-8ebb-d6a44c98464e" srcName="user_hint_sector_point_block">
+				<_field_real_point_3d name="point" />
+				<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+				<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+				<_field_real_euler_angles_2d name="normal" />
+			</_field_block>
+			<_field_real name="z height" />
+			<_field_real name="z sink" />
+			<_field_real name="step height" />
+			<_field_long_enum name="type">
+				<item Name="Navmesh Low Res" />
+				<item Name="Navmesh 2" />
+				<item Name="Navmesh 3" />
+				<item Name="Navmesh 4" />
+				<item Name="Navmesh 5" />
+				<item Name="Navmesh 6" />
+				<item Name="Navmesh 7" />
+				<item Name="Navmesh 8" />
+				<item Name="Navmesh High Res" />
+				<item Name="CUSTOM (Recommended)" />
+			</_field_long_enum>
+			<_field_real name="isValid*~!" />
+			<_field_explanation name="Max CONVEX Border Simplify Area">This controls the amount of simplification applied to internal segments and convex boundary segments</_field_explanation>
+			<_field_real name="Max CONVEX Border Simplify Area" />
+			<_field_explanation name="Max Border Distance Error">When simplifying internal segments and convex boundary segments, this controls the maximum projected distance by which the simplified segment can deviate from the unsimplified segment</_field_explanation>
+			<_field_real name="Max Border Distance Error" />
+			<_field_explanation name="Max CONCAVE Border Simplify Area">This controls the amount of simplification applied to concave boundary segments</_field_explanation>
+			<_field_real name="Max CONCAVE Border Simplify Area" />
+			<_field_explanation name="Max Walkable Slope">Maximum slope AI will traverse (degrees). Don't touch unless necessary.</_field_explanation>
+			<_field_real name="Max Walkable Slope" />
+			<_field_explanation name="Cosine angle merge control">Faces will only be merged if the cosine of the angle between their normals is greater than this.</_field_explanation>
+			<_field_real name="Cosine angle merge control" />
+			<_field_explanation name="Hole replacement area">Holes with area less than this are candidates for conversion to quads</_field_explanation>
+			<_field_real name="Hole replacement area" />
+			<_field_explanation name="Partition size">The maximum number of faces that can be included in a partition. Basically, don't change this.</_field_explanation>
+			<_field_long_integer name="Partition size" />
+			<_field_explanation name="Loop shrink factor">The area of any partition loop will not be reduced by more than this fraction</_field_explanation>
+			<_field_real name="Loop shrink factor" />
+		</_field_block>
+		<_field_block name="giant hints" max="1" srcguid="6e98f70b-6582-be47-a38e-d044db6c3ff2" srcName="user_hint_giant_block">
+			<_field_block name="giant sector hints" max="1000" srcguid="9753d84a-d7d0-dc4b-b6d3-7c85245eb9f3" srcName="user_hint_giant_sector_block">
+				<_field_block name="points" max="32" srcguid="5b0c1733-6012-ff41-8ebb-d6a44c98464e" srcName="user_hint_sector_point_block">
+					<_field_real_point_3d name="point" />
+					<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+					<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+					<_field_real_euler_angles_2d name="normal" />
+				</_field_block>
+			</_field_block>
+			<_field_block name="giant rail hints" max="1000" srcguid="730832f2-8b2b-ff40-bc5f-f0cdf5ca7c72" srcName="user_hint_giant_rail_block">
+				<_field_short_block_index name="geometry index*" targetGuid="9ae292a3-11ee-f945-93fd-f5520799be4b" targetName="user_hint_line_segment_block" />
+				<_field_pad name="JLOU" length="2" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="flood hints" max="1" srcguid="fb6df9fb-4af7-8344-973b-b01dccb4ff83" srcName="user_hint_flood_block">
+			<_field_block name="flood sector hints" max="1000" srcguid="fd691ea8-848f-ec4c-90a7-53b85b664d35" srcName="user_hint_flood_sector_block">
+				<_field_block name="points" max="32" srcguid="5b0c1733-6012-ff41-8ebb-d6a44c98464e" srcName="user_hint_sector_point_block">
+					<_field_real_point_3d name="point" />
+					<_field_custom_long_block_index name="packedKeyOffaceref~!" targetName="void" />
+					<_field_custom_long_block_index name="navMeshUIDOffaceref~!" targetName="void" />
+					<_field_real_euler_angles_2d name="normal" />
+				</_field_block>
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_byte_integer name="already Converted!" />
+	<_field_pad name="fuckPad" length="3" />
+</plugin>

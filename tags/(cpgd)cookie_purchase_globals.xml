@@ -1,0 +1,824 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="Purchase Families" />
+	<_field_block name="Helmet purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Left shoulder purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Right shoulder purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Chest purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Legs purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Arms purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="App 1 loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="App 2 loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Primary weapon loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Secondary weapon loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Grenade purchasable loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Equipment purchasable loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Slot purchasable loadout families" max="30" srcguid="2e9ddd77-a34a-b44e-91dd-83955bf92c69" srcName="CookiePurchaseFamilyLoadoutDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Visor tint purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Elite armor purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Primary emblem purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Secondary emblem purchasable appearance families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Ordnance slot purchasable families" max="30" srcguid="ff8bbaa9-b34f-0542-bc21-11a27a9367a2" srcName="CookiePurchaseFamilyOrdnanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="bb0bdda3-e8f3-3147-b2ee-90248b6bc514" srcName="CookiePurchaseOrdnanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Ordnance purchasable families" max="30" srcguid="ff8bbaa9-b34f-0542-bc21-11a27a9367a2" srcName="CookiePurchaseFamilyOrdnanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="bb0bdda3-e8f3-3147-b2ee-90248b6bc514" srcName="CookiePurchaseOrdnanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Portrait pose purchasable families" max="30" srcguid="0cd95012-cec1-a647-928f-09b80298f667" srcName="CookiePurchaseFamilyAppearanceDefinitionBlock">
+		<_field_string_id name="display title^#If this is left blank, this family will be treated as a list of top-level items (items w/o a family, e.g. visor tints)." />
+		<_field_string_id name="display_description" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_custom name="Appearance Items" />
+	<_field_block name="purchasable appearance items" max="512" srcguid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" srcName="CookiePurchaseAppearanceDefinitionBlock">
+		<_field_string_id name="purchase id" />
+		<_field_string_id name="display name^" />
+		<_field_string_id name="display description" />
+		<_field_string_id name="Exit Experience Aggregate Group Name" />
+		<_field_byte_flags name="flags">
+			<item Name="auto buy#this item is automatically given to the player when they meet the conditions" />
+			<item Name="default#this item will appear as 'worn' when the player isn't wearing any item (for 'default' items)" />
+			<item Name="doesn't count toward percent complete#this item will NOT count toward an overall completion value" />
+			<item Name="doesn't count toward new items#this item is never 'new'" />
+			<item Name="lsp_authoritative#cannot be purchased locally, only LSP can set" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_tag_reference name="detail display bitmap" validtags="bitm" />
+		<_field_long_integer name="cookie cost" />
+		<_field_custom name="Prerequisites for visibility" />
+		<_field_struct name="visible prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_custom name="Prerequisites for purchasability" />
+		<_field_struct name="purchasable prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_struct name="purchase player appearance" />
+		<_field_block name="permutations" max="1" srcguid="1586f904-ae46-e640-b62b-dddf8c73e74c" srcName="purchase_player_appearance_effect_model_permutation_block">
+			<_field_char_enum name="model_region#See player customization globals, linked from globals.globals.">
+				<item Name="spartan helmet" />
+				<item Name="spartan chest" />
+				<item Name="elite armor" />
+				<item Name="unused_1" />
+				<item Name="unused_2" />
+				<item Name="unused_3" />
+				<item Name="unused_4" />
+				<item Name="unused_5" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+			<_field_string_id name="model_customization_selection_name^#This must match one of the selections in the model customization globals (within the selected region)." />
+		</_field_block>
+		<_field_block name="armor effects permutations" max="2" srcguid="ddd98f2b-b8b6-524f-9786-ddee1e6bec95" srcName="purchase_player_appearance_effect_non_model_permutation_block">
+			<_field_char_enum name="non_model_region#See player customization globals, linked from globals.globals.">
+				<item Name="spartan armour effect" />
+				<item Name="elite armour effect" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+			<_field_string_id name="non_model_customization_selection_name^#This must match one of the selections in the model customization globals (within the selected region)." />
+		</_field_block>
+		<_field_block name="visor tints" max="1" srcguid="1f1520f4-1dd4-1b48-a60f-863d0b8318c9" srcName="purchase_player_appearance_effect_visor_tint_block">
+			<_field_string_id name="visor color name^" />
+		</_field_block>
+		<_field_block name="emblem indices" max="32" srcguid="a48d8810-0523-af42-8918-42a8f57892d2" srcName="purchase_player_appearance_effect_emblem_index_block">
+			<_field_char_integer name="emblem index^" />
+		</_field_block>
+		<_field_block name="portrait poses" max="1" srcguid="21266fa0-5cd3-b248-90f9-6d3c9cc32fc5" srcName="PurchasePlayerAppearancePoseBlock">
+			<_field_string_id name="pose name^" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="DLC appearance unlockables" max="32" srcguid="06812442-3955-6844-b28b-8e1c0077c7fb" srcName="CookiePurchaseExternalUnlockableBlockAppearanceDefinition">
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Waypoint appearance unlockables" max="32" srcguid="06812442-3955-6844-b28b-8e1c0077c7fb" srcName="CookiePurchaseExternalUnlockableBlockAppearanceDefinition">
+		<_field_block name="purchasable items" max="200" srcguid="b60ce943-2b14-9448-9115-9bf327451d8b" srcName="CookiePurchaseAppearanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_custom name="Loadout Items" />
+	<_field_block name="purchasable loadout items" max="96" srcguid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" srcName="CookiePurchaseLoadoutDefinitionBlock">
+		<_field_string_id name="purchase id" />
+		<_field_string_id name="display name^" />
+		<_field_string_id name="display description" />
+		<_field_string_id name="Exit Experience Aggregate Group Name" />
+		<_field_byte_flags name="flags">
+			<item Name="auto buy#this item is automatically given to the player when they meet the conditions" />
+			<item Name="default#this item will appear as 'worn' when the player isn't wearing any item (for 'default' items)" />
+			<item Name="doesn't count toward percent complete#this item will NOT count toward an overall completion value" />
+			<item Name="doesn't count toward new items#this item is never 'new'" />
+			<item Name="lsp_authoritative#cannot be purchased locally, only LSP can set" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_tag_reference name="detail display bitmap" validtags="bitm" />
+		<_field_long_integer name="cookie cost" />
+		<_field_custom name="Prerequisites for visibility" />
+		<_field_struct name="visible prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_custom name="Prerequisites for purchasability" />
+		<_field_struct name="purchasable prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_string_id name="icon string id" />
+		<_field_struct name="purchase player loadout" />
+		<_field_block name="items" max="1" srcguid="dd97f16d-aa56-4d43-b24d-15bece1cc937" srcName="purchase_player_item_block">
+			<_field_char_enum name="item_category#From the global multiplayer object list.">
+				<item Name="weapon" />
+				<item Name="grenade" />
+				<item Name="equipment" />
+				<item Name="vehicle" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+			<_field_string_id name="object_name^#This must match one of the global objects." />
+			<_field_byte_integer name="object variant index#e.g. used for weapon skins" />
+			<_field_pad name="ppib" length="3" />
+		</_field_block>
+		<_field_block name="apps" max="1" srcguid="eea4413e-6264-be48-a5ac-d8a559f267f7" srcName="purchase_player_app_block">
+			<_field_string_id name="object_name^#This must match an item in the custom app globals." />
+		</_field_block>
+		<_field_block name="loadout slots" max="1" srcguid="3225650a-8b0f-c748-9ddb-c3aef94ba410" srcName="purchase_player_loadout_slot_block">
+			<_field_byte_integer name="slot_count^#Total slots you're allowed." />
+		</_field_block>
+		<_field_block name="app and mod slots" max="1" srcguid="4d6bc0b5-c7a3-fa4b-8abc-c728b53e8c35" srcName="purchase_player_app_mod_slot_block">
+			<_field_byte_integer name="app_count^#Total apps you're allowed (from 0 to 2)." />
+			<_field_byte_integer name="mod_count^#Total mods you're allowed (from 0 to 1)." />
+		</_field_block>
+	</_field_block>
+	<_field_block name="DLC loadout unlockables" max="32" srcguid="cf2eb75d-3fda-b149-82d4-e4633d71b0c2" srcName="CookiePurchaseExternalUnlockableBlockLoadoutDefinition">
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Waypoint loadout unlockables" max="32" srcguid="cf2eb75d-3fda-b149-82d4-e4633d71b0c2" srcName="CookiePurchaseExternalUnlockableBlockLoadoutDefinition">
+		<_field_block name="purchasable items" max="200" srcguid="d20e0494-bb27-5243-9292-11f97a7241e3" srcName="CookiePurchaseLoadoutDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_custom name="Ordnance Items" />
+	<_field_block name="purchasable ordnance items" max="32" srcguid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" srcName="CookiePurchaseOrdnanceDefinitionBlock">
+		<_field_string_id name="purchase id" />
+		<_field_string_id name="display name^" />
+		<_field_string_id name="display description" />
+		<_field_string_id name="Exit Experience Aggregate Group Name" />
+		<_field_byte_flags name="flags">
+			<item Name="auto buy#this item is automatically given to the player when they meet the conditions" />
+			<item Name="default#this item will appear as 'worn' when the player isn't wearing any item (for 'default' items)" />
+			<item Name="doesn't count toward percent complete#this item will NOT count toward an overall completion value" />
+			<item Name="doesn't count toward new items#this item is never 'new'" />
+			<item Name="lsp_authoritative#cannot be purchased locally, only LSP can set" />
+		</_field_byte_flags>
+		<_field_pad name="pad1" length="3" />
+		<_field_tag_reference name="display bitmap" validtags="bitm" />
+		<_field_long_integer name="sprite index" />
+		<_field_tag_reference name="detail display bitmap" validtags="bitm" />
+		<_field_long_integer name="cookie cost" />
+		<_field_custom name="Prerequisites for visibility" />
+		<_field_struct name="visible prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_custom name="Prerequisites for purchasability" />
+		<_field_struct name="purchasable prerequisites" />
+		<_field_string_id name="prerequisite purchased item error string" />
+		<_field_string_id name="prerequisite unlockable error string" />
+		<_field_string_id name="prerequisite offers error string" />
+		<_field_long_integer name="prerequisite enlistment count" />
+		<_field_block name="prerequisite grades" max="1" srcguid="a141f29a-f406-e84b-893a-86a5707fd4a4" srcName="purchase_prerequisite_grade_definition_block">
+			<_field_long_integer name="enlistment index" />
+			<_field_long_integer name="minimum grade" />
+		</_field_block>
+		<_field_block name="prerequisite commendations" max="1" srcguid="abd675d0-cf69-c949-8aa1-42ed6ca22a5e" srcName="purchase_prerequisite_commendation_definition_block">
+			<_field_string_id name="commendation id^#This must match one of the commendation names." />
+			<_field_char_enum name="type">
+				<item Name="commendation" />
+				<item Name="aggregator" />
+			</_field_char_enum>
+			<_field_char_integer name="minimum level#This field is ignored if 'type' is set to 'aggregator'." />
+			<_field_pad name="PAD1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite appearance purchased items" max="20" srcguid="af945f12-d247-b44b-b12f-2db9b4614e8e" srcName="PurchasePrerequisitePurchasedAppearanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="79c98a8a-c987-cb47-9a28-94e16b04e6d1" targetName="CookiePurchaseAppearanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite loadout purchased items" max="20" srcguid="24e1ec56-ca7a-4846-81de-2ba580468087" srcName="PurchasePrerequisitePurchasedLoadoutItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="62d8d321-92cb-2b4a-bf1f-047b8fb5a80a" targetName="CookiePurchaseLoadoutDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite ordnance purchased items" max="20" srcguid="03369f9f-a8e3-2648-ab19-354fc2e3bc35" srcName="PurchasePrerequisitePurchasedOrdnanceItemDefinitionBlock">
+			<_field_struct name="item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+		<_field_block name="prerequisite unlockables" max="10" srcguid="724631a7-b37a-284b-a1ab-8a3a9f9a1765" srcName="purchase_prerequisites_unlockable_definition_block">
+			<_field_string_id name="unlockable name^" />
+		</_field_block>
+		<_field_block name="prerequisite offers" max="10" srcguid="778ea228-3e1d-ab44-9249-de5ed58ea8fe" srcName="purchase_prerequisites_offer_definition_block">
+			<_field_char_enum name="offer type^">
+				<item Name="DeadeyeHelmet" />
+				<item Name="LocusHelmet" />
+				<item Name="GungnirPulse" />
+				<item Name="VenatorRaptor" />
+				<item Name="CIOWeb" />
+				<item Name="HazopForest" />
+				<item Name="OceanicCircuit" />
+				<item Name="BattleRifleArctic" />
+				<item Name="BonebreakerEmblem" />
+				<item Name="AssassinEmblem" />
+				<item Name="BulletproofEmblem" />
+				<item Name="SpartanEmblem" />
+				<item Name="MjolnirEmblem" />
+				<item Name="LCE1Emblem" />
+				<item Name="SpartanIVArmorUnique" />
+				<item Name="AssaultRifleUnique" />
+				<item Name="Specializations" />
+				<item Name="UnicornEmblem" />
+				<item Name="UnicornArmor" />
+				<item Name="UnicornLightRifle" />
+				<item Name="LiveEmblem" />
+				<item Name="ScannerHelmet" />
+				<item Name="StriderHelmet" />
+				<item Name="FalconEmblem" />
+				<item Name="Reserved01" />
+				<item Name="Reserved02" />
+				<item Name="Reserved04" />
+				<item Name="Reserved08" />
+				<item Name="Reserved10" />
+				<item Name="Reserved20" />
+				<item Name="Reserved40" />
+				<item Name="ReservedDoNotUse80" />
+			</_field_char_enum>
+			<_field_pad name="pad1" length="3" />
+		</_field_block>
+		<_field_struct name="purchase player ordnance" />
+		<_field_block name="ordnance items" max="1" srcguid="d34fb6a0-db6a-2544-adad-3f942604a7d9" srcName="PurchasePlayerOrdnanceItemBlock">
+			<_field_string_id name="ordnance_name^#This must match one of the global ordnance objects." />
+		</_field_block>
+		<_field_block name="ordnance slots" max="1" srcguid="eadde37b-ab4c-004b-bec4-f18047acb4df" srcName="PurchasePlayerOrdnanceSlotBlock">
+			<_field_byte_integer name="slot_count^#Total slots you're allowed." />
+		</_field_block>
+	</_field_block>
+	<_field_block name="DLC ordnance unlockables" max="32" srcguid="be401cf8-4c6c-0547-bd55-3b5e1c80abf4" srcName="CookiePurchaseExternalUnlockableBlockOrdnanceDefinition">
+		<_field_block name="purchasable items" max="200" srcguid="bb0bdda3-e8f3-3147-b2ee-90248b6bc514" srcName="CookiePurchaseOrdnanceDefinitionReferenceBlock">
+			<_field_struct name="purchasable item reference" />
+			<_field_short_block_index name="item reference^" targetGuid="a5f1c947-983d-1640-9c9f-2c7aab4b242a" targetName="CookiePurchaseOrdnanceDefinitionBlock" />
+			<_field_pad name="pad1" length="2" />
+		</_field_block>
+	</_field_block>
+</plugin>

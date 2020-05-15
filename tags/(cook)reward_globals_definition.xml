@@ -1,0 +1,35 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="reward definitions{cookie awards}" max="256" srcguid="8a5d3e09-e7a9-7d43-807a-ae8fd94a13a7" srcName="rewardDefinitionBlock">
+		<_field_string_id name="name^" />
+		<_field_char_enum name="type">
+			<item Name="invasion" />
+			<item Name="bounties" />
+			<item Name="slot machine" />
+			<item Name="heat" />
+			<item Name="mission scripting" />
+			<item Name="commendation" />
+			<item Name="daily challenge" />
+			<item Name="achievement" />
+			<item Name="console scripting" />
+			<item Name="game complete" />
+			<item Name="time spent" />
+			<item Name="score" />
+			<item Name="winning" />
+			<item Name="hopper" />
+			<item Name="slot machinelsp_jackpot" />
+			<item Name="double_xp" />
+			<item Name="fast_track_armor" />
+		</_field_char_enum>
+		<_field_pad name="PJB1" length="3" />
+		<_field_block name="rewards" max="2" srcguid="932e9cf5-81ff-3444-b447-120d3229de7f" srcName="rewardBlock">
+			<_field_char_enum name="currency type#Type of currency given by this reward.">
+				<item Name="cookies" />
+				<item Name="xp" />
+			</_field_char_enum>
+			<_field_pad name="PJB1" length="1" />
+			<_field_short_integer name="reward amount#Amount of the given currency to be given with this reward." />
+		</_field_block>
+	</_field_block>
+</plugin>

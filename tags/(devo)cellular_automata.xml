@@ -1,0 +1,42 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="parameters" />
+	<_field_short_integer name="updates per second:Hz" />
+	<_field_short_integer name=" x (width):cells" />
+	<_field_short_integer name=" y (depth):cells" />
+	<_field_short_integer name=" z (height):cells" />
+	<_field_real name="x (width):world units" />
+	<_field_real name="y (depth):world units" />
+	<_field_real name="z (height):world units" />
+	<_field_pad name="EUJRJIT" length="32" />
+	<_field_old_string_id name="marker" />
+	<_field_explanation name="cell birth" />
+	<_field_real_fraction name="cell birth chance:[0,1]" />
+	<_field_pad name="HXYEZXXRO" length="32" />
+	<_field_explanation name="gene mutation" />
+	<_field_long_integer name="cell gene mutates 1 in:times" />
+	<_field_long_integer name="virus gene mutations 1 in:times" />
+	<_field_pad name="AM" length="32" />
+	<_field_explanation name="cell infection" />
+	<_field_short_integer_bounds name="infected cell lifespan:updates#the lifespan of a cell once infected" />
+	<_field_short_integer name="minimum infection age:updates#no cell can be infected before it has been alive this number of updates" />
+	<_field_pad name="GCKNPCPT" length="2" />
+	<_field_real_fraction name="cell infection chance:[0,1]" />
+	<_field_real_fraction name="infection threshold:[0,1]#0.0 is most difficult for the virus, 1.0 means any virus can infect any cell" />
+	<_field_pad name="SGUUFL" length="32" />
+	<_field_explanation name="initial state" />
+	<_field_real_fraction name="new cell filled chance:[0,1]" />
+	<_field_real_fraction name="new cell infected chance:[0,1]" />
+	<_field_pad name="YKYHDOBT" length="32" />
+	<_field_explanation name="detail texture" />
+	<_field_real_fraction name="detail texture change chance:[0,1]" />
+	<_field_pad name="GPMSPRZN" length="32" />
+	<_field_short_integer name="detail texture width:cells#the number of cells repeating across the detail texture in both dimensions" />
+	<_field_pad name="BXHH" length="2" />
+	<_field_tag_reference name="detail texture" validtags="bitm" />
+	<_field_explanation name="mask texture" />
+	<_field_pad name="VPK" length="32" />
+	<_field_tag_reference name="mask bitmap" validtags="bitm" />
+	<_field_pad name="BW" length="240" />
+</plugin>

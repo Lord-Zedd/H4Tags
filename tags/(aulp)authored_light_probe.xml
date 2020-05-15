@@ -1,0 +1,71 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Character Lighting"></_field_explanation>
+	<_field_block name="Lights*" max="1" srcguid="ad80eac2-b9e1-adc6-667e-d3be79a6a3ff" srcName="authored_light_probe_lights_block">
+		<_field_custom name="Authored Light Probe" />
+		<_field_custom name="Direction 1&amp;Direction(D)" />
+		<_field_real name="Direction 1&amp;Direction(D)" />
+		<_field_custom name="Front-Back 1&amp;Front-Back(D)" />
+		<_field_real name="Front-Back 1&amp;Front-Back(D)" />
+		<_field_real_rgb_color name="Direct color 1" />
+		<_field_custom name="Direct intensity 1" />
+		<_field_real name="Direct intensity 1" />
+		<_field_custom name="Direction 2&amp;Direction(D)" />
+		<_field_real name="Direction 2&amp;Direction(D)" />
+		<_field_custom name="Front-Back 2&amp;Front-Back(D)" />
+		<_field_real name="Front-Back 2&amp;Front-Back(D)" />
+		<_field_real_rgb_color name="Direct color 2" />
+		<_field_custom name="Direct intensity 2" />
+		<_field_real name="Direct intensity 2" />
+		<_field_custom name="Authored Light Probe Intensity Scale" />
+		<_field_real name="Authored Light Probe Intensity Scale" />
+		<_field_custom name="Generated Air Probe Intensity Scale" />
+		<_field_real name="Generated Air Probe Intensity Scale" />
+	</_field_block>
+	<_field_custom name="Authored Light Probe Intensity Scale!" />
+	<_field_real name="Authored Light Probe Intensity Scale!" />
+	<_field_custom name="Generated Air Probe Intensity Scale!" />
+	<_field_real name="Generated Air Probe Intensity Scale!" />
+	<_field_array name="raw sh data!">
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+		<_field_real name="sh data" />
+	</_field_array>
+	<_field_char_enum name="Is Camera-space">
+		<item Name="Off" />
+		<item Name="On" />
+	</_field_char_enum>
+	<_field_char_enum name="Apply to First Person Geometry">
+		<item Name="Off" />
+		<item Name="On" />
+	</_field_char_enum>
+	<_field_pad name="pdd" length="2" />
+	<_field_explanation name="Object Shadows (all objects, not just characters)"></_field_explanation>
+	<_field_custom name="IO Direct Lighting Minimum Percentage (When in Shadow)" />
+	<_field_real name="IO Direct Lighting Minimum Percentage (When in Shadow)" />
+</plugin>

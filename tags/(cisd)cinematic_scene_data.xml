@@ -1,0 +1,124 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="objects*" max="10000" srcguid="ec13b5da-a533-fa49-962d-8de6722b8799" srcName="cinematicSceneDataObjectBlock">
+		<_field_string_id name="name*^" />
+		<_field_string_id name="identifier*" />
+		<_field_tag_reference name="model animation graph*" validtags="jmad" />
+		<_field_tag_reference name="object type*" validtags="obje, scen, efsc" />
+		<_field_custom name="shots active flags*" />
+		<_field_array name="shots active flags*">
+			<_field_dword_integer name="shot flag data" />
+			<_field_dword_integer name="shot flag data" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="shots*" max="64" srcguid="7aeef793-f1ec-8648-997a-153b3fe4ce24" srcName="cinematicDataShotBlock">
+		<_field_block name="dialogue" max="10000" srcguid="ccacbb71-6d8a-0b4b-b080-d7cc12a99f39" srcName="cinematic_shot_dialogue_block">
+			<_field_tag_reference name="dialogue*" validtags="scmb, sndo, snd!" />
+			<_field_tag_reference name="female dialogue*" validtags="scmb, sndo, snd!" />
+			<_field_custom name="frame*" />
+			<_field_long_integer name="frame*" />
+			<_field_real name="scale*" />
+			<_field_string_id name="lipsync actor*" />
+			<_field_string_id name="default sound effect" />
+			<_field_string_id name="subtitle" />
+			<_field_string_id name="female subtitle" />
+			<_field_string_id name="character" />
+		</_field_block>
+		<_field_block name="effects" max="10000" srcguid="5d75e31f-4bb7-9f48-b43e-9a17145632c0" srcName="cinematic_shot_effect_block">
+			<_field_byte_flags name="flags">
+				<item Name="use maya value!" />
+				<item Name="looping" />
+			</_field_byte_flags>
+			<_field_char_enum name="state">
+				<item Name="start" />
+				<item Name="stop" />
+				<item Name="kill" />
+			</_field_char_enum>
+			<_field_pad name="CMVOIRLKSD" length="2" />
+			<_field_tag_reference name="effect" validtags="effe" />
+			<_field_real name="size scale" />
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+			<_field_string_id name="marker name" />
+			<_field_long_block_index name="marker parent" targetGuid="ec13b5da-a533-fa49-962d-8de6722b8799" targetName="cinematicSceneDataObjectBlock" />
+			<_field_string_id name="function a" />
+			<_field_string_id name="function b" />
+			<_field_long_integer name="node id!" />
+			<_field_long_integer name="sequence id!" />
+		</_field_block>
+		<_field_block name="custom script" max="10000" srcguid="aa3381bc-f8c1-7940-922c-7ba95fca1cd2" srcName="cinematic_shot_custom_script_block">
+			<_field_byte_flags name="flags!">
+				<item Name="use maya value" />
+			</_field_byte_flags>
+			<_field_pad name="CMVOIRLKSD" length="3" />
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+			<_field_struct name="script" />
+			<_field_data name="script{ }" />
+			<_field_long_integer name="node id!" />
+			<_field_long_integer name="sequence id!" />
+		</_field_block>
+		<_field_long_integer name="frame count*" />
+		<_field_block name="frame data*" max="10000" srcguid="64034dbd-6799-b645-859a-07a4186868e9" srcName="cinematic_shot_frame_block">
+			<_field_struct name="camera frame" />
+			<_field_struct name="dynamic data" />
+			<_field_real_point_3d name="camera position*" />
+			<_field_real_vector_3d name="camera forward*" />
+			<_field_real_vector_3d name="camera up*" />
+			<_field_struct name="constant data" />
+			<_field_real name="focal length*" />
+			<_field_long_integer name="depth of field*" />
+			<_field_real name="near focal plane distance*" />
+			<_field_real name="far focal plane distance*" />
+			<_field_real name="near focal depth*" />
+			<_field_real name="far focal depth*" />
+			<_field_real name="near blur amount*" />
+			<_field_real name="far blur amount*" />
+		</_field_block>
+		<_field_block name="dynamic frame data*!" max="10000" srcguid="b2528271-5e20-1f43-b629-6b5afe8eb20e" srcName="cinematic_shot_frame_dynamic_block">
+			<_field_struct name="dynamic camera frame" />
+			<_field_real_point_3d name="camera position*" />
+			<_field_real_vector_3d name="camera forward*" />
+			<_field_real_vector_3d name="camera up*" />
+		</_field_block>
+		<_field_block name="constant frame data*!" max="10000" srcguid="acbc8cec-6b6d-da4a-9476-e1a81f85d6b3" srcName="cinematic_shot_frame_constant_block">
+			<_field_long_integer name="frame index" />
+			<_field_struct name="constant camera frame" />
+			<_field_real name="focal length*" />
+			<_field_long_integer name="depth of field*" />
+			<_field_real name="near focal plane distance*" />
+			<_field_real name="far focal plane distance*" />
+			<_field_real name="near focal depth*" />
+			<_field_real name="far focal depth*" />
+			<_field_real name="near blur amount*" />
+			<_field_real name="far blur amount*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="extra camera frame data*" max="10000" srcguid="10da5114-d6db-684c-aaab-b84dd39799b3" srcName="cinematic_shot_extra_camera_block">
+		<_field_string_id name="name" />
+		<_field_string_id name="type" />
+		<_field_block name="shots" max="10000" srcguid="bfbe7b89-a3d4-104b-9114-4e0ee6efbdd5" srcName="cinematic_extra_camera_shot_block">
+			<_field_block name="frame data" max="10000" srcguid="90fedd39-ea9d-d34d-994b-8b1cecb7261f" srcName="cinematic_extra_camera_frame_block">
+				<_field_long_flags name="flags">
+					<item Name="enabled" />
+				</_field_long_flags>
+				<_field_struct name="frame data" />
+				<_field_struct name="dynamic data" />
+				<_field_real_point_3d name="camera position*" />
+				<_field_real_vector_3d name="camera forward*" />
+				<_field_real_vector_3d name="camera up*" />
+				<_field_struct name="constant data" />
+				<_field_real name="focal length*" />
+				<_field_long_integer name="depth of field*" />
+				<_field_real name="near focal plane distance*" />
+				<_field_real name="far focal plane distance*" />
+				<_field_real name="near focal depth*" />
+				<_field_real name="far focal depth*" />
+				<_field_real name="near blur amount*" />
+				<_field_real name="far blur amount*" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_long_integer name="version*" />
+</plugin>

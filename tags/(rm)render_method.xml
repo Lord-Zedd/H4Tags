@@ -1,0 +1,198 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="definition*" validtags="rmdf" />
+	<_field_tag_reference name="reference" validtags="rm  " />
+	<_field_block name="options" max="1024" srcguid="3ec5a466-0385-a648-a976-9ea5a0dfbc08" srcName="short_block">
+		<_field_short_integer name="short" />
+	</_field_block>
+	<_field_block name="parameters" max="64" srcguid="6146f51e-0f63-8d4e-ad88-bd765bbf101c" srcName="render_method_parameter_block">
+		<_field_string_id name="parameter name^" />
+		<_field_long_enum name="parameter type">
+			<item Name="bitmap" />
+			<item Name="color" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="argb color" />
+		</_field_long_enum>
+		<_field_tag_reference name="bitmap" validtags="bitm" />
+		<_field_real name="real" />
+		<_field_long_integer name="int/bool" />
+		<_field_word_integer name="bitmap flags" />
+		<_field_word_integer name="bitmap filter mode" />
+		<_field_word_integer name="bitmap address mode" />
+		<_field_word_integer name="bitmap address mode x" />
+		<_field_word_integer name="bitmap address mode y" />
+		<_field_short_integer name="bitmap anisotropy amount" />
+		<_field_short_integer name="bitmap extern RTT mode" />
+		<_field_word_integer name="bitmap sharpen mode" />
+		<_field_block name="animated parameters" max="1024" srcguid="4b5b6670-17be-764b-87b3-9ee20b5cc3a0" srcName="render_method_animated_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale x" />
+				<item Name="scale y" />
+				<item Name="translation x" />
+				<item Name="translation y" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="postprocess" max="1" srcguid="20e68c44-948c-924d-bcd0-5705362cbbf6" srcName="render_method_postprocess_block">
+		<_field_tag_reference name="shader template" validtags="rmt2" />
+		<_field_block name="textures" max="64" srcguid="51a69194-b4af-1e4c-9822-b53f607f03c2" srcName="render_method_postprocess_texture_block">
+			<_field_tag_reference name="bitmap reference" validtags="bitm" />
+			<_field_short_integer name="bitmap index" />
+			<_field_byte_integer name="address mode" />
+			<_field_byte_integer name="filter mode" />
+			<_field_byte_integer name="extern texture mode" />
+			<_field_char_block_index name="texture transform constant index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_struct name="texture transform overlay indices" />
+			<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="real vectors" max="1024" srcguid="4c029eff-187d-504c-90d7-3f8e22ef3a5d" srcName="real_vector4d_block">
+			<_field_real_vector_3d name="vector" />
+			<_field_real name="vector w" />
+		</_field_block>
+		<_field_block name="int constants" max="1024" srcguid="fed14f48-d74f-8b48-afaa-e8db731747c0" srcName="int_block">
+			<_field_long_integer name="int value" />
+		</_field_block>
+		<_field_long_integer name="bool constants" />
+		<_field_block name="entry points" max="1024" srcguid="cb11d54c-57e0-a642-9b31-efb874d7bee6" srcName="tag_block_index_block">
+			<_field_struct name="block index" />
+			<_field_word_integer name="block index data#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="passes" max="1024" srcguid="23a50a92-62d6-3d49-887e-528dafe64288" srcName="render_method_postprocess_pass_block">
+			<_field_word_integer name="bitmaps#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="vertex real#divide by 1024 for count, remainder is start index" />
+			<_field_word_integer name="pixel real#divide by 1024 for count, remainder is start index" />
+		</_field_block>
+		<_field_block name="routing info" max="512" srcguid="29be3c3d-ec43-d644-961a-e5cb249a1d37" srcName="render_method_routing_info_block">
+			<_field_word_integer name="destination index#D3D constant index or sampler index" />
+			<_field_byte_integer name="source index#into constant tables below, unless this is an extern parameter" />
+			<_field_byte_integer name="type specific#bitmap flags or shader component mask" />
+		</_field_block>
+		<_field_block name="overlays" max="1024" srcguid="4b5b6670-17be-764b-87b3-9ee20b5cc3a0" srcName="render_method_animated_parameter_block">
+			<_field_long_enum name="type^">
+				<item Name="value" />
+				<item Name="color" />
+				<item Name="scale uniform" />
+				<item Name="scale x" />
+				<item Name="scale y" />
+				<item Name="translation x" />
+				<item Name="translation y" />
+				<item Name="frame index" />
+				<item Name="alpha" />
+			</_field_long_enum>
+			<_field_string_id name="input name" />
+			<_field_string_id name="range name" />
+			<_field_real name="time period:seconds" />
+			<_field_explanation name="FUNCTION" />
+			<_field_data name="data" />
+		</_field_block>
+		<_field_long_integer name="blend mode" />
+		<_field_long_integer name="flags" />
+		<_field_long_integer name="im_so_fired_pad!*" />
+		<_field_array name="runtime queryable properties table">
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+		</_field_array>
+	</_field_block>
+	<_field_long_integer name="is template" />
+	<_field_long_flags name="locked options">
+		<item Name="option 0" />
+		<item Name="option 1" />
+		<item Name="option 2" />
+		<item Name="option 3" />
+		<item Name="option 4" />
+		<item Name="option 5" />
+		<item Name="option 6" />
+		<item Name="option 7" />
+		<item Name="option 8" />
+		<item Name="option 9" />
+		<item Name="option 10" />
+		<item Name="option 11" />
+		<item Name="option 12" />
+		<item Name="option 13" />
+		<item Name="option 14" />
+		<item Name="option 15" />
+		<item Name="option 16" />
+		<item Name="option 17" />
+		<item Name="option 18" />
+		<item Name="option 19" />
+		<item Name="option 20" />
+		<item Name="option 21" />
+		<item Name="option 22" />
+		<item Name="option 23" />
+		<item Name="option 24" />
+		<item Name="option 25" />
+		<item Name="option 26" />
+		<item Name="option 27" />
+		<item Name="option 28" />
+		<item Name="option 29" />
+		<item Name="option 30" />
+		<item Name="option 31" />
+	</_field_long_flags>
+	<_field_block name="locked parameters" max="32" srcguid="57fcf408-b1d7-cc46-925b-90ee3108e35e" srcName="render_method_locked_parameter_block">
+		<_field_string_id name="parameter name" />
+		<_field_long_enum name="parameter type">
+			<item Name="bitmap" />
+			<item Name="color" />
+			<item Name="real" />
+			<item Name="int" />
+			<item Name="bool" />
+			<item Name="argb color" />
+		</_field_long_enum>
+		<_field_dword_integer name="animated parameter flags" />
+	</_field_block>
+	<_field_word_flags name="shader flags*">
+		<item Name="don't fog me" />
+		<item Name="use custom setting" />
+		<item Name="calculate Z camera" />
+		<item Name="never render for shields" />
+		<item Name="only render for shields" />
+	</_field_word_flags>
+	<_field_char_enum name="sort layer*">
+		<item Name="invalid" />
+		<item Name="pre-pass" />
+		<item Name="normal" />
+		<item Name="post-pass" />
+	</_field_char_enum>
+	<_field_char_integer name="version!" />
+	<_field_long_integer name="Custom fog setting index" />
+	<_field_long_block_index name="prediction atom index!" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+</plugin>

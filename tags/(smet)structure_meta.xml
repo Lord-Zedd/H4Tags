@@ -1,0 +1,46 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="Effects markers*" max="1024" srcguid="c3715d02-5350-f14b-b133-1c9925eaa551" srcName="structureBspFxMarkerBlock">
+		<_field_string name="marker name^" />
+		<_field_real_quaternion name="rotation*" />
+		<_field_real_point_3d name="position*" />
+		<_field_tag_reference name="optional attached effect" validtags="effe, lens" />
+	</_field_block>
+	<_field_block name="Airprobes*" max="4096" srcguid="ad45637f-d45b-5f42-8dee-f6edf522a677" srcName="scenario_airprobes_block">
+		<_field_real_point_3d name="airprobe position" />
+		<_field_string_id name="airprobe name^" />
+		<_field_long_integer name="BSP index^" />
+	</_field_block>
+	<_field_block name="Light Cones*" max="1024" srcguid="95309754-236f-dd44-a012-514d3dc2a5f7" srcName="structureMetadataLightConeMarkerBlock">
+		<_field_string name="marker name^" />
+		<_field_real_quaternion name="rotation" />
+		<_field_real_point_3d name="position" />
+		<_field_real name="length" />
+		<_field_real name="width" />
+		<_field_real name="intensity" />
+		<_field_real_argb_color name="light color" />
+		<_field_tag_reference name="light cone tag" validtags="licn" />
+		<_field_tag_reference name="intensity curve" validtags="crvs" />
+	</_field_block>
+	<_field_block name="Object Palette*" max="1024" srcguid="4afcd237-622e-f843-b235-bede7776be11" srcName="structure_bsp_environment_object_palette_block">
+		<_field_tag_reference name="definition^" validtags="obje" />
+		<_field_tag_reference name="model" validtags="mode" />
+		<_field_long_integer name="GVEYN!" />
+	</_field_block>
+	<_field_block name="Objects*" max="16384" srcguid="4d63df1c-90fd-6f47-9133-f1dacc1b247f" srcName="structure_bsp_environment_object_block">
+		<_field_string name="name^" />
+		<_field_real_quaternion name="rotation" />
+		<_field_real_point_3d name="translation" />
+		<_field_real name="scale" />
+		<_field_short_block_index name="palette_index" targetGuid="4afcd237-622e-f843-b235-bede7776be11" targetName="structure_bsp_environment_object_palette_block" />
+		<_field_byte_flags name="flags">
+			<item Name="scripts always run" />
+		</_field_byte_flags>
+		<_field_pad name="QHUGQ" length="1" />
+		<_field_long_integer name="unique id*" />
+		<_field_tag name="exported object type" />
+		<_field_string_id name="scenario object name" />
+		<_field_string_id name="variant name" />
+	</_field_block>
+</plugin>

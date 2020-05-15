@@ -1,0 +1,31 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+	</_field_long_flags>
+	<_field_tag_reference name="stencil bitmaps#two bitmaps specifying the mask and the meter levels" validtags="bitm" />
+	<_field_tag_reference name="source bitmap#optional bitmap to draw into the unmasked regions of the meter (modulated by the colors below)" validtags="bitm" />
+	<_field_short_integer name="stencil sequence index" />
+	<_field_short_integer name="source sequence index" />
+	<_field_pad name="KBT" length="16" />
+	<_field_pad name="ON" length="4" />
+	<_field_short_enum name="interpolate colors...">
+		<item Name="linearly" />
+		<item Name="faster near empty" />
+		<item Name="faster near full" />
+		<item Name="through random noise" />
+	</_field_short_enum>
+	<_field_short_enum name="anchor colors...">
+		<item Name="at both ends" />
+		<item Name="at empty" />
+		<item Name="at full" />
+	</_field_short_enum>
+	<_field_pad name="WMTT" length="8" />
+	<_field_real_argb_color name="empty color" />
+	<_field_real_argb_color name="full color" />
+	<_field_pad name="VNJW" length="20" />
+	<_field_real name="unmask distance:meter units#fade from fully masked to fully unmasked this distance beyond full (and below empty)" />
+	<_field_real name="mask distance:meter units#fade from fully unmasked to fully masked this distance below full (and beyond empty)" />
+	<_field_pad name="SBQWDR" length="20" />
+	<_field_data name="encoded stencil" />
+</plugin>

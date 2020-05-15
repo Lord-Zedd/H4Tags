@@ -1,0 +1,114 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="sound classes" max="71" srcguid="4015cede-6f80-9c49-88fc-d3bc96250604" srcName="sound_class_block">
+		<_field_short_integer name="max sounds per tag [1,16]#maximum number of sounds playing per individual sound tag" />
+		<_field_short_integer name="max sounds per object per tag [1,16]{max sounds per object [1,16]}#maximum number of sounds per individual sound tag playing on an object" />
+		<_field_short_integer name="max sounds per class [0,16]#maximum number of sounds playing of this class. zero means ignore." />
+		<_field_short_integer name="max sounds per object per class [0,16]#maximum number of sounds of this class playing on an object. zero means ignore." />
+		<_field_long_integer name="preemption time:ms#replaces other instances after this many milliseconds" />
+		<_field_word_flags name="internal flags!*">
+			<item Name="valid" />
+			<item Name="is speech" />
+			<item Name="scripted" />
+			<item Name="stops with object" />
+			<item Name="valid xma compression level" />
+			<item Name="valid doppler factor" />
+			<item Name="valid obstruction factor" />
+			<item Name="multilingual" />
+			<item Name="don't strip languages" />
+			<item Name="valid underwater propagation" />
+			<item Name="valid suppress spatialization" />
+		</_field_word_flags>
+		<_field_word_flags name="flags">
+			<item Name="plays during pause" />
+			<item Name="bypass default dsp effects{dry stereo mix}" />
+			<item Name="no object obstruction!" />
+			<item Name="use center speaker unspatialized" />
+			<item Name="send (mono) to lfe" />
+			<item Name="deterministic" />
+			<item Name="use huge transmission" />
+			<item Name="always use speakers" />
+			<item Name="don't strip from main menu" />
+			<item Name="ignore stereo headroom" />
+			<item Name="loop fade out is linear" />
+			<item Name="stop when object dies" />
+			<item Name="don't fade on game over" />
+			<item Name="don't promote priority by proximity" />
+		</_field_word_flags>
+		<_field_short_integer name="priority#higher means more important" />
+		<_field_char_enum name="cache miss mode*">
+			<item Name="discard" />
+			<item Name="postpone" />
+		</_field_char_enum>
+		<_field_byte_flags name="bind to acoustics">
+			<item Name="outside" />
+			<item Name="inside" />
+		</_field_byte_flags>
+		<_field_byte_flags name="suppress spatialization">
+			<item Name="first person" />
+			<item Name="third person" />
+		</_field_byte_flags>
+		<_field_pad name="sadf" length="3" />
+		<_field_explanation name="air propagation" />
+		<_field_real name="air reverb gain{reverb gain}:dB#how much reverb applies to this sound class" />
+		<_field_real name="air direct path gain:dB#how much goes to direct path (dry)" />
+		<_field_real name="air base obstruction" />
+		<_field_real name="air base occlusion" />
+		<_field_explanation name="underwater propagation" />
+		<_field_real name="underwater reverb gain:dB#how much reverb applies to this sound class" />
+		<_field_real name="underwater direct path gain:dB#how much goes to direct path (dry)" />
+		<_field_real name="underwater base obstruction" />
+		<_field_real name="underwater base occlusion" />
+		<_field_real name="override speaker gain:dB" />
+		<_field_struct name="distance parameters" />
+		<_field_explanation name="attenuation distances">these settings vary how the sound fades as you move closer or further away from it.</_field_explanation>
+		<_field_real name="don't obstruct distance:world units#don't obstruct below this distance" />
+		<_field_real name="don't play distance:world units#don't play below this distance" />
+		<_field_real name="attack distance:world units#start playing at full volume at this distance" />
+		<_field_real name="minimum distance:world units#start attenuating at this distance" />
+		<_field_real name="sustain begin distance:world units#set attenuation to sustain db at this distance" />
+		<_field_real name="sustain end distance:world units#continue attenuating to silence at this distance" />
+		<_field_real name="maximum distance:world units#the distance beyond which this sound is no longer audible" />
+		<_field_real name="sustain db:dB#the amount of attenuation between sustain begin and end" />
+		<_field_real_bounds name="gain bounds:dB~" />
+		<_field_explanation name="lowpass wetmixes" />
+		<_field_custom name="equipment lowpass{equipment channel occlusion factor}:wetmix#sets the lowpass wet mix when an equiment is active" />
+		<_field_real name="equipment lowpass{equipment channel occlusion factor}:wetmix#sets the lowpass wet mix when an equiment is active" />
+		<_field_custom name="environment forced lowpass{forced lowpass wet mix}:wetmix#sets the lowpass wet mix when an environment forced lowpass is active" />
+		<_field_real name="environment forced lowpass{forced lowpass wet mix}:wetmix#sets the lowpass wet mix when an environment forced lowpass is active" />
+		<_field_custom name="effect lowpass:wetmix#sets the lowpass wet mix when a lowpass effect is active" />
+		<_field_real name="effect lowpass:wetmix#sets the lowpass wet mix when a lowpass effect is active" />
+		<_field_explanation name="ducking" />
+		<_field_real name="cutscene ducking:dB" />
+		<_field_real name="cutscene ducking fade in time:seconds" />
+		<_field_real name="cutscene ducking sustain time:seconds#how long this lasts after the cutscene ends" />
+		<_field_real name="cutscene ducking fade out time:seconds" />
+		<_field_real name="scripted dialog ducking:dB" />
+		<_field_real name="scripted dialog ducking fade in time:seconds" />
+		<_field_real name="scripted dialog ducking sustain time:seconds#how long this lasts after the scripted dialog ends" />
+		<_field_real name="scripted dialog ducking fade out time:seconds" />
+		<_field_real name="equipment channel ducking:dB" />
+		<_field_real name="equipment channel ducking fade in time:seconds" />
+		<_field_real name="equipment channel ducking sustain time:seconds#how long this lasts after the equipment is turned off" />
+		<_field_real name="equipment channel ducking fade out time:seconds" />
+		<_field_real name="between rounds ducking:dB" />
+		<_field_real name="between rounds ducking fade in time:seconds" />
+		<_field_real name="between rounds ducking sustain time:seconds#how long this lasts after we get back in the game" />
+		<_field_real name="between rounds ducking fade out time:seconds" />
+		<_field_explanation name="misc" />
+		<_field_real name="doppler factor" />
+		<_field_char_enum name="stereo playback type">
+			<item Name="first person" />
+			<item Name="ambient" />
+		</_field_char_enum>
+		<_field_pad name="B" length="3" />
+		<_field_real name="transmission multiplier" />
+		<_field_real name="transmission interpolation time:seconds#default is 0.5 seconds" />
+		<_field_long_integer name="xma compression level" />
+		<_field_real name="send to lfe gain:dB#When send (mono) to lfe is set, this is how much additional gain to apply" />
+		<_field_long_integer name="minimum facial animation delay:msecs#setting this forces sounds of this class to be delayed while the facial animation resource loads." />
+		<_field_long_integer name="maximum facial animation delay:msecs#setting this allows sounds of this class to be delayed while the facial animation resource loads." />
+		<_field_long_integer name="maximum facial animation blend:msecs#setting this makes sounds blends in facial animation (will cut off at maximum facial animation delay)." />
+	</_field_block>
+</plugin>

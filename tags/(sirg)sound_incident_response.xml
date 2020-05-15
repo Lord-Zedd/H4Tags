@@ -1,0 +1,28 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="responses" max="10" srcguid="857e5673-dda1-ee41-b91f-166a5d246c98" srcName="sound_incident_response_data_block">
+		<_field_byte_flags name="audience">
+			<item Name="cause player" />
+			<item Name="cause team" />
+			<item Name="effect player" />
+			<item Name="effect team" />
+			<item Name="everyone" />
+		</_field_byte_flags>
+		<_field_byte_flags name="excluded audience">
+			<item Name="cause player" />
+			<item Name="cause team" />
+			<item Name="effect player" />
+			<item Name="effect team" />
+			<item Name="everyone" />
+		</_field_byte_flags>
+		<_field_byte_flags name="split screen flags">
+			<item Name="disable if split screen" />
+			<item Name="disable if not split screen" />
+			<item Name="disable if split screen on different teams" />
+			<item Name="disable if split screen all on same team" />
+		</_field_byte_flags>
+		<_field_pad name="RMPES" length="1" />
+		<_field_tag_reference name="response" validtags="sgrp" />
+	</_field_block>
+</plugin>

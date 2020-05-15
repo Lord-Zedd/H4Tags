@@ -1,0 +1,143 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_tag_reference name="global options" validtags="rmop" />
+	<_field_block name="categories" max="16" srcguid="e5aedde2-e31b-f149-ab13-830f6f22f795" srcName="render_method_category_block">
+		<_field_string_id name="category name" />
+		<_field_block name="options" max="32" srcguid="493c64dc-db41-7d4d-bb8d-4c9071aef410" srcName="render_method_options_block">
+			<_field_string_id name="option name" />
+			<_field_tag_reference name="option" validtags="rmop" />
+			<_field_string_id name="vertex function" />
+			<_field_string_id name="pixel function" />
+		</_field_block>
+		<_field_string_id name="vertex function" />
+		<_field_string_id name="pixel function" />
+	</_field_block>
+	<_field_block name="entry_points" max="32" srcguid="d3696bb6-7867-fa44-ac87-3549c59e32fb" srcName="render_method_entry_points_block">
+		<_field_long_enum name="entry point">
+			<item Name="default" />
+			<item Name="albedo" />
+			<item Name="static_per_pixel" />
+			<item Name="static_per_pixel_hybrid_refinement" />
+			<item Name="static_per_pixel_analytic" />
+			<item Name="static_per_pixel_analytic_hybrid_refinement" />
+			<item Name="static_per_pixel_floating_shadow" />
+			<item Name="static_per_vertex" />
+			<item Name="static_probe" />
+			<item Name="static_per_pixel_forge" />
+			<item Name="static_per_pixel_object" />
+			<item Name="static_per_vertex_object" />
+			<item Name="dynamic_light" />
+			<item Name="shadow_generate" />
+			<item Name="shadow_apply" />
+			<item Name="active_camo" />
+			<item Name="lightmap_debug_mode" />
+			<item Name="vertex_color_lighting" />
+			<item Name="water_tessellation" />
+			<item Name="water_shading" />
+			<item Name="unused2" />
+			<item Name="single_pass_per_pixel" />
+			<item Name="single_pass_per_vertex" />
+			<item Name="single_pass_single_probe" />
+			<item Name="single_pass_as_decal" />
+			<item Name="midnight_spotlight" />
+			<item Name="midnight_spotlight_transparents" />
+			<item Name="motion_blur" />
+			<item Name="volume_fog_stencil" />
+			<item Name="volume_fog_depth" />
+			<item Name="curved_cui" />
+			<item Name="single_pass_shadowed_no_fog_per_pixel" />
+			<item Name="single_pass_shadowed_no_fog_per_vertex" />
+			<item Name="single_pass_shadowed_no_fog_single_probe" />
+			<item Name="static_per_pixel_floating_shadow_simple" />
+			<item Name="static_per_pixel_simple" />
+			<item Name="static_per_pixel_ao" />
+			<item Name="static_per_vertex_ao" />
+			<item Name="static_lit_cui" />
+			<item Name="curved_static_lit_cui" />
+		</_field_long_enum>
+		<_field_block name="passes" max="1024" srcguid="13081af4-b7bf-2d49-8b50-a95b2474b0c0" srcName="render_method_pass_block">
+			<_field_word_flags name="flags">
+				<item Name="shared entry point compilation&shared pixel shader compilation" />
+				<item Name="shared VS only care non-default option of depended category" />
+				<item Name="only be compiled to xenon platform" />
+				<item Name="allow failed shader compile" />
+			</_field_word_flags>
+			<_field_pad name="nothing" length="2" />
+			<_field_block name="category dependencies&amp;shared PS category dependencies" max="1" srcguid="862ccfc2-b074-bc42-b50c-5874ec6e468d" srcName="render_method_pass_category_dependencies">
+				<_field_short_block_index name="category" targetGuid="e5aedde2-e31b-f149-ab13-830f6f22f795" targetName="render_method_category_block" />
+			</_field_block>
+			<_field_block name="shared VS category dependencies" max="1" srcguid="862ccfc2-b074-bc42-b50c-5874ec6e468d" srcName="render_method_pass_category_dependencies">
+				<_field_short_block_index name="category" targetGuid="e5aedde2-e31b-f149-ab13-830f6f22f795" targetName="render_method_category_block" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="vertex_types" max="54" srcguid="2351d710-e9b1-d640-9311-343380d97c43" srcName="vertex_types_block">
+		<_field_short_enum name="vertex type">
+			<item Name="world" />
+			<item Name="rigid" />
+			<item Name="skinned" />
+			<item Name="particle_model" />
+			<item Name="flat_world" />
+			<item Name="flat_rigid" />
+			<item Name="flat_skinned" />
+			<item Name="screen" />
+			<item Name="debug" />
+			<item Name="transparent" />
+			<item Name="particle" />
+			<item Name="rigid2uv" />
+			<item Name="light_volume" />
+			<item Name="chud_simple" />
+			<item Name="chud_fancy" />
+			<item Name="decorator" />
+			<item Name="tiny position" />
+			<item Name="patchy fog" />
+			<item Name="water" />
+			<item Name="ripple" />
+			<item Name="implicit geometry" />
+			<item Name="skinned2uv" />
+			<item Name="world_tessellated" />
+			<item Name="rigid_tessellated" />
+			<item Name="skinned_tessellated" />
+			<item Name="shader_cache" />
+			<item Name="structure_instance_imposter" />
+			<item Name="object_imposter" />
+			<item Name="rigid compressed" />
+			<item Name="skinned uncompressed" />
+			<item Name="light_volume_precompiled" />
+			<item Name="blendshape_rigid" />
+			<item Name="blendshape_rigid_blendshaped" />
+			<item Name="rigid_blendshaped" />
+			<item Name="blendshape_skinned" />
+			<item Name="blendshape_skinned_blendshaped" />
+			<item Name="skinned_blendshaped" />
+			<item Name="VirtualGeometryHWtess" />
+			<item Name="VirtualGeometryMemexport" />
+			<item Name="position_only" />
+			<item Name="VirtualGeometryDebug" />
+			<item Name="BlendshapeRigidCompressedPosition" />
+			<item Name="SkinnedUncompressedPositionBlendshaped" />
+			<item Name="BlendshapeSkinnedUncompressedPosition" />
+			<item Name="tracer" />
+			<item Name="polyart" />
+			<item Name="vectorart" />
+			<item Name="rigid_boned" />
+			<item Name="rigid_boned_2uv" />
+			<item Name="blendshape_skinned_2uv" />
+			<item Name="blendshape_skinned_2uv_blendshaped" />
+			<item Name="skinned_2uv_blendshaped" />
+			<item Name="polyartUV" />
+			<item Name="BlendshapeSkinnedUncompressedPositionBlendshaped" />
+		</_field_short_enum>
+		<_field_pad name="blahasdf" length="2" />
+	</_field_block>
+	<_field_tag_reference name="shared pixel shaders*" validtags="glps" />
+	<_field_tag_reference name="shared vertex shaders*" validtags="glvs" />
+	<_field_long_flags name="flags">
+		<item Name="use automatic macros" />
+		<item Name="build constant table in shader" />
+	</_field_long_flags>
+	<_field_dword_integer name="version:bump to force recompile" />
+	<_field_explanation name="source file location">like templated\shader ...</_field_explanation>
+	<_field_long_string name="location" />
+</plugin>

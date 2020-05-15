@@ -1,0 +1,120 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_string_id name="name^" />
+	<_field_string_id name="script name#The name of a custom script used to drive the performance. If none is given, a default script is uses that goes through the lines in sequence" />
+	<_field_block name="Actors" max="16" srcguid="b5e3707b-8e7f-8349-8b99-5d0be8e80dc7" srcName="performance_template_actor_block">
+		<_field_long_flags name="flags">
+			<item Name="actor is critical" />
+		</_field_long_flags>
+		<_field_string_id name="Actor name^" />
+		<_field_tag_reference name="Actor type" validtags="char" />
+		<_field_tag_reference name="Vehicle type" validtags="vehi" />
+		<_field_string_id name="Vehicle seat label" />
+		<_field_tag_reference name="Weapon type" validtags="weap" />
+		<_field_pad name="pad0" length="2" />
+		<_field_custom_short_block_index name="Spawn Point" targetName="custom_performance_template_point_block_index_definition" />
+	</_field_block>
+	<_field_block name="Lines" max="256" srcguid="29bccca6-699c-ab4f-8136-35e31cebc1ff" srcName="scenario_performance_line_block">
+		<_field_string_id name="name^" />
+		<_field_custom_short_block_index name="Actor" targetName="custom_performance_actor_block_index_definition" />
+		<_field_word_flags name="flags">
+			<item Name="Disable" />
+		</_field_word_flags>
+		<_field_short_integer name="sleep minimum:ticks" />
+		<_field_short_integer name="sleep maximum:ticks" />
+		<_field_long_enum name="Line progress type">
+			<item Name="Immediate (play)" />
+			<item Name="Block until all done" />
+			<item Name="Block until line done" />
+			<item Name="Queue blocking" />
+			<item Name="Queue immediate" />
+		</_field_long_enum>
+		<_field_block name="Script fragments" max="16" srcguid="cb62f746-5d40-8a4c-a033-3371b410e28a" srcName="scenario_performance_line_script_fragment_block">
+			<_field_short_enum name="fragment placement">
+				<item Name="Pre-Line" />
+				<item Name="Post-Line" />
+			</_field_short_enum>
+			<_field_short_enum name="fragment type">
+				<item Name="Default" />
+				<item Name="Conditional Sleep" />
+				<item Name="Branch" />
+			</_field_short_enum>
+			<_field_long_string name="fragment#maximum 256 characters, type just branch condition (with brackets) in case of branches" />
+			<_field_long_string name="branch target#the script to branch to (with any arguments to it). Used only if type is branch" />
+		</_field_block>
+		<_field_block name="Point interaction" max="16" srcguid="7328c842-cba3-2741-a02b-8b05abd54c59" srcName="scenario_performance_line_point_interaction_block">
+			<_field_long_flags name="interaction type">
+				<item Name="Face point" />
+				<item Name="Aim at point" />
+				<item Name="Look at point" />
+				<item Name="Shoot at point" />
+				<item Name="Go by point" />
+				<item Name="Go to point" />
+				<item Name="Go to and align" />
+				<item Name="Go to thespian center" />
+				<item Name="Teleport to point" />
+			</_field_long_flags>
+			<_field_custom_short_block_index name="point" targetName="custom_performance_point_block_index_definition" />
+			<_field_custom_short_block_index name="actor" targetName="custom_performance_actor_block_index_definition" />
+			<_field_string_id name="object name" />
+			<_field_string_id name="throttle style" />
+		</_field_block>
+		<_field_block name="Animations" max="8" srcguid="2ed53f7f-7595-c243-a41b-8bbd3c94dace" srcName="scenario_performance_line_animation_block">
+			<_field_word_flags name="flags">
+				<item Name="Loop" />
+				<item Name="Loop until task transition" />
+				<item Name="Die on animation completion" />
+			</_field_word_flags>
+			<_field_pad name="pad0" length="2" />
+			<_field_string_id name="stance" />
+			<_field_string_id name="animation^" />
+			<_field_real name="duration" />
+			<_field_real name="probability" />
+			<_field_real name="throttle transition time:seconds" />
+			<_field_long_integer name="transition frame count#The number of frames from the end of the animation to start transitioning out" />
+		</_field_block>
+		<_field_block name="Sync Actions" max="8" srcguid="9848d13c-4111-ae47-8303-309f8f172b69" srcName="scenario_performance_line_sync_action_block">
+			<_field_string_id name="sync action name" />
+			<_field_real name="probability" />
+			<_field_custom_short_block_index name="attach to point" targetName="custom_performance_point_block_index_definition" />
+			<_field_word_flags name="flags">
+				<item Name="Share initiator stance" />
+				<item Name="Initiator is origin" />
+			</_field_word_flags>
+			<_field_block name="Actors" max="16" srcguid="9f6f843b-5e15-3243-9334-a3e3b50ae87b" srcName="scenario_performance_line_sync_action_actor_block">
+				<_field_custom_short_block_index name="Actor type" targetName="custom_performance_character_search_definition" />
+				<_field_pad name="pad" length="2" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="Scenery Sync Actions" max="8" srcguid="e2edf4f9-871d-b847-bfdb-568cea43ca92" srcName="scenario_performance_line_scenery_sync_action_block">
+			<_field_string_id name="scenery object name" />
+			<_field_string_id name="sync action name" />
+			<_field_string_id name="stance name" />
+			<_field_real name="probability" />
+			<_field_word_flags name="flags">
+				<item Name="Share initiator stance" />
+			</_field_word_flags>
+			<_field_pad name="pad" length="2" />
+			<_field_block name="Actors" max="16" srcguid="9f6f843b-5e15-3243-9334-a3e3b50ae87b" srcName="scenario_performance_line_sync_action_actor_block">
+				<_field_custom_short_block_index name="Actor type" targetName="custom_performance_character_search_definition" />
+				<_field_pad name="pad" length="2" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="Dialog lines" max="4" srcguid="2ae603da-b8cb-284c-aff5-12145f621322" srcName="scenario_performance_line_dialog_block">
+			<_field_string_id name="dialog" />
+			<_field_real name="probability" />
+		</_field_block>
+		<_field_block name="Sounds" max="4" srcguid="2f6a2c95-7b07-a94e-b110-f08ba8122d4e" srcName="scenario_performance_line_sound_block">
+			<_field_tag_reference name="sound effect" validtags="scmb, sndo, snd!" />
+			<_field_custom_short_block_index name="attach to point" targetName="custom_performance_point_block_index_definition" />
+			<_field_pad name="pad" length="2" />
+			<_field_string_id name="attach to object named" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="Points" max="32" srcguid="ee279b96-6195-4941-9ea1-4f371aa14cb6" srcName="performance_template_point_block">
+		<_field_string_id name="Point name^" />
+		<_field_real_vector_3d name="Relative Position#The offset of the performance point from the center of the performance" />
+		<_field_real_euler_angles_2d name="Relative Facing#The facing at the point in the space of the performance" />
+	</_field_block>
+</plugin>

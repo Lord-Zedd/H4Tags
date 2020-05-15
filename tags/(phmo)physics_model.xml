@@ -1,0 +1,1426 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="mopp codes dirty*!" />
+		<item Name="serialized havok data converted to target platform!*" />
+		<item Name="make physical children keyframed" />
+		<item Name="shrink radius by havok complex radius" />
+	</_field_long_flags>
+	<_field_real name="mass scale#scales the mass of each rigid body.  If you leave this field as 0, then it will be calculated from the total mass below." />
+	<_field_real name="mass#override total mass of all rigid bodies.  Note that this will NOT be the mass of the object if not all rigid bodies are present (for example if you are using permutations)
+If you set a mass scale above, this field is unused." />
+	<_field_real name="low freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive." />
+	<_field_real name="high freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive." />
+	<_field_real name="custom shape radius!#0 defaults to .016.  This field is intentionally hidden because we should only alter this for very special situations.  Lower number == lower performance" />
+	<_field_real name="maximum penetration depth scale#0 is default (1). for objects that are prone to falling through the world we can reduce this number at the cost of performance" />
+	<_field_char_integer name="import version*!" />
+	<_field_pad name="pad0" length="3" />
+	<_field_block name="damped spring motors" max="64" srcguid="61604960-64d2-5c41-af53-227c68d09da9" srcName="physics_model_damped_spring_motor_block">
+		<_field_string_id name="name" />
+		<_field_real name="maximum force#0 defaults to k_real_max" />
+		<_field_real name="minimum force#0 defaults to maximum force.  In general you should leave this alone unless working on ragdolls or something like them" />
+		<_field_real name="spring k" />
+		<_field_real name="damping#0 means default daming of 1.0f" />
+		<_field_real name="initial position" />
+	</_field_block>
+	<_field_block name="position motors" max="64" srcguid="7355c6c0-42e3-ce44-bfda-c94bf92ece8c" srcName="physics_model_position_motor_block">
+		<_field_string_id name="name" />
+		<_field_real name="maximum force" />
+		<_field_real name="minimum force#0 defaults to maximum force.  In general you should leave this alone unless working on ragdolls or something like them" />
+		<_field_real name="tau#from 0-1.  relative stiffness" />
+		<_field_real name="damping#from 0-1" />
+		<_field_real name="proportion recover vel#fraction of recover velocity used.  0 defaults to 1" />
+		<_field_real name="consant recover vel#velocity used to recover when errors happen.  in degress per second" />
+		<_field_real name="initial position" />
+	</_field_block>
+	<_field_block name="phantom types" max="16" srcguid="254090f2-8529-d045-9c80-a4e1ca6ba6fe" srcName="phantom_types_block">
+		<_field_long_flags name="flags">
+			<item Name="UNUSED" />
+			<item Name="use acc as force" />
+			<item Name="negates gravity" />
+			<item Name="ignores players" />
+			<item Name="ignores nonplayers" />
+			<item Name="ignores bipeds" />
+			<item Name="ignores vehicles" />
+			<item Name="ignores weapons" />
+			<item Name="ignores equipment" />
+			<item Name="ignores projectiles" />
+			<item Name="ignores scenery" />
+			<item Name="ignores devices" />
+			<item Name="ignores crates" />
+			<item Name="ignores creatures" />
+			<item Name="ignores giants" />
+			<item Name="ignores spawners" />
+			<item Name="ignores mechs" />
+			<item Name="ignores team objects" />
+			<item Name="smart directional acceleration" />
+			<item Name="ignores grounded bipeds" />
+			<item Name="localizes physics" />
+			<item Name="disable linear damping" />
+			<item Name="disable angular damping" />
+			<item Name="ignores dead bipeds" />
+			<item Name="ignores live bipeds" />
+			<item Name="reciprocal acc" />
+			<item Name="reciprocal acc ONLY" />
+			<item Name="latching disabled" />
+			<item Name="mirrored axis" />
+			<item Name="activate ragdolls" />
+			<item Name="ignores forge editor" />
+		</_field_long_flags>
+		<_field_real name="brittle timer:seconds#objects in this phantom volume will be set to brittle collision damage for this amount of time." />
+		<_field_char_enum name="minimum size">
+			<item Name="default" />
+			<item Name="tiny" />
+			<item Name="small" />
+			<item Name="medium" />
+			<item Name="large" />
+			<item Name="huge" />
+			<item Name="extra huge" />
+		</_field_char_enum>
+		<_field_char_enum name="maximum size">
+			<item Name="default" />
+			<item Name="tiny" />
+			<item Name="small" />
+			<item Name="medium" />
+			<item Name="large" />
+			<item Name="huge" />
+			<item Name="extra huge" />
+		</_field_char_enum>
+		<_field_pad name="OF" length="2" />
+		<_field_string_id name="marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object" />
+		<_field_string_id name="alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to &quot;marker name&quot;" />
+		<_field_explanation name="Linear Motion">0 - means do nothing
+CENTER: motion towards marker position 
+AXIS: motion towards marker axis, such that object is on the axis
+DIRECTION: motion along marker direction</_field_explanation>
+		<_field_pad name="WTBFO" length="8" />
+		<_field_real name="hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do." />
+		<_field_real name="linear dead radius#radius from linear motion origin in which acceleration is dead." />
+		<_field_real name="center acc" />
+		<_field_real name="center max vel" />
+		<_field_real name="axis acc" />
+		<_field_real name="axis max vel" />
+		<_field_real name="direction acc" />
+		<_field_real name="direction max vel" />
+		<_field_real name="orbit acc#negative values spin the opposite direction from positive ones" />
+		<_field_real name="orbit max vel" />
+		<_field_pad name="TF" length="28" />
+		<_field_explanation name="Angular Motion">0 - means do nothing
+ALIGNMENT: algin objects in the phantom with the marker
+SPIN: spin the object about the marker axis</_field_explanation>
+		<_field_real name="alignment hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do." />
+		<_field_real name="alignment acc" />
+		<_field_real name="alignment max vel" />
+		<_field_pad name="TYXJL" length="8" />
+	</_field_block>
+	<_field_block name="powered chains" max="64" srcguid="9b1fc3ab-ef1d-a046-1235-4b86462ceba3" srcName="physics_model_powered_chains_block">
+		<_field_block name="nodes" max="255" srcguid="9b1fc3bb-ef1d-a04a-0235-4b86462aeba3" srcName="physics_model_powered_chain_nodes_block">
+			<_field_short_block_index name="node" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		</_field_block>
+		<_field_block name="constraints" max="64" srcguid="9b1f33bb-ef1c-a04a-0a35-4b86462aebb3" srcName="physics_model_powered_chain_constraints_block">
+			<_field_short_enum name="constraint type">
+				<item Name="hinge" />
+				<item Name="limited hinge" />
+				<item Name="ragdoll" />
+				<item Name="stiff spring" />
+				<item Name="ball and socket" />
+				<item Name="prismatic" />
+				<item Name="powered chain" />
+			</_field_short_enum>
+			<_field_custom_short_block_index name="constraint index" targetName="custom_powered_chain_constraint_reference_block_index_definition" />
+			<_field_struct name="motor x" />
+			<_field_short_enum name="motor type">
+				<item Name="none" />
+				<item Name="damped spring" />
+				<item Name="stongest force" />
+			</_field_short_enum>
+			<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+			<_field_struct name="motor y" />
+			<_field_short_enum name="motor type">
+				<item Name="none" />
+				<item Name="damped spring" />
+				<item Name="stongest force" />
+			</_field_short_enum>
+			<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+			<_field_struct name="motor z" />
+			<_field_short_enum name="motor type">
+				<item Name="none" />
+				<item Name="damped spring" />
+				<item Name="stongest force" />
+			</_field_short_enum>
+			<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="node edges*" max="4096" srcguid="9b1f831e-5115-a046-9a05-4b86462c1033" srcName="physics_model_node_constraint_edge_block">
+		<_field_short_integer name="runtime material type a!" />
+		<_field_short_integer name="runtime material type b!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_block name="constraints*" max="64" srcguid="54c6c547-7f70-7b4f-956b-a9b5ac3e2279" srcName="physics_model_constraint_edge_constraint_block">
+			<_field_short_enum name="type*!">
+				<item Name="hinge" />
+				<item Name="limited hinge" />
+				<item Name="ragdoll" />
+				<item Name="stiff spring" />
+				<item Name="ball and socket" />
+				<item Name="prismatic" />
+				<item Name="powered chain" />
+			</_field_short_enum>
+			<_field_custom_short_block_index name="index*!" targetName="custom_constraint_reference_block_index_definition" />
+			<_field_long_flags name="flags">
+				<item Name="is physical child#this constraint will only be created when this object is a child of another physical object (turrets on vehicles for example)" />
+				<item Name="is rigid#this constraint makes the edge rigid until it is loosened by damage" />
+				<item Name="disable effects#this constraint will not generate impact effects" />
+				<item Name="not created automatically#this flag is used for special systems that need to create constraints dynamically" />
+			</_field_long_flags>
+			<_field_real name="friction#0 is the default (takes what it was set in max) anything else overrides that value" />
+			<_field_block name="ragdoll motors" max="1" srcguid="b56aa962-1648-644e-a529-f07b62fa3b40" srcName="physics_model_ragdoll_motors_block">
+				<_field_explanation name="twist" />
+				<_field_struct name="twist motor" />
+				<_field_short_enum name="motor type">
+					<item Name="none" />
+					<item Name="damped spring" />
+					<item Name="stongest force" />
+				</_field_short_enum>
+				<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+				<_field_explanation name="cone" />
+				<_field_struct name="cone motor" />
+				<_field_short_enum name="motor type">
+					<item Name="none" />
+					<item Name="damped spring" />
+					<item Name="stongest force" />
+				</_field_short_enum>
+				<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+				<_field_explanation name="plane" />
+				<_field_struct name="plane motor" />
+				<_field_short_enum name="motor type">
+					<item Name="none" />
+					<item Name="damped spring" />
+					<item Name="stongest force" />
+				</_field_short_enum>
+				<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+			</_field_block>
+			<_field_block name="limited hinge motors" max="1" srcguid="1038f8b4-e194-384e-9534-7376a5785b3a" srcName="physics_model_limited_hinge_motors_block">
+				<_field_struct name="motor" />
+				<_field_short_enum name="motor type">
+					<item Name="none" />
+					<item Name="damped spring" />
+					<item Name="stongest force" />
+				</_field_short_enum>
+				<_field_custom_short_block_index name="index" targetName="custom_physics_model_motor_reference_block_index_definition" />
+			</_field_block>
+		</_field_block>
+		<_field_string_id name="node a material#if you don't fill this out we will pluck the material from the first primitive, of the first rigid body attached to node a" />
+		<_field_string_id name="node b material#if you don't fill this out we will pluck the material from the first primitive, of the first rigid body attached to node b, if node b is none we use whatever material a has" />
+	</_field_block>
+	<_field_block name="rigid bodies*" max="64" srcguid="13ee02f9-a6fe-c743-9c90-bed0f9d06754" srcName="rigid_bodies_block">
+		<_field_short_block_index name="node*" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="region*" targetGuid="c400cf43-fa48-5d42-9f39-45e3c0cc414d" targetName="regions_block" />
+		<_field_custom_short_block_index name="permutattion*" targetName="permutation_search" />
+		<_field_short_block_index name="serialized shapes*" targetGuid="ad18f77a-5c22-be48-b298-5bdf8251524d" targetName="RigidBodySerializedShapesBlock" />
+		<_field_real_point_3d name="bouding sphere offset*!" />
+		<_field_real name="bounding sphere radius*!" />
+		<_field_word_flags name="flags">
+			<item Name="has no phantom power version#don't check this flag without talking to eamon" />
+			<item Name="infinite intertia tensor#rigid body will never have angular velocity" />
+			<item Name="can use mopps#this flag was invented for the behemoth and is dangerous to use anywhere else (obsolete)!" />
+			<item Name="Havok rigid body#rigid body properties like center of mass and inertia tensor come from Havok Content Tools (and shouldn't be edited in Bonobo)" />
+			<item Name="explicit mass#the mass is explicit, and not computed based on volume and density" />
+			<item Name="absolute center of mass#the 'center of mass offset' is relative to the pivot and not to the computed center" />
+			<item Name="force keyframed#rigid body is always keyframed and can't be overriden to dynamic or fixed" />
+			<item Name="force not cut NavMesh#this rigid body will not generate a cutting silhouette" />
+		</_field_word_flags>
+		<_field_short_block_index name="no phantom power alt" targetGuid="13ee02f9-a6fe-c743-9c90-bed0f9d06754" targetName="rigid_bodies_block" />
+		<_field_char_enum name="motion type">
+			<item Name="sphere" />
+			<item Name="stabilized sphere" />
+			<item Name="box" />
+			<item Name="stabilized box" />
+			<item Name="keyframed" />
+			<item Name="fixed" />
+		</_field_char_enum>
+		<_field_explanation name="collision group override">This value overrides the default group.  It also overrides values specified in the materials block of this tag. Values set here can be overridden per shape through the shape primitive blocks.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_short_enum name="size">
+			<item Name="default" />
+			<item Name="tiny" />
+			<item Name="small" />
+			<item Name="medium" />
+			<item Name="large" />
+			<item Name="huge" />
+			<item Name="extra huge" />
+		</_field_short_enum>
+		<_field_explanation name="inertia tensor scales">if you want to set he scale uniforml just set "inertia tensor scale".  If you want to set the values seperately per axis you can set "inertia tensor scale x\y\z"</_field_explanation>
+		<_field_real name="inertia tensor scale#0.0 defaults to 1.0" />
+		<_field_real name="inertia tensor scale x#0.0 defaults to 1.0" />
+		<_field_real name="inertia tensor scale y#0.0 defaults to 1.0" />
+		<_field_real name="inertia tensor scale z#0.0 defaults to 1.0" />
+		<_field_real name="linear damping#this goes from 0-10 (10 is really, really high)" />
+		<_field_real name="angular damping#this goes from 0-10 (10 is really, really high)" />
+		<_field_real_vector_3d name="center off mass offset" />
+		<_field_explanation name="water physics bounding box">if any of these fields are non-zero, this overrides the bounding box used for water physics</_field_explanation>
+		<_field_real name="water physics x0#x0 value of the water physics aabb" />
+		<_field_real name="water physics x1#x1 value of the water physics aabb" />
+		<_field_real name="water physics y0#y0 value of the water physics aabb" />
+		<_field_real name="water physics y1#y1 value of the water physics aabb" />
+		<_field_real name="water physics z0#z0 value of the water physics aabb" />
+		<_field_real name="water physics z1#z1 value of the water physics aabb" />
+		<_field_long_integer name="Runtime Shape Pointer*~!" />
+		<_field_real_vector_3d name="center of mass*!" />
+		<_field_real name="havok w center of mass*!!" />
+		<_field_real_vector_3d name="intertia tensor x*!" />
+		<_field_real name="havok w intertia tensor x*!!" />
+		<_field_real_vector_3d name="intertia tensor y*!" />
+		<_field_real name="havok w intertia tensor y*!!" />
+		<_field_real_vector_3d name="intertia tensor z*!" />
+		<_field_real name="havok w intertia tensor z*!!" />
+		<_field_long_integer name="runtime havok group mask *!" />
+		<_field_struct name="shape reference" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_real name="mass:kg*!" />
+		<_field_real name="bounding sphere pad#the bounding sphere for this rigid body will be outset by this much" />
+		<_field_char_enum name="collision quality override type">
+			<item Name="none" />
+			<item Name="debris_simple_toi" />
+			<item Name="moving" />
+			<item Name="critical" />
+			<item Name="bullet" />
+			<item Name="character" />
+			<item Name="fixed" />
+		</_field_char_enum>
+		<_field_pad name="pad3" length="1" />
+		<_field_short_integer name="runtime_flags*!" />
+		<_field_explanation name="Stupid mass override">If you want to override what the calculated mass distribution or artist set mass is, this is where you do it. Also, this will show up as n/100 in the game debugger. Awesome.</_field_explanation>
+		<_field_real name="Mass body override" />
+		<_field_pad name="pad4" length="8" />
+	</_field_block>
+	<_field_block name="materials*" max="64" srcguid="677536ac-7139-574e-9b17-ed7020402724" srcName="materials_block">
+		<_field_string_id name="name^*!" />
+		<_field_byte_flags name="flags">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_pad name="flags pad" length="3" />
+		<_field_string_id name="global material name" />
+		<_field_short_block_index name="phantom type" targetGuid="254090f2-8529-d045-9c80-a4e1ca6ba6fe" targetName="phantom_types_block" />
+		<_field_explanation name="collision group override">This value overrides the default collision group.  It is overridden by any values specified rigid bodies block that overlap. Values set here can be overridden per shape through the shape primitive blocks.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_char_integer name="runtime collision group*!" />
+	</_field_block>
+	<_field_block name="spheres*" max="16384" srcguid="eda7b1cd-bc43-8545-97cc-f77d018678c4" srcName="spheres_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="sphere shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn344" length="12" />
+		<_field_struct name="translate shape" />
+		<_field_struct name="convex" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_struct name="havok shape reference struct" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child shape size" />
+		<_field_real_vector_3d name="translation*!" />
+		<_field_real name="havok w translation*!!" />
+	</_field_block>
+	<_field_block name="multi spheres*" max="16384" srcguid="c0c19021-1cb3-1048-88fa-bd1c7e8cf19d" srcName="multi_spheres_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="sphere rep shape" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_long_integer name="num spheres*!" />
+		<_field_pad name="bull434" length="12" />
+		<_field_array name="four vectors storage*!">
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+			<_field_real_vector_3d name="sphere*!" />
+			<_field_real name="havok w sphere*!!" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="pills*" max="16384" srcguid="b350270e-ba8b-7f4b-ada7-73af644ad79a" srcName="pills_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="capsule shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn243" length="12" />
+		<_field_real_vector_3d name="bottom*!" />
+		<_field_real name="havok w bottom*!!" />
+		<_field_real_vector_3d name="top*!" />
+		<_field_real name="havok w top*!!" />
+	</_field_block>
+	<_field_block name="boxes*" max="16384" srcguid="25d426d7-916d-ff47-b52d-c314ebccb77c" srcName="boxes_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="box shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn3473" length="12" />
+		<_field_real_vector_3d name="half extents*!" />
+		<_field_real name="havok w half extents*!!" />
+		<_field_struct name="convex transform shape" />
+		<_field_struct name="convex" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_struct name="havok shape reference struct" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child shape size" />
+		<_field_real_vector_3d name="rotation i*!" />
+		<_field_real name="havok w rotation i*!!" />
+		<_field_real_vector_3d name="rotation j*!" />
+		<_field_real name="havok w rotation j*!!" />
+		<_field_real_vector_3d name="rotation k*!" />
+		<_field_real name="havok w rotation k*!!" />
+		<_field_real_vector_3d name="translation*!" />
+		<_field_real name="havok w translation*!!" />
+	</_field_block>
+	<_field_block name="triangles*" max="16384" srcguid="3b9ab228-5247-de46-a537-1b359316a629" srcName="triangles_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="triangle shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_long_integer name="type*~!" />
+		<_field_real name="radius*!" />
+		<_field_short_integer name="welding info*!" />
+		<_field_char_integer name="welding type*!" />
+		<_field_char_integer name="is extruded*!" />
+		<_field_pad name="algn92" length="8" />
+		<_field_real_vector_3d name="point a*!" />
+		<_field_real name="havok w point a*!!" />
+		<_field_real_vector_3d name="point b*!" />
+		<_field_real name="havok w point b*!!" />
+		<_field_real_vector_3d name="point c*!" />
+		<_field_real name="havok w point c*!!" />
+		<_field_real_vector_3d name="extrusion*!" />
+		<_field_real name="havok w extrusion*!!" />
+	</_field_block>
+	<_field_block name="polyhedra*" max="16384" srcguid="898896f4-c1f5-d745-99a8-d99e17508fb6" srcName="polyhedra_block">
+		<_field_struct name="base" />
+		<_field_string_id name="name^*!" />
+		<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+		<_field_byte_flags name="material flags*">
+			<item Name="supresses effects" />
+			<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+		</_field_byte_flags>
+		<_field_short_integer name="runtime material type*~!" />
+		<_field_real name="relative mass scale" />
+		<_field_real_fraction name="friction" />
+		<_field_real_fraction name="restitution" />
+		<_field_real name="volume *" />
+		<_field_real name="mass*!" />
+		<_field_short_integer name="mass distribution index!" />
+		<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+		<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+		<_field_char_enum name="proxy collision group">
+			<item Name="NONE" />
+			<item Name="small crate" />
+			<item Name="crate" />
+			<item Name="huge crate" />
+			<item Name="item" />
+			<item Name="projectile" />
+			<item Name="biped" />
+			<item Name="machine" />
+			<item Name="early mover machine" />
+			<item Name="only collide with environment" />
+			<item Name="tech art custom" />
+			<item Name="small expensive plant" />
+			<item Name="ignore environment" />
+			<item Name="huge vehicle" />
+			<item Name="ragdoll" />
+			<item Name="super collidable ragdoll" />
+			<item Name="item blocker" />
+			<item Name="user00" />
+			<item Name="user01" />
+			<item Name="everything" />
+			<item Name="creatures" />
+		</_field_char_enum>
+		<_field_struct name="polyhedron shape" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_real name="radius*!" />
+		<_field_pad name="algn743" length="12" />
+		<_field_real_vector_3d name="aabb half extents*" />
+		<_field_real name="havok w aabb half extents*!" />
+		<_field_real_vector_3d name="aabb center*" />
+		<_field_real name="havok w aabb center*!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_long_integer name="four vectors size*" />
+		<_field_long_integer name="four vectors capacity*!" />
+		<_field_long_integer name="num vertices*" />
+		<_field_char_integer name="m_useSpuBuffer*" />
+		<_field_pad name="algn434" length="3" />
+		<_field_long_integer name="another field pointer skip!~" />
+		<_field_long_integer name="plane equations size*" />
+		<_field_long_integer name="plane equations capacity*!" />
+		<_field_long_integer name="connectivity*!" />
+		<_field_pad name="SAMTRA" length="12" />
+	</_field_block>
+	<_field_block name="polyhedron four vectors*!" max="24576" srcguid="2bd79a91-a2a3-744a-ac7f-3bb643b76bc1" srcName="polyhedron_four_vectors_block">
+		<_field_real_vector_3d name="four vectors x*" />
+		<_field_real name="havok w four vectors x*!" />
+		<_field_real_vector_3d name="four vectors y*" />
+		<_field_real name="havok w four vectors y*!" />
+		<_field_real_vector_3d name="four vectors z*" />
+		<_field_real name="havok w four vectors z*!" />
+	</_field_block>
+	<_field_block name="polyhedron plane equations*!" max="131072" srcguid="3cb22f6c-2cba-4240-bfba-cdf22191cab5" srcName="polyhedron_plane_equations_block">
+		<_field_real_vector_3d name="plane equations*!" />
+		<_field_real name="havok w plane equations*!!" />
+	</_field_block>
+	<_field_block name="mass distributions*!" max="1024" srcguid="6ad695d7-fd38-c448-9283-011cb7d8aca0" srcName="mass_distributions_block">
+		<_field_real_vector_3d name="center of mass*" />
+		<_field_real name="havok w center of mass*!" />
+		<_field_real_vector_3d name="inertia tensor i*" />
+		<_field_real name="havok w inertia tensor i*!" />
+		<_field_real_vector_3d name="inertia tensor j*" />
+		<_field_real name="havok w inertia tensor j*!" />
+		<_field_real_vector_3d name="inertia tensor k*" />
+		<_field_real name="havok w inertia tensor k*!" />
+	</_field_block>
+	<_field_block name="lists*!" max="64" srcguid="6ef863d6-d9b8-624d-922b-a3c3bb29d488" srcName="lists_block">
+		<_field_struct name="base" />
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_long_integer name="type*~!" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_char_integer name="disable welding*~" />
+		<_field_char_integer name="collection type*~" />
+		<_field_pad name="VDVAPBSS" length="2" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_long_integer name="child shapes size*" />
+		<_field_long_integer name="child shapes capacity*!" />
+		<_field_pad name="nail_in_dick" length="12" />
+		<_field_real_vector_3d name="aabb half extents!*!" />
+		<_field_real name="havok w aabb half extents!*!!" />
+		<_field_real_vector_3d name="aabb center!*!" />
+		<_field_real name="havok w aabb center!*!!" />
+		<_field_long_integer name="enabled children0" />
+		<_field_long_integer name="enabled children1" />
+		<_field_long_integer name="enabled children2" />
+		<_field_long_integer name="enabled children3" />
+		<_field_long_integer name="enabled children4" />
+		<_field_long_integer name="enabled children5" />
+		<_field_long_integer name="enabled children6" />
+		<_field_long_integer name="enabled children7" />
+	</_field_block>
+	<_field_block name="list shapes*!" max="4096" srcguid="87ce2bb1-7fde-5545-ab45-0e0637a15489" srcName="list_shapes_block">
+		<_field_struct name="shape reference" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="collision filter*" />
+		<_field_long_integer name="shape size*" />
+		<_field_long_integer name="num child shapes*" />
+	</_field_block>
+	<_field_block name="mopps*!" max="64" srcguid="23d2f5e4-7222-b140-a6ce-731c47d19cdc" srcName="mopps_block">
+		<_field_struct name="base" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_pad name="m_bvTreeType" length="1" />
+		<_field_pad name="3 other bytes" length="3" />
+		<_field_long_integer name="mopp code pointer!~" />
+		<_field_long_integer name="mopp data skip!~" />
+		<_field_long_integer name="mopp data size~" />
+		<_field_real_vector_3d name="m_codeInfoCopy*" />
+		<_field_real name="havok w m_codeInfoCopy*!" />
+		<_field_long_integer name="child shape vtable*!~" />
+		<_field_struct name="childShapePointer!~" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="child size!~" />
+		<_field_pad name="mopp alignment*!~" length="4" />
+		<_field_real name="scale*!" />
+		<_field_pad name="final alignment*!~" length="12" />
+	</_field_block>
+	<_field_data name="mopp codes*!" />
+	<_field_block name="hinge constraints*!" max="64" srcguid="d5c37daf-0153-b440-91b1-25d862093acb" srcName="hinge_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="JENFOXHY" length="4" />
+	</_field_block>
+	<_field_block name="ragdoll constraints*!" max="64" srcguid="11def371-b2a1-b14f-aebd-f8e12005975c" srcName="ragdoll_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="OVIM" length="4" />
+		<_field_real name="min twist*!" />
+		<_field_real name="max twist*!" />
+		<_field_real name="min cone*!" />
+		<_field_real name="max cone*!" />
+		<_field_real name="min plane*!" />
+		<_field_real name="max plane*!" />
+		<_field_real name="max friciton torque*!" />
+	</_field_block>
+	<_field_block name="regions*" max="32" srcguid="c400cf43-fa48-5d42-9f39-45e3c0cc414d" srcName="regions_block">
+		<_field_string_id name="name^*!" />
+		<_field_block name="permutations" max="255" srcguid="8f3d07b9-7799-2642-951f-4436864fd834" srcName="permutations_block">
+			<_field_string_id name="name^*!" />
+			<_field_block name="rigid bodies" max="64" srcguid="ea0e21c6-0d4b-ca46-b5ec-b5cefcb173a7" srcName="rigid_body_indices_block">
+				<_field_short_block_index name="rigid body^*!" targetGuid="13ee02f9-a6fe-c743-9c90-bed0f9d06754" targetName="rigid_bodies_block" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="nodes*" max="255" srcguid="e11229f9-36a4-d14c-a657-24a1bb8a252b" srcName="nodes_block">
+		<_field_string_id name="name^*!" />
+		<_field_word_flags name="flags">
+			<item Name="does not animate" />
+		</_field_word_flags>
+		<_field_short_block_index name="parent*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="sibling*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="child*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+	</_field_block>
+	<_field_block name="errors*!" max="512" srcguid="d578bb3c-07ca-834d-8994-291a8e13f496" srcName="global_error_report_categories_block">
+		<_field_long_string name="name^*" />
+		<_field_short_enum name="report type*">
+			<item Name="silent" />
+			<item Name="comment" />
+			<item Name="warning" />
+			<item Name="error" />
+		</_field_short_enum>
+		<_field_word_flags name="flags*">
+			<item Name="rendered" />
+			<item Name="tangent-space" />
+			<item Name="non-critical" />
+			<item Name="lightmap light" />
+			<item Name="report key is valid" />
+		</_field_word_flags>
+		<_field_short_integer name="runtime generation flags!" />
+		<_field_pad name="WVTP" length="2" />
+		<_field_long_integer name="runtime something~!" />
+		<_field_block name="reports*" max="1048576" srcguid="20ab6aee-2732-9f49-9145-08d640fcaa9e" srcName="error_reports_block">
+			<_field_char_enum name="type*">
+				<item Name="silent" />
+				<item Name="comment" />
+				<item Name="warning" />
+				<item Name="error" />
+			</_field_char_enum>
+			<_field_char_enum name="source*">
+				<item Name="none" />
+				<item Name="structure" />
+				<item Name="poop" />
+				<item Name="lightmap" />
+				<item Name="pathfinding" />
+			</_field_char_enum>
+			<_field_word_flags name="flags*">
+				<item Name="rendered" />
+				<item Name="tangent-space" />
+				<item Name="non-critical" />
+				<item Name="lightmap light" />
+				<item Name="report key is valid" />
+			</_field_word_flags>
+			<_field_data name="text*" />
+			<_field_long_integer name="source identifier*" />
+			<_field_string name="source filename*" />
+			<_field_long_integer name="source line number*" />
+			<_field_block name="vertices*" max="1048576" srcguid="d1114db4-84a8-3d46-b955-25130e390450" srcName="error_report_vertices_block">
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+				<_field_real name="screen size*" />
+			</_field_block>
+			<_field_block name="vectors*" max="1048576" srcguid="38e017f6-4e0b-8d4e-af4f-86b902745e1f" srcName="error_report_vectors_block">
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+				<_field_real_vector_3d name="normal*" />
+				<_field_real name="screen length*" />
+			</_field_block>
+			<_field_block name="lines*" max="1048576" srcguid="3c2d171c-4a60-5643-8f1b-de48e0ca8284" srcName="error_report_lines_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="triangles*" max="1048576" srcguid="61e726f9-1200-e344-8517-31162b96347a" srcName="error_report_triangles_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="quads*" max="1048576" srcguid="211607d1-d8e7-0543-8aea-9fccc52955bf" srcName="error_report_quads_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="comments*" max="1048576" srcguid="66959a70-a3de-1746-8aff-50b9db6de950" srcName="error_report_comments_block">
+				<_field_data name="text*" />
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_long_integer name="report key*" />
+			<_field_long_integer name="node index*" />
+			<_field_real_bounds name="bounds x*" />
+			<_field_real_bounds name="bounds y*" />
+			<_field_real_bounds name="bounds z*" />
+			<_field_real_argb_color name="color*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="point to path curves*!" max="64" srcguid="e5835b29-5b91-ea4f-b9c3-7400f93e5bd0" srcName="point_to_path_curve_block">
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node index*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_pad name="TNLRSOSY" length="2" />
+		<_field_block name="points*!" max="1024" srcguid="f469877d-d6bc-c246-99d3-a2dc900fae2f" srcName="point_to_path_curve_point_block">
+			<_field_real_point_3d name="position*!" />
+			<_field_real name="t value*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="limited hinge constraints*!" max="64" srcguid="cc0d7dca-dd98-694a-99c9-28ceb478f286" srcName="limited_hinge_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="TC" length="4" />
+		<_field_real name="limit friction*!" />
+		<_field_real name="limit min angle*!" />
+		<_field_real name="limit max angle*!" />
+	</_field_block>
+	<_field_block name="ball and socket constraints*!" max="64" srcguid="f829ef96-cbd4-714c-8e24-795dbc63d57d" srcName="ball_and_socket_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="UPDLSKB" length="4" />
+	</_field_block>
+	<_field_block name="stiff spring constraints*!" max="64" srcguid="08a471b1-e4c3-a94f-9b29-0904f448e781" srcName="stiff_spring_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="KGB" length="4" />
+		<_field_real name="spring_length*!" />
+	</_field_block>
+	<_field_block name="prismatic constraints*!" max="64" srcguid="48a91465-ac92-164d-807d-1f7f6df5d8a4" srcName="prismatic_constraints_block">
+		<_field_struct name="constraint bodies*!" />
+		<_field_string_id name="name^*!" />
+		<_field_short_block_index name="node a*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_short_block_index name="node b*!" targetGuid="e11229f9-36a4-d14c-a657-24a1bb8a252b" targetName="nodes_block" />
+		<_field_real name="a scale*!" />
+		<_field_real_vector_3d name="a forward*!" />
+		<_field_real_vector_3d name="a left*!" />
+		<_field_real_vector_3d name="a up*!" />
+		<_field_real_point_3d name="a position*!" />
+		<_field_real name="b scale*!" />
+		<_field_real_vector_3d name="b forward*!" />
+		<_field_real_vector_3d name="b left*!" />
+		<_field_real_vector_3d name="b up*!" />
+		<_field_real_point_3d name="b position*!" />
+		<_field_short_block_index name="edge index*!" targetGuid="9b1f831e-5115-a046-9a05-4b86462c1033" targetName="physics_model_node_constraint_edge_block" />
+		<_field_pad name="H" length="2" />
+		<_field_pad name="XVEPD" length="4" />
+		<_field_real name="min_limit*!" />
+		<_field_real name="max_limit*!" />
+		<_field_real name="max_friction_force*!" />
+	</_field_block>
+	<_field_block name="phantoms*!" max="128" srcguid="72b62598-defc-7143-a3e1-d01ac83e8bd0" srcName="phantoms_block">
+		<_field_struct name="bv shape" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+		<_field_struct name="havok shape reference struct1" />
+		<_field_short_enum name="shape type*">
+			<item Name="sphere" />
+			<item Name="pill" />
+			<item Name="box" />
+			<item Name="triangle" />
+			<item Name="polyhedron" />
+			<item Name="multi sphere" />
+			<item Name="unused 0" />
+			<item Name="unused 1" />
+			<item Name="unused 2" />
+			<item Name="unused 3" />
+			<item Name="unused 4" />
+			<item Name="unused 5" />
+			<item Name="unused 6" />
+			<item Name="unused 7" />
+			<item Name="list" />
+			<item Name="mopp" />
+		</_field_short_enum>
+		<_field_custom_short_block_index name="shape*" targetName="shape_search" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_long_integer name="child shape pointer!~" />
+		<_field_struct name="phantom shape" />
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*~!" />
+		<_field_short_integer name="count*~!" />
+		<_field_char_integer name="type*~!" />
+		<_field_char_integer name="dispatchType*~!" />
+		<_field_char_integer name="bitsPerKey*~!" />
+		<_field_char_integer name="codecType*~!" />
+		<_field_long_integer name="user data*~!" />
+	</_field_block>
+	<_field_block name="RigidBody Serialized Shapes*" max="16384" srcguid="ad18f77a-5c22-be48-b298-5bdf8251524d" srcName="RigidBodySerializedShapesBlock">
+		<_field_block name="Mopp Serialized Havok Data" max="64" srcguid="36405193-1164-2d41-9dfe-ac701d84c668" srcName="MoppSerializedHavokDataBlock">
+			<_field_struct name="base" />
+			<_field_string_id name="name^*!" />
+			<_field_char_block_index name="material*" targetGuid="677536ac-7139-574e-9b17-ed7020402724" targetName="materials_block" />
+			<_field_byte_flags name="material flags*">
+				<item Name="supresses effects" />
+				<item Name="force enable collision with player#enables collision with the player regardless of the collision group" />
+			</_field_byte_flags>
+			<_field_short_integer name="runtime material type*~!" />
+			<_field_real name="relative mass scale" />
+			<_field_real_fraction name="friction" />
+			<_field_real_fraction name="restitution" />
+			<_field_real name="volume *" />
+			<_field_real name="mass*!" />
+			<_field_short_integer name="mass distribution index!" />
+			<_field_char_block_index name="phantom*" targetGuid="72b62598-defc-7143-a3e1-d01ac83e8bd0" targetName="phantoms_block" />
+			<_field_explanation name="collision group override">This value overrides the default group, model, and rigid body.</_field_explanation>
+			<_field_char_enum name="proxy collision group">
+				<item Name="NONE" />
+				<item Name="small crate" />
+				<item Name="crate" />
+				<item Name="huge crate" />
+				<item Name="item" />
+				<item Name="projectile" />
+				<item Name="biped" />
+				<item Name="machine" />
+				<item Name="early mover machine" />
+				<item Name="only collide with environment" />
+				<item Name="tech art custom" />
+				<item Name="small expensive plant" />
+				<item Name="ignore environment" />
+				<item Name="huge vehicle" />
+				<item Name="ragdoll" />
+				<item Name="super collidable ragdoll" />
+				<item Name="item blocker" />
+				<item Name="user00" />
+				<item Name="user01" />
+				<item Name="everything" />
+				<item Name="creatures" />
+			</_field_char_enum>
+			<_field_long_integer name="version*" />
+			<_field_long_integer name="Runtime Deserialized Shape Pointer*~!" />
+			<_field_data name="Serialized Havok Data*" />
+			<_field_data name="Serialized Havok Data Any Temp*!" />
+		</_field_block>
+	</_field_block>
+</plugin>

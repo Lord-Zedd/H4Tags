@@ -1,0 +1,49 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_explanation name="Links">links to the tags this data is associated with. These will be set by the importer, you don't need to do it manually</_field_explanation>
+	<_field_tag_reference name="RenderModel*" validtags="mode" />
+	<_field_tag_reference name="AnimationGraph*" validtags="jmad" />
+	<_field_long_flags name="pcaFlags*">
+		<item Name="lookup table ready" />
+		<item Name="resources generated" />
+		<item Name="resources committed" />
+	</_field_long_flags>
+	<_field_long_integer name="PCA Animation Count*!" />
+	<_field_long_integer name="PCA Checksum*!" />
+	<_field_explanation name="Imported Data">imported data</_field_explanation>
+	<_field_block name="frame data*" max="67108864" srcguid="343433e5-5506-484f-821a-f6f8556fb3b5" srcName="PCAImportedFrameDatablock">
+		<_field_data name="Coefficients" />
+	</_field_block>
+	<_field_block name="mesh data*" max="8191" srcguid="d0007a3f-e31f-2a44-aed7-fe3426590547" srcName="PCAImportedMeshDataBlock">
+		<_field_long_integer name="render mesh index*" />
+		<_field_long_integer name="vertices per shape*" />
+		<_field_long_integer name="vertex buffer index*" />
+		<_field_real_vector_3d name="position scale*" />
+		<_field_real name="tension scale*" />
+		<_field_real_vector_3d name="position offset*" />
+		<_field_real name="tension offset*" />
+		<_field_real_vector_3d name="normal scale*" />
+		<_field_real name="stretch scale*" />
+		<_field_real_vector_3d name="normal offset*" />
+		<_field_real name="stretch offset*" />
+		<_field_explanation name="Animations">all imported animations for this mesh</_field_explanation>
+		<_field_block name="animations*" max="2048" srcguid="f8d29f95-c1bb-9642-adcd-7d1c128a561c" srcName="PCAImportedAnimationDataBlock">
+			<_field_string_id name="Name^*" />
+			<_field_long_integer name="Offset*" />
+			<_field_long_integer name="Count*" />
+			<_field_long_integer name="PCA Shape Offset*!" />
+			<_field_long_integer name="PCA coefficient Count*!" />
+			<_field_explanation name="Resource Data">coefficients</_field_explanation>
+			<_field_pageable_resource name="CoefficientResource*" />
+		</_field_block>
+		<_field_explanation name="Vertices">all imported blend shape vertices for this mesh</_field_explanation>
+		<_field_block name="raw blendshape verts*" max="16777214" srcguid="93555e7d-7ef9-b94d-8e97-bc0072ec5ce9" srcName="raw_blendshape_block">
+			<_field_real_vector_3d name="position*" />
+			<_field_real_vector_3d name="normal*" />
+			<_field_real_argb_color name="tension and ambient occlusion*" />
+		</_field_block>
+	</_field_block>
+	<_field_explanation name="Resource Data">vertex buffers</_field_explanation>
+	<_field_pageable_resource name="api resource*" />
+</plugin>

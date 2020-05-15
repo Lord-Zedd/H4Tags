@@ -1,0 +1,29 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="tiers" max="10" srcguid="5ed8c2c1-669e-4f4f-9b76-abc1dab1cd0e" srcName="gameMedalTiers">
+		<_field_string_id name="name^" />
+		<_field_string_id name="description" />
+		<_field_short_integer name="sequence index" />
+		<_field_short_integer name="point value" />
+	</_field_block>
+	<_field_block name="medals" max="256" srcguid="2f91f8f9-1375-a046-b670-d5b7799a1799" srcName="game_medal_block">
+		<_field_string_id name="name^" />
+		<_field_string_id name="description" />
+		<_field_short_integer name="sequence index" />
+		<_field_char_enum name="medal class">
+			<item Name="special" />
+			<item Name="role spree" />
+			<item Name="spree" />
+			<item Name="multikill" />
+			<item Name="objectives" />
+			<item Name="circumstance" />
+			<item Name="finesse" />
+		</_field_char_enum>
+		<_field_pad name="PAD1" length="1" />
+		<_field_long_integer name="ordnance points#The number of ordnance points that are awarded to the player when they earn this medal." />
+		<_field_byte_integer name="ordnance multiplier#The ordnance multiplier to add to players ordnance multiplier when they earn this medal." />
+		<_field_byte_integer name="tier index#the tier that this medal belongs to" />
+		<_field_short_integer name="override point value#if greater than zero, this point value will be awarded to players instead of the tier's point value" />
+	</_field_block>
+</plugin>

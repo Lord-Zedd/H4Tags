@@ -1,0 +1,17 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="rumble" />
+	<_field_explanation name="low frequency rumble" />
+	<_field_struct name="low frequency rumble" />
+	<_field_real name="duration:seconds" />
+	<_field_struct name="dirty whore" />
+	<_field_data name="data" />
+	<_field_useless_pad name="" />
+	<_field_explanation name="high frequency rumble" />
+	<_field_struct name="high frequency rumble" />
+	<_field_real name="duration:seconds" />
+	<_field_struct name="dirty whore" />
+	<_field_data name="data" />
+	<_field_useless_pad name="" />
+</plugin>

@@ -1,0 +1,71 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="vertex types" max="108" srcguid="b69d90d8-fc9d-c944-a2f0-8bb05b8d92e6" srcName="global_vertex_shader_vertex_types_block">
+		<_field_block name="entry point dependency" max="80" srcguid="46b274c7-264b-6344-8f00-ffb5dbf46c9d" srcName="global_shader_entry_point_block">
+			<_field_block name="category dependency" max="16" srcguid="e8c17b5f-3034-2440-a5db-cb551d18fde8" srcName="global_shader_category_dependency">
+				<_field_long_integer name="definition category index" />
+				<_field_block name="option dependency" max="32" srcguid="10bbb736-f229-2f48-a621-d1b78fc91f6e" srcName="global_shader_option_dependency">
+					<_field_long_integer name="compiled shader index" />
+				</_field_block>
+			</_field_block>
+			<_field_long_integer name="default compiled shader index" />
+		</_field_block>
+	</_field_block>
+	<_field_dword_integer name="version*" />
+	<_field_block name="compiled shaders" max="10240" srcguid="1ddb4335-6c83-4348-b307-e44683bd276f" srcName="compiled_vertex_shader_block">
+		<_field_struct name="compiled shader splut" />
+		<_field_long_flags name="shader flags">
+			<item Name="requires constant table" />
+		</_field_long_flags>
+		<_field_data name="xenon compiled shader{..:xenon compiled shader}" />
+		<_field_data name="dx9 compiled shader{..:dx9 compiled shader}" />
+		<_field_explanation name="Xenon constant table" />
+		<_field_struct name="xenon rasterizer constant table*!" />
+		<_field_block name="constants*" max="426" srcguid="ab07ac9e-9d55-ef43-88ae-f5bc656e3255" srcName="rasterizer_constant_block">
+			<_field_string_id name="constant name^" />
+			<_field_word_integer name="register start*" />
+			<_field_byte_integer name="register count*" />
+			<_field_char_enum name="register set*">
+				<item Name="bool" />
+				<item Name="int" />
+				<item Name="float" />
+				<item Name="sampler" />
+				<item Name="vertex_bool" />
+				<item Name="vertex_int" />
+				<item Name="vertex_float" />
+				<item Name="vertex_sampler" />
+			</_field_char_enum>
+		</_field_block>
+		<_field_char_enum name="type*">
+			<item Name="vertex" />
+			<item Name="pixel" />
+		</_field_char_enum>
+		<_field_pad name="qersaui" length="3" />
+		<_field_explanation name="DX9 constant table" />
+		<_field_struct name="dx9 rasterizer constant table*!" />
+		<_field_block name="constants*" max="426" srcguid="ab07ac9e-9d55-ef43-88ae-f5bc656e3255" srcName="rasterizer_constant_block">
+			<_field_string_id name="constant name^" />
+			<_field_word_integer name="register start*" />
+			<_field_byte_integer name="register count*" />
+			<_field_char_enum name="register set*">
+				<item Name="bool" />
+				<item Name="int" />
+				<item Name="float" />
+				<item Name="sampler" />
+				<item Name="vertex_bool" />
+				<item Name="vertex_int" />
+				<item Name="vertex_float" />
+				<item Name="vertex_sampler" />
+			</_field_char_enum>
+		</_field_block>
+		<_field_char_enum name="type*">
+			<item Name="vertex" />
+			<item Name="pixel" />
+		</_field_char_enum>
+		<_field_pad name="qersaui" length="3" />
+		<_field_dword_integer name="gprs{..:gprs}" />
+		<_field_long_integer name="cache file reference*" />
+		<_field_long_integer name="runtime shader ~*!" />
+	</_field_block>
+</plugin>

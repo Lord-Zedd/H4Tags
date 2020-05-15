@@ -1,0 +1,296 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="random rotation" />
+		<item Name="force planar" />
+		<item Name="is strip" />
+	</_field_long_flags>
+	<_field_long_integer name="ring buffer size (in triangles)#bigger sizes keep more decals around but use much more memory" />
+	<_field_long_integer name="ring buffer size single player (in triangles)#above entry is for MP -- SP can be different" />
+	<_field_real name="material shader fade time#material shader lifetime is modulated from 1 to 0 over this time" />
+	<_field_real_point_2d name="decal scale override#NOTE - If set to non-zero, this will override manual scaling in Sapien and smash it with these values" />
+	<_field_explanation name="Decal bucket sharing">For the index bounds below, if non-zero, sprites will be chosen between low and high bounds, inclusive.
+Use this to keep multiple different decals in the same bucket.
+If multiple decal systems use the same bitmap set and the same material definition, they will be combined at runtime and share their vertex bucket.
+This is more efficient in memory and more performant to render.</_field_explanation>
+	<_field_short_integer_bounds name="random sprite index bounds#if zero, will use random sprite" />
+	<_field_block name="decals" max="16" srcguid="1baee505-a433-bf4f-83f6-0d66ac15fdb8" srcName="decal_definition_block">
+		<_field_string_id name="decal name^" />
+		<_field_long_flags name="flags">
+			<item Name="render in transparents pass" />
+		</_field_long_flags>
+		<_field_custom name="material" />
+		<_field_struct name="actual material?" />
+		<_field_tag_reference name="material shader" validtags="mats" />
+		<_field_block name="material parameters" max="111" srcguid="063e4b5e-a818-3647-becf-963f42cad69d" srcName="material_shader_parameter_block">
+			<_field_string_id name="parameter name^*" />
+			<_field_long_enum name="parameter type*">
+				<item Name="bitmap" />
+				<item Name="real" />
+				<item Name="int" />
+				<item Name="bool" />
+				<item Name="color" />
+			</_field_long_enum>
+			<_field_long_integer name="parameter index*!" />
+			<_field_tag_reference name="bitmap" validtags="bitm" />
+			<_field_string_id name="bitmap path" />
+			<_field_real_argb_color name="color" />
+			<_field_real name="real" />
+			<_field_real_vector_3d name="vector" />
+			<_field_long_integer name="int/bool" />
+			<_field_word_integer name="bitmap flags" />
+			<_field_word_integer name="bitmap filter mode" />
+			<_field_word_integer name="bitmap address mode" />
+			<_field_word_integer name="bitmap address mode x" />
+			<_field_word_integer name="bitmap address mode y" />
+			<_field_word_integer name="bitmap sharpen mode" />
+			<_field_byte_integer name="bitmap extern mode" />
+			<_field_byte_integer name="bitmap min mipmap" />
+			<_field_byte_integer name="bitmap max mipmap" />
+			<_field_byte_integer name="render phases used" />
+			<_field_block name="function parameters" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+				<_field_long_enum name="type^">
+					<item Name="value" />
+					<item Name="color" />
+					<item Name="scale uniform" />
+					<item Name="scale u" />
+					<item Name="scale v" />
+					<item Name="offset u" />
+					<item Name="offset v" />
+					<item Name="frame index" />
+					<item Name="alpha" />
+				</_field_long_enum>
+				<_field_string_id name="input name" />
+				<_field_string_id name="range name" />
+				<_field_char_enum name="Output Modifier!">
+					<item Name=" " />
+					<item Name="Add" />
+					<item Name="Multiply" />
+				</_field_char_enum>
+				<_field_pad name="BVCG" length="3" />
+				<_field_string_id name="Output Modifier Input!" />
+				<_field_real name="time period:seconds" />
+				<_field_explanation name="FUNCTION" />
+				<_field_data name="data" />
+			</_field_block>
+			<_field_data name="display name*" />
+			<_field_data name="display group*" />
+			<_field_data name="display help text*" />
+			<_field_real name="display minimum" />
+			<_field_real name="display maximum" />
+			<_field_byte_integer name="register index*!" />
+			<_field_byte_integer name="register offset*!" />
+			<_field_byte_integer name="register count*!" />
+			<_field_char_enum name="register set*!">
+				<item Name="bool" />
+				<item Name="int" />
+				<item Name="float" />
+				<item Name="sampler" />
+				<item Name="vertex_bool" />
+				<item Name="vertex_int" />
+				<item Name="vertex_float" />
+				<item Name="vertex_sampler" />
+			</_field_char_enum>
+		</_field_block>
+		<_field_block name="postprocess definition!" max="1" srcguid="c3d0501d-52c8-c041-9e5b-9057ce98f3a3" srcName="material_postprocess_block">
+			<_field_block name="textures" max="32" srcguid="ec1298cd-d63c-e14b-b33b-fe480bbca596" srcName="material_postprocess_texture_block">
+				<_field_tag_reference name="bitmap reference" validtags="bitm" />
+				<_field_byte_integer name="address mode" />
+				<_field_byte_integer name="filter mode" />
+				<_field_byte_integer name="frame index parameter" />
+				<_field_byte_integer name="sampler index" />
+				<_field_char_integer name="level of smallest mipmap to use" />
+				<_field_char_integer name="level of largest mipmap to use" />
+				<_field_byte_integer name="render phase mask" />
+				<_field_pad name="DHaFS" length="1" />
+			</_field_block>
+			<_field_block name="texture constants" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="real vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="real vertex vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="int constants" max="1024" srcguid="9d869ce2-ada4-5b48-bf0b-f7e660402421" srcName="int_block">
+				<_field_long_integer name="int value" />
+			</_field_block>
+			<_field_long_integer name="bool constants" />
+			<_field_long_integer name="used bool constants" />
+			<_field_long_integer name="bool render phase mask" />
+			<_field_long_integer name="vertex bool constants" />
+			<_field_long_integer name="used vertex bool constants" />
+			<_field_long_integer name="vertex bool render phase mask" />
+			<_field_block name="functions" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+				<_field_long_enum name="type^">
+					<item Name="value" />
+					<item Name="color" />
+					<item Name="scale uniform" />
+					<item Name="scale u" />
+					<item Name="scale v" />
+					<item Name="offset u" />
+					<item Name="offset v" />
+					<item Name="frame index" />
+					<item Name="alpha" />
+				</_field_long_enum>
+				<_field_string_id name="input name" />
+				<_field_string_id name="range name" />
+				<_field_char_enum name="Output Modifier!">
+					<item Name=" " />
+					<item Name="Add" />
+					<item Name="Multiply" />
+				</_field_char_enum>
+				<_field_pad name="BVCG" length="3" />
+				<_field_string_id name="Output Modifier Input!" />
+				<_field_real name="time period:seconds" />
+				<_field_explanation name="FUNCTION" />
+				<_field_data name="data" />
+			</_field_block>
+			<_field_block name="function parameters" max="255" srcguid="c0eca125-1fb8-be4c-9f94-66e280a9cfdb" srcName="functionParameterBlock">
+				<_field_byte_integer name="function index" />
+				<_field_byte_integer name="render phase mask" />
+				<_field_byte_integer name="register index" />
+				<_field_byte_integer name="register offset" />
+			</_field_block>
+			<_field_block name="extern parameters" max="255" srcguid="36821172-2cb2-914f-a645-daafabe7a5bb" srcName="externParameterBlock">
+				<_field_byte_integer name="extern index" />
+				<_field_byte_integer name="extern register" />
+				<_field_byte_integer name="extern offset" />
+				<_field_byte_integer name="render phase mask" />
+			</_field_block>
+			<_field_char_enum name="alpha blend mode">
+				<item Name="opaque" />
+				<item Name="additive" />
+				<item Name="multiply" />
+				<item Name="alpha_blend" />
+				<item Name="double_multiply" />
+				<item Name="pre_multiplied_alpha" />
+				<item Name="maximum" />
+				<item Name="multiply_add" />
+				<item Name="add_src_times_dstalpha" />
+				<item Name="add_src_times_srcalpha" />
+				<item Name="inv_alpha_blend" />
+				<item Name="motion_blur_static" />
+				<item Name="motion_blur_inhibit" />
+				<item Name="apply_shadow_into_shadow_mask" />
+				<item Name="alpha_blend_constant" />
+				<item Name="overdraw_apply" />
+				<item Name="wet_screen_effect" />
+				<item Name="minimum" />
+				<item Name="revsubtract" />
+				<item Name="forge_lightmap" />
+				<item Name="forge_lightmap_inv" />
+				<item Name="replace_all_channels" />
+				<item Name="alpha_blend_max" />
+				<item Name="opaque_alpha_blend" />
+				<item Name="alpha_blend_additive_transparent" />
+			</_field_char_enum>
+			<_field_char_enum name="layer blend mode">
+				<item Name="none" />
+				<item Name="blended" />
+				<item Name="layered" />
+			</_field_char_enum>
+			<_field_word_flags name="flags">
+				<item Name="wireframe outline" />
+				<item Name="force single pass" />
+				<item Name="has pixel constant functions" />
+				<item Name="has vertex constant functions" />
+				<item Name="has texture transform functions" />
+				<item Name="has texture frame functions" />
+				<item Name="resolve screen before rendering" />
+				<item Name="disable atmosphere fog" />
+				<item Name="uses depth camera" />
+				<item Name="material is variable" />
+			</_field_word_flags>
+			<_field_array name="runtime queryable properties table">
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			</_field_array>
+			<_field_struct name="physics material 0!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 1!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 2!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 3!" />
+			<_field_short_integer name="global material index" />
+		</_field_block>
+		<_field_string_id name="physics material name" />
+		<_field_string_id name="physics material name 2" />
+		<_field_string_id name="physics material name 3" />
+		<_field_string_id name="physics material name 4" />
+		<_field_real name="sort offset" />
+		<_field_char_enum name="alpha blend mode">
+			<item Name="opaque" />
+			<item Name="additive" />
+			<item Name="multiply" />
+			<item Name="alpha_blend" />
+			<item Name="double_multiply" />
+			<item Name="pre_multiplied_alpha" />
+			<item Name="maximum" />
+			<item Name="multiply_add" />
+			<item Name="add_src_times_dstalpha" />
+			<item Name="add_src_times_srcalpha" />
+			<item Name="inv_alpha_blend" />
+			<item Name="motion_blur_static" />
+			<item Name="motion_blur_inhibit" />
+			<item Name="apply_shadow_into_shadow_mask" />
+			<item Name="alpha_blend_constant" />
+			<item Name="overdraw_apply" />
+			<item Name="wet_screen_effect" />
+			<item Name="minimum" />
+			<item Name="revsubtract" />
+			<item Name="forge_lightmap" />
+			<item Name="forge_lightmap_inv" />
+			<item Name="replace_all_channels" />
+			<item Name="alpha_blend_max" />
+			<item Name="opaque_alpha_blend" />
+			<item Name="alpha_blend_additive_transparent" />
+		</_field_char_enum>
+		<_field_char_enum name="sort layer*">
+			<item Name="invalid" />
+			<item Name="pre-pass" />
+			<item Name="normal" />
+			<item Name="post-pass" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags!">
+			<item Name="converted from shader" />
+			<item Name="decal post lighting" />
+		</_field_byte_flags>
+		<_field_byte_flags name="render flags!">
+			<item Name="resolve screen before rendering" />
+		</_field_byte_flags>
+		<_field_char_enum name="Transparent Shadow Policy">
+			<item Name="none" />
+			<item Name="render as decal (cheap)" />
+			<item Name="render with material (expensive)" />
+		</_field_char_enum>
+		<_field_pad name="transparentshadowpad" length="3" />
+		<_field_real_bounds name="radius:world units" />
+		<_field_real_bounds name="decay time:seconds!" />
+		<_field_real_bounds name="lifespan:seconds!" />
+		<_field_real name="clamp angle:degrees#Projections at greater than this angle will be clamped to this angle" />
+		<_field_real name="cull angle:degrees#Projections at greater than this angle will not be drawn" />
+		<_field_real name="depth bias" />
+		<_field_custom name="Decal Strip" />
+		<_field_real name="strip U-coordinate tile length" />
+		<_field_real name="strip max profile distance" />
+		<_field_real name="runtime bitmap aspect!" />
+	</_field_block>
+	<_field_real name="runtime max radius!" />
+</plugin>

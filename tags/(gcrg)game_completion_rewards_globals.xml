@@ -1,0 +1,176 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="campaign#rewards given for playing campaign games online" max="1" srcguid="3582b311-bbc0-114e-b7ba-4ef072725526" srcName="game_completion_rewards_difficulty_block">
+		<_field_block name="easy matchmaking#this block is used for easy matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="normal matchmaking#this block is used for normal matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="heroic matchmaking#this block is used for heroic matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="legendary matchmaking#this block is used for legendary matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="custom#this block is used for custom games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="firefight#rewards given for playing firefight games online" max="1" srcguid="3582b311-bbc0-114e-b7ba-4ef072725526" srcName="game_completion_rewards_difficulty_block">
+		<_field_block name="easy matchmaking#this block is used for easy matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="normal matchmaking#this block is used for normal matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="heroic matchmaking#this block is used for heroic matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="legendary matchmaking#this block is used for legendary matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="custom#this block is used for custom games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="multiplayer#rewards given for playing PvP multiplayer games online" max="1" srcguid="f014aee6-288c-9444-9ea0-b508d493d0ca" srcName="game_completion_rewards_multiplayer_block">
+		<_field_block name="matchmaking#this block is used for matchmade games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="custom#this block is used for custom games" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="unused0!" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="unused1!" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="unused2!" max="2" srcguid="f0640550-8059-e644-9d20-9d9ac7af9f7b" srcName="game_completion_rewards_definition_block">
+			<_field_long_integer name="initial amount per minute{initial cookies per minute}#base amount of reward given for each minute of play up until the start of the falloff curve" />
+			<_field_real name="hopper scaling factor#the player's time-based reward value is multiplied by this factor before being awarded; this value can be overridden by the hopper" />
+			<_field_real name="winner scaling factor#if the player is an unambiguous winner, their time-based reward value is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overridden by the hopper" />
+			<_field_real name="performance scaling factor#if the player is not a winner, but is in the top half of the standings, their time-based reward is multiplied by (this factor - 1) and the result is awarded as a bonus; this value can be overriden by the hopper" />
+			<_field_real name="score scaling factor#for score-based modes, the player's normalized score (0..1) is multiplied by this scaling factor and the result is awarded to the player as a bonus; this value can be overridden by the hopper" />
+			<_field_block name="apm falloff curve{cpm falloff curve}#amount per minute falloff curve; used to provide diminishing returns for longer play time" max="15" srcguid="6937a55f-897b-2a44-b8cb-bc10f605b579" srcName="game_completion_rewards_falloff_point_block">
+				<_field_short_integer name="start time#minutes into the game after which this new reward rate applies" />
+				<_field_short_integer name="amount per minute{cookies per minute}#points awarded per minute once the given time is reached" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_real name="fast track armor modifier#this multiplier is applied to the combined reward of timespent, score and performance, multiplied by the percentage time the player has the armor mod active" />
+</plugin>

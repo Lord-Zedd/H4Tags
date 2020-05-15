@@ -1,0 +1,1570 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_short_enum name="scenario type">
+		<item Name="solo" />
+		<item Name="multiplayer" />
+		<item Name="main menu" />
+		<item Name="multiplayer shared" />
+		<item Name="single player shared" />
+	</_field_short_enum>
+	<_field_word_flags name="scenario flags">
+		<item Name="always draw sky!#always draw sky 0, even if no +sky polygons are visible" />
+		<item Name="don't strip pathfinding#always leave pathfinding in, even for a multiplayer scenario" />
+		<item Name="symmetric multiplayer map!" />
+		<item Name="quick loading (cinematic only) scenario" />
+		<item Name="characters use previous mission weapons" />
+		<item Name="lightmaps smooth palettes with neighbors!" />
+		<item Name="snap to white at start" />
+		<item Name="override globals!" />
+		<item Name="big vehicle use center point for light sampling!" />
+		<item Name="don't use campaign sharing" />
+		<item Name="ignore size and can't ship" />
+		<item Name="always run lightmaps per-bsp" />
+		<item Name="in space#so we can hide hud elements like the compass" />
+		<item Name="survival#so we can strip the elite from the global player representations" />
+		<item Name="do not strip variants#so we can test the impact of variant stripping" />
+	</_field_word_flags>
+	<_field_block name="resource type identifiers*" max="16" srcguid="81a7d1a2-64d5-d046-a066-21d2648d26b3" srcName="cache_file_resource_type_identifier_block">
+		<_field_long_integer name="identifier part 0" />
+		<_field_long_integer name="identifier part 1" />
+		<_field_long_integer name="identifier part 2" />
+		<_field_long_integer name="identifier part 3" />
+		<_field_long_integer name="definition flags" />
+		<_field_string_id name="name^" />
+		<_field_array name="page alignment bits">
+			<_field_short_integer name="page alignment bits" />
+			<_field_short_integer name="page alignment bits" />
+			<_field_short_integer name="page alignment bits" />
+		</_field_array>
+		<_field_pad name="pad0" length="2" />
+	</_field_block>
+	<_field_block name="interop type identifiers*" max="16" srcguid="ac466994-f822-4a4b-8dc4-b9c6b9cde8fe" srcName="cache_file_interop_type_identifier_block">
+		<_field_long_integer name="identifier part 0" />
+		<_field_long_integer name="identifier part 1" />
+		<_field_long_integer name="identifier part 2" />
+		<_field_long_integer name="identifier part 3" />
+		<_field_string_id name="name^" />
+	</_field_block>
+	<_field_block name="codec identifiers*" max="127" srcguid="7e45bc98-ea5f-264c-9c9e-fcf1fb46c21f" srcName="cache_file_codec_identifier_block">
+		<_field_long_integer name="identifier part 0" />
+		<_field_long_integer name="identifier part 1" />
+		<_field_long_integer name="identifier part 2" />
+		<_field_long_integer name="identifier part 3" />
+	</_field_block>
+	<_field_block name="shared files" max="7" srcguid="ec7d0213-9efa-114c-bd81-b8e7d68881e9" srcName="cache_file_shared_file_block">
+		<_field_long_string name="dvd relative path^" />
+		<_field_word_flags name="flags">
+			<item Name="use header io offset" />
+			<item Name="not required" />
+			<item Name="use header locations" />
+		</_field_word_flags>
+		<_field_short_integer name="global shared location offset" />
+		<_field_long_integer name="io offset" />
+	</_field_block>
+	<_field_block name="file pages" max="65535" srcguid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" srcName="cache_file_resource_file_page_block">
+		<_field_short_integer name="header salt at runtime" />
+		<_field_byte_flags name="flags">
+			<item Name="valid checksum" />
+			<item Name="shared and required" />
+			<item Name="dvd only shared and required" />
+			<item Name="dvd only and required" />
+			<item Name="referenced by cache file header" />
+			<item Name="only full valid checksum" />
+		</_field_byte_flags>
+		<_field_char_block_index name="codec" targetGuid="7e45bc98-ea5f-264c-9c9e-fcf1fb46c21f" targetName="cache_file_codec_identifier_block" />
+		<_field_short_block_index name="shared file^" targetGuid="ec7d0213-9efa-114c-bd81-b8e7d68881e9" targetName="cache_file_shared_file_block" />
+		<_field_short_integer name="shared file location index" />
+		<_field_long_integer name="file offset" />
+		<_field_long_integer name="file size" />
+		<_field_long_integer name="size" />
+		<_field_struct name="checksum" />
+		<_field_long_integer name="checksum" />
+		<_field_array name="entire hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_array name="first chunk hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_array name="last chunk hash">
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+			<_field_byte_integer name="hash byte" />
+		</_field_array>
+		<_field_short_integer name="resource reference count" />
+		<_field_short_block_index name="streaming subpage table" targetGuid="33eacf41-56c3-9049-aba2-2b6bf24eb390" targetName="cache_file_resource_streaming_subpage_table_block" />
+	</_field_block>
+	<_field_block name="streaming subpage tables" max="32767" srcguid="33eacf41-56c3-9049-aba2-2b6bf24eb390" srcName="cache_file_resource_streaming_subpage_table_block">
+		<_field_long_integer name="total memory size" />
+		<_field_block name="streaming subpages" max="32767" srcguid="7a944d18-8272-c543-8329-e7b3f3fb0838" srcName="cache_file_resource_streaming_subpage_block">
+			<_field_long_integer name="memory offset" />
+			<_field_long_integer name="memory size" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="sections" max="32767" srcguid="8936cee8-2841-df48-8d98-ba3d43333461" srcName="cache_file_resource_section_block">
+		<_field_array name="page offsets">
+			<_field_long_integer name="offset" />
+			<_field_long_integer name="offset" />
+			<_field_long_integer name="offset" />
+		</_field_array>
+		<_field_array name="file page indexes">
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="page index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+		</_field_array>
+		<_field_array name="subpage table indexes">
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+			<_field_short_block_index name="subpage table index" targetGuid="b9da2ca8-1baf-7141-816b-a199dd8e6c9c" targetName="cache_file_resource_file_page_block" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="resources*" max="32767" srcguid="5d6bef07-0b21-d14a-9dec-2f43e9dcb6a4" srcName="cache_file_resource_data_block">
+		<_field_tag_reference name="owner tag^*" />
+		<_field_short_integer name="resource salt" />
+		<_field_char_block_index name="resource type index*" targetGuid="81a7d1a2-64d5-d046-a066-21d2648d26b3" targetName="cache_file_resource_type_identifier_block" />
+		<_field_char_integer name="control alignment bits" />
+		<_field_long_integer name="control size" />
+		<_field_word_flags name="flags">
+			<item Name="has highest priority data" />
+			<item Name="has medium priority data" />
+			<item Name="has low priority data" />
+		</_field_word_flags>
+		<_field_short_block_index name="page" targetGuid="8936cee8-2841-df48-8d98-ba3d43333461" targetName="cache_file_resource_section_block" />
+		<_field_long_integer name="root fixup" />
+		<_field_block name="control fixups" max="32767" srcguid="f7f8a3fe-6e96-fe4e-ba0b-07a940c2d4ec" srcName="cache_file_resource_fixup_location_block">
+			<_field_long_integer name="encoded fixup location*" />
+			<_field_long_integer name="encoded fixup value*" />
+		</_field_block>
+		<_field_block name="interop locations" max="32767" srcguid="334e425a-0352-d54b-b69a-55cd95a55da9" srcName="cache_file_resource_interop_location_block">
+			<_field_long_integer name="encoded interop location*" />
+			<_field_long_block_index name="interop type index^*" targetGuid="ac466994-f822-4a4b-8dc4-b9c6b9cde8fe" targetName="cache_file_interop_type_identifier_block" />
+		</_field_block>
+		<_field_block name="priority level data" max="3" srcguid="cd0de157-b009-5d43-989c-704ec205b3f3" srcName="cache_file_resource_priority_data_block">
+			<_field_long_integer name="naive data offset" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="designer zone manifests*" max="64" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_designer_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="global zone manifest*" max="1" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_global_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="hs zone manifest*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="unattached designer zone manifest*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="dvd forbidden zone manifest*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="dvd always streaming zone manifest*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="default bsp zone manifests*" max="32" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_bsp_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="static bsp zone manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="dynamic bsp zone manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="cinematic zone manifests*" max="32" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_cinematic_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="required map variant manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="sandbox map variant manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="zone only zone set manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="expected zone set manifests*" max="32767" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_tag_zone_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="fully populated zone set manifests" max="64" srcguid="bd6d5297-300d-f246-846e-0460dadc74b2" srcName="cache_file_full_zone_sets_block">
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+	</_field_block>
+	<_field_block name="zone set zone usage" max="64" srcguid="23b390fa-6dce-2b4d-a872-2ea8b3830975" srcName="cache_file_zone_set_zone_usage_block">
+		<_field_string_id name="name^" />
+		<_field_long_flags name="flags">
+			<item Name="begin loading next level" />
+			<item Name="debug purposes only" />
+			<item Name="interal zone set*!" />
+			<item Name="disable sky clearing" />
+			<item Name="override sky clear color" />
+		</_field_long_flags>
+		<_field_long_block_flags name="required bsp zones" targetGuid="bd6d5297-300d-f246-846e-0460dadc74b2" targetName="cache_file_bsp_zone_block" />
+		<_field_long_block_flags name="expected touched bsp zones" targetGuid="bd6d5297-300d-f246-846e-0460dadc74b2" targetName="cache_file_bsp_zone_block" />
+		<_field_qword_integer name="required designer zones" />
+		<_field_qword_integer name="expected designer zones" />
+		<_field_long_block_flags name="required cinematic zones" targetGuid="bd6d5297-300d-f246-846e-0460dadc74b2" targetName="cache_file_cinematic_zone_block" />
+		<_field_long_block_index name="hint previous zone set" targetGuid="23b390fa-6dce-2b4d-a872-2ea8b3830975" targetName="cache_file_zone_set_zone_usage_block" />
+	</_field_block>
+	<_field_block name="bsp references*" max="32" srcguid="4d4e8784-a4db-6e45-8bc8-229ba6b4a90d" srcName="cache_file_bsp_reference_block">
+		<_field_tag_reference name="bsp^" />
+	</_field_block>
+	<_field_block name="resource owners*" max="32767" srcguid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" srcName="cache_file_resource_owner_block">
+		<_field_tag_reference name="resource owner^" />
+		<_field_long_integer name="actual tag index*" />
+	</_field_block>
+	<_field_block name="model variant usage*" max="32767" srcguid="6cab2123-45b7-ef47-8b8e-12ea7d729350" srcName="cache_file_model_variant_usage_block">
+		<_field_short_block_index name="model^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+		<_field_pad name="sdfasfas" length="2" />
+		<_field_string_id name="variant" />
+		<_field_block name="used materials" max="32767" srcguid="c9ca2c18-2887-e24e-a12e-1b0feeae5b58" srcName="cache_file_resource_owner_reference_block">
+			<_field_short_block_index name="tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="character usage*" max="32767" srcguid="504dcd7d-c0cc-104a-a518-7197dcc31708" srcName="cache_file_character_usage_block">
+		<_field_short_block_index name="model^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+		<_field_pad name="sdfasfas" length="2" />
+		<_field_block name="used model variants" max="32767" srcguid="f6c4a548-c417-214c-8bb1-975c887dc11f" srcName="cache_file_model_variant_usage_reference_block">
+			<_field_short_block_index name="model variant^" targetGuid="6cab2123-45b7-ef47-8b8e-12ea7d729350" targetName="cache_file_model_variant_usage_block" />
+		</_field_block>
+	</_field_block>
+	<_field_data name="naive resource control data*" />
+	<_field_long_integer name="minimum complete resource size" />
+	<_field_long_integer name="minimum required resource size" />
+	<_field_long_integer name="minimum dvd resource size" />
+	<_field_long_integer name="global required resource size#intersection of resources amongst all zone sets" />
+	<_field_long_integer name="total optional control data size" />
+	<_field_block name="overall resource usage*" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+	</_field_block>
+	<_field_block name="bsp game attachments*" max="32" srcguid="8d84bbe0-cbe4-344e-80f3-985e09450c40" srcName="cache_file_bsp_game_attachments_block">
+		<_field_block name="static" max="32767" srcguid="e231708a-c9c4-c74a-89c7-4c82c996e277" srcName="cache_file_bsp_attachment_block">
+			<_field_tag_reference name="attachment^" />
+		</_field_block>
+		<_field_block name="persistent" max="32767" srcguid="e231708a-c9c4-c74a-89c7-4c82c996e277" srcName="cache_file_bsp_attachment_block">
+			<_field_tag_reference name="attachment^" />
+		</_field_block>
+		<_field_block name="dynamic" max="32767" srcguid="e231708a-c9c4-c74a-89c7-4c82c996e277" srcName="cache_file_bsp_attachment_block">
+			<_field_tag_reference name="attachment^" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="model variant zones*" max="32767" srcguid="cdc34a4e-8d59-fc4e-ad44-da5dea3da8f0" srcName="debug_cache_file_model_variant_zone_block">
+		<_field_struct name="cache zone manifest" />
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+		<_field_long_integer name="disk size" />
+		<_field_long_integer name="unused size" />
+		<_field_tag_reference name="owner tag^" />
+	</_field_block>
+	<_field_block name="combat dialogue zones*" max="32767" srcguid="cdc34a4e-8d59-fc4e-ad44-da5dea3da8f0" srcName="debug_cache_file_combat_dialogue_zone_block">
+		<_field_struct name="cache zone manifest" />
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+		<_field_long_integer name="disk size" />
+		<_field_long_integer name="unused size" />
+		<_field_tag_reference name="owner tag^" />
+	</_field_block>
+	<_field_block name="tag zones*" max="32767" srcguid="cdc34a4e-8d59-fc4e-ad44-da5dea3da8f0" srcName="debug_cache_file_tag_zone_block">
+		<_field_struct name="cache zone manifest" />
+		<_field_block name="cached resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="streamed resource bitvector" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_string_id name="name^" />
+		<_field_array name="page sizes">
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+			<_field_long_integer name="page size" />
+		</_field_array>
+		<_field_long_integer name="deferred required size" />
+		<_field_long_integer name="streamed resource size" />
+		<_field_long_integer name="dvd in-memory resource size" />
+		<_field_block name="resource usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="unique budget usage" max="16" srcguid="7dc23f7e-100b-304d-be6c-359dbb4988cb" srcName="cache_file_tag_resource_usage_block">
+			<_field_string_id name="name^" />
+			<_field_array name="page sizes">
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+				<_field_long_integer name="page size" />
+			</_field_array>
+			<_field_long_integer name="deferred required size" />
+			<_field_long_integer name="streamed resource size" />
+			<_field_long_integer name="dvd in-memory resource size" />
+		</_field_block>
+		<_field_block name="active resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="top level resource owners" max="32767" srcguid="4e47cbf5-1cf5-5f46-9dd7-7eaf5070ba68" srcName="cache_file_tag_resources_bitvector_block">
+			<_field_long_integer name="32 bits" />
+		</_field_block>
+		<_field_block name="visitation hierarchy" max="32767" srcguid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" srcName="cache_file_zone_resource_visit_node_block">
+			<_field_short_block_index name="parent tag^" targetGuid="3df4f8ee-825d-c749-8cd0-2dd134a61c28" targetName="cache_file_resource_owner_block" />
+			<_field_pad name="sdfasfas" length="2" />
+			<_field_block name="children" max="32767" srcguid="03903122-888d-2644-af2e-d443e9b58033" srcName="cache_file_zone_resource_visit_node_link_block">
+				<_field_short_block_index name="child tag^" targetGuid="ba75c317-b7e7-1f48-af7d-1577fac6cd4a" targetName="cache_file_zone_resource_visit_node_block" />
+			</_field_block>
+		</_field_block>
+		<_field_long_integer name="active bsp mask!" />
+		<_field_long_integer name="touched bsp mask!" />
+		<_field_long_integer name="cinematic zone mask!" />
+		<_field_qword_integer name="designer zone mask!" />
+		<_field_long_integer name="disk size" />
+		<_field_long_integer name="unused size" />
+		<_field_tag_reference name="owner tag^" />
+	</_field_block>
+	<_field_block name="debug resource definitions" max="16" srcguid="92be566d-1fe9-914c-901f-2870addf2f38" srcName="cache_file_debug_resource_definition_block">
+		<_field_block name="categories" max="32" srcguid="5fb050c4-cddf-4048-aed5-d08f1d23aeb7" srcName="resource_category_block">
+			<_field_string_id name="name" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="resource layouts*" max="32767" srcguid="156408af-b79c-9e42-b4d3-97a60ad19864" srcName="cache_file_resource_layout_block">
+		<_field_array name="memory sizes">
+			<_field_long_integer name="memory size" />
+			<_field_long_integer name="memory size" />
+			<_field_long_integer name="memory size" />
+		</_field_array>
+		<_field_array name="compressed sizes">
+			<_field_long_integer name="compressed size" />
+			<_field_long_integer name="compressed size" />
+			<_field_long_integer name="compressed size" />
+		</_field_array>
+		<_field_long_integer name="deferred required resource size" />
+		<_field_long_integer name="unused resource size" />
+		<_field_word_flags name="global zone attachment">
+			<item Name="global" />
+			<item Name="script" />
+			<item Name="hdd only" />
+			<item Name="always streaming" />
+			<item Name="unattached" />
+		</_field_word_flags>
+		<_field_pad name="global-zone-attachment-pad" length="2" />
+		<_field_long_block_flags name="bsp zone attachment" targetGuid="bd6d5297-300d-f246-846e-0460dadc74b2" targetName="cache_file_bsp_zone_block" />
+		<_field_qword_integer name="designer zone attachment" />
+		<_field_long_block_flags name="cinematic zone attachment" targetGuid="bd6d5297-300d-f246-846e-0460dadc74b2" targetName="cache_file_cinematic_zone_block" />
+		<_field_pad name="64 bit alignment pad" length="4" />
+	</_field_block>
+	<_field_block name="resource properties*" max="32767" srcguid="c8154d88-401e-8447-b1e4-362c2e44e7e3" srcName="cache_file_tag_resource_properties_block">
+		<_field_block name="named values" max="4096" srcguid="a21750e1-51ab-8e45-b4ad-b12618477b8e" srcName="cache_file_tag_resource_named_value_block">
+			<_field_string_id name="name" />
+			<_field_long_enum name="type">
+				<item Name="unknown" />
+				<item Name="string" />
+				<item Name="real" />
+				<item Name="int" />
+			</_field_long_enum>
+			<_field_long_integer name="row" />
+			<_field_string_id name="string value" />
+			<_field_real name="real value" />
+			<_field_long_integer name="int value" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="parentages*" max="65534" srcguid="d9a8b930-fd80-fd41-be99-0caa8cf7f824" srcName="cache_file_tag_parentage_block">
+		<_field_tag_reference name="tag" />
+		<_field_word_flags name="flags">
+			<item Name="loaded by game" />
+			<item Name="unloaded" />
+		</_field_word_flags>
+		<_field_short_integer name="resource owner index" />
+		<_field_block name="parents" max="65534" srcguid="1e7773c2-c699-ba45-b30e-3ec4968468fb" srcName="cache_file_tag_parentage_reference_block">
+			<_field_long_block_index name="link^" targetGuid="d9a8b930-fd80-fd41-be99-0caa8cf7f824" targetName="cache_file_tag_parentage_block" />
+		</_field_block>
+		<_field_block name="children" max="65534" srcguid="1e7773c2-c699-ba45-b30e-3ec4968468fb" srcName="cache_file_tag_parentage_reference_block">
+			<_field_long_block_index name="link^" targetGuid="d9a8b930-fd80-fd41-be99-0caa8cf7f824" targetName="cache_file_tag_parentage_block" />
+		</_field_block>
+	</_field_block>
+	<_field_struct name="prediction table*" />
+	<_field_block name="prediction quanta" max="61440" srcguid="a3e6c3b0-6c6b-a144-9c87-b72def8ef158" srcName="cache_file_tag_resource_prediction_quantum_block">
+		<_field_long_integer name="internal resource handle" />
+	</_field_block>
+	<_field_block name="prediction atoms" max="32767" srcguid="1288dfd4-cce9-b440-83ec-06500c2c8ac6" srcName="cache_file_tag_resource_prediction_atom_block">
+		<_field_short_integer name="index salt" />
+		<_field_word_integer name="prediction quantum count" />
+		<_field_long_block_index name="first prediction quantum index" targetGuid="a3e6c3b0-6c6b-a144-9c87-b72def8ef158" targetName="cache_file_tag_resource_prediction_quantum_block" />
+	</_field_block>
+	<_field_block name="prediction molecule atoms" max="32767" srcguid="52209cf4-b9c3-2744-b175-d8b844ec4f73" srcName="cache_file_tag_resource_prediction_molecule_atom_reference_block">
+		<_field_long_integer name="prediction atom handle" />
+	</_field_block>
+	<_field_block name="prediction molecules" max="32767" srcguid="1b8a5e33-5074-ff46-a6b7-b810c0f7c4b7" srcName="cache_file_tag_resource_prediction_molecule_block">
+		<_field_word_integer name="prediction atom count" />
+		<_field_short_block_index name="first prediction atom index" targetGuid="1288dfd4-cce9-b440-83ec-06500c2c8ac6" targetName="cache_file_tag_resource_prediction_atom_block" />
+		<_field_word_integer name="prediction quantum count" />
+		<_field_word_integer name="first prediction quantum index" />
+	</_field_block>
+	<_field_block name="prediction molecule keys" max="8192" srcguid="17aa05b2-83ed-9647-b466-9d1847f86845" srcName="cache_file_tag_resource_prediction_molecule_keys_block">
+		<_field_long_integer name="index a" />
+		<_field_long_integer name="index b" />
+		<_field_long_integer name="index c" />
+	</_field_block>
+	<_field_long_integer name="Mat is in a really bad mood campaign id" />
+	<_field_long_integer name="Next time we don't put things that the game depends on outside of tool, guerilla, or sapien map id" />
+</plugin>

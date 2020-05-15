@@ -1,0 +1,21 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="levels" max="4" srcguid="99779e61-467b-7940-8baf-b0f0bc3ca08d" srcName="silentAssistLevelBlock">
+		<_field_real name="grenade damage" />
+		<_field_real name="grenade radius" />
+		<_field_real name="assist award bias#multiplier for attributed-damage during assist calculation" />
+		<_field_real name="weapon spread" />
+		<_field_real name="headshot aim assist{headshot magnetism}#increases autoaim for headshot weapons" />
+		<_field_real name="melee cone" />
+		<_field_real name="aim assist#unimplemented" />
+		<_field_explanation name="Level Change">These fields show how many kills/deaths it takes to move between levels</_field_explanation>
+		<_field_byte_flags name="flags">
+			<item Name="kills must be consecutive" />
+			<item Name="deaths must be consecutive" />
+		</_field_byte_flags>
+		<_field_pad name="SXIX" length="3" />
+		<_field_long_integer name="kills to decrease level" />
+		<_field_long_integer name="deaths to increase level" />
+	</_field_block>
+</plugin>

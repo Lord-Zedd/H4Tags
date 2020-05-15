@@ -1,0 +1,13 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="Random ordnance drop list" max="24" srcguid="ea5e5d05-5e70-c945-a93e-ea2851622165" srcName="RandomOrdnanceItemBlock">
+		<_field_string_id name="ordnance_name^#This must match one of the global ordnance objects." />
+	</_field_block>
+	<_field_block name="Player ordnance drop groups" max="3" srcguid="762c355c-34bb-b249-b202-321fe2fc9e1c" srcName="PlayerOrdnanceGroupBlock">
+		<_field_block name="Player ordnance drops" max="8" srcguid="cb0cfe5f-e827-2345-ada8-ba59747b2d50" srcName="PlayerOrdnanceItemBlock">
+			<_field_string name="ordnance name^#This must match one of the global ordnance objects." />
+			<_field_real name="ordnance frequency#chance that an ordnance from this group will be chosen" />
+		</_field_block>
+	</_field_block>
+</plugin>

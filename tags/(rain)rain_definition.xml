@@ -1,0 +1,66 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_integer name="version!#INTERNAL TAG USE ONLY DO NOT CHANGE" />
+	<_field_real name="rain amount:[0,1]#fade control for all rain effects" />
+	<_field_explanation name="Rain Effects">These effects are applied when this rain is active</_field_explanation>
+	<_field_tag_reference name="effect" validtags="effe" />
+	<_field_tag_reference name="screen effect" validtags="sefc" />
+	<_field_tag_reference name="camera fx" validtags="cfxs" />
+	<_field_custom name="particles" />
+	<_field_long_flags name="flags">
+		<item Name="alpha blend" />
+		<item Name="disable collision" />
+	</_field_long_flags>
+	<_field_tag_reference name="drop texture" validtags="bitm" />
+	<_field_tag_reference name="splash texture" validtags="bitm" />
+	<_field_real name="density:particles per square world unit" />
+	<_field_real_vector_3d name="direction#k -1 is down" />
+	<_field_real name="fall speed:world units per second" />
+	<_field_real name="size:world units#size of the rain particles" />
+	<_field_real name="max vertical camera-relative motion:world units per second#the max velocity in which we allow world-relative vertical rain motion.  over this velocity we clamp to camera-relative vertical rain motion" />
+	<_field_real name="max aspect ratio#height to width ratio" />
+	<_field_real name="min aspect for intensity#intensity will scale inversely with aspect ratio, this clamps the aspect ratio before scaling" />
+	<_field_real_rgb_color name="tint color#tints the rain drops" />
+	<_field_real name="intensity#brightness of the rain drops" />
+	<_field_real name="alpha scale#transparency of the rain drops" />
+	<_field_real name="drop near fade distance:world units#distance at which the drops fade out" />
+	<_field_real name="collision range:world units#depth range over which the particle will search for collisions with the depth buffer" />
+	<_field_real name="splash size:world units#length of a side of the splash particle card" />
+	<_field_real name="splash height:world units#height off the ground of the center of the splash particle" />
+	<_field_real name="splash lifetime:seconds#how long the splash lasts" />
+	<_field_real name="near fade distance:world units#distance at which the splash fades out" />
+	<_field_real_rgb_color name="splash tint#tints the splashes" />
+	<_field_real name="splash intensity#brightness of the splashes" />
+	<_field_real name="splash alpha#transparency of the splashes" />
+	<_field_real name="ripple initial size#size of the ripple at impact" />
+	<_field_real name="ripple max size#maximum size of the ripple" />
+	<_field_real name="ripple lifetime:seconds#how long the ripples last" />
+	<_field_real name="ripple intensity#intensifies ripples" />
+	<_field_custom name="rain sheet" />
+	<_field_tag_reference name="rain sheet texture" validtags="bitm" />
+	<_field_real name="rain sheet speed" />
+	<_field_real name="rain sheet intervals" />
+	<_field_real name="rain sheet minimum distance" />
+	<_field_real name="rain sheet intensity" />
+	<_field_real name="rain texture tile scale" />
+	<_field_real name="rain sheet parallax speed" />
+	<_field_real name="rain sheet depth fade{rain sheet fade factor}" />
+	<_field_real name="transparent sort distance" />
+	<_field_real name="transparent sort layer" />
+	<_field_custom name="light volume" />
+	<_field_tag_reference name="light volume texture" validtags="bitm" />
+	<_field_real name="light volume intensity" />
+	<_field_real name="light volume texture scale" />
+	<_field_real name="rain drop/particle intensity" />
+	<_field_real name="farthest rain particle distance" />
+	<_field_real name="closest rain sheet distance" />
+	<_field_real name="rain drop length compensation#make it longer when it is far" />
+	<_field_custom name="rain transition" />
+	<_field_real name="wetness fade in time:seconds" />
+	<_field_real name="wetness fade out time:seconds" />
+	<_field_custom name="material dim" />
+	<_field_real name="dim of point light" />
+	<_field_real name="dim of imposters" />
+	<_field_real name="dim of decorators" />
+</plugin>

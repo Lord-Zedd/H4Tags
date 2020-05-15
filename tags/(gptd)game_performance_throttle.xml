@@ -1,0 +1,16 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="entries" max="32" srcguid="03a99571-be69-a549-c5cd-305e57868fdc" srcName="game_performance_throttle_entries_block">
+		<_field_struct name="filter" />
+		<_field_long_integer name="minimum player count" />
+		<_field_struct name="profile" />
+		<_field_long_integer name="maximum havok proxy count" />
+		<_field_long_integer name="maximum ragdoll count" />
+		<_field_long_integer name="maximum impact count" />
+		<_field_long_integer name="vehicle suspension update frequency" />
+		<_field_long_integer name="Actor LOD, AI actors to update fully each frame" />
+		<_field_long_integer name="Actor LOD, Number of frames to tick LODed AI" />
+		<_field_long_integer name="Actor LOD, Number of concurrent LOD actors to tick" />
+	</_field_block>
+</plugin>

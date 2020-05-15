@@ -1,0 +1,12 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="script data" />
+	<_field_block name="source file references*" max="128" srcguid="3a6bf38c-228c-cc4f-a38a-9b83cec80ed2" srcName="hs_source_reference_block">
+		<_field_tag_reference name="reference^" validtags="hsc*" />
+	</_field_block>
+	<_field_block name="external source references" max="128" srcguid="3a6bf38c-228c-cc4f-a38a-9b83cec80ed2" srcName="hs_source_reference_block">
+		<_field_tag_reference name="reference^" validtags="hsc*" />
+	</_field_block>
+	<_field_tag_reference name="compiled script*!" validtags="hsdt" />
+</plugin>

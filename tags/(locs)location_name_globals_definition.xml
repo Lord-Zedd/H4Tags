@@ -1,0 +1,8 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="location names" max="255" srcguid="a5e9dc04-096a-7844-8b8e-b1322a8c5a6a" srcName="location_name_block">
+		<_field_string_id name="name^" />
+	</_field_block>
+	<_field_tag_reference name="location name string list" validtags="unic" />
+</plugin>

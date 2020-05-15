@@ -1,0 +1,2744 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_struct name="build identifier*" />
+	<_field_long_integer name="manifest_id0*!" />
+	<_field_long_integer name="manifest_id1*!" />
+	<_field_long_integer name="manifest_id2*!" />
+	<_field_long_integer name="manifest_id3*!" />
+	<_field_long_integer name="build_index*" />
+	<_field_long_integer name="structure importer version*" />
+	<_field_struct name="parent build identifier*" />
+	<_field_long_integer name="manifest_id0*!" />
+	<_field_long_integer name="manifest_id1*!" />
+	<_field_long_integer name="manifest_id2*!" />
+	<_field_long_integer name="manifest_id3*!" />
+	<_field_long_integer name="build_index*" />
+	<_field_long_integer name="structure importer version*" />
+	<_field_long_integer name="import info checksum*" />
+	<_field_tag_reference name="structure lighting_info^" validtags="stli" />
+	<_field_long_integer name="import version*!" />
+	<_field_tag_reference name="structure meta data*" validtags="smet" />
+	<_field_word_flags name="flags*!">
+		<item Name="has instance groups" />
+		<item Name="surface to triangle mapping remapped*" />
+		<item Name="external references converted to io" />
+		<item Name="structure mopp needs rebuilt" />
+		<item Name="structure prefab materials need postprocessing" />
+		<item Name="serialized havok data converted to target platform" />
+	</_field_word_flags>
+	<_field_word_flags name="content policy flags*!">
+		<item Name="has working pathfinding" />
+		<item Name="convex decomposition enabled" />
+	</_field_word_flags>
+	<_field_word_flags name="failed content policy flags*!">
+		<item Name="has working pathfinding" />
+		<item Name="convex decomposition enabled" />
+	</_field_word_flags>
+	<_field_pad name="faild policy pad*!" length="2" />
+	<_field_block name="seam identifiers*!" max="128" srcguid="2e90efb9-95e8-bc45-abe9-1a7440c7c1a5" srcName="structure_seam_mapping_block">
+		<_field_struct name="seams identifier*!" />
+		<_field_long_integer name="seam_id0*!" />
+		<_field_long_integer name="seam_id1*!" />
+		<_field_long_integer name="seam_id2*!" />
+		<_field_long_integer name="seam_id3*!" />
+		<_field_block name="edge mapping*" max="32767" srcguid="2f908f75-cc67-5143-9a17-4fc40590c91f" srcName="structure_seam_edge_mapping_block">
+			<_field_long_integer name="structure edge index*" />
+		</_field_block>
+		<_field_block name="cluster mapping*" max="255" srcguid="0a6ca8e1-7748-ef45-922f-58213e39c08a" srcName="structure_seam_cluster_mapping_block">
+			<_field_long_integer name="cluster_index*" />
+			<_field_real_point_3d name="cluster center*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="edge to seam edge*!" max="2621440" srcguid="2c4a7d5e-1349-8141-b265-2e00aba99982" srcName="structure_edge_to_seam_edge_mapping_block">
+		<_field_short_integer name="seam_index*!" />
+		<_field_short_integer name="seam_edge_index*!" />
+	</_field_block>
+	<_field_block name="collision materials*" max="512" srcguid="25ac469b-274f-734c-a712-e3804ccc324b" srcName="structure_collision_materials_block">
+		<_field_tag_reference name="render method{old shader}*^" validtags="mat , rm  " />
+		<_field_string_id name="override material name" />
+		<_field_short_integer name="runtime global material index!" />
+		<_field_short_block_index name="conveyor surface index*" targetGuid="13660ccd-bf20-d049-9379-fd49a1729b48" targetName="structure_bsp_conveyor_surface_block" />
+		<_field_short_block_index name="seam mapping index*" targetGuid="2e90efb9-95e8-bc45-abe9-1a7440c7c1a5" targetName="structure_seam_mapping_block" />
+		<_field_word_flags name="flags*">
+			<item Name="is seam" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_block name="leaves*!" max="134217728" srcguid="65df11b6-2cc9-7947-8227-aafa52126166" srcName="structure_bsp_leaf_block">
+		<_field_byte_integer name="cluster*" />
+	</_field_block>
+	<_field_block name="super aabbs*!" max="32768" srcguid="8aaaaaab-0432-6141-3467-ca2fad4716bf" srcName="structure_super_node_aabbs_block">
+		<_field_real name="x0" />
+		<_field_real name="x1" />
+		<_field_real name="y0" />
+		<_field_real name="y1" />
+		<_field_real name="z0" />
+		<_field_real name="z1" />
+	</_field_block>
+	<_field_block name="super node parent mappings*!" max="2048" srcguid="8a46aa61-040a-6141-b167-ca2fcb2716bf" srcName="super_node_mappings_block">
+		<_field_short_integer name="parent_super_node_index!*" />
+		<_field_char_integer name="parent_internal_node_index!*" />
+		<_field_byte_flags name="flags!*">
+			<item Name="above" />
+		</_field_byte_flags>
+		<_field_long_integer name="has_traversal_geometry_mask!*" />
+		<_field_short_block_index name="first_traversal_geometry_index!*" targetGuid="8aaaaa61-0480-6141-3167-ca2fcd4716bf" targetName="structure_super_node_traversal_geometry_indices_block" />
+		<_field_short_block_index name="first_aabb_index!*" targetGuid="8aaaaaab-0432-6141-3467-ca2fad4716bf" targetName="structure_super_node_aabbs_block" />
+		<_field_long_integer name="aabb_mask!*" />
+		<_field_short_block_index name="non_terminal_traversal_geometry_index!*" targetGuid="8aaaaa61-0480-6141-3167-ca2fcd4716bf" targetName="structure_super_node_traversal_geometry_indices_block" />
+		<_field_pad name="pad" length="2" />
+	</_field_block>
+	<_field_block name="super node recursable_masks*!" max="2048" srcguid="8a46ab61-04ca-6141-b167-caaf1b2716bf" srcName="super_node_recursable_masks_block">
+		<_field_short_integer name="mask!*" />
+	</_field_block>
+	<_field_block name="structure_super_node_traversal_geometry_block*!" max="32767" srcguid="8aabaa61-0410-6141-c167-ca2fcb4716bf" srcName="structure_super_node_traversal_geometry_block">
+		<_field_block name="portal_indices!*" max="1000" srcguid="8aaaaa61-0480-6141-3167-ca2fcd4716bf" srcName="structure_super_node_traversal_geometry_indices_block">
+			<_field_short_integer name="index!*" />
+		</_field_block>
+		<_field_block name="seam_indices!*" max="1000" srcguid="8aaaaa61-0480-6141-3167-ca2fcd4716bf" srcName="structure_super_node_traversal_geometry_indices_block">
+			<_field_short_integer name="index!*" />
+		</_field_block>
+	</_field_block>
+	<_field_struct name="instance kd hierarchy!" />
+	<_field_long_integer name="hash total_count!" />
+	<_field_block name="hash data" max="32767" srcguid="bcaa331c-231a-4944-3eab-1083a9170d8a" srcName="collision_kd_hierarchy_static_hash_table_data_block">
+		<_field_long_integer name="node index!" />
+		<_field_long_integer name="key a!" />
+		<_field_long_integer name="key b!" />
+		<_field_long_integer name="key c!" />
+	</_field_block>
+	<_field_block name="hash entry count" max="32767" srcguid="bcaa331c-23ca-4944-3eab-10c3a917098a" srcName="collision_kd_hierarchy_static_hash_table_short_block">
+		<_field_short_integer name="index!" />
+	</_field_block>
+	<_field_block name="original hash entry count" max="32767" srcguid="bcaa331c-23ca-4944-3eab-10c3a917098a" srcName="collision_kd_hierarchy_static_hash_table_short_block">
+		<_field_short_integer name="index!" />
+	</_field_block>
+	<_field_block name="nodes" max="32767" srcguid="bcaa331c-239a-4944-0eab-1083a9173d8a" srcName="collision_kd_hierarchy_static_nodes_block">
+		<_field_block name="render only headers!" max="32767" srcguid="bcaa331c-237a-4944-0eab-d083d9173d8a" srcName="collision_kd_hierarchy_static_hash_table_headers_block">
+			<_field_word_flags name="cull flags!">
+				<item Name="render only" />
+				<item Name="does not block aoe" />
+				<item Name="non pathfindable" />
+			</_field_word_flags>
+			<_field_short_integer name="instance index!" />
+			<_field_long_integer name="instance index dword mask!" />
+			<_field_short_integer name="bsp index!" />
+			<_field_pad name="bsp-index-pad" length="2" />
+			<_field_long_integer name="bsp mask!" />
+		</_field_block>
+		<_field_block name="collidable headers!" max="32767" srcguid="bcaa331c-237a-4944-0eab-d083d9173d8a" srcName="collision_kd_hierarchy_static_hash_table_headers_block">
+			<_field_word_flags name="cull flags!">
+				<item Name="render only" />
+				<item Name="does not block aoe" />
+				<item Name="non pathfindable" />
+			</_field_word_flags>
+			<_field_short_integer name="instance index!" />
+			<_field_long_integer name="instance index dword mask!" />
+			<_field_short_integer name="bsp index!" />
+			<_field_pad name="bsp-index-pad" length="2" />
+			<_field_long_integer name="bsp mask!" />
+		</_field_block>
+		<_field_short_block_index name="child below!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+		<_field_short_block_index name="child above!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+		<_field_short_block_index name="parent!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+		<_field_short_integer name="cluster index!" />
+	</_field_block>
+	<_field_block name="in use masks" max="2048" srcguid="bcaa330c-233a-4944-1eab-1083a9870d8a" srcName="collision_kd_hierarchy_static_in_use_masks_block">
+		<_field_long_integer name="mask!" />
+	</_field_block>
+	<_field_block name="cluster table" max="32767" srcguid="bcdaab1c-231a-49c4-aeab-d08319a70d8a" srcName="cluster_table_block">
+		<_field_block name="super node mappings" max="32767" srcguid="bcdac3ac-2fba-4944-ceab-10b349a70c8a" srcName="super_node_mappings_block">
+			<_field_array name="indices!">
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+				<_field_short_block_index name="index!" targetGuid="bcaa331c-239a-4944-0eab-1083a9173d8a" targetName="collision_kd_hierarchy_static_nodes_block" />
+			</_field_array>
+			<_field_pad name="pad" length="2" />
+		</_field_block>
+	</_field_block>
+	<_field_real_bounds name="world bounds x*" />
+	<_field_real_bounds name="world bounds y*" />
+	<_field_real_bounds name="world bounds z*" />
+	<_field_block name="large structure surfaces*" max="262136" srcguid="c49f15e0-abc9-e945-b1b5-840024345098" srcName="structure_surface_block">
+		<_field_long_integer name="first_structure_surface_to_triangle_mapping_index*" />
+		<_field_long_integer name="structure_surface_to_triangle_mapping_count*" />
+	</_field_block>
+	<_field_block name="structure surface to triangle mapping*" max="2097088" srcguid="a7811d8e-11ac-c346-126e-dac7b65e2b07" srcName="structure_surface_to_triangle_mapping_block">
+		<_field_dword_integer name="manual byteswarp1*" />
+	</_field_block>
+	<_field_block name="cluster portals*" max="1000" srcguid="a4515c51-4987-9040-9510-45473c6c550f" srcName="structure_bsp_cluster_portal_block">
+		<_field_struct name="oriented bounds" />
+		<_field_real_point_3d name="center*!" />
+		<_field_real_vector_3d name="extents*!" />
+		<_field_real_quaternion name="orientation*!" />
+		<_field_short_integer name="back cluster*" />
+		<_field_short_integer name="front cluster*" />
+		<_field_long_integer name="plane index*" />
+		<_field_real_point_3d name="centroid*" />
+		<_field_real name="bounding radius*" />
+		<_field_long_flags name="flags*">
+			<item Name="ai can't hear through this shit" />
+			<item Name="one-way" />
+			<item Name="door" />
+			<item Name="no-way" />
+			<item Name="one-way-reversed" />
+			<item Name="no one can hear through this" />
+		</_field_long_flags>
+		<_field_block name="vertices*" max="128" srcguid="9fa956ce-d31d-a84c-aa36-6f5ff8f748ec" srcName="structure_bsp_cluster_portal_vertex_block">
+			<_field_real_point_3d name="point*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="detail objects*" max="1" srcguid="85c2d020-12b6-f744-996e-d157181ca371" srcName="structure_bsp_detail_object_data_block">
+		<_field_block name="cells" max="262144" srcguid="5c316019-e0bf-8147-bb7b-db665627f0ee" srcName="global_detail_object_cells_block">
+			<_field_short_integer name="cell x!*" />
+			<_field_short_integer name="cell y!*" />
+			<_field_short_integer name="cell z!*" />
+			<_field_short_integer name="offset z!*" />
+			<_field_long_integer name="valid layers flags!*" />
+			<_field_long_integer name="start index!*" />
+			<_field_long_integer name="count index!*" />
+			<_field_pad name="OHF" length="12" />
+		</_field_block>
+		<_field_block name="instances" max="2097152" srcguid="dece1814-9d44-9b41-9406-f322a3d43d98" srcName="global_detail_object_block">
+			<_field_char_integer name="position x!*" />
+			<_field_char_integer name="position y!*" />
+			<_field_char_integer name="position z!*" />
+			<_field_char_integer name="data!*" />
+			<_field_short_integer name="color!*" />
+		</_field_block>
+		<_field_block name="counts" max="8388608" srcguid="6a2c80cb-e6fb-9444-9401-aefb0759e910" srcName="global_detail_object_counts_block">
+			<_field_short_integer name="count!*" />
+		</_field_block>
+		<_field_block name="z reference vectors" max="262144" srcguid="b43ada2b-4328-7245-a6bf-6c6972508c99" srcName="global_z_reference_vector_block">
+			<_field_real name="z reference i!*" />
+			<_field_real name="z reference j!*" />
+			<_field_real name="z reference k!*" />
+			<_field_real name="z reference l!*" />
+		</_field_block>
+		<_field_pad name="KXILLD" length="1" />
+		<_field_pad name="EDFPN" length="3" />
+	</_field_block>
+	<_field_block name="clusters*" max="255" srcguid="08b83e44-a4f3-3e49-aab7-dadd79f9a8de" srcName="structure_bsp_cluster_block">
+		<_field_explanation name="CLUSTER INFO" />
+		<_field_real_bounds name="bounds x*" />
+		<_field_real_bounds name="bounds y*" />
+		<_field_real_bounds name="bounds z*" />
+		<_field_pad name="DING" length="1" />
+		<_field_char_integer name="atmosphere index*" />
+		<_field_char_integer name="camera fx index*" />
+		<_field_char_integer name="weather index*" />
+		<_field_short_block_index name="acoustics*" targetGuid="a2b9deca-9b11-7b46-82d3-6013de6c1794" targetName="scenario_acoustics_palette_block_definition" />
+		<_field_short_integer name="acoustics sound cluster index" />
+		<_field_short_integer name="runtime first decal index!" />
+		<_field_short_integer name="runtime decal cound!" />
+		<_field_word_flags name="flags">
+			<item Name="one way portal" />
+			<item Name="door portal" />
+			<item Name="postprocessed geometry" />
+			<item Name="is the sky" />
+			<item Name="decorators are lit" />
+		</_field_word_flags>
+		<_field_pad name="ERERRFQ" length="2" />
+		<_field_block name="predicted resources*" max="0" srcguid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" srcName="g_null_block">
+		</_field_block>
+		<_field_block name="portals*" max="512" srcguid="413a1c8c-0b40-1945-95b2-c6b8710ac715" srcName="structure_bsp_cluster_portal_index_block">
+			<_field_short_integer name="portal index*" />
+		</_field_block>
+		<_field_short_integer name="mesh index*" />
+		<_field_short_integer name="instance imposter cluster mopp index" />
+		<_field_block name="seam indices*!" max="128" srcguid="877bd44d-3429-e940-9573-2e53ecad8b62" srcName="seam_indices_block_definition">
+			<_field_char_integer name="seam index*" />
+		</_field_block>
+		<_field_block name="decorator groups*" max="1429968" srcguid="303a54e2-e7a9-b942-8f48-9af7c283783f" srcName="decorator_runtime_cluster_block">
+			<_field_word_integer name="decorator placement count*" />
+			<_field_byte_integer name="decorator set index*" />
+			<_field_byte_integer name="decorator instance buffer index*" />
+			<_field_long_integer name="decorator instance buffer offset*" />
+			<_field_real_vector_3d name="position bounds min*" />
+			<_field_real name="bounding sphere radius*" />
+			<_field_real_vector_3d name="position bounds size*" />
+			<_field_real_vector_3d name="bounding sphere center*" />
+		</_field_block>
+		<_field_block name="cheap light marker refs*" max="1024" srcguid="87fbff4a-aaca-e940-9bbb-fe530ccc8b62" srcName="cheap_light_marker_ref_block">
+			<_field_short_block_index name="cheap light reference reference" targetGuid="faca62fe-5349-8c6a-b9e5-a93fa9aa1aab" targetName="cheap_light_reference_block" />
+			<_field_pad name="WHATIZZIT" length="2" />
+		</_field_block>
+		<_field_block name="pvs bound object identifiers*!" max="6304" srcguid="877bb44a-34cd-e940-957e-fe5301ad8b62" srcName="pvs_bound_object_identifiers_block">
+			<_field_struct name="object ID*!" />
+			<_field_long_integer name="unique id*" />
+			<_field_short_block_index name="origin bsp index*" targetGuid="8b8ccce6-6b3b-104e-897c-b89e1fa22862" targetName="scenario_structure_bsp_reference_block" />
+			<_field_char_enum name="type*">
+				<item Name="biped" />
+				<item Name="vehicle" />
+				<item Name="weapon" />
+				<item Name="equipment" />
+				<item Name="terminal" />
+				<item Name="projectile" />
+				<item Name="scenery" />
+				<item Name="machine" />
+				<item Name="control" />
+				<item Name="dispenser" />
+				<item Name="sound_scenery" />
+				<item Name="crate" />
+				<item Name="creature" />
+				<item Name="giant" />
+				<item Name="effect_scenery" />
+				<item Name="spawner" />
+			</_field_char_enum>
+			<_field_char_enum name="source*">
+				<item Name="structure" />
+				<item Name="editor" />
+				<item Name="dynamic" />
+				<item Name="legacy" />
+				<item Name="sky" />
+				<item Name="parent" />
+			</_field_char_enum>
+		</_field_block>
+		<_field_block name="pvs bound object references*!" max="6304" srcguid="877bb4aa-3acd-e9a0-9bbe-fe5301ad8bcc" srcName="pvs_bound_object_references_block">
+			<_field_struct name="scenario object reference*!" />
+			<_field_short_integer name="object index*" />
+			<_field_short_integer name="scenario object index*" />
+		</_field_block>
+		<_field_block name="cluster cubemaps" max="32" srcguid="c46be9ca-a1d7-1147-ba17-de833a3b5bab" srcName="structure_cluster_cubemap">
+			<_field_short_integer name="scenario cubemap index" />
+			<_field_short_integer name="cubemap bitmap index" />
+			<_field_block name="reference points" max="15" srcguid="a01cc045-40d2-8141-bcc9-cae33c979ebd" srcName="cubemap_reference_points_block">
+				<_field_real_point_3d name="reference point" />
+				<_field_long_integer name="point index!" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="materials*" max="1024" srcguid="735913b1-a534-c54d-9990-1631b0b5e573" srcName="global_geometry_material_block">
+		<_field_tag_reference name="render method^*" />
+		<_field_long_integer name="imported material index*" />
+		<_field_real name="lightmap resolution scale" />
+		<_field_long_integer name="lightmap additive transparency color" />
+		<_field_long_integer name="lightmap traslucency tint color" />
+		<_field_real name="lightmap analytical light absorb" />
+		<_field_real name="lightmap normal light absorb" />
+		<_field_byte_flags name="lightmap flags">
+			<item Name="ignore default resolution scale" />
+			<item Name="transparency override" />
+			<item Name="lighting from both sides" />
+			<item Name="version1" />
+		</_field_byte_flags>
+		<_field_char_integer name="breakable surface index*" />
+		<_field_short_integer name="lightmap chart group index" />
+	</_field_block>
+	<_field_block name="emissive materials*" max="32767" srcguid="89ccd39d-37b8-304b-bd6f-5c2dda247ea0" srcName="structure_material_lighting_info_block">
+		<_field_real name="emissive power" />
+		<_field_real_rgb_color name="emissive color" />
+		<_field_real name="emissive quality" />
+		<_field_real name="emissive focus" />
+		<_field_long_flags name="flags">
+			<item Name="reserved{use attenuation}" />
+			<item Name="power per unit area" />
+			<item Name="use shader gel" />
+		</_field_long_flags>
+		<_field_real name="attenuation falloff" />
+		<_field_real name="attenuation cutoff" />
+		<_field_real name="bounce ratio" />
+	</_field_block>
+	<_field_block name="sky owner cluster*" max="32" srcguid="a5badb5c-cb15-6c4a-a0f2-8010c976fb69" srcName="structure_bsp_sky_owner_cluster_block">
+		<_field_short_integer name="cluster owner*" />
+	</_field_block>
+	<_field_block name="conveyor surfaces*" max="512" srcguid="13660ccd-bf20-d049-9379-fd49a1729b48" srcName="structure_bsp_conveyor_surface_block">
+		<_field_real_vector_3d name="u" />
+		<_field_real_vector_3d name="v" />
+	</_field_block>
+	<_field_block name="breakable surface sets*" max="2048" srcguid="4136af1c-3392-3f4c-9991-a6accb69431a" srcName="breakable_surface_set_block">
+		<_field_array name="supported bitfield!">
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+			<_field_long_integer name="bitvector data!" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="pathfinding data" max="32" srcguid="3cab35d9-ac86-1642-bcb7-36bb9ae0727c" srcName="pathfinding_data_block">
+		<_field_long_integer name="runtimeNavMesh*~!" />
+		<_field_long_integer name="runtimeNavGraph*~!" />
+		<_field_long_integer name="runtimeNavMediator*~!" />
+		<_field_pad name="pads" length="4" />
+		<_field_data name="navGraphData*~" />
+		<_field_data name="navMediatorData*~" />
+		<_field_block name="faceUserData*~" max="262144" srcguid="3c6ef940-eaa1-4246-9824-e997515857cb" srcName="FaceUserDataBlock">
+			<_field_short_integer name="m_flags*~" />
+			<_field_pad name="pad" length="2" />
+			<_field_real name="currentMinPathDistance!*~" />
+			<_field_real name="currentMinTargetApproachDistance!*~" />
+		</_field_block>
+		<_field_long_integer name="structure checksum*~" />
+		<_field_pad name="pads2" length="8" />
+	</_field_block>
+	<_field_block name="cookie cutters" max="1024" srcguid="15d3e424-faf5-a34b-96c8-03717a6f48ac" srcName="structure_cookie_cutter_definition">
+		<_field_custom name="Cookie Cutter" />
+		<_field_struct name="collision model" />
+		<_field_block name="bsp3d nodes*" max="8388608" srcguid="21fcd8b5-8eff-e748-9261-1f523e7371a3" srcName="bsp3d_nodes_block">
+			<_field_int64_integer name="node data designator!" />
+		</_field_block>
+		<_field_block name="bsp3d supernodes*" max="2048" srcguid="01c2cdab-1210-a94f-a740-0ab4e01ab4bc" srcName="bsp3d_kd_supdernodes_block">
+			<_field_real name="plane 0*!" />
+			<_field_real name="plane 1*!" />
+			<_field_real name="plane 2*!" />
+			<_field_real name="plane 3*!" />
+			<_field_real name="plane 4*!" />
+			<_field_real name="plane 5*!" />
+			<_field_real name="plane 6*!" />
+			<_field_real name="plane 7*!" />
+			<_field_real name="plane 8*!" />
+			<_field_real name="plane 9*!" />
+			<_field_real name="plane10*!" />
+			<_field_real name="plane11*!" />
+			<_field_real name="plane12*!" />
+			<_field_real name="plane13*!" />
+			<_field_real name="plane14*!" />
+			<_field_long_integer name="plane dimensions*!" />
+			<_field_long_integer name="child index 0*!" />
+			<_field_long_integer name="child index 1*!" />
+			<_field_long_integer name="child index 2*!" />
+			<_field_long_integer name="child index 3*!" />
+			<_field_long_integer name="child index 4*!" />
+			<_field_long_integer name="child index 5*!" />
+			<_field_long_integer name="child index 6*!" />
+			<_field_long_integer name="child index 7*!" />
+			<_field_long_integer name="child index 8*!" />
+			<_field_long_integer name="child index 9*!" />
+			<_field_long_integer name="child index10*!" />
+			<_field_long_integer name="child index11*!" />
+			<_field_long_integer name="child index12*!" />
+			<_field_long_integer name="child index13*!" />
+			<_field_long_integer name="child index14*!" />
+			<_field_long_integer name="child index15*!" />
+		</_field_block>
+		<_field_block name="planes*" max="536870911" srcguid="8d8a185d-9c71-0d4e-8015-a6da22e342eb" srcName="planes_block">
+			<_field_real_plane_3d name="plane*" />
+		</_field_block>
+		<_field_block name="leaves*" max="8388608" srcguid="e38efda5-649a-cc4e-9ceb-f2fb45030ca1" srcName="leaves_block">
+			<_field_byte_flags name="flags*">
+				<item Name="contains double-sided surfaces" />
+			</_field_byte_flags>
+			<_field_pad name="pad" length="1" />
+			<_field_word_integer name="bsp2d reference count*" />
+			<_field_dword_integer name="first bsp2d reference*" />
+		</_field_block>
+		<_field_block name="bsp2d references*" max="196608" srcguid="9e801e59-388c-5f44-b889-de6f3b5474ff" srcName="bsp2d_references_block">
+			<_field_short_integer name="plane*" />
+			<_field_short_integer name="bsp2d node*" />
+		</_field_block>
+		<_field_block name="bsp2d nodes*" max="32767" srcguid="8c0cd66c-3bc7-2441-b339-408c966ad3be" srcName="bsp2d_nodes_block">
+			<_field_real_plane_2d name="plane*" />
+			<_field_short_integer name="left child*" />
+			<_field_short_integer name="right child*" />
+		</_field_block>
+		<_field_block name="surfaces*" max="32767" srcguid="3519b87a-0a01-884b-ab12-de8085cd9139" srcName="surfaces_block">
+			<_field_word_integer name="plane index*" />
+			<_field_word_integer name="first edge*" />
+			<_field_short_integer name="material*" />
+			<_field_short_integer name="breakable surface set*" />
+			<_field_short_integer name="breakable surface*" />
+			<_field_byte_flags name="flags*">
+				<item Name="two sided" />
+				<item Name="invisible" />
+				<item Name="climbable" />
+				<item Name="breakable" />
+				<item Name="invalid" />
+				<item Name="conveyor" />
+				<item Name="slip" />
+				<item Name="plane negated" />
+			</_field_byte_flags>
+			<_field_byte_integer name="best plane calculation vertex index *!" />
+		</_field_block>
+		<_field_block name="edges*" max="65535" srcguid="35a61db5-53ec-0044-81b5-8c33d1dccafd" srcName="edges_block">
+			<_field_word_integer name="start vertex*" />
+			<_field_word_integer name="end vertex*" />
+			<_field_word_integer name="forward edge*" />
+			<_field_word_integer name="reverse edge*" />
+			<_field_word_integer name="left surface*" />
+			<_field_word_integer name="right surface*" />
+		</_field_block>
+		<_field_block name="vertices*" max="131072" srcguid="606a3f6c-ce1f-6a4c-8f89-e265e56d2f60" srcName="vertices_block">
+			<_field_real_point_3d name="point*" />
+			<_field_word_integer name="first edge*" />
+			<_field_short_integer name="sink*!" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="acoustics palette" max="128" srcguid="a2b9deca-9b11-7b46-82d3-6013de6c1794" srcName="scenario_acoustics_palette_block_definition">
+		<_field_string_id name="name^" />
+		<_field_explanation name="SOUND ENVIRONMENT" />
+		<_field_struct name="reverb" />
+		<_field_tag_reference name="sound environment" validtags="snde" />
+		<_field_long_enum name="type">
+			<item Name="outside" />
+			<item Name="inside" />
+		</_field_long_enum>
+		<_field_real name="cutoff distance" />
+		<_field_real name="interpolation time{interpolation speed}:seconds" />
+		<_field_explanation name="BACKGROUND SOUND" />
+		<_field_struct name="ambience" />
+		<_field_tag_reference name="background sound" validtags="lsnd" />
+		<_field_tag_reference name="weather sound#plays when rain is active, weather rate gets applied to scale." validtags="lsnd" />
+		<_field_tag_reference name="entry sound#plays when entering this area" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="exit sound#plays when leaving this area" validtags="scmb, sndo, snd!" />
+		<_field_real name="cutoff distance" />
+		<_field_real name="interpolation time{interpolation speed}:seconds" />
+		<_field_long_flags name="scale flags DEPRICATED!">
+			<item Name="override default scale" />
+			<item Name="use adjacent cluster as portal scale" />
+			<item Name="use adjacent cluster as exterior scale" />
+			<item Name="scale with weather intensity" />
+		</_field_long_flags>
+		<_field_real_fraction name="interior scale DEPRICATED!" />
+		<_field_real_fraction name="portal scale DEPRICATED!" />
+		<_field_real_fraction name="exterior scale DEPRICATED!" />
+		<_field_explanation name="SOUND BANK" />
+		<_field_tag_reference name="Sound bank tag" validtags="sbnk" />
+		<_field_tag_reference name="DVD Only sound bank tag" validtags="sbnk" />
+	</_field_block>
+	<_field_data name="sound PAS data*" />
+	<_field_block name="markers*" max="1024" srcguid="1dc5b2e4-c8f2-2445-8f67-a3533e9f7017" srcName="structure_bsp_marker_block">
+		<_field_char_enum name="marker type*">
+			<item Name="none" />
+			<item Name="cheap light" />
+			<item Name="falling leaf generator" />
+			<item Name="light" />
+			<item Name="sky (unused)" />
+			<item Name="model" />
+		</_field_char_enum>
+		<_field_pad name="pad" length="3" />
+		<_field_string name="marker parameter*" />
+		<_field_real_quaternion name="rotation" />
+		<_field_real_point_3d name="position*" />
+	</_field_block>
+	<_field_block name="marker light palette*" max="1024" srcguid="81d108a0-1296-9f44-96d5-e611e4355d97" srcName="structure_bsp_marker_light_palette">
+		<_field_tag_reference name="light tag" validtags="ligh" />
+	</_field_block>
+	<_field_block name="marker light palette index*" max="1024" srcguid="2743accb-f9b7-f84c-9e42-daecfa79ffa7" srcName="structure_bsp_marker_light_index">
+		<_field_short_integer name="palette index" />
+	</_field_block>
+	<_field_block name="runtime decals*" max="6144" srcguid="8a467c61-c48a-6141-b167-c76f152716bf" srcName="structure_bsp_runtime_decal_block">
+		<_field_short_integer name="decal palette index!" />
+		<_field_pad name="post-decal-palette-index-pad" length="2" />
+		<_field_struct name="manual bsp flags" />
+		<_field_custom name="manual bsp flags" />
+		<_field_block name="references block*!" max="32" srcguid="56efdb7d-765e-d449-a10f-631ac7523c29" srcName="scenarioBspReferenceBlock">
+			<_field_tag_reference name="structure design^" validtags="sbsp" />
+		</_field_block>
+		<_field_long_integer name="flags*!" />
+		<_field_real_quaternion name="rotation*" />
+		<_field_real_point_3d name="position*" />
+		<_field_real name="scale_x(scale}*" />
+		<_field_real name="scale_y*" />
+		<_field_real name="cull angle" />
+	</_field_block>
+	<_field_block name="(DEPRECATED) environment object palette*" max="1024" srcguid="4afcd237-622e-f843-b235-bede7776be11" srcName="structure_bsp_environment_object_palette_block">
+		<_field_tag_reference name="definition^" validtags="obje" />
+		<_field_tag_reference name="model" validtags="mode" />
+		<_field_long_integer name="GVEYN!" />
+	</_field_block>
+	<_field_block name="(DEPRECATED) environment objects*" max="16384" srcguid="4d63df1c-90fd-6f47-9133-f1dacc1b247f" srcName="structure_bsp_environment_object_block">
+		<_field_string name="name^" />
+		<_field_real_quaternion name="rotation" />
+		<_field_real_point_3d name="translation" />
+		<_field_real name="scale" />
+		<_field_short_block_index name="palette_index" targetGuid="4afcd237-622e-f843-b235-bede7776be11" targetName="structure_bsp_environment_object_palette_block" />
+		<_field_byte_flags name="flags">
+			<item Name="scripts always run" />
+		</_field_byte_flags>
+		<_field_pad name="QHUGQ" length="1" />
+		<_field_long_integer name="unique id*" />
+		<_field_tag name="exported object type" />
+		<_field_string_id name="scenario object name" />
+		<_field_string_id name="variant name" />
+	</_field_block>
+	<_field_pad name="IMISWXUG" length="4" />
+	<_field_block name="leaf map leaves*" max="134217728" srcguid="f0ba6379-ed35-234a-91fe-c7ccc9477083" srcName="global_map_leaf_block">
+		<_field_block name="faces*" max="1048576" srcguid="2982c776-4b50-e649-ae70-e1d063a16b1e" srcName="map_leaf_face_block">
+			<_field_long_integer name="node index*" />
+			<_field_block name="vertices*" max="512" srcguid="0adb18f9-e067-db4a-9440-fd7721a4734d" srcName="map_leaf_face_vertex_block">
+				<_field_real_point_3d name="vertex*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="connection indices*" max="1048576" srcguid="ed273fde-2a24-9d46-af13-9c96fb3c81ea" srcName="map_leaf_connection_index_block">
+			<_field_long_integer name="connection index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="leaf map connections*" max="1073741824" srcguid="8005e17f-9788-2e4f-810a-b1b9d47e3481" srcName="global_leaf_connection_block">
+		<_field_long_integer name="plane index*" />
+		<_field_long_integer name="back leaf index*" />
+		<_field_long_integer name="front leaf index*" />
+		<_field_block name="vertices*" max="512" srcguid="7d481e42-4811-a14c-8537-01fc69284a5c" srcName="leaf_connection_vertex_block">
+			<_field_real_point_3d name="vertex*" />
+		</_field_block>
+		<_field_real name="area*" />
+	</_field_block>
+	<_field_block name="errors*" max="512" srcguid="d578bb3c-07ca-834d-8994-291a8e13f496" srcName="global_error_report_categories_block">
+		<_field_long_string name="name^*" />
+		<_field_short_enum name="report type*">
+			<item Name="silent" />
+			<item Name="comment" />
+			<item Name="warning" />
+			<item Name="error" />
+		</_field_short_enum>
+		<_field_word_flags name="flags*">
+			<item Name="rendered" />
+			<item Name="tangent-space" />
+			<item Name="non-critical" />
+			<item Name="lightmap light" />
+			<item Name="report key is valid" />
+		</_field_word_flags>
+		<_field_short_integer name="runtime generation flags!" />
+		<_field_pad name="WVTP" length="2" />
+		<_field_long_integer name="runtime something~!" />
+		<_field_block name="reports*" max="1048576" srcguid="20ab6aee-2732-9f49-9145-08d640fcaa9e" srcName="error_reports_block">
+			<_field_char_enum name="type*">
+				<item Name="silent" />
+				<item Name="comment" />
+				<item Name="warning" />
+				<item Name="error" />
+			</_field_char_enum>
+			<_field_char_enum name="source*">
+				<item Name="none" />
+				<item Name="structure" />
+				<item Name="poop" />
+				<item Name="lightmap" />
+				<item Name="pathfinding" />
+			</_field_char_enum>
+			<_field_word_flags name="flags*">
+				<item Name="rendered" />
+				<item Name="tangent-space" />
+				<item Name="non-critical" />
+				<item Name="lightmap light" />
+				<item Name="report key is valid" />
+			</_field_word_flags>
+			<_field_data name="text*" />
+			<_field_long_integer name="source identifier*" />
+			<_field_string name="source filename*" />
+			<_field_long_integer name="source line number*" />
+			<_field_block name="vertices*" max="1048576" srcguid="d1114db4-84a8-3d46-b955-25130e390450" srcName="error_report_vertices_block">
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+				<_field_real name="screen size*" />
+			</_field_block>
+			<_field_block name="vectors*" max="1048576" srcguid="38e017f6-4e0b-8d4e-af4f-86b902745e1f" srcName="error_report_vectors_block">
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+				<_field_real_vector_3d name="normal*" />
+				<_field_real name="screen length*" />
+			</_field_block>
+			<_field_block name="lines*" max="1048576" srcguid="3c2d171c-4a60-5643-8f1b-de48e0ca8284" srcName="error_report_lines_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="triangles*" max="1048576" srcguid="61e726f9-1200-e344-8517-31162b96347a" srcName="error_report_triangles_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="quads*" max="1048576" srcguid="211607d1-d8e7-0543-8aea-9fccc52955bf" srcName="error_report_quads_block">
+				<_field_array name="points*">
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+					<_field_struct name="point" />
+					<_field_real_point_3d name="position*" />
+					<_field_array name="node indices*">
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+						<_field_char_integer name="node index*" />
+					</_field_array>
+					<_field_array name="node weights*">
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+						<_field_real name="node weight*" />
+					</_field_array>
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_block name="comments*" max="1048576" srcguid="66959a70-a3de-1746-8aff-50b9db6de950" srcName="error_report_comments_block">
+				<_field_data name="text*" />
+				<_field_struct name="point" />
+				<_field_real_point_3d name="position*" />
+				<_field_array name="node indices*">
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+					<_field_char_integer name="node index*" />
+				</_field_array>
+				<_field_array name="node weights*">
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+					<_field_real name="node weight*" />
+				</_field_array>
+				<_field_real_argb_color name="color*" />
+			</_field_block>
+			<_field_long_integer name="report key*" />
+			<_field_long_integer name="node index*" />
+			<_field_real_bounds name="bounds x*" />
+			<_field_real_bounds name="bounds y*" />
+			<_field_real_bounds name="bounds z*" />
+			<_field_real_argb_color name="color*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="cluster to instance group mopps" max="32767" srcguid="98c82bee-d18a-984e-b643-51e5635cf676" srcName="mopp_code_definition_block">
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*!" />
+		<_field_short_integer name="count~*!" />
+		<_field_pad name="total shit pad1" length="8" />
+		<_field_real name="v.i*!" />
+		<_field_real name="v.j*!" />
+		<_field_real name="v.k*!" />
+		<_field_real name="v.w*!" />
+		<_field_long_integer name="m_data pointer!~" />
+		<_field_long_integer name="int m_size*!" />
+		<_field_long_integer name="int m_capacityAndFlags*!" />
+		<_field_char_integer name="int8 m_buildType*!" />
+		<_field_pad name="total shit pad2" length="3" />
+		<_field_block name="mopp data block *!" max="16777216" srcguid="1f74ab0e-d7f5-0844-9d5a-32e112d4fd6d" srcName="mopp_code_data_definition_block">
+			<_field_byte_integer name="mopp data*!" />
+		</_field_block>
+		<_field_char_integer name="mopp build type!*#they say it only matters for ps3" />
+		<_field_pad name="explicit alignment pad 3" length="3" />
+	</_field_block>
+	<_field_block name="instance group to instance mopps" max="32767" srcguid="98c82bee-d18a-984e-b643-51e5635cf676" srcName="mopp_code_definition_block">
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*!" />
+		<_field_short_integer name="count~*!" />
+		<_field_pad name="total shit pad1" length="8" />
+		<_field_real name="v.i*!" />
+		<_field_real name="v.j*!" />
+		<_field_real name="v.k*!" />
+		<_field_real name="v.w*!" />
+		<_field_long_integer name="m_data pointer!~" />
+		<_field_long_integer name="int m_size*!" />
+		<_field_long_integer name="int m_capacityAndFlags*!" />
+		<_field_char_integer name="int8 m_buildType*!" />
+		<_field_pad name="total shit pad2" length="3" />
+		<_field_block name="mopp data block *!" max="16777216" srcguid="1f74ab0e-d7f5-0844-9d5a-32e112d4fd6d" srcName="mopp_code_data_definition_block">
+			<_field_byte_integer name="mopp data*!" />
+		</_field_block>
+		<_field_char_integer name="mopp build type!*#they say it only matters for ps3" />
+		<_field_pad name="explicit alignment pad 3" length="3" />
+	</_field_block>
+	<_field_block name="cluster to instance group spheres" max="4096" srcguid="fcb725b1-b8f9-a346-91e9-dfcf3e1978ab" srcName="structure_instance_cluster_definition">
+		<_field_long_flags name="flags">
+			<item Name="optimized mopp" />
+		</_field_long_flags>
+		<_field_block name="instance group indices" max="4096" srcguid="b989a246-cd00-3849-baae-cc175e24c7ba" srcName="index_list_block">
+			<_field_word_integer name="index" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="instance group to instance spheres" max="4096" srcguid="9cab0a69-a268-5744-b5bc-abd73411a2b6" srcName="structure_instance_group_definition">
+		<_field_real_point_3d name="center" />
+		<_field_real name="radius" />
+		<_field_short_integer name="cluster count" />
+		<_field_word_flags name="flags">
+			<item Name="contains card imposters" />
+			<item Name="contains poly imposters" />
+			<item Name="is decorator type" />
+			<item Name="optimized mopp" />
+		</_field_word_flags>
+		<_field_real name="maximum imposter distance*" />
+		<_field_real name="minimum centrifugal distance from group center*" />
+		<_field_real name="minimum imposter distance squared*" />
+		<_field_block name="instance indices" max="4096" srcguid="b989a246-cd00-3849-baae-cc175e24c7ba" srcName="index_list_block">
+			<_field_word_integer name="index" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="instanced geometry instances*" max="8192" srcguid="e606ed1a-acf1-b446-8a2a-f2d2da51b54a" srcName="structure_bsp_instanced_geometry_instances_block">
+		<_field_real name="scale" />
+		<_field_real_vector_3d name="forward" />
+		<_field_real_vector_3d name="left" />
+		<_field_real_vector_3d name="up" />
+		<_field_real_point_3d name="position" />
+		<_field_short_block_index name="instance definition*" targetGuid="5f0b1df5-9591-b14e-8b0c-7e1f85168f82" targetName="structure_bsp_instanced_geometry_definition_block" />
+		<_field_word_flags name="flags">
+			<item Name="not in lightprobes" />
+			<item Name="render only" />
+			<item Name="does not block aoe damage" />
+			<item Name="collidable" />
+			<item Name="decal spacing" />
+			<item Name="rain blocker" />
+			<item Name="vertical rain sheet" />
+			<item Name="outside map" />
+			<item Name="seam colliding" />
+			<item Name="(mostly) planar" />
+			<item Name="remove from shadow geometry" />
+			<item Name="cinema only" />
+			<item Name="exclude from cinema" />
+			<item Name="disallow object lighting samples" />
+		</_field_word_flags>
+		<_field_long_flags name="Light Channels:">
+			<item Name="0" />
+			<item Name="1" />
+			<item Name="2" />
+			<item Name="3" />
+			<item Name="4" />
+			<item Name="5" />
+			<item Name="6" />
+			<item Name="7" />
+			<item Name="8" />
+			<item Name="9" />
+			<item Name="10" />
+			<item Name="11" />
+			<item Name="12" />
+			<item Name="13" />
+			<item Name="14" />
+			<item Name="15" />
+			<item Name="16" />
+			<item Name="17" />
+			<item Name="18" />
+			<item Name="19" />
+			<item Name="20" />
+			<item Name="21" />
+			<item Name="22" />
+			<item Name="23" />
+			<item Name="24" />
+			<item Name="25" />
+			<item Name="26" />
+			<item Name="27" />
+			<item Name="28" />
+			<item Name="29" />
+			<item Name="30" />
+			<item Name="31" />
+		</_field_long_flags>
+		<_field_short_integer name="mesh_index" />
+		<_field_short_integer name="compression_index" />
+		<_field_long_integer name="seam bit vector 0" />
+		<_field_long_integer name="seam bit vector 1" />
+		<_field_long_integer name="seam bit vector 2" />
+		<_field_long_integer name="seam bit vector 3" />
+		<_field_real name="bounds x0!" />
+		<_field_real name="bounds x1!" />
+		<_field_real name="bounds y0!" />
+		<_field_real name="bounds y1!" />
+		<_field_real name="bounds z0!" />
+		<_field_real name="bounds z1!" />
+		<_field_real_point_3d name="world bounding sphere center!" />
+		<_field_real name="world bounding sphere radius!" />
+		<_field_real name="imposter transition complete distance!" />
+		<_field_real name="imposter brightness!" />
+		<_field_long_integer name="checksum*" />
+		<_field_char_enum name="pathfinding policy*">
+			<item Name="cut-out" />
+			<item Name="static" />
+			<item Name="none" />
+		</_field_char_enum>
+		<_field_char_enum name="lightmapping policy*">
+			<item Name="per-pixel shared" />
+			<item Name="per-vertex" />
+			<item Name="single-probe" />
+			<item Name="exclude" />
+			<item Name="per-pixel ao" />
+			<item Name="per-vertex ao" />
+		</_field_char_enum>
+		<_field_char_enum name="imposter policy*">
+			<item Name="polygon default" />
+			<item Name="polygon high" />
+			<item Name="cards medium" />
+			<item Name="cards high" />
+			<item Name="none" />
+			<item Name="rainbow box (runtime only)" />
+		</_field_char_enum>
+		<_field_pad name="SDFSDFE" length="1" />
+		<_field_char_enum name="streaming priority*">
+			<item Name="default" />
+			<item Name="higher" />
+			<item Name="highest" />
+		</_field_char_enum>
+		<_field_pad name="strpad" length="1" />
+		<_field_short_integer name="cubemap 0 bitmap index" />
+		<_field_real name="lightmap resolution scale" />
+		<_field_short_integer name="group_index!" />
+		<_field_short_integer name="group_list_index!" />
+		<_field_string_id name="name*^" />
+		<_field_long_string name="source file name*" />
+	</_field_block>
+	<_field_block name="instanced geometry instance names*" max="8192" srcguid="2e7adfa3-dcc2-e941-dba2-72441ad617d1" srcName="structure_bsp_instanced_geometry_instances_names_block">
+		<_field_string_id name="name*^" />
+	</_field_block>
+	<_field_tag_reference name="instance imposters" validtags="iimz" />
+	<_field_block name="instance imposter infos" max="8192" srcguid="56c7114b-8e84-4c46-8723-247d98dbb91e" srcName="structure_instance_imposter_info_block">
+		<_field_string_id name="name" />
+		<_field_char_integer name="imposter policy" />
+		<_field_pad name="parasdd" length="3" />
+		<_field_real name="transition distance" />
+	</_field_block>
+	<_field_long_integer name="Instance Geometry Tag Instance Count!" />
+	<_field_custom name="decorator info" />
+	<_field_block name="decorator sets*" max="48" srcguid="4a16c8eb-3158-c640-bb82-77a058357ada" srcName="runtime_decorator_set_block">
+		<_field_tag_reference name="decorator set reference*" validtags="dctr" />
+	</_field_block>
+	<_field_struct name="decorator instance buffer!*" />
+	<_field_explanation name="Render Geometry">
+All new Halo 3 render geometry definitions!</_field_explanation>
+	<_field_long_flags name="runtime flags*!">
+		<item Name="processed*!" />
+		<item Name="available*!" />
+		<item Name="has valid budgets (really)*!" />
+		<item Name="manual resource creation*!" />
+		<item Name="keep raw geometry*!" />
+		<item Name="dont use compressed vertex positions*!" />
+		<item Name="pca animation table sorted*!" />
+		<item Name="needs no lightmap uvs*!" />
+		<item Name="always needs lightmap uvs*!" />
+	</_field_long_flags>
+	<_field_block name="meshes*" max="8191" srcguid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" srcName="global_mesh_block">
+		<_field_block name="parts*" max="255" srcguid="9d84814a-eefb-b442-a3c9-56ace6530f18" srcName="part_block">
+			<_field_short_block_index name="render method index^*" targetGuid="735913b1-a534-c54d-9990-1631b0b5e573" targetName="global_geometry_material_block" />
+			<_field_short_block_index name="transparent sorting index*" targetGuid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" targetName="sorting_position_block" />
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_integer name="subpart start*" />
+			<_field_short_integer name="subpart count*" />
+			<_field_char_integer name="part type*" />
+			<_field_char_enum name="specialized render">
+				<item Name="none" />
+				<item Name="fail" />
+				<item Name="fur" />
+				<item Name="fur_stencil" />
+				<item Name="decal" />
+				<item Name="shield" />
+				<item Name="water" />
+				<item Name="lightmap_only" />
+				<item Name="hologram" />
+			</_field_char_enum>
+			<_field_word_flags name="part flags*">
+				<item Name="is water surface" />
+				<item Name="per vertex lightmap part" />
+				<item Name="debug flag instance part" />
+				<item Name="subparts has uberlights info" />
+				<item Name="draw cull distance medium" />
+				<item Name="draw cull distance close" />
+				<item Name="draw cull rendering shields" />
+				<item Name="cannot single pass render" />
+				<item Name="is transparent" />
+				<item Name="cannot two pass" />
+				<item Name="transparent should output depth for DoF#expensive" />
+				<item Name="do not include in static lightmap" />
+				<item Name="do not include in PVS generation" />
+				<item Name="draw cull rendering active camo" />
+			</_field_word_flags>
+			<_field_word_integer name="budget vertex count" />
+			<_field_short_enum name="tessellation">
+				<item Name="none" />
+				<item Name="fixed x4 faces" />
+				<item Name="fixed x9 faces" />
+				<item Name="fixed x36 faces" />
+			</_field_short_enum>
+		</_field_block>
+		<_field_block name="subparts*" max="65535" srcguid="339a1009-279c-6f43-b438-bfbab6971bae" srcName="subpart_block">
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_block_index name="part index*" targetGuid="9d84814a-eefb-b442-a3c9-56ace6530f18" targetName="part_block" />
+			<_field_word_integer name="budget vertex count" />
+			<_field_dword_integer name="analytical light index" />
+		</_field_block>
+		<_field_array name="vertex buffer indices*">
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+		</_field_array>
+		<_field_short_integer name="index buffer index*" />
+		<_field_short_integer name="index buffer tessellation*" />
+		<_field_word_flags name="mesh flags*">
+			<item Name="mesh has vertex color" />
+			<item Name="use region index for sorting" />
+			<item Name="use vertex buffers for indices" />
+			<item Name="mesh has per-instance lighting (do not modify)" />
+			<item Name="mesh is unindexed (do not modify)" />
+			<item Name="subpart were merged" />
+			<item Name="mesh has fur" />
+			<item Name="mesh has decal" />
+			<item Name="mesh doesnt use compressed position" />
+			<item Name="use uncompressed vertex format" />
+			<item Name="mesh is PCA" />
+			<item Name="mesh compression determined" />
+			<item Name="mesh has authored lightmap texture coords" />
+			<item Name="mesh has a useful set of second texture coords" />
+			<item Name="mesh has no lightmap" />
+			<item Name="per vertex lighting" />
+		</_field_word_flags>
+		<_field_char_integer name="rigid node index*" />
+		<_field_char_enum name="vertex type*">
+			<item Name="world" />
+			<item Name="rigid" />
+			<item Name="skinned" />
+			<item Name="particle_model" />
+			<item Name="flat world" />
+			<item Name="flat rigid" />
+			<item Name="flat skinned" />
+			<item Name="screen" />
+			<item Name="debug" />
+			<item Name="transparent" />
+			<item Name="particle" />
+			<item Name="unused0" />
+			<item Name="light_volume" />
+			<item Name="chud_simple" />
+			<item Name="chud_fancy" />
+			<item Name="decorator" />
+			<item Name="position only" />
+			<item Name="patchy_fog" />
+			<item Name="water" />
+			<item Name="ripple" />
+			<item Name="implicit geometry" />
+			<item Name="unused1" />
+			<item Name="world_tessellated" />
+			<item Name="rigid_tessellated" />
+			<item Name="skinned_tessellated" />
+			<item Name="shader_cache" />
+			<item Name="structure_instance_imposter" />
+			<item Name="object_instance_imposter" />
+			<item Name="rigid compressed" />
+			<item Name="skinned uncompressed" />
+			<item Name="light volume precompiled" />
+			<item Name="blendshape_rigid" />
+			<item Name="blendshape_rigid_blendshaped" />
+			<item Name="rigid_blendshaped" />
+			<item Name="blendshape_skinned" />
+			<item Name="blendshape_skinned_blendshaped" />
+			<item Name="skinned_blendshaped" />
+			<item Name="VirtualGeometryHWtess" />
+			<item Name="VirtualGeometryMemexport" />
+			<item Name="position_only" />
+			<item Name="VirtualGeometryDebug" />
+			<item Name="blendshapeRigidCompressed" />
+			<item Name="skinnedUncompressedBlendshaped" />
+			<item Name="blendshapeSkinnedCompressed" />
+			<item Name="tracer" />
+			<item Name="polyart" />
+			<item Name="vectorart" />
+			<item Name="rigid_boned" />
+			<item Name="rigid_boned_2uv" />
+			<item Name="blendshape_skinned_2uv" />
+			<item Name="blendshape_skinned_2uv_blendshaped" />
+			<item Name="skinned_2uv_blendshaped" />
+			<item Name="polyartUV" />
+			<item Name="blendshape_skinned_uncompressed_blendshaped" />
+		</_field_char_enum>
+		<_field_char_enum name="PRT vertex type*">
+			<item Name="No PRT" />
+			<item Name="PRT Ambient" />
+			<item Name="PRT Linear" />
+			<item Name="PRT Quadratic" />
+		</_field_char_enum>
+		<_field_char_enum name="lighting policy">
+			<item Name="vertex color" />
+			<item Name="single probe" />
+			<item Name="prt ambient" />
+		</_field_char_enum>
+		<_field_char_enum name="index buffer type*">
+			<item Name="DEFAULT" />
+			<item Name="line list" />
+			<item Name="line strip" />
+			<item Name="triangle list" />
+			<item Name="triangle fan" />
+			<item Name="triangle strip" />
+			<item Name="quad list" />
+			<item Name="rect list" />
+		</_field_char_enum>
+		<_field_pad name="BAASDFIR" length="1" />
+		<_field_short_integer name="pca mesh index*" />
+		<_field_block name="instance buckets*" max="2048" srcguid="6960550c-90c7-aa4b-a39f-96e0d9b27120" srcName="global_instance_bucket_block">
+			<_field_short_integer name="mesh index*" />
+			<_field_short_integer name="definition index*" />
+			<_field_block name="instances" max="65535" srcguid="2abc11bb-5252-ac4b-9937-57be8027853e" srcName="instance_index_word_block">
+				<_field_short_integer name="instance index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="water indices start" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_real name="runtime bounding radius:world units*!" />
+		<_field_real_point_3d name="runtime bounding offset*!" />
+		<_field_block name="vertex keys*" max="16777214" srcguid="18c1d1da-0f57-4e4e-af86-840b860bb1e0" srcName="vertexKeyBlock">
+			<_field_long_integer name="key1*" />
+			<_field_long_integer name="key2*" />
+		</_field_block>
+		<_field_short_block_index name="clone index*" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+		<_field_short_integer name="cumulative part count (initialized by PVS building code)" />
+	</_field_block>
+	<_field_block name="PCA Mesh Indices*" max="8191" srcguid="2313c647-271f-164d-97cd-4802cca9ffa4" srcName="PCAMeshIndexBlock">
+		<_field_long_block_index name="mesh index" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+	</_field_block>
+	<_field_block name="compression info*" max="65536" srcguid="acfd51fe-ff62-7847-a8c3-3054a023a96c" srcName="compression_info_block">
+		<_field_word_flags name="compression flags*">
+			<item Name="compressed position" />
+			<item Name="compressed texcoord" />
+			<item Name="compression optimized" />
+		</_field_word_flags>
+		<_field_pad name="JOJOBOMO" length="2" />
+		<_field_explanation name="WARNING">The following fields are mislabeled for legacy reasons.The actual order is:
+position_bounds.x0 position_bounds.x1 position_bounds.y0
+position_bounds.y1 position_bounds.z0 position_bounds.z1
+
+texcoord_bounds.x0 texcoord_bounds.x1
+texcoord_bounds.y0 texcoord_bounds.y1</_field_explanation>
+		<_field_real_point_3d name="position bounds 0*" />
+		<_field_real_point_3d name="position bounds 1*" />
+		<_field_real_point_2d name="texcoord bounds 0*" />
+		<_field_real_point_2d name="texcoord bounds 1*" />
+		<_field_real name="unused0*" />
+		<_field_real name="unused1*" />
+	</_field_block>
+	<_field_block name="part sorting position*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+		<_field_real_plane_3d name="plane*" />
+		<_field_real_point_3d name="position*" />
+		<_field_real name="radius*" />
+		<_field_array name="node indices*">
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+		</_field_array>
+		<_field_array name="node weights*">
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="user data*" max="64" srcguid="4e7ebe3b-5947-ef49-bdd0-1f257c2f2589" srcName="user_data_block">
+		<_field_struct name="user data header*" />
+		<_field_char_enum name="data type^*">
+			<item Name="PRT Info" />
+		</_field_char_enum>
+		<_field_char_integer name="data count*" />
+		<_field_word_integer name="data size*" />
+		<_field_data name="user data*" />
+	</_field_block>
+	<_field_block name="per mesh temporary*" max="8191" srcguid="b00a9052-0523-644b-ba86-1c132cc95c01" srcName="per_mesh_raw_data_block">
+		<_field_block name="raw vertices*" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="raw indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_block name="raw indices32*" max="2147483647" srcguid="8e4b5173-a55e-7849-8aaa-440d39e1c24c" srcName="indices_dword_block">
+			<_field_long_integer name="dword*" />
+		</_field_block>
+		<_field_block name="raw water data" max="1024" srcguid="44c6094f-ed93-124f-a9d7-54e16e7054c7" srcName="raw_water_block">
+			<_field_block name="raw water indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+				<_field_short_integer name="word*" />
+			</_field_block>
+			<_field_block name="raw water vertices*" max="65535" srcguid="8530f8b6-9ac9-b141-b7f4-54a85ae2008e" srcName="raw_water_append_block">
+				<_field_real_point_2d name="base texcoord*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="raw imposter data" max="65535" srcguid="53c748c2-9b67-7348-82d2-cc05bb8a57a9" srcName="raw_imposter_brdf_block">
+			<_field_real_rgb_color name="diffuse" />
+			<_field_real_rgb_color name="ambient" />
+			<_field_real_rgb_color name="specular" />
+			<_field_real name="shininess" />
+			<_field_real name="alpha" />
+			<_field_real_argb_color name="change color tint of diffuse" />
+			<_field_real_argb_color name="change color tint of specular" />
+		</_field_block>
+		<_field_block name="raw instance imposter verts" max="65535" srcguid="d44dcf22-e8fd-0e47-83fa-52ab7303b0cc" srcName="raw_instance_imposter_block">
+			<_field_real_vector_3d name="position" />
+			<_field_dword_integer name="color" />
+			<_field_real name="HDR scaler" />
+		</_field_block>
+		<_field_block name="raw blendshapes*" max="16777214" srcguid="93555e7d-7ef9-b94d-8e97-bc0072ec5ce9" srcName="raw_blendshape_block">
+			<_field_real_vector_3d name="position*" />
+			<_field_real_vector_3d name="normal*" />
+			<_field_real_argb_color name="tension and ambient occlusion*" />
+		</_field_block>
+		<_field_long_integer name="per vertex lighting vertex size" />
+		<_field_short_integer name="parameterized texture width" />
+		<_field_short_integer name="parameterized texture height" />
+		<_field_long_flags name="flags">
+			<item Name="indices are triangle strips" />
+			<item Name="indices are triangle lists" />
+			<item Name="indices are quad lists" />
+		</_field_long_flags>
+	</_field_block>
+	<_field_pad name="pad3" length="12" />
+	<_field_block name="per mesh node map*" max="8191" srcguid="03203bc2-a62a-0c45-8b24-97d96c50810f" srcName="per_mesh_node_map_block">
+		<_field_block name="node map*" max="255" srcguid="4a2adb77-c60e-0d49-822e-a7273026f880" srcName="node_map_byte_block">
+			<_field_char_integer name="node index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per mesh subpart visibility*" max="64" srcguid="32043606-be14-e047-818a-b223a6db06a2" srcName="per_mesh_subpart_visibility_block">
+		<_field_block name="bounding_sphere*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+			<_field_real_plane_3d name="plane*" />
+			<_field_real_point_3d name="position*" />
+			<_field_real name="radius*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_mesh_prt_data*" max="8191" srcguid="afa5cb7e-9d68-8543-be23-7733820d7068" srcName="per_mesh_prt_data_block">
+		<_field_data name="mesh pca data*" />
+		<_field_block name="per instance prt data" max="65535" srcguid="3da36c83-d937-db44-bbef-f22e6f5d159b" srcName="per_instance_prt_data_block">
+			<_field_data name="mesh pca data*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_instance_lightmap_texcoords*" max="65535" srcguid="d0a480f8-f8f9-ae48-99b4-36d5c2c552e5" srcName="per_instance_lightmap_texcoords_block">
+		<_field_block name="texture coordinates" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="texture coordinates (concise)" max="16777214" srcguid="33763d6e-f556-2d49-84f0-f79e0e70cd1a" srcName="raw_texcoord_block">
+			<_field_real_point_2d name="texcoord*" />
+		</_field_block>
+		<_field_short_integer name="vertex buffer index*" />
+		<_field_pad name="HTJIAHA" length="2" />
+	</_field_block>
+	<_field_block name="water bounding box block*" max="8191" srcguid="d0ac8ef2-fff1-a941-96b9-30d0c2a5a259" srcName="water_bounding_box_block">
+		<_field_short_integer name="mesh index" />
+		<_field_short_integer name="part index" />
+		<_field_real_point_3d name="position bounds 0" />
+		<_field_real_point_3d name="position bounds 1" />
+	</_field_block>
+	<_field_pageable_resource name="api resource" />
+	<_field_block name="Optional PVS data" max="16" srcguid="2c1e4000-d96b-e64b-aa5d-6719c5566afd" srcName="render_geometry_pvs_data_block">
+		<_field_block name="Visibility array" max="65535" srcguid="de41aacd-e9de-c64e-9e9b-798e24e8f6f7" srcName="render_geometry_pvs_data_visibility_value_block">
+			<_field_dword_integer name="Value" />
+		</_field_block>
+		<_field_block name="Per-block visibility offset array" max="65535" srcguid="ff84cb00-57d9-414e-a470-8748921e2594" srcName="render_geometry_pvs_data_visibility_index_block">
+			<_field_word_integer name="Index" />
+		</_field_block>
+		<_field_long_integer name="Bits per block" />
+		<_field_real_point_3d name="Object space grid AABB min" />
+		<_field_real_point_3d name="Object space grid AABB max" />
+		<_field_real_vector_3d name="Block Size" />
+		<_field_long_integer name="Num blocks X" />
+		<_field_long_integer name="Num blocks Y" />
+		<_field_long_integer name="Num blocks Z" />
+	</_field_block>
+	<_field_block name="shapeNames*" max="8192" srcguid="7ce68c39-7e3a-704f-b414-43f073d6fb49" srcName="shapeNameBlock">
+		<_field_long_integer name="key*" />
+		<_field_long_string name="name*" />
+	</_field_block>
+	<_field_custom name="decals info" />
+	<_field_block name="preplaced decal sets*" max="6144" srcguid="305a34a3-65f7-6f4f-ae72-426d15740b0b" srcName="bsp_preplaced_decal_set_reference_block">
+		<_field_long_integer name="decal definition index!" />
+		<_field_char_integer name="location bsp 0!" />
+		<_field_byte_integer name="location cluster 0!" />
+		<_field_char_integer name="location bsp 1!" />
+		<_field_byte_integer name="location cluster 1!" />
+		<_field_char_integer name="location bsp 2!" />
+		<_field_byte_integer name="location cluster 2!" />
+		<_field_char_integer name="location bsp 3!" />
+		<_field_byte_integer name="location cluster 3!" />
+		<_field_real_point_3d name="center*" />
+		<_field_short_integer name="first decal ref index!" />
+		<_field_short_integer name="decal ref count!" />
+	</_field_block>
+	<_field_block name="preplaced decals*" max="6144" srcguid="3f46fde6-36e0-f245-ab63-286208d637ab" srcName="bsp_preplaced_decal_reference_block">
+		<_field_short_integer name="index start" />
+		<_field_short_integer name="index count" />
+		<_field_short_integer name="vertex start" />
+		<_field_short_integer name="vertex count" />
+		<_field_short_integer name="definition block index" />
+		<_field_pad name="paddddg" length="2" />
+		<_field_real_point_2d name="spirit corner" />
+		<_field_real_vector_2d name="spirit size" />
+	</_field_block>
+	<_field_struct name="preplaced decal geometry!*" />
+	<_field_explanation name="Render Geometry">
+All new Halo 3 render geometry definitions!</_field_explanation>
+	<_field_long_flags name="runtime flags*!">
+		<item Name="processed*!" />
+		<item Name="available*!" />
+		<item Name="has valid budgets (really)*!" />
+		<item Name="manual resource creation*!" />
+		<item Name="keep raw geometry*!" />
+		<item Name="dont use compressed vertex positions*!" />
+		<item Name="pca animation table sorted*!" />
+		<item Name="needs no lightmap uvs*!" />
+		<item Name="always needs lightmap uvs*!" />
+	</_field_long_flags>
+	<_field_block name="meshes*" max="8191" srcguid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" srcName="global_mesh_block">
+		<_field_block name="parts*" max="255" srcguid="9d84814a-eefb-b442-a3c9-56ace6530f18" srcName="part_block">
+			<_field_short_block_index name="render method index^*" targetGuid="735913b1-a534-c54d-9990-1631b0b5e573" targetName="global_geometry_material_block" />
+			<_field_short_block_index name="transparent sorting index*" targetGuid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" targetName="sorting_position_block" />
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_integer name="subpart start*" />
+			<_field_short_integer name="subpart count*" />
+			<_field_char_integer name="part type*" />
+			<_field_char_enum name="specialized render">
+				<item Name="none" />
+				<item Name="fail" />
+				<item Name="fur" />
+				<item Name="fur_stencil" />
+				<item Name="decal" />
+				<item Name="shield" />
+				<item Name="water" />
+				<item Name="lightmap_only" />
+				<item Name="hologram" />
+			</_field_char_enum>
+			<_field_word_flags name="part flags*">
+				<item Name="is water surface" />
+				<item Name="per vertex lightmap part" />
+				<item Name="debug flag instance part" />
+				<item Name="subparts has uberlights info" />
+				<item Name="draw cull distance medium" />
+				<item Name="draw cull distance close" />
+				<item Name="draw cull rendering shields" />
+				<item Name="cannot single pass render" />
+				<item Name="is transparent" />
+				<item Name="cannot two pass" />
+				<item Name="transparent should output depth for DoF#expensive" />
+				<item Name="do not include in static lightmap" />
+				<item Name="do not include in PVS generation" />
+				<item Name="draw cull rendering active camo" />
+			</_field_word_flags>
+			<_field_word_integer name="budget vertex count" />
+			<_field_short_enum name="tessellation">
+				<item Name="none" />
+				<item Name="fixed x4 faces" />
+				<item Name="fixed x9 faces" />
+				<item Name="fixed x36 faces" />
+			</_field_short_enum>
+		</_field_block>
+		<_field_block name="subparts*" max="65535" srcguid="339a1009-279c-6f43-b438-bfbab6971bae" srcName="subpart_block">
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_block_index name="part index*" targetGuid="9d84814a-eefb-b442-a3c9-56ace6530f18" targetName="part_block" />
+			<_field_word_integer name="budget vertex count" />
+			<_field_dword_integer name="analytical light index" />
+		</_field_block>
+		<_field_array name="vertex buffer indices*">
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+		</_field_array>
+		<_field_short_integer name="index buffer index*" />
+		<_field_short_integer name="index buffer tessellation*" />
+		<_field_word_flags name="mesh flags*">
+			<item Name="mesh has vertex color" />
+			<item Name="use region index for sorting" />
+			<item Name="use vertex buffers for indices" />
+			<item Name="mesh has per-instance lighting (do not modify)" />
+			<item Name="mesh is unindexed (do not modify)" />
+			<item Name="subpart were merged" />
+			<item Name="mesh has fur" />
+			<item Name="mesh has decal" />
+			<item Name="mesh doesnt use compressed position" />
+			<item Name="use uncompressed vertex format" />
+			<item Name="mesh is PCA" />
+			<item Name="mesh compression determined" />
+			<item Name="mesh has authored lightmap texture coords" />
+			<item Name="mesh has a useful set of second texture coords" />
+			<item Name="mesh has no lightmap" />
+			<item Name="per vertex lighting" />
+		</_field_word_flags>
+		<_field_char_integer name="rigid node index*" />
+		<_field_char_enum name="vertex type*">
+			<item Name="world" />
+			<item Name="rigid" />
+			<item Name="skinned" />
+			<item Name="particle_model" />
+			<item Name="flat world" />
+			<item Name="flat rigid" />
+			<item Name="flat skinned" />
+			<item Name="screen" />
+			<item Name="debug" />
+			<item Name="transparent" />
+			<item Name="particle" />
+			<item Name="unused0" />
+			<item Name="light_volume" />
+			<item Name="chud_simple" />
+			<item Name="chud_fancy" />
+			<item Name="decorator" />
+			<item Name="position only" />
+			<item Name="patchy_fog" />
+			<item Name="water" />
+			<item Name="ripple" />
+			<item Name="implicit geometry" />
+			<item Name="unused1" />
+			<item Name="world_tessellated" />
+			<item Name="rigid_tessellated" />
+			<item Name="skinned_tessellated" />
+			<item Name="shader_cache" />
+			<item Name="structure_instance_imposter" />
+			<item Name="object_instance_imposter" />
+			<item Name="rigid compressed" />
+			<item Name="skinned uncompressed" />
+			<item Name="light volume precompiled" />
+			<item Name="blendshape_rigid" />
+			<item Name="blendshape_rigid_blendshaped" />
+			<item Name="rigid_blendshaped" />
+			<item Name="blendshape_skinned" />
+			<item Name="blendshape_skinned_blendshaped" />
+			<item Name="skinned_blendshaped" />
+			<item Name="VirtualGeometryHWtess" />
+			<item Name="VirtualGeometryMemexport" />
+			<item Name="position_only" />
+			<item Name="VirtualGeometryDebug" />
+			<item Name="blendshapeRigidCompressed" />
+			<item Name="skinnedUncompressedBlendshaped" />
+			<item Name="blendshapeSkinnedCompressed" />
+			<item Name="tracer" />
+			<item Name="polyart" />
+			<item Name="vectorart" />
+			<item Name="rigid_boned" />
+			<item Name="rigid_boned_2uv" />
+			<item Name="blendshape_skinned_2uv" />
+			<item Name="blendshape_skinned_2uv_blendshaped" />
+			<item Name="skinned_2uv_blendshaped" />
+			<item Name="polyartUV" />
+			<item Name="blendshape_skinned_uncompressed_blendshaped" />
+		</_field_char_enum>
+		<_field_char_enum name="PRT vertex type*">
+			<item Name="No PRT" />
+			<item Name="PRT Ambient" />
+			<item Name="PRT Linear" />
+			<item Name="PRT Quadratic" />
+		</_field_char_enum>
+		<_field_char_enum name="lighting policy">
+			<item Name="vertex color" />
+			<item Name="single probe" />
+			<item Name="prt ambient" />
+		</_field_char_enum>
+		<_field_char_enum name="index buffer type*">
+			<item Name="DEFAULT" />
+			<item Name="line list" />
+			<item Name="line strip" />
+			<item Name="triangle list" />
+			<item Name="triangle fan" />
+			<item Name="triangle strip" />
+			<item Name="quad list" />
+			<item Name="rect list" />
+		</_field_char_enum>
+		<_field_pad name="BAASDFIR" length="1" />
+		<_field_short_integer name="pca mesh index*" />
+		<_field_block name="instance buckets*" max="2048" srcguid="6960550c-90c7-aa4b-a39f-96e0d9b27120" srcName="global_instance_bucket_block">
+			<_field_short_integer name="mesh index*" />
+			<_field_short_integer name="definition index*" />
+			<_field_block name="instances" max="65535" srcguid="2abc11bb-5252-ac4b-9937-57be8027853e" srcName="instance_index_word_block">
+				<_field_short_integer name="instance index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="water indices start" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_real name="runtime bounding radius:world units*!" />
+		<_field_real_point_3d name="runtime bounding offset*!" />
+		<_field_block name="vertex keys*" max="16777214" srcguid="18c1d1da-0f57-4e4e-af86-840b860bb1e0" srcName="vertexKeyBlock">
+			<_field_long_integer name="key1*" />
+			<_field_long_integer name="key2*" />
+		</_field_block>
+		<_field_short_block_index name="clone index*" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+		<_field_short_integer name="cumulative part count (initialized by PVS building code)" />
+	</_field_block>
+	<_field_block name="PCA Mesh Indices*" max="8191" srcguid="2313c647-271f-164d-97cd-4802cca9ffa4" srcName="PCAMeshIndexBlock">
+		<_field_long_block_index name="mesh index" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+	</_field_block>
+	<_field_block name="compression info*" max="65536" srcguid="acfd51fe-ff62-7847-a8c3-3054a023a96c" srcName="compression_info_block">
+		<_field_word_flags name="compression flags*">
+			<item Name="compressed position" />
+			<item Name="compressed texcoord" />
+			<item Name="compression optimized" />
+		</_field_word_flags>
+		<_field_pad name="JOJOBOMO" length="2" />
+		<_field_explanation name="WARNING">The following fields are mislabeled for legacy reasons.The actual order is:
+position_bounds.x0 position_bounds.x1 position_bounds.y0
+position_bounds.y1 position_bounds.z0 position_bounds.z1
+
+texcoord_bounds.x0 texcoord_bounds.x1
+texcoord_bounds.y0 texcoord_bounds.y1</_field_explanation>
+		<_field_real_point_3d name="position bounds 0*" />
+		<_field_real_point_3d name="position bounds 1*" />
+		<_field_real_point_2d name="texcoord bounds 0*" />
+		<_field_real_point_2d name="texcoord bounds 1*" />
+		<_field_real name="unused0*" />
+		<_field_real name="unused1*" />
+	</_field_block>
+	<_field_block name="part sorting position*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+		<_field_real_plane_3d name="plane*" />
+		<_field_real_point_3d name="position*" />
+		<_field_real name="radius*" />
+		<_field_array name="node indices*">
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+		</_field_array>
+		<_field_array name="node weights*">
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="user data*" max="64" srcguid="4e7ebe3b-5947-ef49-bdd0-1f257c2f2589" srcName="user_data_block">
+		<_field_struct name="user data header*" />
+		<_field_char_enum name="data type^*">
+			<item Name="PRT Info" />
+		</_field_char_enum>
+		<_field_char_integer name="data count*" />
+		<_field_word_integer name="data size*" />
+		<_field_data name="user data*" />
+	</_field_block>
+	<_field_block name="per mesh temporary*" max="8191" srcguid="b00a9052-0523-644b-ba86-1c132cc95c01" srcName="per_mesh_raw_data_block">
+		<_field_block name="raw vertices*" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="raw indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_block name="raw indices32*" max="2147483647" srcguid="8e4b5173-a55e-7849-8aaa-440d39e1c24c" srcName="indices_dword_block">
+			<_field_long_integer name="dword*" />
+		</_field_block>
+		<_field_block name="raw water data" max="1024" srcguid="44c6094f-ed93-124f-a9d7-54e16e7054c7" srcName="raw_water_block">
+			<_field_block name="raw water indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+				<_field_short_integer name="word*" />
+			</_field_block>
+			<_field_block name="raw water vertices*" max="65535" srcguid="8530f8b6-9ac9-b141-b7f4-54a85ae2008e" srcName="raw_water_append_block">
+				<_field_real_point_2d name="base texcoord*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="raw imposter data" max="65535" srcguid="53c748c2-9b67-7348-82d2-cc05bb8a57a9" srcName="raw_imposter_brdf_block">
+			<_field_real_rgb_color name="diffuse" />
+			<_field_real_rgb_color name="ambient" />
+			<_field_real_rgb_color name="specular" />
+			<_field_real name="shininess" />
+			<_field_real name="alpha" />
+			<_field_real_argb_color name="change color tint of diffuse" />
+			<_field_real_argb_color name="change color tint of specular" />
+		</_field_block>
+		<_field_block name="raw instance imposter verts" max="65535" srcguid="d44dcf22-e8fd-0e47-83fa-52ab7303b0cc" srcName="raw_instance_imposter_block">
+			<_field_real_vector_3d name="position" />
+			<_field_dword_integer name="color" />
+			<_field_real name="HDR scaler" />
+		</_field_block>
+		<_field_block name="raw blendshapes*" max="16777214" srcguid="93555e7d-7ef9-b94d-8e97-bc0072ec5ce9" srcName="raw_blendshape_block">
+			<_field_real_vector_3d name="position*" />
+			<_field_real_vector_3d name="normal*" />
+			<_field_real_argb_color name="tension and ambient occlusion*" />
+		</_field_block>
+		<_field_long_integer name="per vertex lighting vertex size" />
+		<_field_short_integer name="parameterized texture width" />
+		<_field_short_integer name="parameterized texture height" />
+		<_field_long_flags name="flags">
+			<item Name="indices are triangle strips" />
+			<item Name="indices are triangle lists" />
+			<item Name="indices are quad lists" />
+		</_field_long_flags>
+	</_field_block>
+	<_field_pad name="pad3" length="12" />
+	<_field_block name="per mesh node map*" max="8191" srcguid="03203bc2-a62a-0c45-8b24-97d96c50810f" srcName="per_mesh_node_map_block">
+		<_field_block name="node map*" max="255" srcguid="4a2adb77-c60e-0d49-822e-a7273026f880" srcName="node_map_byte_block">
+			<_field_char_integer name="node index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per mesh subpart visibility*" max="64" srcguid="32043606-be14-e047-818a-b223a6db06a2" srcName="per_mesh_subpart_visibility_block">
+		<_field_block name="bounding_sphere*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+			<_field_real_plane_3d name="plane*" />
+			<_field_real_point_3d name="position*" />
+			<_field_real name="radius*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_mesh_prt_data*" max="8191" srcguid="afa5cb7e-9d68-8543-be23-7733820d7068" srcName="per_mesh_prt_data_block">
+		<_field_data name="mesh pca data*" />
+		<_field_block name="per instance prt data" max="65535" srcguid="3da36c83-d937-db44-bbef-f22e6f5d159b" srcName="per_instance_prt_data_block">
+			<_field_data name="mesh pca data*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_instance_lightmap_texcoords*" max="65535" srcguid="d0a480f8-f8f9-ae48-99b4-36d5c2c552e5" srcName="per_instance_lightmap_texcoords_block">
+		<_field_block name="texture coordinates" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="texture coordinates (concise)" max="16777214" srcguid="33763d6e-f556-2d49-84f0-f79e0e70cd1a" srcName="raw_texcoord_block">
+			<_field_real_point_2d name="texcoord*" />
+		</_field_block>
+		<_field_short_integer name="vertex buffer index*" />
+		<_field_pad name="HTJIAHA" length="2" />
+	</_field_block>
+	<_field_block name="water bounding box block*" max="8191" srcguid="d0ac8ef2-fff1-a941-96b9-30d0c2a5a259" srcName="water_bounding_box_block">
+		<_field_short_integer name="mesh index" />
+		<_field_short_integer name="part index" />
+		<_field_real_point_3d name="position bounds 0" />
+		<_field_real_point_3d name="position bounds 1" />
+	</_field_block>
+	<_field_pageable_resource name="api resource" />
+	<_field_block name="Optional PVS data" max="16" srcguid="2c1e4000-d96b-e64b-aa5d-6719c5566afd" srcName="render_geometry_pvs_data_block">
+		<_field_block name="Visibility array" max="65535" srcguid="de41aacd-e9de-c64e-9e9b-798e24e8f6f7" srcName="render_geometry_pvs_data_visibility_value_block">
+			<_field_dword_integer name="Value" />
+		</_field_block>
+		<_field_block name="Per-block visibility offset array" max="65535" srcguid="ff84cb00-57d9-414e-a470-8748921e2594" srcName="render_geometry_pvs_data_visibility_index_block">
+			<_field_word_integer name="Index" />
+		</_field_block>
+		<_field_long_integer name="Bits per block" />
+		<_field_real_point_3d name="Object space grid AABB min" />
+		<_field_real_point_3d name="Object space grid AABB max" />
+		<_field_real_vector_3d name="Block Size" />
+		<_field_long_integer name="Num blocks X" />
+		<_field_long_integer name="Num blocks Y" />
+		<_field_long_integer name="Num blocks Z" />
+	</_field_block>
+	<_field_block name="shapeNames*" max="8192" srcguid="7ce68c39-7e3a-704f-b414-43f073d6fb49" srcName="shapeNameBlock">
+		<_field_long_integer name="key*" />
+		<_field_long_string name="name*" />
+	</_field_block>
+	<_field_block name="acoustics sound clusters!" max="255" srcguid="2fa3601b-3357-bf42-861f-64d3adc5fa35" srcName="structure_bsp_sound_cluster_block">
+		<_field_short_integer name="palette index!" />
+		<_field_pad name="HRSFKJT" length="2" />
+		<_field_block name="enclosing portal designators" max="1000" srcguid="e924ec01-0dfd-9043-b834-edb281935210" srcName="structure_sound_cluster_portal_designators">
+			<_field_short_integer name="portal designator*" />
+		</_field_block>
+		<_field_block name="interior cluster indices" max="255" srcguid="ac2238c9-9e9f-4b40-9440-c3da462f28e7" srcName="structure_sound_cluster_interior_cluster_indices">
+			<_field_short_integer name="interior cluster index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="transparent planes*" max="32768" srcguid="51e46cb6-ae57-c84d-b204-270d07a9412f" srcName="transparent_planes_block">
+		<_field_short_integer name="section index" />
+		<_field_short_integer name="part index" />
+		<_field_real_plane_3d name="plane" />
+	</_field_block>
+	<_field_block name="debug info*" max="1" srcguid="433af58f-81e3-2044-8114-0052ab9dfea6" srcName="structure_bsp_debug_info_block">
+		<_field_pad name="BRQYEF" length="64" />
+		<_field_block name="clusters*" max="255" srcguid="69aca0b5-9326-5943-9ca5-5c27431ec06e" srcName="structure_bsp_cluster_debug_info_block">
+			<_field_word_flags name="errors*">
+				<item Name="multiple fog planes" />
+				<item Name="fog zone collision" />
+				<item Name="fog zone immersion" />
+			</_field_word_flags>
+			<_field_word_flags name="warnings*">
+				<item Name="multiple visible fog planes" />
+				<item Name="visible fog cluster omission" />
+				<item Name="fog plane missed render-bsp" />
+			</_field_word_flags>
+			<_field_pad name="KHWRB" length="28" />
+			<_field_block name="lines*" max="32767" srcguid="83f28f28-b71a-cd47-84a9-1a1a49eb05f1" srcName="structure_bsp_debug_info_render_line_block">
+				<_field_short_enum name="type*">
+					<item Name="fog plane boundary edge" />
+					<item Name="fog plane internal edge" />
+					<item Name="fog zone floodfill" />
+					<item Name="fog zone cluster centroid" />
+					<item Name="fog zone cluster geometry" />
+					<item Name="fog zone portal centroid" />
+					<item Name="fog zone portal geometry" />
+				</_field_short_enum>
+				<_field_short_integer name="code*" />
+				<_field_short_integer name="pad thai*" />
+				<_field_pad name="BNQS" length="2" />
+				<_field_real_point_3d name="point 0*" />
+				<_field_real_point_3d name="point 1*" />
+			</_field_block>
+			<_field_block name="fog plane indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="visible fog plane indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="vis-fog omission cluster indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="containing fog zone indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="fog planes*" max="127" srcguid="df158af7-c8dc-d04a-a18e-7b16621bc70b" srcName="structure_bsp_fog_plane_debug_info_block">
+			<_field_long_integer name="fog zone index*" />
+			<_field_pad name="WZGH" length="24" />
+			<_field_long_integer name="connected plane designator*" />
+			<_field_block name="lines*" max="32767" srcguid="83f28f28-b71a-cd47-84a9-1a1a49eb05f1" srcName="structure_bsp_debug_info_render_line_block">
+				<_field_short_enum name="type*">
+					<item Name="fog plane boundary edge" />
+					<item Name="fog plane internal edge" />
+					<item Name="fog zone floodfill" />
+					<item Name="fog zone cluster centroid" />
+					<item Name="fog zone cluster geometry" />
+					<item Name="fog zone portal centroid" />
+					<item Name="fog zone portal geometry" />
+				</_field_short_enum>
+				<_field_short_integer name="code*" />
+				<_field_short_integer name="pad thai*" />
+				<_field_pad name="BNQS" length="2" />
+				<_field_real_point_3d name="point 0*" />
+				<_field_real_point_3d name="point 1*" />
+			</_field_block>
+			<_field_block name="intersected cluster indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="inf. extent cluster indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="fog zones*" max="127" srcguid="d13b5154-3761-cb4d-950f-f95c72b662d5" srcName="structure_bsp_fog_zone_debug_info_block">
+			<_field_long_integer name="media index:scenario fog plane*" />
+			<_field_long_integer name="base fog plane index*" />
+			<_field_pad name="RB" length="24" />
+			<_field_block name="lines*" max="32767" srcguid="83f28f28-b71a-cd47-84a9-1a1a49eb05f1" srcName="structure_bsp_debug_info_render_line_block">
+				<_field_short_enum name="type*">
+					<item Name="fog plane boundary edge" />
+					<item Name="fog plane internal edge" />
+					<item Name="fog zone floodfill" />
+					<item Name="fog zone cluster centroid" />
+					<item Name="fog zone cluster geometry" />
+					<item Name="fog zone portal centroid" />
+					<item Name="fog zone portal geometry" />
+				</_field_short_enum>
+				<_field_short_integer name="code*" />
+				<_field_short_integer name="pad thai*" />
+				<_field_pad name="BNQS" length="2" />
+				<_field_real_point_3d name="point 0*" />
+				<_field_real_point_3d name="point 1*" />
+			</_field_block>
+			<_field_block name="immersed cluster indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="bounding fog plane indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+			<_field_block name="collision fog plane indices*" max="32767" srcguid="5c4a7d5e-b349-8141-b565-2e009ba99982" srcName="structure_bsp_debug_info_indices_block">
+				<_field_long_integer name="index*" />
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_struct name="structure_physics*" />
+	<_field_block name="breakable surfaces mopp code block!*" max="32767" srcguid="98c82bee-d18a-984e-b643-51e5635cf676" srcName="mopp_code_definition_block">
+		<_field_long_integer name="field pointer skip!~" />
+		<_field_short_integer name="size*!" />
+		<_field_short_integer name="count~*!" />
+		<_field_pad name="total shit pad1" length="8" />
+		<_field_real name="v.i*!" />
+		<_field_real name="v.j*!" />
+		<_field_real name="v.k*!" />
+		<_field_real name="v.w*!" />
+		<_field_long_integer name="m_data pointer!~" />
+		<_field_long_integer name="int m_size*!" />
+		<_field_long_integer name="int m_capacityAndFlags*!" />
+		<_field_char_integer name="int8 m_buildType*!" />
+		<_field_pad name="total shit pad2" length="3" />
+		<_field_block name="mopp data block *!" max="16777216" srcguid="1f74ab0e-d7f5-0844-9d5a-32e112d4fd6d" srcName="mopp_code_data_definition_block">
+			<_field_byte_integer name="mopp data*!" />
+		</_field_block>
+		<_field_char_integer name="mopp build type!*#they say it only matters for ps3" />
+		<_field_pad name="explicit alignment pad 3" length="3" />
+	</_field_block>
+	<_field_block name="breakable surfaace key table" max="32767" srcguid="8b591598-8836-514e-81cf-6cb8aa8f19cd" srcName="breakable_surface_key_table_block">
+		<_field_short_integer name="instanced geometry index!*" />
+		<_field_byte_integer name="breakable surface set index!*" />
+		<_field_byte_integer name="breakable surface index!*" />
+		<_field_long_integer name="seed surface index!*" />
+		<_field_real name="x0!*" />
+		<_field_real name="x1!*" />
+		<_field_real name="y0!*" />
+		<_field_real name="y1!*" />
+		<_field_real name="z0!*" />
+		<_field_real name="z1!*" />
+	</_field_block>
+	<_field_struct name="render geometry*" />
+	<_field_explanation name="Render Geometry">
+All new Halo 3 render geometry definitions!</_field_explanation>
+	<_field_long_flags name="runtime flags*!">
+		<item Name="processed*!" />
+		<item Name="available*!" />
+		<item Name="has valid budgets (really)*!" />
+		<item Name="manual resource creation*!" />
+		<item Name="keep raw geometry*!" />
+		<item Name="dont use compressed vertex positions*!" />
+		<item Name="pca animation table sorted*!" />
+		<item Name="needs no lightmap uvs*!" />
+		<item Name="always needs lightmap uvs*!" />
+	</_field_long_flags>
+	<_field_block name="meshes*" max="8191" srcguid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" srcName="global_mesh_block">
+		<_field_block name="parts*" max="255" srcguid="9d84814a-eefb-b442-a3c9-56ace6530f18" srcName="part_block">
+			<_field_short_block_index name="render method index^*" targetGuid="735913b1-a534-c54d-9990-1631b0b5e573" targetName="global_geometry_material_block" />
+			<_field_short_block_index name="transparent sorting index*" targetGuid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" targetName="sorting_position_block" />
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_integer name="subpart start*" />
+			<_field_short_integer name="subpart count*" />
+			<_field_char_integer name="part type*" />
+			<_field_char_enum name="specialized render">
+				<item Name="none" />
+				<item Name="fail" />
+				<item Name="fur" />
+				<item Name="fur_stencil" />
+				<item Name="decal" />
+				<item Name="shield" />
+				<item Name="water" />
+				<item Name="lightmap_only" />
+				<item Name="hologram" />
+			</_field_char_enum>
+			<_field_word_flags name="part flags*">
+				<item Name="is water surface" />
+				<item Name="per vertex lightmap part" />
+				<item Name="debug flag instance part" />
+				<item Name="subparts has uberlights info" />
+				<item Name="draw cull distance medium" />
+				<item Name="draw cull distance close" />
+				<item Name="draw cull rendering shields" />
+				<item Name="cannot single pass render" />
+				<item Name="is transparent" />
+				<item Name="cannot two pass" />
+				<item Name="transparent should output depth for DoF#expensive" />
+				<item Name="do not include in static lightmap" />
+				<item Name="do not include in PVS generation" />
+				<item Name="draw cull rendering active camo" />
+			</_field_word_flags>
+			<_field_word_integer name="budget vertex count" />
+			<_field_short_enum name="tessellation">
+				<item Name="none" />
+				<item Name="fixed x4 faces" />
+				<item Name="fixed x9 faces" />
+				<item Name="fixed x36 faces" />
+			</_field_short_enum>
+		</_field_block>
+		<_field_block name="subparts*" max="65535" srcguid="339a1009-279c-6f43-b438-bfbab6971bae" srcName="subpart_block">
+			<_field_long_integer name="index start*" />
+			<_field_long_integer name="index count*" />
+			<_field_short_block_index name="part index*" targetGuid="9d84814a-eefb-b442-a3c9-56ace6530f18" targetName="part_block" />
+			<_field_word_integer name="budget vertex count" />
+			<_field_dword_integer name="analytical light index" />
+		</_field_block>
+		<_field_array name="vertex buffer indices*">
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+			<_field_word_integer name="vertex buffer index*" />
+		</_field_array>
+		<_field_short_integer name="index buffer index*" />
+		<_field_short_integer name="index buffer tessellation*" />
+		<_field_word_flags name="mesh flags*">
+			<item Name="mesh has vertex color" />
+			<item Name="use region index for sorting" />
+			<item Name="use vertex buffers for indices" />
+			<item Name="mesh has per-instance lighting (do not modify)" />
+			<item Name="mesh is unindexed (do not modify)" />
+			<item Name="subpart were merged" />
+			<item Name="mesh has fur" />
+			<item Name="mesh has decal" />
+			<item Name="mesh doesnt use compressed position" />
+			<item Name="use uncompressed vertex format" />
+			<item Name="mesh is PCA" />
+			<item Name="mesh compression determined" />
+			<item Name="mesh has authored lightmap texture coords" />
+			<item Name="mesh has a useful set of second texture coords" />
+			<item Name="mesh has no lightmap" />
+			<item Name="per vertex lighting" />
+		</_field_word_flags>
+		<_field_char_integer name="rigid node index*" />
+		<_field_char_enum name="vertex type*">
+			<item Name="world" />
+			<item Name="rigid" />
+			<item Name="skinned" />
+			<item Name="particle_model" />
+			<item Name="flat world" />
+			<item Name="flat rigid" />
+			<item Name="flat skinned" />
+			<item Name="screen" />
+			<item Name="debug" />
+			<item Name="transparent" />
+			<item Name="particle" />
+			<item Name="unused0" />
+			<item Name="light_volume" />
+			<item Name="chud_simple" />
+			<item Name="chud_fancy" />
+			<item Name="decorator" />
+			<item Name="position only" />
+			<item Name="patchy_fog" />
+			<item Name="water" />
+			<item Name="ripple" />
+			<item Name="implicit geometry" />
+			<item Name="unused1" />
+			<item Name="world_tessellated" />
+			<item Name="rigid_tessellated" />
+			<item Name="skinned_tessellated" />
+			<item Name="shader_cache" />
+			<item Name="structure_instance_imposter" />
+			<item Name="object_instance_imposter" />
+			<item Name="rigid compressed" />
+			<item Name="skinned uncompressed" />
+			<item Name="light volume precompiled" />
+			<item Name="blendshape_rigid" />
+			<item Name="blendshape_rigid_blendshaped" />
+			<item Name="rigid_blendshaped" />
+			<item Name="blendshape_skinned" />
+			<item Name="blendshape_skinned_blendshaped" />
+			<item Name="skinned_blendshaped" />
+			<item Name="VirtualGeometryHWtess" />
+			<item Name="VirtualGeometryMemexport" />
+			<item Name="position_only" />
+			<item Name="VirtualGeometryDebug" />
+			<item Name="blendshapeRigidCompressed" />
+			<item Name="skinnedUncompressedBlendshaped" />
+			<item Name="blendshapeSkinnedCompressed" />
+			<item Name="tracer" />
+			<item Name="polyart" />
+			<item Name="vectorart" />
+			<item Name="rigid_boned" />
+			<item Name="rigid_boned_2uv" />
+			<item Name="blendshape_skinned_2uv" />
+			<item Name="blendshape_skinned_2uv_blendshaped" />
+			<item Name="skinned_2uv_blendshaped" />
+			<item Name="polyartUV" />
+			<item Name="blendshape_skinned_uncompressed_blendshaped" />
+		</_field_char_enum>
+		<_field_char_enum name="PRT vertex type*">
+			<item Name="No PRT" />
+			<item Name="PRT Ambient" />
+			<item Name="PRT Linear" />
+			<item Name="PRT Quadratic" />
+		</_field_char_enum>
+		<_field_char_enum name="lighting policy">
+			<item Name="vertex color" />
+			<item Name="single probe" />
+			<item Name="prt ambient" />
+		</_field_char_enum>
+		<_field_char_enum name="index buffer type*">
+			<item Name="DEFAULT" />
+			<item Name="line list" />
+			<item Name="line strip" />
+			<item Name="triangle list" />
+			<item Name="triangle fan" />
+			<item Name="triangle strip" />
+			<item Name="quad list" />
+			<item Name="rect list" />
+		</_field_char_enum>
+		<_field_pad name="BAASDFIR" length="1" />
+		<_field_short_integer name="pca mesh index*" />
+		<_field_block name="instance buckets*" max="2048" srcguid="6960550c-90c7-aa4b-a39f-96e0d9b27120" srcName="global_instance_bucket_block">
+			<_field_short_integer name="mesh index*" />
+			<_field_short_integer name="definition index*" />
+			<_field_block name="instances" max="65535" srcguid="2abc11bb-5252-ac4b-9937-57be8027853e" srcName="instance_index_word_block">
+				<_field_short_integer name="instance index*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="water indices start" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_real name="runtime bounding radius:world units*!" />
+		<_field_real_point_3d name="runtime bounding offset*!" />
+		<_field_block name="vertex keys*" max="16777214" srcguid="18c1d1da-0f57-4e4e-af86-840b860bb1e0" srcName="vertexKeyBlock">
+			<_field_long_integer name="key1*" />
+			<_field_long_integer name="key2*" />
+		</_field_block>
+		<_field_short_block_index name="clone index*" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+		<_field_short_integer name="cumulative part count (initialized by PVS building code)" />
+	</_field_block>
+	<_field_block name="PCA Mesh Indices*" max="8191" srcguid="2313c647-271f-164d-97cd-4802cca9ffa4" srcName="PCAMeshIndexBlock">
+		<_field_long_block_index name="mesh index" targetGuid="bb48b3eb-c0a7-c84c-a6e5-1515a5a99c7c" targetName="global_mesh_block" />
+	</_field_block>
+	<_field_block name="compression info*" max="65536" srcguid="acfd51fe-ff62-7847-a8c3-3054a023a96c" srcName="compression_info_block">
+		<_field_word_flags name="compression flags*">
+			<item Name="compressed position" />
+			<item Name="compressed texcoord" />
+			<item Name="compression optimized" />
+		</_field_word_flags>
+		<_field_pad name="JOJOBOMO" length="2" />
+		<_field_explanation name="WARNING">The following fields are mislabeled for legacy reasons.The actual order is:
+position_bounds.x0 position_bounds.x1 position_bounds.y0
+position_bounds.y1 position_bounds.z0 position_bounds.z1
+
+texcoord_bounds.x0 texcoord_bounds.x1
+texcoord_bounds.y0 texcoord_bounds.y1</_field_explanation>
+		<_field_real_point_3d name="position bounds 0*" />
+		<_field_real_point_3d name="position bounds 1*" />
+		<_field_real_point_2d name="texcoord bounds 0*" />
+		<_field_real_point_2d name="texcoord bounds 1*" />
+		<_field_real name="unused0*" />
+		<_field_real name="unused1*" />
+	</_field_block>
+	<_field_block name="part sorting position*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+		<_field_real_plane_3d name="plane*" />
+		<_field_real_point_3d name="position*" />
+		<_field_real name="radius*" />
+		<_field_array name="node indices*">
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+			<_field_byte_integer name="node index*" />
+		</_field_array>
+		<_field_array name="node weights*">
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+			<_field_real name="node weight*" />
+		</_field_array>
+	</_field_block>
+	<_field_block name="user data*" max="64" srcguid="4e7ebe3b-5947-ef49-bdd0-1f257c2f2589" srcName="user_data_block">
+		<_field_struct name="user data header*" />
+		<_field_char_enum name="data type^*">
+			<item Name="PRT Info" />
+		</_field_char_enum>
+		<_field_char_integer name="data count*" />
+		<_field_word_integer name="data size*" />
+		<_field_data name="user data*" />
+	</_field_block>
+	<_field_block name="per mesh temporary*" max="8191" srcguid="b00a9052-0523-644b-ba86-1c132cc95c01" srcName="per_mesh_raw_data_block">
+		<_field_block name="raw vertices*" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="raw indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+			<_field_short_integer name="word*" />
+		</_field_block>
+		<_field_block name="raw indices32*" max="2147483647" srcguid="8e4b5173-a55e-7849-8aaa-440d39e1c24c" srcName="indices_dword_block">
+			<_field_long_integer name="dword*" />
+		</_field_block>
+		<_field_block name="raw water data" max="1024" srcguid="44c6094f-ed93-124f-a9d7-54e16e7054c7" srcName="raw_water_block">
+			<_field_block name="raw water indices*" max="2147483647" srcguid="9be9f592-5bfc-b545-a594-973c688e96a8" srcName="indices_word_block">
+				<_field_short_integer name="word*" />
+			</_field_block>
+			<_field_block name="raw water vertices*" max="65535" srcguid="8530f8b6-9ac9-b141-b7f4-54a85ae2008e" srcName="raw_water_append_block">
+				<_field_real_point_2d name="base texcoord*" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="raw imposter data" max="65535" srcguid="53c748c2-9b67-7348-82d2-cc05bb8a57a9" srcName="raw_imposter_brdf_block">
+			<_field_real_rgb_color name="diffuse" />
+			<_field_real_rgb_color name="ambient" />
+			<_field_real_rgb_color name="specular" />
+			<_field_real name="shininess" />
+			<_field_real name="alpha" />
+			<_field_real_argb_color name="change color tint of diffuse" />
+			<_field_real_argb_color name="change color tint of specular" />
+		</_field_block>
+		<_field_block name="raw instance imposter verts" max="65535" srcguid="d44dcf22-e8fd-0e47-83fa-52ab7303b0cc" srcName="raw_instance_imposter_block">
+			<_field_real_vector_3d name="position" />
+			<_field_dword_integer name="color" />
+			<_field_real name="HDR scaler" />
+		</_field_block>
+		<_field_block name="raw blendshapes*" max="16777214" srcguid="93555e7d-7ef9-b94d-8e97-bc0072ec5ce9" srcName="raw_blendshape_block">
+			<_field_real_vector_3d name="position*" />
+			<_field_real_vector_3d name="normal*" />
+			<_field_real_argb_color name="tension and ambient occlusion*" />
+		</_field_block>
+		<_field_long_integer name="per vertex lighting vertex size" />
+		<_field_short_integer name="parameterized texture width" />
+		<_field_short_integer name="parameterized texture height" />
+		<_field_long_flags name="flags">
+			<item Name="indices are triangle strips" />
+			<item Name="indices are triangle lists" />
+			<item Name="indices are quad lists" />
+		</_field_long_flags>
+	</_field_block>
+	<_field_pad name="pad3" length="12" />
+	<_field_block name="per mesh node map*" max="8191" srcguid="03203bc2-a62a-0c45-8b24-97d96c50810f" srcName="per_mesh_node_map_block">
+		<_field_block name="node map*" max="255" srcguid="4a2adb77-c60e-0d49-822e-a7273026f880" srcName="node_map_byte_block">
+			<_field_char_integer name="node index*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per mesh subpart visibility*" max="64" srcguid="32043606-be14-e047-818a-b223a6db06a2" srcName="per_mesh_subpart_visibility_block">
+		<_field_block name="bounding_sphere*" max="65535" srcguid="6df44e68-2eb5-1141-8e20-fefbeefb1c9e" srcName="sorting_position_block">
+			<_field_real_plane_3d name="plane*" />
+			<_field_real_point_3d name="position*" />
+			<_field_real name="radius*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_mesh_prt_data*" max="8191" srcguid="afa5cb7e-9d68-8543-be23-7733820d7068" srcName="per_mesh_prt_data_block">
+		<_field_data name="mesh pca data*" />
+		<_field_block name="per instance prt data" max="65535" srcguid="3da36c83-d937-db44-bbef-f22e6f5d159b" srcName="per_instance_prt_data_block">
+			<_field_data name="mesh pca data*" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="per_instance_lightmap_texcoords*" max="65535" srcguid="d0a480f8-f8f9-ae48-99b4-36d5c2c552e5" srcName="per_instance_lightmap_texcoords_block">
+		<_field_block name="texture coordinates" max="16777214" srcguid="36c8f698-93cd-c543-ba31-318805bdba77" srcName="raw_vertex_block">
+			<_field_real_point_3d name="position*" />
+			<_field_real_point_2d name="texcoord*" />
+			<_field_real_point_3d name="normal*" />
+			<_field_real_point_3d name="binormal*" />
+			<_field_real_point_3d name="tangent*" />
+			<_field_real_point_2d name="lightmap texcoord*" />
+			<_field_array name="node indices*">
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+				<_field_byte_integer name="node index*" />
+			</_field_array>
+			<_field_array name="node weights*">
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+				<_field_real name="node weight*" />
+			</_field_array>
+			<_field_real_point_3d name="vertex color*" />
+			<_field_real_point_2d name="texcoord1*" />
+		</_field_block>
+		<_field_block name="texture coordinates (concise)" max="16777214" srcguid="33763d6e-f556-2d49-84f0-f79e0e70cd1a" srcName="raw_texcoord_block">
+			<_field_real_point_2d name="texcoord*" />
+		</_field_block>
+		<_field_short_integer name="vertex buffer index*" />
+		<_field_pad name="HTJIAHA" length="2" />
+	</_field_block>
+	<_field_block name="water bounding box block*" max="8191" srcguid="d0ac8ef2-fff1-a941-96b9-30d0c2a5a259" srcName="water_bounding_box_block">
+		<_field_short_integer name="mesh index" />
+		<_field_short_integer name="part index" />
+		<_field_real_point_3d name="position bounds 0" />
+		<_field_real_point_3d name="position bounds 1" />
+	</_field_block>
+	<_field_pageable_resource name="api resource" />
+	<_field_block name="Optional PVS data" max="16" srcguid="2c1e4000-d96b-e64b-aa5d-6719c5566afd" srcName="render_geometry_pvs_data_block">
+		<_field_block name="Visibility array" max="65535" srcguid="de41aacd-e9de-c64e-9e9b-798e24e8f6f7" srcName="render_geometry_pvs_data_visibility_value_block">
+			<_field_dword_integer name="Value" />
+		</_field_block>
+		<_field_block name="Per-block visibility offset array" max="65535" srcguid="ff84cb00-57d9-414e-a470-8748921e2594" srcName="render_geometry_pvs_data_visibility_index_block">
+			<_field_word_integer name="Index" />
+		</_field_block>
+		<_field_long_integer name="Bits per block" />
+		<_field_real_point_3d name="Object space grid AABB min" />
+		<_field_real_point_3d name="Object space grid AABB max" />
+		<_field_real_vector_3d name="Block Size" />
+		<_field_long_integer name="Num blocks X" />
+		<_field_long_integer name="Num blocks Y" />
+		<_field_long_integer name="Num blocks Z" />
+	</_field_block>
+	<_field_block name="shapeNames*" max="8192" srcguid="7ce68c39-7e3a-704f-b414-43f073d6fb49" srcName="shapeNameBlock">
+		<_field_long_integer name="key*" />
+		<_field_long_string name="name*" />
+	</_field_block>
+	<_field_block name="widget references" max="1024" srcguid="2cca7dfe-1349-816a-b965-2900abaa5a82" srcName="widget_reference_block">
+		<_field_short_integer name="marker index*" />
+		<_field_pad name="gnlao" length="2" />
+		<_field_tag_reference name="widget ref*" validtags="lswd" />
+	</_field_block>
+	<_field_block name="cheap light references" max="1024" srcguid="faca62fe-5349-8c6a-b9e5-a93fa9aa1aab" srcName="cheap_light_reference_block">
+		<_field_short_integer name="marker index*" />
+		<_field_pad name="ldajk" length="2" />
+		<_field_tag_reference name="cheap light*" validtags="gldf" />
+	</_field_block>
+	<_field_struct name="resource interface" />
+	<_field_block name="raw_resources" max="1" srcguid="f4eb393a-faa1-2041-8ca7-c0ac54dcae26" srcName="structure_bsp_raw_resources">
+		<_field_struct name="raw_items" />
+		<_field_block name="collision bsp*" max="1" srcguid="1b4f5ee1-171f-2d44-8730-f6bbc0e02045" srcName="global_collision_bsp_block">
+			<_field_block name="bsp3d nodes*" max="8388608" srcguid="21fcd8b5-8eff-e748-9261-1f523e7371a3" srcName="bsp3d_nodes_block">
+				<_field_int64_integer name="node data designator!" />
+			</_field_block>
+			<_field_block name="bsp3d supernodes*" max="2048" srcguid="01c2cdab-1210-a94f-a740-0ab4e01ab4bc" srcName="bsp3d_kd_supdernodes_block">
+				<_field_real name="plane 0*!" />
+				<_field_real name="plane 1*!" />
+				<_field_real name="plane 2*!" />
+				<_field_real name="plane 3*!" />
+				<_field_real name="plane 4*!" />
+				<_field_real name="plane 5*!" />
+				<_field_real name="plane 6*!" />
+				<_field_real name="plane 7*!" />
+				<_field_real name="plane 8*!" />
+				<_field_real name="plane 9*!" />
+				<_field_real name="plane10*!" />
+				<_field_real name="plane11*!" />
+				<_field_real name="plane12*!" />
+				<_field_real name="plane13*!" />
+				<_field_real name="plane14*!" />
+				<_field_long_integer name="plane dimensions*!" />
+				<_field_long_integer name="child index 0*!" />
+				<_field_long_integer name="child index 1*!" />
+				<_field_long_integer name="child index 2*!" />
+				<_field_long_integer name="child index 3*!" />
+				<_field_long_integer name="child index 4*!" />
+				<_field_long_integer name="child index 5*!" />
+				<_field_long_integer name="child index 6*!" />
+				<_field_long_integer name="child index 7*!" />
+				<_field_long_integer name="child index 8*!" />
+				<_field_long_integer name="child index 9*!" />
+				<_field_long_integer name="child index10*!" />
+				<_field_long_integer name="child index11*!" />
+				<_field_long_integer name="child index12*!" />
+				<_field_long_integer name="child index13*!" />
+				<_field_long_integer name="child index14*!" />
+				<_field_long_integer name="child index15*!" />
+			</_field_block>
+			<_field_block name="planes*" max="536870911" srcguid="8d8a185d-9c71-0d4e-8015-a6da22e342eb" srcName="planes_block">
+				<_field_real_plane_3d name="plane*" />
+			</_field_block>
+			<_field_block name="leaves*" max="8388608" srcguid="e38efda5-649a-cc4e-9ceb-f2fb45030ca1" srcName="leaves_block">
+				<_field_byte_flags name="flags*">
+					<item Name="contains double-sided surfaces" />
+				</_field_byte_flags>
+				<_field_pad name="pad" length="1" />
+				<_field_word_integer name="bsp2d reference count*" />
+				<_field_dword_integer name="first bsp2d reference*" />
+			</_field_block>
+			<_field_block name="bsp2d references*" max="196608" srcguid="9e801e59-388c-5f44-b889-de6f3b5474ff" srcName="bsp2d_references_block">
+				<_field_short_integer name="plane*" />
+				<_field_short_integer name="bsp2d node*" />
+			</_field_block>
+			<_field_block name="bsp2d nodes*" max="32767" srcguid="8c0cd66c-3bc7-2441-b339-408c966ad3be" srcName="bsp2d_nodes_block">
+				<_field_real_plane_2d name="plane*" />
+				<_field_short_integer name="left child*" />
+				<_field_short_integer name="right child*" />
+			</_field_block>
+			<_field_block name="surfaces*" max="32767" srcguid="3519b87a-0a01-884b-ab12-de8085cd9139" srcName="surfaces_block">
+				<_field_word_integer name="plane index*" />
+				<_field_word_integer name="first edge*" />
+				<_field_short_integer name="material*" />
+				<_field_short_integer name="breakable surface set*" />
+				<_field_short_integer name="breakable surface*" />
+				<_field_byte_flags name="flags*">
+					<item Name="two sided" />
+					<item Name="invisible" />
+					<item Name="climbable" />
+					<item Name="breakable" />
+					<item Name="invalid" />
+					<item Name="conveyor" />
+					<item Name="slip" />
+					<item Name="plane negated" />
+				</_field_byte_flags>
+				<_field_byte_integer name="best plane calculation vertex index *!" />
+			</_field_block>
+			<_field_block name="edges*" max="65535" srcguid="35a61db5-53ec-0044-81b5-8c33d1dccafd" srcName="edges_block">
+				<_field_word_integer name="start vertex*" />
+				<_field_word_integer name="end vertex*" />
+				<_field_word_integer name="forward edge*" />
+				<_field_word_integer name="reverse edge*" />
+				<_field_word_integer name="left surface*" />
+				<_field_word_integer name="right surface*" />
+			</_field_block>
+			<_field_block name="vertices*" max="131072" srcguid="606a3f6c-ce1f-6a4c-8f89-e265e56d2f60" srcName="vertices_block">
+				<_field_real_point_3d name="point*" />
+				<_field_word_integer name="first edge*" />
+				<_field_short_integer name="sink*!" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="large collision bsp*" max="1" srcguid="1baf5ae1-17bf-2d42-b730-f6dbcde02043" srcName="global_large_collision_bsp_block">
+			<_field_block name="bsp3d nodes*" max="536870911" srcguid="e27060b1-3c37-dd48-bc53-6e38a979e2e0" srcName="large_bsp3d_nodes_block">
+				<_field_long_integer name="plane*" />
+				<_field_long_integer name="back child*" />
+				<_field_long_integer name="front child*" />
+			</_field_block>
+			<_field_block name="bsp3d supernodes*" max="2048" srcguid="01c2cdab-1210-a94f-a740-0ab4e01ab4bc" srcName="bsp3d_kd_supdernodes_block">
+				<_field_real name="plane 0*!" />
+				<_field_real name="plane 1*!" />
+				<_field_real name="plane 2*!" />
+				<_field_real name="plane 3*!" />
+				<_field_real name="plane 4*!" />
+				<_field_real name="plane 5*!" />
+				<_field_real name="plane 6*!" />
+				<_field_real name="plane 7*!" />
+				<_field_real name="plane 8*!" />
+				<_field_real name="plane 9*!" />
+				<_field_real name="plane10*!" />
+				<_field_real name="plane11*!" />
+				<_field_real name="plane12*!" />
+				<_field_real name="plane13*!" />
+				<_field_real name="plane14*!" />
+				<_field_long_integer name="plane dimensions*!" />
+				<_field_long_integer name="child index 0*!" />
+				<_field_long_integer name="child index 1*!" />
+				<_field_long_integer name="child index 2*!" />
+				<_field_long_integer name="child index 3*!" />
+				<_field_long_integer name="child index 4*!" />
+				<_field_long_integer name="child index 5*!" />
+				<_field_long_integer name="child index 6*!" />
+				<_field_long_integer name="child index 7*!" />
+				<_field_long_integer name="child index 8*!" />
+				<_field_long_integer name="child index 9*!" />
+				<_field_long_integer name="child index10*!" />
+				<_field_long_integer name="child index11*!" />
+				<_field_long_integer name="child index12*!" />
+				<_field_long_integer name="child index13*!" />
+				<_field_long_integer name="child index14*!" />
+				<_field_long_integer name="child index15*!" />
+			</_field_block>
+			<_field_block name="planes*" max="536870911" srcguid="8d8a185d-9c71-0d4e-8015-a6da22e342eb" srcName="planes_block">
+				<_field_real_plane_3d name="plane*" />
+			</_field_block>
+			<_field_block name="leaves*" max="134217728" srcguid="aaafac6f-1c8b-584c-9133-73aa7c8a9e94" srcName="large_leaves_block">
+				<_field_word_flags name="flags*">
+					<item Name="contains double-sided surfaces" />
+				</_field_word_flags>
+				<_field_short_integer name="bsp2d reference count*" />
+				<_field_long_integer name="first bsp2d reference*" />
+			</_field_block>
+			<_field_block name="bsp2d references*" max="536870911" srcguid="6508607e-1348-ee49-aa59-55664fd9c2bb" srcName="large_bsp2d_references_block">
+				<_field_long_integer name="plane*" />
+				<_field_long_integer name="bsp2d node*" />
+			</_field_block>
+			<_field_block name="bsp2d nodes*" max="536870911" srcguid="c77379c1-c116-e54e-a40f-a277212d8050" srcName="large_bsp2d_nodes_block">
+				<_field_real_plane_2d name="plane*" />
+				<_field_long_integer name="left child*" />
+				<_field_long_integer name="right child*" />
+			</_field_block>
+			<_field_block name="surfaces*" max="262136" srcguid="980bf8ab-1600-5b4c-bace-563d04a14589" srcName="large_surfaces_block">
+				<_field_long_integer name="plane index*" />
+				<_field_long_integer name="first edge*" />
+				<_field_short_integer name="material*" />
+				<_field_short_integer name="breakable surface set*" />
+				<_field_short_integer name="breakable surface*" />
+				<_field_byte_flags name="flags*">
+					<item Name="two sided" />
+					<item Name="invisible" />
+					<item Name="climbable" />
+					<item Name="breakable" />
+					<item Name="invalid" />
+					<item Name="conveyor" />
+					<item Name="slip" />
+					<item Name="plane negated" />
+				</_field_byte_flags>
+				<_field_byte_integer name="best plane calculation vertex index *!" />
+			</_field_block>
+			<_field_block name="edges*" max="2621440" srcguid="e84bb276-57e1-6444-b7c0-9c61948f3471" srcName="large_edges_block">
+				<_field_long_integer name="start vertex*" />
+				<_field_long_integer name="end vertex*" />
+				<_field_long_integer name="forward edge*" />
+				<_field_long_integer name="reverse edge*" />
+				<_field_long_integer name="left surface*" />
+				<_field_long_integer name="right surface*" />
+			</_field_block>
+			<_field_block name="vertices*" max="1310720" srcguid="7b795904-3bf0-8641-aa63-8c78d41b79dd" srcName="large_vertices_block">
+				<_field_real_point_3d name="point*" />
+				<_field_long_integer name="first edge*" />
+				<_field_long_integer name="sink*!" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="instanced geometries definitions*" max="2048" srcguid="5f0b1df5-9591-b14e-8b0c-7e1f85168f82" srcName="structure_bsp_instanced_geometry_definition_block">
+			<_field_long_integer name="checksum*" />
+			<_field_long_flags name="flags*">
+				<item Name="miscolored bsp" />
+				<item Name="error free" />
+				<item Name="surface to triangle remapped" />
+				<item Name="external reference mesh" />
+				<item Name="no physics" />
+				<item Name="stitched physics" />
+			</_field_long_flags>
+			<_field_short_integer name="mesh index" />
+			<_field_short_integer name="compression index" />
+			<_field_real name="global lightmap resolution scale" />
+			<_field_short_integer name="external_index" />
+			<_field_pad name="useme" length="2" />
+		</_field_block>
+		<_field_block name="Havok Data*" max="1" srcguid="29073207-6a54-8d46-bdb6-3f21f4c58c41" srcName="structureIOHavokDataBlock">
+			<_field_long_integer name="version*" />
+			<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+			<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+			<_field_long_integer name="Prefab Index*!" />
+			<_field_data name="Serialized Havok Data*" />
+			<_field_block name="Serialized Per Collision Type Havok Geometry" max="5" srcguid="b0d031b8-3412-f246-832b-b0cf6cddb759" srcName="SerializedHavokGeometryDataBlock">
+				<_field_data name="Serialized Havok Data*" />
+				<_field_data name="Serialized Static Havok Data*" />
+				<_field_long_integer name="collision type" />
+				<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+				<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+			</_field_block>
+			<_field_real_point_3d name="Shapes bounds min!*" />
+			<_field_real_point_3d name="Shapes bounds max!*" />
+		</_field_block>
+	</_field_block>
+	<_field_pageable_resource name="tag_resources" />
+	<_field_pageable_resource name="cache_file_resources" />
+	<_field_long_integer name="use resource items*" />
+	<_field_custom name="Any Platform Temporary Storage" />
+	<_field_block name="Any Platform Temp Havok Data*!" max="1" srcguid="29073207-6a54-8d46-bdb6-3f21f4c58c41" srcName="structureIOHavokDataBlock">
+		<_field_long_integer name="version*" />
+		<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+		<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+		<_field_long_integer name="Prefab Index*!" />
+		<_field_data name="Serialized Havok Data*" />
+		<_field_block name="Serialized Per Collision Type Havok Geometry" max="5" srcguid="b0d031b8-3412-f246-832b-b0cf6cddb759" srcName="SerializedHavokGeometryDataBlock">
+			<_field_data name="Serialized Havok Data*" />
+			<_field_data name="Serialized Static Havok Data*" />
+			<_field_long_integer name="collision type" />
+			<_field_long_integer name="RuntimeDeserializedBody Pointer*!" />
+			<_field_long_integer name="RuntimeDeserializedData Pointer*!" />
+		</_field_block>
+		<_field_real_point_3d name="Shapes bounds min!*" />
+		<_field_real_point_3d name="Shapes bounds max!*" />
+	</_field_block>
+	<_field_block name="external references" max="4096" srcguid="26efc887-35e9-5741-85b7-0af5447b03b8" srcName="structure_external_instanced_geometry_references_block">
+		<_field_tag_reference name="prefab reference" validtags="prfb" />
+		<_field_string_id name="name*^" />
+		<_field_real name="scale" />
+		<_field_real_vector_3d name="forward" />
+		<_field_real_vector_3d name="left" />
+		<_field_real_vector_3d name="up" />
+		<_field_real_point_3d name="position" />
+		<_field_short_integer name="mesh count!" />
+		<_field_short_integer name="mesh block index!" />
+		<_field_short_integer name="light count!" />
+		<_field_short_integer name="light instance block index!" />
+		<_field_short_integer name="dynamic object count!" />
+		<_field_short_integer name="dynamic object block index!" />
+		<_field_word_flags name="override flags">
+			<item Name="not in lightprobes" />
+			<item Name="render only" />
+			<item Name="does not block aoe damage" />
+			<item Name="collidable" />
+			<item Name="decal spacing" />
+			<item Name="rain blocker" />
+			<item Name="vertical rain sheet" />
+			<item Name="outside map" />
+			<item Name="seam colliding" />
+			<item Name="(mostly) planar" />
+			<item Name="remove from shadow geometry" />
+			<item Name="cinema only" />
+			<item Name="exclude from cinema" />
+			<item Name="disallow object lighting samples" />
+		</_field_word_flags>
+		<_field_pad name="SDFSDEE" length="2" />
+		<_field_char_enum name="override pathfinding policy">
+			<item Name="cut-out" />
+			<item Name="static" />
+			<item Name="none" />
+		</_field_char_enum>
+		<_field_char_enum name="override lightmapping policy">
+			<item Name="per-pixel shared" />
+			<item Name="per-vertex" />
+			<item Name="single-probe" />
+			<item Name="exclude" />
+			<item Name="per-pixel ao" />
+			<item Name="per-vertex ao" />
+		</_field_char_enum>
+		<_field_char_enum name="override imposter policy">
+			<item Name="polygon default" />
+			<item Name="polygon high" />
+			<item Name="cards medium" />
+			<item Name="cards high" />
+			<item Name="none" />
+			<item Name="rainbow box (runtime only)" />
+		</_field_char_enum>
+		<_field_char_enum name="override streaming priority*">
+			<item Name="default" />
+			<item Name="higher" />
+			<item Name="highest" />
+		</_field_char_enum>
+		<_field_real name="override lightmap resolution scale" />
+		<_field_real name="override imposter transition distance" />
+		<_field_real name="override imposter brightness" />
+		<_field_real name="override light channel flags" />
+		<_field_word_flags name="instance flags Mask">
+			<item Name="not in lightprobes" />
+			<item Name="render only" />
+			<item Name="does not block aoe damage" />
+			<item Name="collidable" />
+			<item Name="decal spacing" />
+			<item Name="rain blocker" />
+			<item Name="vertical rain sheet" />
+			<item Name="outside map" />
+			<item Name="seam colliding" />
+			<item Name="(mostly) planar" />
+			<item Name="remove from shadow geometry" />
+			<item Name="cinema only" />
+			<item Name="exclude from cinema" />
+			<item Name="disallow object lighting samples" />
+		</_field_word_flags>
+		<_field_word_flags name="instance policy mask">
+			<item Name="override pathfinding policy" />
+			<item Name="override lightmapping policy" />
+			<item Name="override lmposter policy" />
+			<item Name="override lightmap resolution policy" />
+			<item Name="override imposter transition distance policy" />
+			<item Name="override light channel flags policy" />
+			<item Name="override imposter brightness" />
+		</_field_word_flags>
+	</_field_block>
+	<_field_tag_reference name="dependencies" validtags="dpnd" />
+	<_field_long_integer name="base material count*!" />
+	<_field_block name="obb volume list" max="4096" srcguid="05d08c7b-e185-6d49-ae54-5c184f842706" srcName="structure_bsp_obb_volume_block">
+		<_field_real_point_3d name="origin" />
+		<_field_real_vector_3d name="axis 1" />
+		<_field_real_vector_3d name="axis 2" />
+		<_field_real_vector_3d name="axis 3" />
+		<_field_dword_integer name="type" />
+	</_field_block>
+	<_field_block name="scripted dependencies" max="1024" srcguid="5a1a08d5-aeaa-b049-a3dd-5c21984c1a8b" srcName="hs_references_block">
+		<_field_tag_reference name="reference*^" />
+	</_field_block>
+	<_field_block name="pupAnimations*!" max="256" srcguid="10751239-152a-9547-b625-ef5600b30c28" srcName="AnimGraphDependencyBlock">
+		<_field_tag_reference name="graph" validtags="jmad" />
+	</_field_block>
+</plugin>

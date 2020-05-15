@@ -1,0 +1,380 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_long_flags name="flags">
+		<item Name="fit to adpcm blocksize" />
+		<item Name="always spatialize#always play as 3d sound, even in first person" />
+		<item Name="never obstruct#disable occlusion/obstruction for this sound" />
+		<item Name="internal don't touch!" />
+		<item Name="facial animation data stripped!" />
+		<item Name="use huge sound transmission" />
+		<item Name="link count to owner unit" />
+		<item Name="pitch range is language" />
+		<item Name="don't use sound class speaker flag" />
+		<item Name="don't use lipsync data" />
+		<item Name="instant sound propagation" />
+		<item Name="fake spatialization with distance" />
+		<item Name="play permutations in order#picks the first permutation randomly" />
+	</_field_long_flags>
+	<_field_long_flags name="import flags!">
+		<item Name="duplicate directory name" />
+		<item Name="cut to block size" />
+		<item Name="use markers" />
+		<item Name="use layer markers" />
+	</_field_long_flags>
+	<_field_long_flags name="xsync flags!">
+		<item Name="processed language times" />
+		<item Name="optimized facial animation" />
+	</_field_long_flags>
+	<_field_char_enum name="class">
+		<item Name="projectile_impact" />
+		<item Name="projectile_detonation" />
+		<item Name="projectile_flyby" />
+		<item Name="projectile_detonation_lod" />
+		<item Name="weapon_fire" />
+		<item Name="weapon_ready" />
+		<item Name="weapon_reload" />
+		<item Name="weapon_empty" />
+		<item Name="weapon_charge" />
+		<item Name="weapon_overheat" />
+		<item Name="weapon_idle" />
+		<item Name="weapon_melee" />
+		<item Name="weapon_animation" />
+		<item Name="object_impacts" />
+		<item Name="particle_impacts" />
+		<item Name="weapon_fire_lod" />
+		<item Name="water_transitions" />
+		<item Name="lowpass_effects" />
+		<item Name="unit_footsteps" />
+		<item Name="unit_dialog" />
+		<item Name="unit_animation" />
+		<item Name="unit_unused!" />
+		<item Name="vehicle_collision" />
+		<item Name="vehicle_engine" />
+		<item Name="vehicle_animation" />
+		<item Name="vehicle_engine_lod" />
+		<item Name="device_door" />
+		<item Name="device_unused0!" />
+		<item Name="device_machinery" />
+		<item Name="device_stationary" />
+		<item Name="device_unused1!" />
+		<item Name="device_unused2!" />
+		<item Name="music" />
+		<item Name="ambient_nature" />
+		<item Name="ambient_machinery" />
+		<item Name="ambient_stationary" />
+		<item Name="huge_ass" />
+		<item Name="object_looping" />
+		<item Name="cinematic_music" />
+		<item Name="unknown_unused0!" />
+		<item Name="unknown_unused1!" />
+		<item Name="ambient_flock" />
+		<item Name="no_pad" />
+		<item Name="no_pad_stationary" />
+		<item Name="equipment_effect" />
+		<item Name="mission_dialog" />
+		<item Name="cinematic_dialog" />
+		<item Name="scripted_cinematic_foley" />
+		<item Name="game_event" />
+		<item Name="ui" />
+		<item Name="test" />
+		<item Name="multiplayer_dialog" />
+		<item Name="ambient_nature_details" />
+		<item Name="ambient_machinery_details" />
+		<item Name="inside_surround_tail" />
+		<item Name="outside_surround_tail" />
+		<item Name="vehicle_detonation" />
+		<item Name="ambient_detonation" />
+		<item Name="first_person_inside" />
+		<item Name="first_person_outside" />
+		<item Name="first_person_anywhere" />
+		<item Name="space_projectile_detonation" />
+		<item Name="space_projectile_flyby" />
+		<item Name="space_vehicle_engine" />
+		<item Name="space_weapon_fire" />
+		<item Name="player_voice_team" />
+		<item Name="player_voice_proxy" />
+		<item Name="projectile_impact_postpone" />
+		<item Name="unit_footsteps_postpone" />
+		<item Name="weapon_ready_third_person" />
+		<item Name="ui_music" />
+	</_field_char_enum>
+	<_field_char_enum name="sample rate*">
+		<item Name="22kHz" />
+		<item Name="44kHz" />
+		<item Name="32kHz" />
+	</_field_char_enum>
+	<_field_char_integer name="override xma compression:[1-100]" />
+	<_field_char_enum name="import type*">
+		<item Name="unknown" />
+		<item Name="single-shot" />
+		<item Name="single-layer" />
+		<item Name="multi-layer" />
+	</_field_char_enum>
+	<_field_struct name="playback" />
+	<_field_long_integer name="internal flags!" />
+	<_field_real_fraction name="skip fraction#fraction of requests to play this sound that will be ignored (0 means always play.)" />
+	<_field_real name="maximum bend per second:cents" />
+	<_field_struct name="distance parameters{.}" />
+	<_field_explanation name="attenuation distances">these settings vary how the sound fades as you move closer or further away from it.</_field_explanation>
+	<_field_real name="don't obstruct distance:world units#don't obstruct below this distance" />
+	<_field_real name="don't play distance:world units#don't play below this distance" />
+	<_field_real name="attack distance:world units#start playing at full volume at this distance" />
+	<_field_real name="minimum distance:world units#start attenuating at this distance" />
+	<_field_real name="sustain begin distance:world units#set attenuation to sustain db at this distance" />
+	<_field_real name="sustain end distance:world units#continue attenuating to silence at this distance" />
+	<_field_real name="maximum distance:world units#the distance beyond which this sound is no longer audible" />
+	<_field_real name="sustain db:dB#the amount of attenuation between sustain begin and end" />
+	<_field_explanation name="randomization">these settings control random variation of volume and pitch.
+ the second parameter gets clipped to the first.</_field_explanation>
+	<_field_real name="gain base:dB#sound's random gain will start here" />
+	<_field_real name="gain variance:dB#sound's gain will be randomly modulated within this range" />
+	<_field_short_integer_bounds name="random pitch bounds:cents#the sound's pitch will be modulated randomly within this range." />
+	<_field_explanation name="directional sounds">these settings allow sounds to be directional, fading as they turn away from the listener</_field_explanation>
+	<_field_angle name="inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0." />
+	<_field_angle name="outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)" />
+	<_field_real name="outer cone gain:dB#the gain to use when the sound is directed away from the listener" />
+	<_field_explanation name="scripted location override">NOTE: this will only apply when the sound is started via script
+azimuth:
+    0 =&gt; front
+    90 =&gt; left
+    180 =&gt; back
+    270 =&gt; right</_field_explanation>
+	<_field_long_flags name="flags">
+		<item Name="override azimuth" />
+		<item Name="override 3d gain" />
+		<item Name="override speaker gain" />
+	</_field_long_flags>
+	<_field_angle name="azimuth" />
+	<_field_real name="positional gain:dB" />
+	<_field_real name="first person gain:dB" />
+	<_field_struct name="scale" />
+	<_field_explanation name="scale modifiers">as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the values specified above. (0 values are ignored.)</_field_explanation>
+	<_field_real_bounds name="gain modifier:dB" />
+	<_field_short_integer_bounds name="pitch modifier:cents" />
+	<_field_fraction_bounds name="skip fraction modifier" />
+	<_field_explanation name="sub priority">Used to compare individual sounds in the same class. Higher means more important. (Negative means do not use.)</_field_explanation>
+	<_field_real name="sub priority" />
+	<_field_explanation name="import properties" />
+	<_field_char_enum name="encoding*">
+		<item Name="mono" />
+		<item Name="stereo" />
+		<item Name="quad" />
+		<item Name="5.1" />
+		<item Name="codec" />
+	</_field_char_enum>
+	<_field_char_enum name="compression*">
+		<item Name="none (big endian)" />
+		<item Name="xbox adpcm" />
+		<item Name="ima adpcm" />
+		<item Name="none (little endian)" />
+		<item Name="wma" />
+		<item Name="none (endian agnostic)" />
+		<item Name="xma" />
+		<item Name="xma v2.0" />
+	</_field_char_enum>
+	<_field_pad name="pad" length="2" />
+	<_field_struct name="promotion" />
+	<_field_block name="promotion rules" max="17" srcguid="b04399c6-bc10-c844-bc4d-84cbadce8178" srcName="sound_promotion_rule_block">
+		<_field_short_block_index name="pitch range^" targetGuid="4f2af777-d642-554d-b407-2e440e750c29" targetName="sound_pitch_range_block" />
+		<_field_short_integer name="maximum playing count" />
+		<_field_real name="suppression time:seconds#time from when first permutation plays to when another sound from an equal or lower promotion can play" />
+		<_field_long_integer name="runtime rollover time!" />
+		<_field_long_integer name="impulse promotion time!" />
+	</_field_block>
+	<_field_block name="runtime timers!" max="17" srcguid="e0dd3877-750d-1041-b20b-95f043509aaa" srcName="sound_promotion_runtime_timer_block">
+		<_field_long_integer name="timer storage~!" />
+	</_field_block>
+	<_field_long_integer name="runtime active promotion index!" />
+	<_field_long_integer name="runtime last promotion time!" />
+	<_field_long_integer name="runtime suppression timeout!" />
+	<_field_pad name="runtime pad~" length="4" />
+	<_field_block name="pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches" max="17" srcguid="4f2af777-d642-554d-b407-2e440e750c29" srcName="sound_pitch_range_block">
+		<_field_string_id name="name*#the name of the imported pitch range directory" />
+		<_field_explanation name="pitch control">these settings control what pitches this set of samples represents. if there is only one pitch range, all three values are ignored.</_field_explanation>
+		<_field_short_integer name="natural pitch:cents#the apparent pitch when these samples are played at their recorded pitch." />
+		<_field_pad name="KCTSDWPP~" length="2" />
+		<_field_short_integer_bounds name="bend bounds:cents#the range of pitches that will be represented using this sample." />
+		<_field_short_integer_bounds name="full volume bounds!:cents#the range of pitches that map to full gain." />
+		<_field_short_integer_bounds name="playback bend bounds:cents#the actual pitch will be clamped to this" />
+		<_field_struct name="distance parameters" />
+		<_field_explanation name="attenuation distances">these settings vary how the sound fades as you move closer or further away from it.</_field_explanation>
+		<_field_real name="don't obstruct distance:world units#don't obstruct below this distance" />
+		<_field_real name="don't play distance:world units#don't play below this distance" />
+		<_field_real name="attack distance:world units#start playing at full volume at this distance" />
+		<_field_real name="minimum distance:world units#start attenuating at this distance" />
+		<_field_real name="sustain begin distance:world units#set attenuation to sustain db at this distance" />
+		<_field_real name="sustain end distance:world units#continue attenuating to silence at this distance" />
+		<_field_real name="maximum distance:world units#the distance beyond which this sound is no longer audible" />
+		<_field_real name="sustain db:dB#the amount of attenuation between sustain begin and end" />
+		<_field_pad name="YAMTVB~" length="4" />
+		<_field_char_integer name="runtime usable permutation count!" />
+		<_field_byte_flags name="xsync flags!">
+			<item Name="processed language permutations" />
+		</_field_byte_flags>
+		<_field_pad name="asdf" length="2" />
+		<_field_block name="permutations*#permutations represent equivalent variations of this sound." max="32" srcguid="a4cf2614-da00-0642-ad7c-0a62da270964" srcName="sound_permutations_block">
+			<_field_string_id name="name*^#name of the file from which this sample was imported" />
+			<_field_real_fraction name="skip fraction#fraction of requests to play this permutation that are ignored (a different permutation is selected.)" />
+			<_field_real name="gain:dB#additional attenuation when played" />
+			<_field_custom_short_block_index name="raw info!" targetName="permutation_info_search_definition" />
+			<_field_short_block_index name="play fraction type!" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			<_field_short_integer_bounds name="mission range#first and last mission ids this permutation can play in (zero values are ignored)" />
+			<_field_word_flags name="permutation flags">
+				<item Name="don't play in dvd build" />
+			</_field_word_flags>
+			<_field_word_flags name="flags!*">
+			</_field_word_flags>
+			<_field_block name="languages!" max="17" srcguid="5f6983ac-63ab-cb49-8b5c-af879f79ec46" srcName="sound_permutation_languages_block">
+				<_field_long_integer name="uncompressed sample count" />
+				<_field_block name="chunks" max="262140" srcguid="fd77b2bd-3104-544f-9509-8a1971d29fe5" srcName="sound_permutation_chunk_block">
+					<_field_long_integer name="file offset*" />
+					<_field_long_integer name="encoded size and flags~!" />
+					<_field_long_block_index name="cache index~!" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+					<_field_long_integer name="xma2_source_buffer_sample_start*" />
+					<_field_long_integer name="xma2_source_buffer_sample_end*" />
+				</_field_block>
+			</_field_block>
+		</_field_block>
+	</_field_block>
+	<_field_block name="platform parameters" max="1" srcguid="a2a03d4a-0fcb-e141-aab6-650ebca33f94" srcName="sound_platform_sound_playback_block">
+		<_field_struct name="playback definition" />
+		<_field_long_flags name="flags">
+			<item Name="turn off in splitscreen" />
+			<item Name="only turn on in first person" />
+		</_field_long_flags>
+		<_field_tag_reference name="radio effect" validtags="srad" />
+		<_field_tag_reference name="Start event" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="End event" validtags="scmb, sndo, snd!" />
+		<_field_tag_reference name="Immediate stop event#Must clear the effect without any transition - used for exiting levels, etc" validtags="scmb, sndo, snd!" />
+		<_field_block name="lowpass effect" max="1" srcguid="19121a88-de01-a74e-8bc6-3300baa416ab" srcName="platform_sound_playback_lowpass_block">
+			<_field_real name="attack:seconds" />
+			<_field_real name="release:seconds" />
+			<_field_struct name="settings" />
+			<_field_custom name="cutoff frequency:Hz" />
+			<_field_real name="cutoff frequency:Hz" />
+			<_field_custom name="output gain:dB" />
+			<_field_real name="output gain:dB" />
+		</_field_block>
+		<_field_block name="sound components" max="16" srcguid="268c147f-184a-3f43-a475-41015b0e7f87" srcName="platform_sound_playback_component_block">
+			<_field_tag_reference name="sound^" validtags="scmb, sndo, lsnd, snd!" />
+			<_field_real name="gain:dB#additional attenuation to sound" />
+			<_field_long_flags name="flags">
+				<item Name="don't play at start" />
+				<item Name="play on stop" />
+				<item Name="play alternate" />
+				<item Name="sync with origin looping sound" />
+			</_field_long_flags>
+		</_field_block>
+	</_field_block>
+	<_field_pageable_resource name="sound data resource" />
+	<_field_block name="extra info!" max="1" srcguid="ba7281a8-ec8b-4146-8e2a-9edb3b346b18" srcName="sound_extra_info_block">
+		<_field_block name="language permutation info" max="1088" srcguid="9443cf87-7fe5-184b-aa4d-2fb56c5606cb" srcName="sound_definition_language_permutation_info_block">
+			<_field_block name="raw info block" max="34" srcguid="cefa6bdc-e554-4e41-b0b0-3c612ed507a1" srcName="sound_permutation_raw_info_block">
+				<_field_string_id name="skip fraction name" />
+				<_field_data name="samples!#sampled sound data" />
+				<_field_block name="markers!" max="65535" srcguid="56e37946-b34c-3748-a348-08ac6dca28a0" srcName="sound_permutation_marker_block">
+					<_field_long_integer name="marker id*" />
+					<_field_string_id name="name^*" />
+					<_field_long_integer name="sample offset*" />
+				</_field_block>
+				<_field_block name="layer markers!" max="65535" srcguid="56e37946-b34c-3748-a348-08ac6dca28a0" srcName="sound_permutation_marker_block">
+					<_field_long_integer name="marker id*" />
+					<_field_string_id name="name^*" />
+					<_field_long_integer name="sample offset*" />
+				</_field_block>
+				<_field_block name="xma2 seek table!" max="16384" srcguid="1aa12769-e210-dd4e-9e68-1a4eb2ad185f" srcName="sound_xma2_seek_table_block">
+					<_field_long_integer name="block relative sample start*" />
+					<_field_long_integer name="block relative sample end" />
+					<_field_long_integer name="starting sample index*" />
+					<_field_long_integer name="ending sample index*" />
+					<_field_long_integer name="starting xma2 offset*" />
+					<_field_long_integer name="ending xma2 offset*" />
+				</_field_block>
+				<_field_short_enum name="compression*">
+					<item Name="none (big endian)" />
+					<item Name="xbox adpcm" />
+					<item Name="ima adpcm" />
+					<item Name="none (little endian)" />
+					<item Name="wma" />
+					<item Name="none (endian agnostic)" />
+					<item Name="xma" />
+					<item Name="xma v2.0" />
+				</_field_short_enum>
+				<_field_char_enum name="language*">
+					<item Name="english" />
+					<item Name="japanese" />
+					<item Name="german" />
+					<item Name="french" />
+					<item Name="spanish" />
+					<item Name="mexican spanish" />
+					<item Name="italian" />
+					<item Name="korean" />
+					<item Name="chinese-traditional" />
+					<item Name="chinese-simplified" />
+					<item Name="portuguese" />
+					<item Name="polish" />
+					<item Name="russian" />
+					<item Name="danish" />
+					<item Name="finnish" />
+					<item Name="dutch" />
+					<item Name="norwegian" />
+				</_field_char_enum>
+				<_field_pad name="ZHDGBHWS" length="1" />
+				<_field_long_integer name="sample count!" />
+				<_field_long_integer name="resource sample offset!" />
+				<_field_long_integer name="resource sample size!" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="facial animation resource languages" max="17" srcguid="a0f08052-80a2-454a-b651-2d4532312fb4" srcName="facial_animation_language_block">
+			<_field_pageable_resource name="facial animation resource" />
+			<_field_long_enum name="language">
+				<item Name="english" />
+				<item Name="japanese" />
+				<item Name="german" />
+				<item Name="french" />
+				<item Name="spanish" />
+				<item Name="mexican spanish" />
+				<item Name="italian" />
+				<item Name="korean" />
+				<item Name="chinese-traditional" />
+				<item Name="chinese-simplified" />
+				<item Name="portuguese" />
+				<item Name="polish" />
+				<item Name="russian" />
+				<item Name="danish" />
+				<item Name="finnish" />
+				<item Name="dutch" />
+				<item Name="norwegian" />
+			</_field_long_enum>
+		</_field_block>
+	</_field_block>
+	<_field_block name="language info!" max="17" srcguid="35f29cd6-899a-db43-bfe8-53639c6857ec" srcName="sound_language_info_block">
+		<_field_long_enum name="language">
+			<item Name="english" />
+			<item Name="japanese" />
+			<item Name="german" />
+			<item Name="french" />
+			<item Name="spanish" />
+			<item Name="mexican spanish" />
+			<item Name="italian" />
+			<item Name="korean" />
+			<item Name="chinese-traditional" />
+			<item Name="chinese-simplified" />
+			<item Name="portuguese" />
+			<item Name="polish" />
+			<item Name="russian" />
+			<item Name="danish" />
+			<item Name="finnish" />
+			<item Name="dutch" />
+			<item Name="norwegian" />
+		</_field_long_enum>
+		<_field_block name="permutation durations" max="65535" srcguid="ac060caa-5153-5945-98cc-c8d0410a29ca" srcName="sound_permutation_language_info">
+			<_field_short_integer name="duration in hs ticks" />
+		</_field_block>
+		<_field_block name="pitch range durations" max="65535" srcguid="8725cf55-a8c2-0d4f-a21b-d9d4f3411caa" srcName="sound_pitch_range_language_info">
+			<_field_short_block_index name="first permutation language index" targetGuid="ac060caa-5153-5945-98cc-c8d0410a29ca" targetName="sound_permutation_language_info" />
+			<_field_short_integer name="permutation count" />
+		</_field_block>
+	</_field_block>
+</plugin>

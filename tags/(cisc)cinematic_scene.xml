@@ -1,0 +1,174 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_custom name="loop now" />
+	<_field_string_id name="name^" />
+	<_field_string_id name="anchor" />
+	<_field_short_enum name="reset object lighting">
+		<item Name="Default" />
+		<item Name="Don't reset lighting" />
+		<item Name="Reset lighting" />
+	</_field_short_enum>
+	<_field_pad name="pad" length="2" />
+	<_field_tag_reference name="data*" validtags="cisd" />
+	<_field_custom name="Header" />
+	<_field_struct name="header" />
+	<_field_data name="script{ }" />
+	<_field_block name="objects*" max="10000" srcguid="039ec050-5d42-8e48-a09d-b8ad3eb374e0" srcName="cinematic_scene_object_block">
+		<_field_string_id name="name*^" />
+		<_field_string_id name="variant name" />
+		<_field_long_flags name="flags">
+			<item Name="Placed Manually in Sapien" />
+			<item Name="Object Comes From Game" />
+			<item Name="Special Case (like player0)" />
+			<item Name="Effect Object" />
+			<item Name="No Lightmap Shadow" />
+			<item Name="Apply Player Customization" />
+			<item Name="Apply First Person Player Customization" />
+			<item Name="I will animate the English lipsync manually" />
+			<item Name="Primary Cortana" />
+			<item Name="Preload Textures" />
+		</_field_long_flags>
+		<_field_custom name="lightmap shadow flags" />
+		<_field_array name="lightmap shadow flags">
+			<_field_dword_integer name="shot flag data" />
+			<_field_dword_integer name="shot flag data" />
+		</_field_array>
+		<_field_custom name="high res flags" />
+		<_field_array name="high res flags">
+			<_field_dword_integer name="shot flag data" />
+			<_field_dword_integer name="shot flag data" />
+		</_field_array>
+		<_field_long_flags name="override creation flags">
+			<item Name="single player" />
+			<item Name="2 player co-op" />
+			<item Name="3 player co-op" />
+			<item Name="4 player co-op" />
+		</_field_long_flags>
+		<_field_explanation name="Custom override creation condition">Used in combination with the override creation flags above</_field_explanation>
+		<_field_struct name="custom don't create condition" />
+		<_field_data name="script{ }" />
+		<_field_block name="attachments" max="10000" srcguid="38ca3d71-8ff4-a14f-87e8-9bfb1a6d2bc3" srcName="scene_object_attachment_block">
+			<_field_byte_flags name="flags">
+				<item Name="invisible" />
+			</_field_byte_flags>
+			<_field_pad name="VKJSLKHF" length="3" />
+			<_field_string_id name="object marker name" />
+			<_field_string_id name="attachment object name^" />
+			<_field_string_id name="attachment marker name" />
+			<_field_tag_reference name="attachment type" validtags="obje, scen, efsc" />
+		</_field_block>
+	</_field_block>
+	<_field_block name="shots" max="64" srcguid="f0e910cd-1c72-0e47-8571-c1fea88e8ac9" srcName="cinematic_shot_block">
+		<_field_custom name="loop now" />
+		<_field_custom name="Header" />
+		<_field_struct name="header" />
+		<_field_data name="script{ }" />
+		<_field_long_flags name="flags">
+			<item Name="Instant Auto-Exposure" />
+			<item Name="Force Exposure" />
+			<item Name="Generate Looping Script" />
+		</_field_long_flags>
+		<_field_custom name="environment darken:0 - 1#this works best with auto-exposure off" />
+		<_field_real name="environment darken:0 - 1#this works best with auto-exposure off" />
+		<_field_custom name="forced exposure:stops#will disable auto-exposure" />
+		<_field_real name="forced exposure:stops#will disable auto-exposure" />
+		<_field_custom name="Settings" />
+		<_field_long_flags name="settings flags">
+			<item Name="Lightmap Scalars - set" />
+			<item Name="Lightmap Scalars - clear" />
+			<item Name="Lightmap Scalars - persist across shots" />
+			<item Name="Atmosphere Fog - clear" />
+			<item Name="Atmosphere fog - persist across shots" />
+			<item Name="Camera Effects - clear" />
+			<item Name="Camera Effects - persist across shots" />
+			<item Name="Sun Scalar - set" />
+			<item Name="Sun Scalar - clear" />
+			<item Name="Sun Scalar - persist across shots" />
+			<item Name="Cubemap - clear" />
+			<item Name="Cubemap - persist across shots" />
+			<item Name="Disable All Lightmap Shadows" />
+		</_field_long_flags>
+		<_field_real name="Lightmap Direct Scalar" />
+		<_field_real name="Lightmap Indirect Scalar" />
+		<_field_real name="Sun Scalar" />
+		<_field_tag_reference name="Atmosphere Fog" validtags="fogg" />
+		<_field_tag_reference name="Camera Effects" validtags="cfxs" />
+		<_field_tag_reference name="Cubemap" validtags="bitm" />
+		<_field_block name="lighting" max="10000" srcguid="8c17866f-e0f5-8f4c-a14c-3003eaadce78" srcName="cinematic_shot_lighting_block">
+			<_field_long_flags name="flags">
+				<item Name="persists across shots" />
+			</_field_long_flags>
+			<_field_tag_reference name="lighting" validtags="nclt" />
+			<_field_long_block_index name="subject^" targetGuid="039ec050-5d42-8e48-a09d-b8ad3eb374e0" targetName="cinematic_scene_object_block" />
+			<_field_string_id name="marker" />
+		</_field_block>
+		<_field_block name="clip" max="32" srcguid="175ecae6-6364-8246-97d7-de1441724603" srcName="cinematic_shot_clip_block">
+			<_field_real_point_3d name="plane center" />
+			<_field_real_point_3d name="plane direction" />
+			<_field_custom name="frame start" />
+			<_field_long_integer name="frame start" />
+			<_field_custom name="frame end" />
+			<_field_long_integer name="frame end" />
+			<_field_block name="subject objects" max="24" srcguid="28bb9dfd-6570-8f41-9364-0300e4390930" srcName="cinematic_shot_clip_subject_block">
+				<_field_long_block_index name="index" targetGuid="039ec050-5d42-8e48-a09d-b8ad3eb374e0" targetName="cinematic_scene_object_block" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="music" max="10000" srcguid="286ebdc8-ea7d-aa45-9861-384ba392711f" srcName="cinematic_shot_music_block">
+			<_field_long_flags name="flags">
+				<item Name="Stop Music At Frame (rather than starting it)" />
+			</_field_long_flags>
+			<_field_tag_reference name="music/foley" validtags="scmb, sndo, lsnd, snd!" />
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+		</_field_block>
+		<_field_block name="object functions" max="10000" srcguid="da08a65a-f1b9-ee45-af52-c72d315ec520" srcName="cinematic_shot_object_function_block">
+			<_field_long_block_index name="object" targetGuid="039ec050-5d42-8e48-a09d-b8ad3eb374e0" targetName="cinematic_scene_object_block" />
+			<_field_string_id name="function name" />
+			<_field_block name="keyframes" max="10000" srcguid="c5f62d27-2bfb-cf42-8d00-89d4982001c8" srcName="cinematic_shot_object_function_keyframe_block">
+				<_field_long_flags name="flags">
+					<item Name="clear function (Value and Interpolation time are unused)" />
+				</_field_long_flags>
+				<_field_custom name="frame" />
+				<_field_long_integer name="frame" />
+				<_field_real name="value" />
+				<_field_real name="interpolation time:ticks" />
+			</_field_block>
+		</_field_block>
+		<_field_block name="screen effects" max="10000" srcguid="a5c0e8cb-9dac-f847-8713-016e344c3792" srcName="cinematic_shot_screen_effect_block">
+			<_field_tag_reference name="screen effect" validtags="sefc" />
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+			<_field_custom name="stop frame" />
+			<_field_long_integer name="stop frame" />
+			<_field_byte_flags name="flags">
+				<item Name="Persist Entire Shot" />
+			</_field_byte_flags>
+			<_field_pad name="BLAHWWW" length="3" />
+		</_field_block>
+		<_field_block name="user input constraints" max="10000" srcguid="41ff97f9-bfdf-6742-9de5-24d72624cb23" srcName="cinematic_shot_user_input_constraints_block">
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+			<_field_long_integer name="ticks" />
+			<_field_rectangle_2d name="maximum look angles" />
+			<_field_real name="frictional force" />
+		</_field_block>
+		<_field_block name="texture movies" max="10000" srcguid="5c06c47a-f022-d14a-895e-6a2c059924db" srcName="cinematicShotTextureMovieBlock">
+			<_field_long_flags name="flags">
+				<item Name="Stop Movie At Frame (rather than starting it)" />
+			</_field_long_flags>
+			<_field_custom name="frame" />
+			<_field_long_integer name="frame" />
+			<_field_tag_reference name="bink movie" validtags="bink" />
+		</_field_block>
+		<_field_custom name="Footer" />
+		<_field_struct name="footer" />
+		<_field_data name="script{ }" />
+	</_field_block>
+	<_field_block name="lights" max="32" srcguid="ca627bf2-b234-bf43-924f-bcfde3d020b9" srcName="cinematicStructureLightingBlock">
+		<_field_tag_reference name="structure lighting info^" validtags="stli" />
+	</_field_block>
+	<_field_custom name="Footer" />
+	<_field_struct name="footer" />
+	<_field_data name="script{ }" />
+</plugin>

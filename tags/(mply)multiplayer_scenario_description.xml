@@ -1,0 +1,11 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="multiplayer scenarios" max="32" srcguid="17268a7d-5120-a647-9d34-9a6ad9966e2b" srcName="scenario_description_block">
+		<_field_explanation name="net map info">these provide the info required by the UI to load a net map</_field_explanation>
+		<_field_tag_reference name="descriptive bitmap" validtags="bitm" />
+		<_field_tag_reference name="displayed map name" validtags="unic" />
+		<_field_string name="scenario tag directory path#this is the path to the directory containing the scenario tag file of the same name" />
+		<_field_pad name="RMNNQW" length="4" />
+	</_field_block>
+</plugin>

@@ -1,0 +1,61 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_short_integer name="player cooldown timer seconds" />
+	<_field_short_integer name="backfield cooldown timer seconds" />
+	<_field_short_integer name="unsafe spawn timer" />
+	<_field_short_integer name="teammate damage timer" />
+	<_field_short_integer name="dead body switch time" />
+	<_field_word_flags name="flags">
+		<item Name="push to spawn enabled#allow loadout menu to delay spawn" />
+		<item Name="show marker on respawn player" />
+		<item Name="extermination syncs timers" />
+		<item Name="extermination syncs location" />
+		<item Name="rotation allowed on player" />
+		<item Name="rotation allowed on object" />
+		<item Name="display loadouts if changed" />
+		<item Name="always display loadouts on death" />
+		<item Name="disable spartan respawn on player" />
+		<item Name="disable spartan respawn on backfield" />
+		<item Name="disable elite respawn on player" />
+		<item Name="disable elite respawn on backfield" />
+	</_field_word_flags>
+	<_field_short_integer name="loadout menu spawn suppression time#maximal time that the loadout menu can prevent respawn while up" />
+	<_field_short_integer name="loadout menu cooldown time#cooldown time after loadout menu is dismissed before player spawns in" />
+	<_field_short_integer name="loadout menu initial choice time#time before players initially spawn in for choosing starting loadout" />
+	<_field_short_integer name="maximum spawn suppression time#maximal time that a player can continue to delay his spawn by switching targets" />
+	<_field_real name="nearby enemy cylinder height" />
+	<_field_real name="nearby enemy cylinder radius" />
+	<_field_custom name="Safety Statuses" />
+	<_field_long_enum name="ready#safe and ready to spawn - this value currently ignored">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_long_enum name="waiting#safe but waiting to spawn - this value currently ignored">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_long_enum name="enemy territory#spawn target is inside enemy territory volumes">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_long_enum name="teammate damaged#spawn target has recently taken damage">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_long_enum name="enemy nearby#There is an enemy within the cylinder around the spawn target">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_long_enum name="projectiles#There are dangerous projectiles in the area">
+		<item Name="has no effect" />
+		<item Name="displays warning" />
+		<item Name="prevents spawn" />
+	</_field_long_enum>
+	<_field_real name="failover to influence spawning time#number of seconds before influence spawning will be used (&lt;= 0 is disabled)" />
+</plugin>

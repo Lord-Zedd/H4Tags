@@ -1,0 +1,40 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="template collection" max="8" srcguid="f858845c-b894-6045-93eb-b56fa67e6e02" srcName="sound_effect_templates_block">
+		<_field_string_id name="dsp effect" />
+		<_field_explanation name="WARNING">DON'T MODIFY THIS TAG UNLESS YOU KNOW WHAT YOU ARE DOING</_field_explanation>
+		<_field_data name="explanation" />
+		<_field_long_flags name="flags">
+			<item Name="use high level parameters" />
+			<item Name="custom parameters" />
+		</_field_long_flags>
+		<_field_short_integer name="dsp state offset!" />
+		<_field_short_integer name="dsp state size!" />
+		<_field_block name="parameters" max="128" srcguid="167b090c-df12-7a42-a170-402ebfd48e4f" srcName="sound_effect_template_parameter_block">
+			<_field_string_id name="name" />
+			<_field_short_enum name="type">
+				<item Name="integer" />
+				<item Name="real" />
+				<item Name="filter type" />
+			</_field_short_enum>
+			<_field_word_flags name="flags">
+				<item Name="expose as function" />
+			</_field_word_flags>
+			<_field_long_integer name="hardware offset" />
+			<_field_long_integer name="default enum integer value" />
+			<_field_real name="default scalar value" />
+			<_field_struct name="default function" />
+			<_field_data name="data" />
+			<_field_real name="minimum scalar value" />
+			<_field_real name="maximum scalar value" />
+		</_field_block>
+	</_field_block>
+	<_field_string_id name="internal dsp effect name{input effect name}" />
+	<_field_block name="additional sound inputs" max="1" srcguid="4efb46c1-4544-2942-b830-c6671a9f31f0" srcName="sound_effect_template_additional_sound_input_block">
+		<_field_string_id name="dsp effect" />
+		<_field_struct name="low frequency sound" />
+		<_field_data name="data" />
+		<_field_real name="time period: seconds" />
+	</_field_block>
+</plugin>

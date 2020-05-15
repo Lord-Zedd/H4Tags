@@ -1,0 +1,709 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="light_volumes" max="16" srcguid="9bf93c7e-5cb8-f74a-8f99-0018b1e1dd8a" srcName="light_volume_definition_block">
+		<_field_string_id name="light_volume name^" />
+		<_field_custom name="material" />
+		<_field_struct name="actual material?" />
+		<_field_tag_reference name="material shader" validtags="mats" />
+		<_field_block name="material parameters" max="111" srcguid="063e4b5e-a818-3647-becf-963f42cad69d" srcName="material_shader_parameter_block">
+			<_field_string_id name="parameter name^*" />
+			<_field_long_enum name="parameter type*">
+				<item Name="bitmap" />
+				<item Name="real" />
+				<item Name="int" />
+				<item Name="bool" />
+				<item Name="color" />
+			</_field_long_enum>
+			<_field_long_integer name="parameter index*!" />
+			<_field_tag_reference name="bitmap" validtags="bitm" />
+			<_field_string_id name="bitmap path" />
+			<_field_real_argb_color name="color" />
+			<_field_real name="real" />
+			<_field_real_vector_3d name="vector" />
+			<_field_long_integer name="int/bool" />
+			<_field_word_integer name="bitmap flags" />
+			<_field_word_integer name="bitmap filter mode" />
+			<_field_word_integer name="bitmap address mode" />
+			<_field_word_integer name="bitmap address mode x" />
+			<_field_word_integer name="bitmap address mode y" />
+			<_field_word_integer name="bitmap sharpen mode" />
+			<_field_byte_integer name="bitmap extern mode" />
+			<_field_byte_integer name="bitmap min mipmap" />
+			<_field_byte_integer name="bitmap max mipmap" />
+			<_field_byte_integer name="render phases used" />
+			<_field_block name="function parameters" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+				<_field_long_enum name="type^">
+					<item Name="value" />
+					<item Name="color" />
+					<item Name="scale uniform" />
+					<item Name="scale u" />
+					<item Name="scale v" />
+					<item Name="offset u" />
+					<item Name="offset v" />
+					<item Name="frame index" />
+					<item Name="alpha" />
+				</_field_long_enum>
+				<_field_string_id name="input name" />
+				<_field_string_id name="range name" />
+				<_field_char_enum name="Output Modifier!">
+					<item Name=" " />
+					<item Name="Add" />
+					<item Name="Multiply" />
+				</_field_char_enum>
+				<_field_pad name="BVCG" length="3" />
+				<_field_string_id name="Output Modifier Input!" />
+				<_field_real name="time period:seconds" />
+				<_field_explanation name="FUNCTION" />
+				<_field_data name="data" />
+			</_field_block>
+			<_field_data name="display name*" />
+			<_field_data name="display group*" />
+			<_field_data name="display help text*" />
+			<_field_real name="display minimum" />
+			<_field_real name="display maximum" />
+			<_field_byte_integer name="register index*!" />
+			<_field_byte_integer name="register offset*!" />
+			<_field_byte_integer name="register count*!" />
+			<_field_char_enum name="register set*!">
+				<item Name="bool" />
+				<item Name="int" />
+				<item Name="float" />
+				<item Name="sampler" />
+				<item Name="vertex_bool" />
+				<item Name="vertex_int" />
+				<item Name="vertex_float" />
+				<item Name="vertex_sampler" />
+			</_field_char_enum>
+		</_field_block>
+		<_field_block name="postprocess definition!" max="1" srcguid="c3d0501d-52c8-c041-9e5b-9057ce98f3a3" srcName="material_postprocess_block">
+			<_field_block name="textures" max="32" srcguid="ec1298cd-d63c-e14b-b33b-fe480bbca596" srcName="material_postprocess_texture_block">
+				<_field_tag_reference name="bitmap reference" validtags="bitm" />
+				<_field_byte_integer name="address mode" />
+				<_field_byte_integer name="filter mode" />
+				<_field_byte_integer name="frame index parameter" />
+				<_field_byte_integer name="sampler index" />
+				<_field_char_integer name="level of smallest mipmap to use" />
+				<_field_char_integer name="level of largest mipmap to use" />
+				<_field_byte_integer name="render phase mask" />
+				<_field_pad name="DHaFS" length="1" />
+			</_field_block>
+			<_field_block name="texture constants" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="real vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="real vertex vectors" max="1024" srcguid="4311a897-1c6c-f943-9055-f558c20b4cf1" srcName="real_vector4d_block">
+				<_field_real_vector_3d name="vector" />
+				<_field_real name="vector w" />
+			</_field_block>
+			<_field_block name="int constants" max="1024" srcguid="9d869ce2-ada4-5b48-bf0b-f7e660402421" srcName="int_block">
+				<_field_long_integer name="int value" />
+			</_field_block>
+			<_field_long_integer name="bool constants" />
+			<_field_long_integer name="used bool constants" />
+			<_field_long_integer name="bool render phase mask" />
+			<_field_long_integer name="vertex bool constants" />
+			<_field_long_integer name="used vertex bool constants" />
+			<_field_long_integer name="vertex bool render phase mask" />
+			<_field_block name="functions" max="111" srcguid="e3f07154-4df5-7244-ad55-a5169a007bed" srcName="material_shader_function_parameter_block">
+				<_field_long_enum name="type^">
+					<item Name="value" />
+					<item Name="color" />
+					<item Name="scale uniform" />
+					<item Name="scale u" />
+					<item Name="scale v" />
+					<item Name="offset u" />
+					<item Name="offset v" />
+					<item Name="frame index" />
+					<item Name="alpha" />
+				</_field_long_enum>
+				<_field_string_id name="input name" />
+				<_field_string_id name="range name" />
+				<_field_char_enum name="Output Modifier!">
+					<item Name=" " />
+					<item Name="Add" />
+					<item Name="Multiply" />
+				</_field_char_enum>
+				<_field_pad name="BVCG" length="3" />
+				<_field_string_id name="Output Modifier Input!" />
+				<_field_real name="time period:seconds" />
+				<_field_explanation name="FUNCTION" />
+				<_field_data name="data" />
+			</_field_block>
+			<_field_block name="function parameters" max="255" srcguid="c0eca125-1fb8-be4c-9f94-66e280a9cfdb" srcName="functionParameterBlock">
+				<_field_byte_integer name="function index" />
+				<_field_byte_integer name="render phase mask" />
+				<_field_byte_integer name="register index" />
+				<_field_byte_integer name="register offset" />
+			</_field_block>
+			<_field_block name="extern parameters" max="255" srcguid="36821172-2cb2-914f-a645-daafabe7a5bb" srcName="externParameterBlock">
+				<_field_byte_integer name="extern index" />
+				<_field_byte_integer name="extern register" />
+				<_field_byte_integer name="extern offset" />
+				<_field_byte_integer name="render phase mask" />
+			</_field_block>
+			<_field_char_enum name="alpha blend mode">
+				<item Name="opaque" />
+				<item Name="additive" />
+				<item Name="multiply" />
+				<item Name="alpha_blend" />
+				<item Name="double_multiply" />
+				<item Name="pre_multiplied_alpha" />
+				<item Name="maximum" />
+				<item Name="multiply_add" />
+				<item Name="add_src_times_dstalpha" />
+				<item Name="add_src_times_srcalpha" />
+				<item Name="inv_alpha_blend" />
+				<item Name="motion_blur_static" />
+				<item Name="motion_blur_inhibit" />
+				<item Name="apply_shadow_into_shadow_mask" />
+				<item Name="alpha_blend_constant" />
+				<item Name="overdraw_apply" />
+				<item Name="wet_screen_effect" />
+				<item Name="minimum" />
+				<item Name="revsubtract" />
+				<item Name="forge_lightmap" />
+				<item Name="forge_lightmap_inv" />
+				<item Name="replace_all_channels" />
+				<item Name="alpha_blend_max" />
+				<item Name="opaque_alpha_blend" />
+				<item Name="alpha_blend_additive_transparent" />
+			</_field_char_enum>
+			<_field_char_enum name="layer blend mode">
+				<item Name="none" />
+				<item Name="blended" />
+				<item Name="layered" />
+			</_field_char_enum>
+			<_field_word_flags name="flags">
+				<item Name="wireframe outline" />
+				<item Name="force single pass" />
+				<item Name="has pixel constant functions" />
+				<item Name="has vertex constant functions" />
+				<item Name="has texture transform functions" />
+				<item Name="has texture frame functions" />
+				<item Name="resolve screen before rendering" />
+				<item Name="disable atmosphere fog" />
+				<item Name="uses depth camera" />
+				<item Name="material is variable" />
+			</_field_word_flags>
+			<_field_array name="runtime queryable properties table">
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+				<_field_short_block_index name="index" targetGuid="a6487e75-ac9c-bc4c-bc46-a11c63f7e2f3" targetName="g_null_block" />
+			</_field_array>
+			<_field_struct name="physics material 0!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 1!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 2!" />
+			<_field_short_integer name="global material index" />
+			<_field_struct name="physics material 3!" />
+			<_field_short_integer name="global material index" />
+		</_field_block>
+		<_field_string_id name="physics material name" />
+		<_field_string_id name="physics material name 2" />
+		<_field_string_id name="physics material name 3" />
+		<_field_string_id name="physics material name 4" />
+		<_field_real name="sort offset" />
+		<_field_char_enum name="alpha blend mode">
+			<item Name="opaque" />
+			<item Name="additive" />
+			<item Name="multiply" />
+			<item Name="alpha_blend" />
+			<item Name="double_multiply" />
+			<item Name="pre_multiplied_alpha" />
+			<item Name="maximum" />
+			<item Name="multiply_add" />
+			<item Name="add_src_times_dstalpha" />
+			<item Name="add_src_times_srcalpha" />
+			<item Name="inv_alpha_blend" />
+			<item Name="motion_blur_static" />
+			<item Name="motion_blur_inhibit" />
+			<item Name="apply_shadow_into_shadow_mask" />
+			<item Name="alpha_blend_constant" />
+			<item Name="overdraw_apply" />
+			<item Name="wet_screen_effect" />
+			<item Name="minimum" />
+			<item Name="revsubtract" />
+			<item Name="forge_lightmap" />
+			<item Name="forge_lightmap_inv" />
+			<item Name="replace_all_channels" />
+			<item Name="alpha_blend_max" />
+			<item Name="opaque_alpha_blend" />
+			<item Name="alpha_blend_additive_transparent" />
+		</_field_char_enum>
+		<_field_char_enum name="sort layer*">
+			<item Name="invalid" />
+			<item Name="pre-pass" />
+			<item Name="normal" />
+			<item Name="post-pass" />
+		</_field_char_enum>
+		<_field_byte_flags name="flags!">
+			<item Name="converted from shader" />
+			<item Name="decal post lighting" />
+		</_field_byte_flags>
+		<_field_byte_flags name="render flags!">
+			<item Name="resolve screen before rendering" />
+		</_field_byte_flags>
+		<_field_char_enum name="Transparent Shadow Policy">
+			<item Name="none" />
+			<item Name="render as decal (cheap)" />
+			<item Name="render with material (expensive)" />
+		</_field_char_enum>
+		<_field_pad name="transparentshadowpad" length="3" />
+		<_field_word_flags name="appearance flags">
+		</_field_word_flags>
+		<_field_pad name="SONGWEOINGEW" length="2" />
+		<_field_real name="brightness ratio#avg. brightness head-on/side-view" />
+		<_field_long_flags name="flags">
+			<item Name="lod enabled#if not checked, the following flags do not matter, nor do LOD parameters below" />
+			<item Name="lod always 1.0{ignore lod (render always)}" />
+			<item Name="lod same in splitscreen" />
+			<item Name="disable precompiled profiles" />
+			<item Name="force precompile profiles" />
+			<item Name="can be low res" />
+			<item Name="precompiled!" />
+		</_field_long_flags>
+		<_field_real name="LOD in distance#defaults to 0.0, ignored if 'lod enabled' not checked above" />
+		<_field_real name="LOD feather in delta#defaults to 0.0, ignored if 'lod enabled' not checked above" />
+		<_field_real name="inverse LOD feather in!" />
+		<_field_real name="LOD out distance#defaults to 30.0, ignored if 'lod enabled' not checked above" />
+		<_field_real name="LOD feather out delta#defaults to 10.0, ignored if 'lod enabled' not checked above" />
+		<_field_real name="inverse LOD feather out!" />
+		<_field_struct name="length" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="offset" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_density" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_length" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_thickness" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_color" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_alpha" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_struct name="profile_intensity" />
+		<_field_char_enum name="Input Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Range Variable">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier">
+			<item Name=" " />
+			<item Name="Plus" />
+			<item Name="Times" />
+		</_field_char_enum>
+		<_field_char_enum name="Output Modifier Input">
+			<item Name="profile position" />
+			<item Name="game time" />
+			<item Name="light volume age" />
+			<item Name="light volume random" />
+			<item Name="light volume correlation 1" />
+			<item Name="light volume correlation 2" />
+			<item Name="light volume lod" />
+			<item Name="effect a scale" />
+			<item Name="effect b scale" />
+			<item Name="invalid state --- please set again" />
+		</_field_char_enum>
+		<_field_struct name="Mapping" />
+		<_field_data name="data" />
+		<_field_real name="runtime m_constant_value!" />
+		<_field_word_integer name="runtime m_flags!" />
+		<_field_pad name="DSFDSGLKJ" length="2" />
+		<_field_dword_integer name="runtime m_constant_per_profile_properties!" />
+		<_field_dword_integer name="runtime m_used_states!" />
+		<_field_dword_integer name="runtime m_max_profile_count!" />
+		<_field_struct name="runtime m_gpu_data!" />
+		<_field_block name="runtime gpu_property_block!" max="17" srcguid="23089ca4-cf46-624b-a45b-39472d11da0e" srcName="gpu_property_block">
+			<_field_array name="runtime gpu_property_sub_array!">
+				<_field_real name="runtime gpu_property_real!" />
+				<_field_real name="runtime gpu_property_real!" />
+				<_field_real name="runtime gpu_property_real!" />
+				<_field_real name="runtime gpu_property_real!" />
+			</_field_array>
+		</_field_block>
+		<_field_block name="runtime gpu_functions_block!" max="25" srcguid="fdc1f4e4-6d77-2145-aacc-f4ea51350bcd" srcName="gpu_function_block">
+			<_field_array name="runtime gpu_function_sub_array!">
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+				<_field_real name="runtime gpu_function_real!" />
+			</_field_array>
+		</_field_block>
+		<_field_block name="runtime gpu_colors_block!" max="8" srcguid="fb6fa277-160c-1943-81e4-c4d369dc3749" srcName="gpu_color_block">
+			<_field_array name="runtime gpu_color_sub_array!">
+				<_field_real name="runtime gpu_color_real!" />
+				<_field_real name="runtime gpu_color_real!" />
+				<_field_real name="runtime gpu_color_real!" />
+				<_field_real name="runtime gpu_color_real!" />
+			</_field_array>
+		</_field_block>
+		<_field_block name="precompiled vertices" max="128" srcguid="88f6fe12-d536-cf4a-af16-f7402a42b196" srcName="light_volume_precompiled_vert_block">
+			<_field_word_integer name="r" />
+			<_field_word_integer name="g" />
+			<_field_word_integer name="b" />
+			<_field_word_integer name="thickness" />
+		</_field_block>
+	</_field_block>
+</plugin>

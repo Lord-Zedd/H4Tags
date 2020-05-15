@@ -1,0 +1,41 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_char_enum name="downsample*">
+		<item Name="block downsample" />
+		<item Name="clover downsample" />
+	</_field_char_enum>
+	<_field_char_enum name="ssao type*">
+		<item Name="off" />
+		<item Name="hdao large 32 sample" />
+		<item Name="hdao large 64 predicated" />
+		<item Name="hdao small 24 sample" />
+		<item Name="hdao screenshot" />
+		<item Name="debug mask" />
+		<item Name="ssao midnight 16 sample" />
+	</_field_char_enum>
+	<_field_byte_integer name="version!" />
+	<_field_pad name="BKGKKELQIF" length="1" />
+	<_field_real name="hdao ambient shadow#how much ssao shadowing darkens the ambient lighting" />
+	<_field_real name="hdao point shadow#how much ssao shadowing darkens the point lighting ie the sun" />
+	<_field_real name="sharp ambient shadow#how much the sharp dynamic shadows darken ambient lighting" />
+	<_field_real name="sharp point shadow#how much the sharp dynamic shadows darken the point lighting ie the sun" />
+	<_field_real name="max intensity:[0-1]#unshadowed areas will have this relative intensity" />
+	<_field_real name="min intensity:[0-1]#fully shadowed areas will have this relative intensity" />
+	<_field_real name="falloff width#controls the shape of the shadow falloff curve" />
+	<_field_real name="corner scale#controls shadow sensitivity to corners" />
+	<_field_real name="corner bias#offsets corner sensitivity, generally to ignore shallow corners" />
+	<_field_real name="bounds scale#controls the maximum shadow distance, as a ratio of the distance to the object" />
+	<_field_real name="bounds offset#offsets the maximum shadow distance, generally to make a region of full darkness before fading" />
+	<_field_real name="near clip:world units#completely removes ssao on anything closer than this" />
+	<_field_real name="near fade width:world units#distance over which the ssao fades in" />
+	<_field_real name="far clip:world units#completely removes ssao on anything farther than this" />
+	<_field_real name="far fade width:world units#distance over which the ssao fades in" />
+	<_field_real_argb_color name="runtime_data_0!" />
+	<_field_real_argb_color name="runtime_data_1!" />
+	<_field_real_argb_color name="runtime_data_2!" />
+	<_field_real_argb_color name="runtime_data_3!" />
+	<_field_real_argb_color name="runtime_data_4!" />
+	<_field_real_argb_color name="runtime_data_5!" />
+	<_field_real_argb_color name="runtime_data_7!" />
+</plugin>

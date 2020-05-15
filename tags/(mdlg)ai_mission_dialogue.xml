@@ -1,0 +1,13 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="lines" max="500" srcguid="7fd25bb9-655b-a145-b83d-0094922d3337" srcName="mission_dialogue_lines_block">
+		<_field_string_id name="name^" />
+		<_field_block name="variants" max="10" srcguid="0cb9e35d-bbab-e34d-870e-fc077bb2aa80" srcName="mission_dialogue_variants_block">
+			<_field_string_id name="variant designation#3-letter designation for the character^" />
+			<_field_tag_reference name="sound" validtags="snd!" />
+			<_field_string_id name="sound effect" />
+		</_field_block>
+		<_field_string_id name="default sound effect" />
+	</_field_block>
+</plugin>

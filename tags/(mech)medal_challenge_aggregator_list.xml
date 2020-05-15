@@ -1,0 +1,35 @@
+<!-- This is a mockup plugin with original field names and such -->
+<!-- Made by Zedd lol -->
+<plugin>
+	<_field_block name="lists" max="64" srcguid="ddfb617b-9734-e548-a239-85cc7c3da8ca" srcName="medalChallengeAggregator">
+		<_field_string_id name="challenge to increment^" />
+		<_field_struct name="medals" />
+		<_field_string_id name="display name^" />
+		<_field_custom name="allowed game modes" />
+		<_field_struct name="allowed game modes" />
+		<_field_byte_flags name="game mode">
+			<item Name="campaign" />
+			<item Name="firefight" />
+			<item Name="multiplayer" />
+		</_field_byte_flags>
+		<_field_byte_flags name="matchmaking type">
+			<item Name="custom game" />
+			<item Name="matchmaking" />
+		</_field_byte_flags>
+		<_field_byte_flags name="difficulty">
+			<item Name="easy" />
+			<item Name="normal" />
+			<item Name="heroic" />
+			<item Name="legendary" />
+		</_field_byte_flags>
+		<_field_char_enum name="player count">
+			<item Name="any" />
+			<item Name="1 player only" />
+			<item Name="4 players only" />
+			<item Name="more than one player" />
+		</_field_char_enum>
+		<_field_block name="contributing medals" max="12" srcguid="2cb4bd6e-a8ce-c240-9264-da6f99c58621" srcName="medalAggregatorEntry">
+			<_field_string_id name="medal name^" />
+		</_field_block>
+	</_field_block>
+</plugin>
